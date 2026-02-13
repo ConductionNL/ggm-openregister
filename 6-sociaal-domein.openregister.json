@@ -218,13 +218,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "aanvraagofmelding",
-            "objectConfiguration": {
-              "register": "ggm-dienstverlening",
-              "schema": "aanvraagofmelding"
-            }
-          }
+          "aanvraagofmelding"
         ]
       },
       "aommeldingwmojeugd": {
@@ -320,13 +314,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "aanvraagofmelding",
-            "objectConfiguration": {
-              "register": "ggm-dienstverlening",
-              "schema": "aanvraagofmelding"
-            }
-          }
+          "aanvraagofmelding"
         ]
       },
       "beperking": {
@@ -1767,13 +1755,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "inkooporder",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "inkooporder"
-            }
-          }
+          "inkooporder"
         ]
       },
       "verzoek-om-toewijzing": {
@@ -2303,13 +2285,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "inburgeraar",
-            "objectConfiguration": {
-              "register": "ggm-sociaal-domein",
-              "schema": "inburgeraar"
-            }
-          }
+          "inburgeraar"
         ]
       },
       "brede-intake": {
@@ -2500,13 +2476,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "inburgeraar",
-            "objectConfiguration": {
-              "register": "ggm-sociaal-domein",
-              "schema": "inburgeraar"
-            }
-          }
+          "inburgeraar"
         ]
       },
       "inburgeraar": {
@@ -2573,13 +2543,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "vreemdeling",
-            "objectConfiguration": {
-              "register": "ggm-sociaal-domein",
-              "schema": "vreemdeling"
-            }
-          }
+          "vreemdeling"
         ]
       },
       "inburgeringstraject": {
@@ -2932,13 +2896,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "natuurlijkpersoon",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "natuurlijkpersoon"
-            }
-          }
+          "natuurlijkpersoon"
         ]
       },
       "informering": {
@@ -3142,13 +3100,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "aanvraagofmelding",
-            "objectConfiguration": {
-              "register": "ggm-dienstverlening",
-              "schema": "aanvraagofmelding"
-            }
-          }
+          "aanvraagofmelding"
         ]
       },
       "aanmelding": {
@@ -3840,13 +3792,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "natuurlijkpersoon",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "natuurlijkpersoon"
-            }
-          }
+          "natuurlijkpersoon"
         ]
       },
       "planvanaanpak": {
@@ -3972,13 +3918,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "rechtspersoon",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "rechtspersoon"
-            }
-          }
+          "rechtspersoon"
         ]
       },
       "schuldhulporganisatie": {
@@ -4035,13 +3975,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "nietnatuurlijkpersoon",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "nietnatuurlijkpersoon"
-            }
-          }
+          "nietnatuurlijkpersoon"
         ]
       },
       "schuldhulptraject": {
@@ -4725,13 +4659,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "ingeschrevenpersoon",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "ingeschrevenpersoon"
-            }
-          }
+          "ingeschrevenpersoon"
         ]
       },
       "clientbegeleider": {
@@ -4808,13 +4736,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "medewerker",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "medewerker"
-            }
-          }
+          "medewerker"
         ]
       },
       "gerechtelijke-uitspraak": {
@@ -5128,13 +5050,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "rechtspersoon",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "rechtspersoon"
-            }
-          }
+          "rechtspersoon"
         ]
       },
       "profiel": {
@@ -5255,13 +5171,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "natuurlijkpersoon",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "natuurlijkpersoon"
-            }
-          }
+          "natuurlijkpersoon"
         ]
       },
       "relatiesoort": {
@@ -5459,13 +5369,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "primair-inkomstencomponent",
-            "objectConfiguration": {
-              "register": "ggm-sociaal-domein",
-              "schema": "primair-inkomstencomponent"
-            }
-          }
+          "primair-inkomstencomponent"
         ]
       },
       "ander-inkomen": {
@@ -5490,13 +5394,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "primair-inkomstencomponent",
-            "objectConfiguration": {
-              "register": "ggm-sociaal-domein",
-              "schema": "primair-inkomstencomponent"
-            }
-          }
+          "primair-inkomstencomponent"
         ]
       },
       "beslag-op-inkomen": {
@@ -5516,13 +5414,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "kostencomponent",
-            "objectConfiguration": {
-              "register": "ggm-sociaal-domein",
-              "schema": "kostencomponent"
-            }
-          }
+          "kostencomponent"
         ]
       },
       "betaald-werk": {
@@ -5675,13 +5567,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "primair-inkomstencomponent",
-            "objectConfiguration": {
-              "register": "ggm-sociaal-domein",
-              "schema": "primair-inkomstencomponent"
-            }
-          }
+          "primair-inkomstencomponent"
         ]
       },
       "dertiende-maand-eindejaarsuitkering": {
@@ -5707,13 +5593,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "secundair-inkomstencomponent",
-            "objectConfiguration": {
-              "register": "ggm-sociaal-domein",
-              "schema": "secundair-inkomstencomponent"
-            }
-          }
+          "secundair-inkomstencomponent"
         ]
       },
       "draagkracht": {
@@ -5831,13 +5711,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "primair-inkomstencomponent",
-            "objectConfiguration": {
-              "register": "ggm-sociaal-domein",
-              "schema": "primair-inkomstencomponent"
-            }
-          }
+          "primair-inkomstencomponent"
         ]
       },
       "eigen-bijdrage": {
@@ -5857,13 +5731,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "kostencomponent",
-            "objectConfiguration": {
-              "register": "ggm-sociaal-domein",
-              "schema": "kostencomponent"
-            }
-          }
+          "kostencomponent"
         ]
       },
       "heffingskorting": {
@@ -5900,13 +5768,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "secundair-inkomstencomponent",
-            "objectConfiguration": {
-              "register": "ggm-sociaal-domein",
-              "schema": "secundair-inkomstencomponent"
-            }
-          }
+          "secundair-inkomstencomponent"
         ]
       },
       "hobby": {
@@ -5931,13 +5793,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "primair-inkomstencomponent",
-            "objectConfiguration": {
-              "register": "ggm-sociaal-domein",
-              "schema": "primair-inkomstencomponent"
-            }
-          }
+          "primair-inkomstencomponent"
         ]
       },
       "inkomstencomponent": {
@@ -6126,13 +5982,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "secundair-inkomstencomponent",
-            "objectConfiguration": {
-              "register": "ggm-sociaal-domein",
-              "schema": "secundair-inkomstencomponent"
-            }
-          }
+          "secundair-inkomstencomponent"
         ]
       },
       "kostencomponent": {
@@ -6199,13 +6049,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "inkomstenvermindering",
-            "objectConfiguration": {
-              "register": "ggm-sociaal-domein",
-              "schema": "inkomstenvermindering"
-            }
-          }
+          "inkomstenvermindering"
         ]
       },
       "maaltijdvergoeding": {
@@ -6243,13 +6087,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "vergoeding",
-            "objectConfiguration": {
-              "register": "ggm-sociaal-domein",
-              "schema": "vergoeding"
-            }
-          }
+          "vergoeding"
         ]
       },
       "onderhoudsplicht": {
@@ -6387,13 +6225,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "vergoeding",
-            "objectConfiguration": {
-              "register": "ggm-sociaal-domein",
-              "schema": "vergoeding"
-            }
-          }
+          "vergoeding"
         ]
       },
       "pensioen": {
@@ -6471,13 +6303,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "primair-inkomstencomponent",
-            "objectConfiguration": {
-              "register": "ggm-sociaal-domein",
-              "schema": "primair-inkomstencomponent"
-            }
-          }
+          "primair-inkomstencomponent"
         ]
       },
       "primair-inkomstencomponent": {
@@ -6503,13 +6329,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "inkomstencomponent",
-            "objectConfiguration": {
-              "register": "ggm-sociaal-domein",
-              "schema": "inkomstencomponent"
-            }
-          }
+          "inkomstencomponent"
         ]
       },
       "reiskosten-naar-het-werk": {
@@ -6529,13 +6349,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "kostencomponent",
-            "objectConfiguration": {
-              "register": "ggm-sociaal-domein",
-              "schema": "kostencomponent"
-            }
-          }
+          "kostencomponent"
         ]
       },
       "reiskostenvergoeding": {
@@ -6573,13 +6387,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "vergoeding",
-            "objectConfiguration": {
-              "register": "ggm-sociaal-domein",
-              "schema": "vergoeding"
-            }
-          }
+          "vergoeding"
         ]
       },
       "secundair-inkomstencomponent": {
@@ -6592,13 +6400,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "inkomstencomponent",
-            "objectConfiguration": {
-              "register": "ggm-sociaal-domein",
-              "schema": "inkomstencomponent"
-            }
-          }
+          "inkomstencomponent"
         ]
       },
       "stage": {
@@ -6686,13 +6488,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "primair-inkomstencomponent",
-            "objectConfiguration": {
-              "register": "ggm-sociaal-domein",
-              "schema": "primair-inkomstencomponent"
-            }
-          }
+          "primair-inkomstencomponent"
         ]
       },
       "studiefinanciering": {
@@ -6721,13 +6517,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "primair-inkomstencomponent",
-            "objectConfiguration": {
-              "register": "ggm-sociaal-domein",
-              "schema": "primair-inkomstencomponent"
-            }
-          }
+          "primair-inkomstencomponent"
         ]
       },
       "te-betalen-alimentatie": {
@@ -6747,13 +6537,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "kostencomponent",
-            "objectConfiguration": {
-              "register": "ggm-sociaal-domein",
-              "schema": "kostencomponent"
-            }
-          }
+          "kostencomponent"
         ]
       },
       "uitkering": {
@@ -6912,13 +6696,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "primair-inkomstencomponent",
-            "objectConfiguration": {
-              "register": "ggm-sociaal-domein",
-              "schema": "primair-inkomstencomponent"
-            }
-          }
+          "primair-inkomstencomponent"
         ]
       },
       "vakantiegeld": {
@@ -6968,13 +6746,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "secundair-inkomstencomponent",
-            "objectConfiguration": {
-              "register": "ggm-sociaal-domein",
-              "schema": "secundair-inkomstencomponent"
-            }
-          }
+          "secundair-inkomstencomponent"
         ]
       },
       "vergoeding": {
@@ -6987,13 +6759,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "secundair-inkomstencomponent",
-            "objectConfiguration": {
-              "register": "ggm-sociaal-domein",
-              "schema": "secundair-inkomstencomponent"
-            }
-          }
+          "secundair-inkomstencomponent"
         ]
       },
       "vergoeding-in-natura": {
@@ -7019,13 +6785,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "vergoeding",
-            "objectConfiguration": {
-              "register": "ggm-sociaal-domein",
-              "schema": "vergoeding"
-            }
-          }
+          "vergoeding"
         ]
       },
       "verlaging-door-boete": {
@@ -7051,13 +6811,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "inkomstenvermindering",
-            "objectConfiguration": {
-              "register": "ggm-sociaal-domein",
-              "schema": "inkomstenvermindering"
-            }
-          }
+          "inkomstenvermindering"
         ]
       },
       "verlaging-door-maatregel": {
@@ -7083,13 +6837,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "inkomstenvermindering",
-            "objectConfiguration": {
-              "register": "ggm-sociaal-domein",
-              "schema": "inkomstenvermindering"
-            }
-          }
+          "inkomstenvermindering"
         ]
       },
       "vrijlating-inkomsten": {
@@ -7221,13 +6969,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "vermogenscomponent",
-            "objectConfiguration": {
-              "register": "ggm-sociaal-domein",
-              "schema": "vermogenscomponent"
-            }
-          }
+          "vermogenscomponent"
         ]
       },
       "hypotheek": {
@@ -7259,13 +7001,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "vermogenscomponent",
-            "objectConfiguration": {
-              "register": "ggm-sociaal-domein",
-              "schema": "vermogenscomponent"
-            }
-          }
+          "vermogenscomponent"
         ]
       },
       "motorvoertuig": {
@@ -7298,13 +7034,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "vermogenscomponent",
-            "objectConfiguration": {
-              "register": "ggm-sociaal-domein",
-              "schema": "vermogenscomponent"
-            }
-          }
+          "vermogenscomponent"
         ]
       },
       "onroerend-goed": {
@@ -7333,13 +7063,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "vermogenscomponent",
-            "objectConfiguration": {
-              "register": "ggm-sociaal-domein",
-              "schema": "vermogenscomponent"
-            }
-          }
+          "vermogenscomponent"
         ]
       },
       "vermogenscomponent": {
@@ -8137,13 +7861,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "zaak",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "zaak"
-            }
-          }
+          "zaak"
         ]
       },
       "contactpoging": {
@@ -8247,13 +7965,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "rechtspersoon",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "rechtspersoon"
-            }
-          }
+          "rechtspersoon"
         ]
       },
       "contactpersoon-2": {
@@ -9312,13 +9024,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "opleidingsnaam",
-            "objectConfiguration": {
-              "register": "ggm-sociaal-domein",
-              "schema": "opleidingsnaam"
-            }
-          }
+          "opleidingsnaam"
         ]
       },
       "opleidingsnaamongecodeerd": {
@@ -9338,13 +9044,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "opleidingsnaam",
-            "objectConfiguration": {
-              "register": "ggm-sociaal-domein",
-              "schema": "opleidingsnaam"
-            }
-          }
+          "opleidingsnaam"
         ]
       },
       "opleidingsniveau": {
@@ -9967,13 +9667,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "werkzaamheden-anders-dan-in-arbeidsverhouding",
-            "objectConfiguration": {
-              "register": "ggm-sociaal-domein",
-              "schema": "werkzaamheden-anders-dan-in-arbeidsverhouding"
-            }
-          }
+          "werkzaamheden-anders-dan-in-arbeidsverhouding"
         ]
       },
       "werkzaamheden-anders-dan-in-arbeidsverhouding": {
@@ -10316,13 +10010,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "client",
-            "objectConfiguration": {
-              "register": "ggm-sociaal-domein",
-              "schema": "client"
-            }
-          }
+          "client"
         ]
       },
       "zelfredzaamheidscore": {
@@ -13140,13 +12828,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "voorwaarde",
-            "objectConfiguration": {
-              "register": "ggm-sociaal-domein",
-              "schema": "voorwaarde"
-            }
-          }
+          "voorwaarde"
         ]
       },
       "verstrekkingsvorm": {
@@ -13208,13 +12890,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "voorwaarde",
-            "objectConfiguration": {
-              "register": "ggm-sociaal-domein",
-              "schema": "voorwaarde"
-            }
-          }
+          "voorwaarde"
         ]
       },
       "voorwaarde": {
@@ -14165,13 +13841,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "maatregel",
-            "objectConfiguration": {
-              "register": "ggm-sociaal-domein",
-              "schema": "maatregel"
-            }
-          }
+          "maatregel"
         ]
       },
       "boete": {
@@ -14206,13 +13876,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "maatregel",
-            "objectConfiguration": {
-              "register": "ggm-sociaal-domein",
-              "schema": "maatregel"
-            }
-          }
+          "maatregel"
         ]
       },
       "maatregel": {
@@ -14318,13 +13982,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "maatregel",
-            "objectConfiguration": {
-              "register": "ggm-sociaal-domein",
-              "schema": "maatregel"
-            }
-          }
+          "maatregel"
         ]
       },
       "normafwijking": {
@@ -14426,13 +14084,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "reden-afwijkende-startdatum",
-            "objectConfiguration": {
-              "register": "ggm-sociaal-domein",
-              "schema": "reden-afwijkende-startdatum"
-            }
-          }
+          "reden-afwijkende-startdatum"
         ]
       },
       "andere-reden-verzoek": {
@@ -14457,13 +14109,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "reden-aanvraag-levensonderhoud",
-            "objectConfiguration": {
-              "register": "ggm-sociaal-domein",
-              "schema": "reden-aanvraag-levensonderhoud"
-            }
-          }
+          "reden-aanvraag-levensonderhoud"
         ]
       },
       "dienstenaanvraag": {
@@ -14512,13 +14158,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "dienstenaanvraag",
-            "objectConfiguration": {
-              "register": "ggm-sociaal-domein",
-              "schema": "dienstenaanvraag"
-            }
-          }
+          "dienstenaanvraag"
         ]
       },
       "gestopt-betaald-werk": {
@@ -14648,13 +14288,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "reden-aanvraag-levensonderhoud",
-            "objectConfiguration": {
-              "register": "ggm-sociaal-domein",
-              "schema": "reden-aanvraag-levensonderhoud"
-            }
-          }
+          "reden-aanvraag-levensonderhoud"
         ]
       },
       "gestopt-of-verkocht-eigen-bedrijf": {
@@ -14709,13 +14343,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "reden-aanvraag-levensonderhoud",
-            "objectConfiguration": {
-              "register": "ggm-sociaal-domein",
-              "schema": "reden-aanvraag-levensonderhoud"
-            }
-          }
+          "reden-aanvraag-levensonderhoud"
         ]
       },
       "gestopte-bijstanduitkering": {
@@ -14759,13 +14387,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "reden-aanvraag-levensonderhoud",
-            "objectConfiguration": {
-              "register": "ggm-sociaal-domein",
-              "schema": "reden-aanvraag-levensonderhoud"
-            }
-          }
+          "reden-aanvraag-levensonderhoud"
         ]
       },
       "gestopte-detentie": {
@@ -14813,13 +14435,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "reden-aanvraag-levensonderhoud",
-            "objectConfiguration": {
-              "register": "ggm-sociaal-domein",
-              "schema": "reden-aanvraag-levensonderhoud"
-            }
-          }
+          "reden-aanvraag-levensonderhoud"
         ]
       },
       "gestopte-of-verlaagde-alimentatie": {
@@ -14872,13 +14488,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "reden-aanvraag-levensonderhoud",
-            "objectConfiguration": {
-              "register": "ggm-sociaal-domein",
-              "schema": "reden-aanvraag-levensonderhoud"
-            }
-          }
+          "reden-aanvraag-levensonderhoud"
         ]
       },
       "gestopte-studiefinanciering": {
@@ -14905,13 +14515,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "reden-aanvraag-levensonderhoud",
-            "objectConfiguration": {
-              "register": "ggm-sociaal-domein",
-              "schema": "reden-aanvraag-levensonderhoud"
-            }
-          }
+          "reden-aanvraag-levensonderhoud"
         ]
       },
       "gestopte-uitkering": {
@@ -15028,13 +14632,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "reden-aanvraag-levensonderhoud",
-            "objectConfiguration": {
-              "register": "ggm-sociaal-domein",
-              "schema": "reden-aanvraag-levensonderhoud"
-            }
-          }
+          "reden-aanvraag-levensonderhoud"
         ]
       },
       "ingang-bijstandsuitkering": {
@@ -15133,13 +14731,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "reden-afwijkende-startdatum",
-            "objectConfiguration": {
-              "register": "ggm-sociaal-domein",
-              "schema": "reden-afwijkende-startdatum"
-            }
-          }
+          "reden-afwijkende-startdatum"
         ]
       },
       "overleden-partner": {
@@ -15181,13 +14773,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "reden-aanvraag-levensonderhoud",
-            "objectConfiguration": {
-              "register": "ggm-sociaal-domein",
-              "schema": "reden-aanvraag-levensonderhoud"
-            }
-          }
+          "reden-aanvraag-levensonderhoud"
         ]
       },
       "reden-aanvraag": {
@@ -15309,13 +14895,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "reden-aanvraag",
-            "objectConfiguration": {
-              "register": "ggm-sociaal-domein",
-              "schema": "reden-aanvraag"
-            }
-          }
+          "reden-aanvraag"
         ]
       },
       "reden-afwijkende-startdatum": {
@@ -15404,13 +14984,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "reden-aanvraag-levensonderhoud",
-            "objectConfiguration": {
-              "register": "ggm-sociaal-domein",
-              "schema": "reden-aanvraag-levensonderhoud"
-            }
-          }
+          "reden-aanvraag-levensonderhoud"
         ]
       },
       "vertrek-uit-asielzoekerscentrum": {
@@ -15458,13 +15032,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "reden-aanvraag-levensonderhoud",
-            "objectConfiguration": {
-              "register": "ggm-sociaal-domein",
-              "schema": "reden-aanvraag-levensonderhoud"
-            }
-          }
+          "reden-aanvraag-levensonderhoud"
         ]
       },
       "wachten-beslissing-instantie": {
@@ -15485,13 +15053,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "reden-afwijkende-startdatum",
-            "objectConfiguration": {
-              "register": "ggm-sociaal-domein",
-              "schema": "reden-afwijkende-startdatum"
-            }
-          }
+          "reden-afwijkende-startdatum"
         ]
       },
       "wachten-digid": {
@@ -15512,13 +15074,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "reden-afwijkende-startdatum",
-            "objectConfiguration": {
-              "register": "ggm-sociaal-domein",
-              "schema": "reden-afwijkende-startdatum"
-            }
-          }
+          "reden-afwijkende-startdatum"
         ]
       },
       "aflossing": {
@@ -15845,13 +15401,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "vordering",
-            "objectConfiguration": {
-              "register": "ggm-sociaal-domein",
-              "schema": "vordering"
-            }
-          }
+          "vordering"
         ]
       },
       "conservatoir-beslag": {
@@ -16052,13 +15602,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "vordering",
-            "objectConfiguration": {
-              "register": "ggm-sociaal-domein",
-              "schema": "vordering"
-            }
-          }
+          "vordering"
         ]
       },
       "interventie": {
@@ -16264,13 +15808,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "hypotheek",
-            "objectConfiguration": {
-              "register": "ggm-sociaal-domein",
-              "schema": "hypotheek"
-            }
-          }
+          "hypotheek"
         ]
       },
       "krediethypotheekvordering": {
@@ -16296,13 +15834,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "vordering",
-            "objectConfiguration": {
-              "register": "ggm-sociaal-domein",
-              "schema": "vordering"
-            }
-          }
+          "vordering"
         ]
       },
       "kwijtschelding": {
@@ -16417,13 +15949,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "vordering",
-            "objectConfiguration": {
-              "register": "ggm-sociaal-domein",
-              "schema": "vordering"
-            }
-          }
+          "vordering"
         ]
       },
       "loonbeslagafspraak": {
@@ -16436,13 +15962,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "aflossingsafspraak",
-            "objectConfiguration": {
-              "register": "ggm-sociaal-domein",
-              "schema": "aflossingsafspraak"
-            }
-          }
+          "aflossingsafspraak"
         ]
       },
       "rechtmaand": {
@@ -16528,13 +16048,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "vordering",
-            "objectConfiguration": {
-              "register": "ggm-sociaal-domein",
-              "schema": "vordering"
-            }
-          }
+          "vordering"
         ]
       },
       "restitutie": {
@@ -16876,13 +16390,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "vordering",
-            "objectConfiguration": {
-              "register": "ggm-sociaal-domein",
-              "schema": "vordering"
-            }
-          }
+          "vordering"
         ]
       },
       "verwijtbare-vordering": {
@@ -16905,13 +16413,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "vordering",
-            "objectConfiguration": {
-              "register": "ggm-sociaal-domein",
-              "schema": "vordering"
-            }
-          }
+          "vordering"
         ]
       },
       "vordering": {

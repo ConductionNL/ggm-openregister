@@ -250,13 +250,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "ingezetene",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "ingezetene"
-            }
-          }
+          "ingezetene"
         ]
       },
       "dossier": {
@@ -474,13 +468,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "ingezetene",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "ingezetene"
-            }
-          }
+          "ingezetene"
         ]
       },
       "raadsstuk": {

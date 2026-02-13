@@ -1520,20 +1520,8 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "document",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "document"
-            }
-          },
-          {
-            "$ref": "erfgoed-object",
-            "objectConfiguration": {
-              "register": "ggm-sport-cultuur-recreatie",
-              "schema": "erfgoed-object"
-            }
-          }
+          "document",
+          "erfgoed-object"
         ]
       },
       "auteur": {
@@ -1560,13 +1548,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "historisch-persoon",
-            "objectConfiguration": {
-              "register": "ggm-sport-cultuur-recreatie",
-              "schema": "historisch-persoon"
-            }
-          }
+          "historisch-persoon"
         ]
       },
       "bezoeker": {
@@ -1592,13 +1574,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "natuurlijkpersoon",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "natuurlijkpersoon"
-            }
-          }
+          "natuurlijkpersoon"
         ]
       },
       "depot": {
@@ -1949,13 +1925,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "rechtspersoon",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "rechtspersoon"
-            }
-          }
+          "rechtspersoon"
         ]
       },
       "stelling-2": {
@@ -2023,13 +1993,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "rechtspersoon",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "rechtspersoon"
-            }
-          }
+          "rechtspersoon"
         ]
       },
       "vindplaats-2": {
@@ -2221,13 +2185,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "natuurlijkpersoon",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "natuurlijkpersoon"
-            }
-          }
+          "natuurlijkpersoon"
         ]
       },
       "objectclassificatie": {
@@ -2841,13 +2799,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "balieverkoop",
-            "objectConfiguration": {
-              "register": "ggm-sport-cultuur-recreatie",
-              "schema": "balieverkoop"
-            }
-          }
+          "balieverkoop"
         ]
       },
       "belanghebbende": {
@@ -2886,13 +2838,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "rechtspersoon",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "rechtspersoon"
-            }
-          }
+          "rechtspersoon"
         ]
       },
       "bruikleen": {
@@ -3084,13 +3030,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "product",
-            "objectConfiguration": {
-              "register": "ggm-sport-cultuur-recreatie",
-              "schema": "product"
-            }
-          }
+          "product"
         ]
       },
       "incident": {
@@ -3169,13 +3109,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "rechtspersoon",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "rechtspersoon"
-            }
-          }
+          "rechtspersoon"
         ]
       },
       "mailing": {
@@ -3333,13 +3267,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "erfgoed-object",
-            "objectConfiguration": {
-              "register": "ggm-sport-cultuur-recreatie",
-              "schema": "erfgoed-object"
-            }
-          }
+          "erfgoed-object"
         ]
       },
       "museumrelatie": {
@@ -3396,13 +3324,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "rechtspersoon",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "rechtspersoon"
-            }
-          }
+          "rechtspersoon"
         ]
       },
       "omzetgroep": {
@@ -3913,13 +3835,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "medewerker",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "medewerker"
-            }
-          }
+          "medewerker"
         ]
       },
       "standplaats": {
@@ -4372,13 +4288,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "sportlocatie",
-            "objectConfiguration": {
-              "register": "ggm-sport-cultuur-recreatie",
-              "schema": "sportlocatie"
-            }
-          }
+          "sportlocatie"
         ]
       },
       "onderhoudskosten": {
@@ -4513,13 +4423,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "sportlocatie",
-            "objectConfiguration": {
-              "register": "ggm-sport-cultuur-recreatie",
-              "schema": "sportlocatie"
-            }
-          }
+          "sportlocatie"
         ]
       },
       "sportvereniging": {
@@ -4600,13 +4504,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "nietnatuurlijkpersoon",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "nietnatuurlijkpersoon"
-            }
-          }
+          "nietnatuurlijkpersoon"
         ]
       },
       "veld": {

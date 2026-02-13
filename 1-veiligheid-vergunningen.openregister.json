@@ -243,13 +243,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "vth-melding",
-            "objectConfiguration": {
-              "register": "ggm-veiligheid-vergunningen",
-              "schema": "vth-melding"
-            }
-          }
+          "vth-melding"
         ]
       },
       "fietsregistratie": {
@@ -274,13 +268,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "vth-melding",
-            "objectConfiguration": {
-              "register": "ggm-veiligheid-vergunningen",
-              "schema": "vth-melding"
-            }
-          }
+          "vth-melding"
         ]
       },
       "grondslag": {
@@ -415,13 +403,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "document",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "document"
-            }
-          }
+          "document"
         ]
       },
       "indiener": {
@@ -447,13 +429,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "rechtspersoon",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "rechtspersoon"
-            }
-          }
+          "rechtspersoon"
         ]
       },
       "inspectie": {
@@ -829,13 +805,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "aanvraagofmelding",
-            "objectConfiguration": {
-              "register": "ggm-dienstverlening",
-              "schema": "aanvraagofmelding"
-            }
-          }
+          "aanvraagofmelding"
         ]
       },
       "openbareactiviteit": {
@@ -1099,13 +1069,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "aanvraagofmelding",
-            "objectConfiguration": {
-              "register": "ggm-dienstverlening",
-              "schema": "aanvraagofmelding"
-            }
-          }
+          "aanvraagofmelding"
         ]
       },
       "vordering": {
@@ -1315,13 +1279,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "vomaanvraagofmelding",
-            "objectConfiguration": {
-              "register": "ggm-veiligheid-vergunningen",
-              "schema": "vomaanvraagofmelding"
-            }
-          }
+          "vomaanvraagofmelding"
         ]
       },
       "vth-melding": {
@@ -1468,13 +1426,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "aanvraagofmelding",
-            "objectConfiguration": {
-              "register": "ggm-dienstverlening",
-              "schema": "aanvraagofmelding"
-            }
-          }
+          "aanvraagofmelding"
         ]
       },
       "vthzaak": {
@@ -1553,13 +1505,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "zaak",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "zaak"
-            }
-          }
+          "zaak"
         ]
       },
       "waarneming": {
@@ -1572,13 +1518,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "vth-melding",
-            "objectConfiguration": {
-              "register": "ggm-veiligheid-vergunningen",
-              "schema": "vth-melding"
-            }
-          }
+          "vth-melding"
         ]
       },
       "waboaanvraagofmelding": {
@@ -1621,13 +1561,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "vomaanvraagofmelding",
-            "objectConfiguration": {
-              "register": "ggm-veiligheid-vergunningen",
-              "schema": "vomaanvraagofmelding"
-            }
-          }
+          "vomaanvraagofmelding"
         ]
       },
       "woonfraudeaanvraagofmelding": {
@@ -1672,13 +1606,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "aanvraagofmelding",
-            "objectConfiguration": {
-              "register": "ggm-dienstverlening",
-              "schema": "aanvraagofmelding"
-            }
-          }
+          "aanvraagofmelding"
         ]
       },
       "woonoverlastaanvraagofmelding": {
@@ -1717,13 +1645,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "aanvraagofmelding",
-            "objectConfiguration": {
-              "register": "ggm-dienstverlening",
-              "schema": "aanvraagofmelding"
-            }
-          }
+          "aanvraagofmelding"
         ]
       }
     },

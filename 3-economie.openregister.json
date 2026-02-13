@@ -98,13 +98,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "vestiging",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "vestiging"
-            }
-          }
+          "vestiging"
         ]
       },
       "hotelbezoek": {
@@ -158,13 +152,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "vestiging",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "vestiging"
-            }
-          }
+          "vestiging"
         ]
       },
       "werkgelegenheid": {

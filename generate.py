@@ -477,21 +477,14 @@ class OpenRegisterGenerator:
         }
 
         # Handle generalizations (inheritance via allOf)
+        # OpenRegister expects allOf as a flat array of schema slugs
         parent_ids = self.db.get_generalizations_for_object(obj_id)
         if parent_ids:
             all_of = []
             for parent_id in parent_ids:
                 if parent_id in self.object_slug_map:
                     parent_slug = self.object_slug_map[parent_id]
-                    parent_domain_id = self.object_domain_map.get(parent_id)
-                    parent_register = self.domain_slug_map.get(parent_domain_id, "")
-                    all_of.append({
-                        "$ref": parent_slug,
-                        "objectConfiguration": {
-                            "register": parent_register,
-                            "schema": parent_slug,
-                        },
-                    })
+                    all_of.append(parent_slug)
             if all_of:
                 schema["allOf"] = all_of
 

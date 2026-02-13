@@ -186,13 +186,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "linkbaar-cmdb-item",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "linkbaar-cmdb-item"
-            }
-          }
+          "linkbaar-cmdb-item"
         ]
       },
       "attribuutsoort": {
@@ -472,13 +466,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "linkbaar-cmdb-item",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "linkbaar-cmdb-item"
-            }
-          }
+          "linkbaar-cmdb-item"
         ]
       },
       "datatype": {
@@ -851,13 +839,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "cmdb-item",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "cmdb-item"
-            }
-          }
+          "cmdb-item"
         ]
       },
       "inventaris": {
@@ -870,13 +852,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "cmdb-item",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "cmdb-item"
-            }
-          }
+          "cmdb-item"
         ]
       },
       "koppeling": {
@@ -935,13 +911,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "cmdb-item",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "cmdb-item"
-            }
-          }
+          "cmdb-item"
         ]
       },
       "linkbaar-cmdb-item": {
@@ -979,13 +949,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "cmdb-item",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "cmdb-item"
-            }
-          }
+          "cmdb-item"
         ]
       },
       "log": {
@@ -1046,13 +1010,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "cmdb-item",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "cmdb-item"
-            }
-          }
+          "cmdb-item"
         ]
       },
       "notitie": {
@@ -1579,13 +1537,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "linkbaar-cmdb-item",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "linkbaar-cmdb-item"
-            }
-          }
+          "linkbaar-cmdb-item"
         ]
       },
       "software": {
@@ -1598,13 +1550,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "cmdb-item",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "cmdb-item"
-            }
-          }
+          "cmdb-item"
         ]
       },
       "storing": {
@@ -1637,13 +1583,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "cmdb-item",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "cmdb-item"
-            }
-          }
+          "cmdb-item"
         ]
       },
       "versie": {
@@ -1711,13 +1651,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "cmdb-item",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "cmdb-item"
-            }
-          }
+          "cmdb-item"
         ]
       },
       "wijzigingsverzoek": {
@@ -2395,13 +2329,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "aanbesteding",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "aanbesteding"
-            }
-          }
+          "aanbesteding"
         ]
       },
       "adresaanduiding": {
@@ -2572,13 +2500,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "rechtspersoon",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "rechtspersoon"
-            }
-          }
+          "rechtspersoon"
         ]
       },
       "gebruiksdoel": {
@@ -2645,13 +2567,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "rechtspersoon",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "rechtspersoon"
-            }
-          }
+          "rechtspersoon"
         ]
       },
       "inspectie": {
@@ -3082,13 +2998,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "nummeraanduiding",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "nummeraanduiding"
-            }
-          }
+          "nummeraanduiding"
         ]
       },
       "objectrelatie": {
@@ -3158,13 +3068,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "rechtspersoon",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "rechtspersoon"
-            }
-          }
+          "rechtspersoon"
         ]
       },
       "prijzenboekitem": {
@@ -4092,13 +3996,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "zakelijkrecht",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "zakelijkrecht"
-            }
-          }
+          "zakelijkrecht"
         ]
       },
       "activa": {
@@ -4576,13 +4474,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "rechtspersoon",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "rechtspersoon"
-            }
-          }
+          "rechtspersoon"
         ]
       },
       "doelstelling": {
@@ -6556,13 +6448,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "nietnatuurlijkpersoon",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "nietnatuurlijkpersoon"
-            }
-          }
+          "nietnatuurlijkpersoon"
         ]
       },
       "opleiding": {
@@ -6678,13 +6564,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "organisatorischeeenheid",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "organisatorischeeenheid"
-            }
-          }
+          "organisatorischeeenheid"
         ]
       },
       "relatie": {
@@ -6716,13 +6596,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "natuurlijkpersoon",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "natuurlijkpersoon"
-            }
-          }
+          "natuurlijkpersoon"
         ]
       },
       "rol": {
@@ -6811,13 +6685,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "natuurlijkpersoon",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "natuurlijkpersoon"
-            }
-          }
+          "natuurlijkpersoon"
         ]
       },
       "sollicitatie": {
@@ -7453,13 +7321,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "medewerker",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "medewerker"
-            }
-          }
+          "medewerker"
         ]
       },
       "aanbesteding": {
@@ -8800,13 +8662,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "rechtspersoon",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "rechtspersoon"
-            }
-          }
+          "rechtspersoon"
         ]
       },
       "offerte-2": {

@@ -86,13 +86,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "aanvraagofmelding",
-            "objectConfiguration": {
-              "register": "ggm-dienstverlening",
-              "schema": "aanvraagofmelding"
-            }
-          }
+          "aanvraagofmelding"
         ]
       },
       "aanvraagvrijstelling": {
@@ -119,13 +113,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "aanvraagofmelding",
-            "objectConfiguration": {
-              "register": "ggm-onderwijs",
-              "schema": "aanvraagofmelding"
-            }
-          }
+          "aanvraagofmelding"
         ]
       },
       "beschikking-leerlingenvervoer": {
@@ -151,13 +139,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "beslissing",
-            "objectConfiguration": {
-              "register": "ggm-onderwijs",
-              "schema": "beslissing"
-            }
-          }
+          "beslissing"
         ]
       },
       "beslissing": {
@@ -246,13 +228,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "beslissing",
-            "objectConfiguration": {
-              "register": "ggm-onderwijs",
-              "schema": "beslissing"
-            }
-          }
+          "beslissing"
         ]
       },
       "halt-verwijzing": {
@@ -290,13 +266,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "beslissing",
-            "objectConfiguration": {
-              "register": "ggm-onderwijs",
-              "schema": "beslissing"
-            }
-          }
+          "beslissing"
         ]
       },
       "klacht-leerlingenvervoer": {
@@ -354,13 +324,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "medewerker",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "medewerker"
-            }
-          }
+          "medewerker"
         ]
       },
       "procesverbaal-onderwijs": {
@@ -489,13 +453,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "beslissing",
-            "objectConfiguration": {
-              "register": "ggm-onderwijs",
-              "schema": "beslissing"
-            }
-          }
+          "beslissing"
         ]
       },
       "verlofaanvraag": {
@@ -528,13 +486,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "aanvraagofmelding",
-            "objectConfiguration": {
-              "register": "ggm-onderwijs",
-              "schema": "aanvraagofmelding"
-            }
-          }
+          "aanvraagofmelding"
         ]
       },
       "vervoerder": {
@@ -572,13 +524,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "leverancier",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "leverancier"
-            }
-          }
+          "leverancier"
         ]
       },
       "verzuimmelding": {
@@ -620,13 +566,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "aanvraagofmelding",
-            "objectConfiguration": {
-              "register": "ggm-onderwijs",
-              "schema": "aanvraagofmelding"
-            }
-          }
+          "aanvraagofmelding"
         ]
       },
       "vrijstelling": {
@@ -688,13 +628,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "beslissing",
-            "objectConfiguration": {
-              "register": "ggm-onderwijs",
-              "schema": "beslissing"
-            }
-          }
+          "beslissing"
         ]
       },
       "ziekmelding-leerlingenvervoer": {
@@ -825,13 +759,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "ingeschrevenpersoon",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "ingeschrevenpersoon"
-            }
-          }
+          "ingeschrevenpersoon"
         ]
       },
       "locatie": {
@@ -860,13 +788,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "vastgoedobject",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "vastgoedobject"
-            }
-          }
+          "vastgoedobject"
         ]
       },
       "loopbaanstap": {
@@ -1043,13 +965,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "ingeschrevenpersoon",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "ingeschrevenpersoon"
-            }
-          }
+          "ingeschrevenpersoon"
         ]
       },
       "school": {
@@ -1130,20 +1046,8 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "nietnatuurlijkpersoon",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "nietnatuurlijkpersoon"
-            }
-          },
-          {
-            "$ref": "nietnatuurlijkpersoon",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "nietnatuurlijkpersoon"
-            }
-          }
+          "nietnatuurlijkpersoon",
+          "nietnatuurlijkpersoon"
         ]
       },
       "startkwalificatie": {

@@ -249,13 +249,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "geo-object",
-            "objectConfiguration": {
-              "register": "ggm-volkshuisvesting-leefomgeving",
-              "schema": "geo-object"
-            }
-          }
+          "geo-object"
         ]
       },
       "wijk": {
@@ -1169,13 +1163,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "adresseerbaarobject",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "adresseerbaarobject"
-            }
-          }
+          "adresseerbaarobject"
         ]
       },
       "onderzoek": {
@@ -1409,13 +1397,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "adresseerbaarobject",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "adresseerbaarobject"
-            }
-          }
+          "adresseerbaarobject"
         ]
       },
       "standplaats": {
@@ -1538,13 +1520,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "adresseerbaarobject",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "adresseerbaarobject"
-            }
-          }
+          "adresseerbaarobject"
         ]
       },
       "adresseerbaarobject": {
@@ -1671,13 +1647,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "object",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "object"
-            }
-          }
+          "object"
         ]
       },
       "openbareruimte": {
@@ -2126,13 +2096,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "locatie",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "locatie"
-            }
-          }
+          "locatie"
         ]
       },
       "punt": {
@@ -2162,13 +2126,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "locatie",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "locatie"
-            }
-          }
+          "locatie"
         ]
       },
       "video-opname": {
@@ -2237,13 +2195,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "locatie",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "locatie"
-            }
-          }
+          "locatie"
         ]
       },
       "locatie": {
@@ -2441,13 +2393,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "locatie",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "locatie"
-            }
-          }
+          "locatie"
         ]
       },
       "lijnengroep": {
@@ -2473,13 +2419,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "locatie",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "locatie"
-            }
-          }
+          "locatie"
         ]
       },
       "lijn": {
@@ -2509,13 +2449,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "locatie",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "locatie"
-            }
-          }
+          "locatie"
         ]
       },
       "bedrijfsprocestype": {
@@ -3108,13 +3042,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "rechtspersoon",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "rechtspersoon"
-            }
-          }
+          "rechtspersoon"
         ]
       },
       "deelproces": {
@@ -3182,13 +3110,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "document",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "document"
-            }
-          }
+          "document"
         ]
       },
       "enkelvoudigdocument": {
@@ -3255,13 +3177,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "document",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "document"
-            }
-          }
+          "document"
         ]
       },
       "document": {
@@ -5955,13 +5871,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "geo-object",
-            "objectConfiguration": {
-              "register": "ggm-volkshuisvesting-leefomgeving",
-              "schema": "geo-object"
-            }
-          }
+          "geo-object"
         ]
       },
       "wijk-2": {
@@ -6227,13 +6137,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "object",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "object"
-            }
-          }
+          "object"
         ]
       },
       "benoemdobject": {
@@ -6314,13 +6218,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "object",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "object"
-            }
-          }
+          "object"
         ]
       },
       "buurt-2": {
@@ -6439,20 +6337,8 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "benoemdobject",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "benoemdobject"
-            }
-          },
-          {
-            "$ref": "adresseerbaarobject",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "adresseerbaarobject"
-            }
-          }
+          "benoemdobject",
+          "adresseerbaarobject"
         ]
       },
       "gebouwdobject": {
@@ -6623,13 +6509,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "benoemdobject",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "benoemdobject"
-            }
-          }
+          "benoemdobject"
         ]
       },
       "verblijfsobject-2": {
@@ -6764,20 +6644,8 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "adresseerbaarobjectaanduiding",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "adresseerbaarobjectaanduiding"
-            }
-          },
-          {
-            "$ref": "gebouwdobject",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "gebouwdobject"
-            }
-          }
+          "adresseerbaarobjectaanduiding",
+          "gebouwdobject"
         ]
       },
       "gemeente-2": {
@@ -6943,20 +6811,8 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "adresseerbaarobjectaanduiding",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "adresseerbaarobjectaanduiding"
-            }
-          },
-          {
-            "$ref": "benoemdterrein",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "benoemdterrein"
-            }
-          }
+          "adresseerbaarobjectaanduiding",
+          "benoemdterrein"
         ]
       },
       "adresseerbaarobjectaanduiding": {
@@ -7087,20 +6943,8 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "adresseerbaarobjectaanduiding",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "adresseerbaarobjectaanduiding"
-            }
-          },
-          {
-            "$ref": "benoemdterrein",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "benoemdterrein"
-            }
-          }
+          "adresseerbaarobjectaanduiding",
+          "benoemdterrein"
         ]
       },
       "openbareruimte-2": {
@@ -7390,13 +7234,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "kadastraleonroerendezaak",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "kadastraleonroerendezaak"
-            }
-          }
+          "kadastraleonroerendezaak"
         ]
       },
       "overigbouwwerk": {
@@ -7493,13 +7331,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "geo-object",
-            "objectConfiguration": {
-              "register": "ggm-volkshuisvesting-leefomgeving",
-              "schema": "geo-object"
-            }
-          }
+          "geo-object"
         ]
       },
       "tenaamstelling": {
@@ -7748,13 +7580,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "geo-object",
-            "objectConfiguration": {
-              "register": "ggm-volkshuisvesting-leefomgeving",
-              "schema": "geo-object"
-            }
-          }
+          "geo-object"
         ]
       },
       "kunstwerkdeel": {
@@ -7851,13 +7677,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "geo-object",
-            "objectConfiguration": {
-              "register": "ggm-volkshuisvesting-leefomgeving",
-              "schema": "geo-object"
-            }
-          }
+          "geo-object"
         ]
       },
       "briefadres": {
@@ -8162,13 +7982,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "rechtspersoon",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "rechtspersoon"
-            }
-          }
+          "rechtspersoon"
         ]
       },
       "maatschappelijkeactiviteit": {
@@ -8587,13 +8401,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "geo-object",
-            "objectConfiguration": {
-              "register": "ggm-volkshuisvesting-leefomgeving",
-              "schema": "geo-object"
-            }
-          }
+          "geo-object"
         ]
       },
       "gebied-2": {
@@ -8880,13 +8688,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "geo-object",
-            "objectConfiguration": {
-              "register": "ggm-volkshuisvesting-leefomgeving",
-              "schema": "geo-object"
-            }
-          }
+          "geo-object"
         ]
       },
       "aantekening": {
@@ -8997,13 +8799,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "object",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "object"
-            }
-          }
+          "object"
         ]
       },
       "overigeadresseerbaarobjectaanduiding": {
@@ -9033,27 +8829,9 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "nummeraanduiding",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "nummeraanduiding"
-            }
-          },
-          {
-            "$ref": "nummeraanduiding",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "nummeraanduiding"
-            }
-          },
-          {
-            "$ref": "nummeraanduiding",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "nummeraanduiding"
-            }
-          }
+          "nummeraanduiding",
+          "nummeraanduiding",
+          "nummeraanduiding"
         ]
       },
       "ondersteunendwaterdeel": {
@@ -9126,13 +8904,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "geo-object",
-            "objectConfiguration": {
-              "register": "ggm-volkshuisvesting-leefomgeving",
-              "schema": "geo-object"
-            }
-          }
+          "geo-object"
         ]
       },
       "woz-waarde": {
@@ -9249,27 +9021,9 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "adresseerbaarobjectaanduiding",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "adresseerbaarobjectaanduiding"
-            }
-          },
-          {
-            "$ref": "gebouwdobject",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "gebouwdobject"
-            }
-          },
-          {
-            "$ref": "adresseerbaarobject",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "adresseerbaarobject"
-            }
-          }
+          "adresseerbaarobjectaanduiding",
+          "gebouwdobject",
+          "adresseerbaarobject"
         ]
       },
       "appartementsrecht": {
@@ -9282,13 +9036,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "kadastraleonroerendezaak",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "kadastraleonroerendezaak"
-            }
-          }
+          "kadastraleonroerendezaak"
         ]
       },
       "zakelijkrecht": {
@@ -9641,13 +9389,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "object",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "object"
-            }
-          }
+          "object"
         ]
       },
       "vegetatieobject": {
@@ -9720,13 +9462,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "geo-object",
-            "objectConfiguration": {
-              "register": "ggm-volkshuisvesting-leefomgeving",
-              "schema": "geo-object"
-            }
-          }
+          "geo-object"
         ]
       },
       "wegdeel": {
@@ -9881,13 +9617,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "geo-object",
-            "objectConfiguration": {
-              "register": "ggm-volkshuisvesting-leefomgeving",
-              "schema": "geo-object"
-            }
-          }
+          "geo-object"
         ]
       },
       "rechtspersoon": {
@@ -10383,13 +10113,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "rechtspersoon",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "rechtspersoon"
-            }
-          }
+          "rechtspersoon"
         ]
       },
       "scheiding": {
@@ -10477,13 +10201,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "geo-object",
-            "objectConfiguration": {
-              "register": "ggm-volkshuisvesting-leefomgeving",
-              "schema": "geo-object"
-            }
-          }
+          "geo-object"
         ]
       },
       "verblijfstitel": {
@@ -10814,13 +10532,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "natuurlijkpersoon",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "natuurlijkpersoon"
-            }
-          }
+          "natuurlijkpersoon"
         ]
       },
       "spoor": {
@@ -10893,13 +10605,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "geo-object",
-            "objectConfiguration": {
-              "register": "ggm-volkshuisvesting-leefomgeving",
-              "schema": "geo-object"
-            }
-          }
+          "geo-object"
         ]
       },
       "vestiging": {
@@ -11140,13 +10846,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "geo-object",
-            "objectConfiguration": {
-              "register": "ggm-volkshuisvesting-leefomgeving",
-              "schema": "geo-object"
-            }
-          }
+          "geo-object"
         ]
       },
       "appartementsrechtsplitsing": {
@@ -11322,13 +11022,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "geo-object",
-            "objectConfiguration": {
-              "register": "ggm-volkshuisvesting-leefomgeving",
-              "schema": "geo-object"
-            }
-          }
+          "geo-object"
         ]
       },
       "ingezetene": {
@@ -11414,13 +11108,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "ingeschrevenpersoon",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "ingeschrevenpersoon"
-            }
-          }
+          "ingeschrevenpersoon"
         ]
       },
       "reisdocument": {
@@ -11703,20 +11391,8 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "geo-object",
-            "objectConfiguration": {
-              "register": "ggm-volkshuisvesting-leefomgeving",
-              "schema": "geo-object"
-            }
-          },
-          {
-            "$ref": "adresseerbaarobject",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "adresseerbaarobject"
-            }
-          }
+          "geo-object",
+          "adresseerbaarobject"
         ]
       },
       "begroeidterreindeel": {
@@ -11840,13 +11516,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "geo-object",
-            "objectConfiguration": {
-              "register": "ggm-volkshuisvesting-leefomgeving",
-              "schema": "geo-object"
-            }
-          }
+          "geo-object"
         ]
       },
       "overigescheiding": {
@@ -11934,13 +11604,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "geo-object",
-            "objectConfiguration": {
-              "register": "ggm-volkshuisvesting-leefomgeving",
-              "schema": "geo-object"
-            }
-          }
+          "geo-object"
         ]
       },
       "tunneldeel": {
@@ -12004,13 +11668,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "geo-object",
-            "objectConfiguration": {
-              "register": "ggm-volkshuisvesting-leefomgeving",
-              "schema": "geo-object"
-            }
-          }
+          "geo-object"
         ]
       },
       "woz-deelobject": {
@@ -12207,13 +11865,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "geo-object",
-            "objectConfiguration": {
-              "register": "ggm-volkshuisvesting-leefomgeving",
-              "schema": "geo-object"
-            }
-          }
+          "geo-object"
         ]
       },
       "waterdeel": {
@@ -12307,13 +11959,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "geo-object",
-            "objectConfiguration": {
-              "register": "ggm-volkshuisvesting-leefomgeving",
-              "schema": "geo-object"
-            }
-          }
+          "geo-object"
         ]
       },
       "locatieaanduidingadreswozobject": {
@@ -15020,13 +14666,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "objecttypec",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "objecttypec"
-            }
-          }
+          "objecttypec"
         ]
       },
       "objecttyped": {

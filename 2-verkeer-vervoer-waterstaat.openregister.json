@@ -49,13 +49,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "leverancier",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "leverancier"
-            }
-          }
+          "leverancier"
         ]
       },
       "mulderfeit": {
@@ -287,13 +281,7 @@
         "searchable": true,
         "hardValidation": false,
         "allOf": [
-          {
-            "$ref": "parkeerzone",
-            "objectConfiguration": {
-              "register": "ggm-verkeer-vervoer-waterstaat",
-              "schema": "parkeerzone"
-            }
-          }
+          "parkeerzone"
         ]
       },
       "parkeerrecht": {
