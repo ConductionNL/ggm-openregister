@@ -68,20 +68,12 @@
           "is": {
             "type": "object",
             "title": "is",
-            "$ref": "raadslid",
-            "objectConfiguration": {
-              "register": "ggm-bestuur-politiek",
-              "schema": "raadslid"
-            }
+            "$ref": "raadslid"
           },
           "vergadering": {
             "type": "object",
             "title": "vergadering",
-            "$ref": "vergadering",
-            "objectConfiguration": {
-              "register": "ggm-bestuur-politiek",
-              "schema": "vergadering"
-            }
+            "$ref": "vergadering"
           }
         },
         "searchable": true,
@@ -116,42 +108,26 @@
             "title": "behandelt",
             "items": {
               "type": "object",
-              "$ref": "raadsstuk",
-              "objectConfiguration": {
-                "register": "ggm-bestuur-politiek",
-                "schema": "raadsstuk"
-              }
+              "$ref": "raadsstuk"
             }
           },
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "vergadering",
-            "objectConfiguration": {
-              "register": "ggm-bestuur-politiek",
-              "schema": "vergadering"
-            }
+            "$ref": "vergadering"
           },
           "hoortBij": {
             "type": "array",
             "title": "hoortBij",
             "items": {
               "type": "object",
-              "$ref": "stemming",
-              "objectConfiguration": {
-                "register": "ggm-bestuur-politiek",
-                "schema": "stemming"
-              }
+              "$ref": "stemming"
             }
           },
           "betreft": {
             "type": "object",
             "title": "betreft",
-            "$ref": "video-opname",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "video-opname"
-            }
+            "$ref": "video-opname"
           }
         },
         "searchable": true,
@@ -176,11 +152,7 @@
             "title": "heeft",
             "items": {
               "type": "object",
-              "$ref": "raadsstuk",
-              "objectConfiguration": {
-                "register": "ggm-bestuur-politiek",
-                "schema": "raadsstuk"
-              }
+              "$ref": "raadsstuk"
             }
           }
         },
@@ -191,7 +163,7 @@
         "slug": "collegelid",
         "title": "Collegelid",
         "version": "2.5.0",
-        "description": "Iemand die behoort het college van burgemeester en wethouders",
+        "description": "Iemand die behoort het college van burgemeester en wethouders Extends: ingezetene.",
         "required": [
           "voornaam",
           "achternaam",
@@ -240,18 +212,11 @@
           "is": {
             "type": "object",
             "title": "is",
-            "$ref": "indiener",
-            "objectConfiguration": {
-              "register": "ggm-bestuur-politiek",
-              "schema": "indiener"
-            }
+            "$ref": "indiener"
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "ingezetene"
-        ]
+        "hardValidation": false
       },
       "dossier": {
         "slug": "dossier",
@@ -272,11 +237,7 @@
             "title": "hoortBij",
             "items": {
               "type": "object",
-              "$ref": "raadsstuk",
-              "objectConfiguration": {
-                "register": "ggm-bestuur-politiek",
-                "schema": "raadsstuk"
-              }
+              "$ref": "raadsstuk"
             }
           }
         },
@@ -305,22 +266,14 @@
           "is": {
             "type": "object",
             "title": "is",
-            "$ref": "rechtspersoon",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "rechtspersoon"
-            }
+            "$ref": "rechtspersoon"
           },
           "heeft": {
             "type": "array",
             "title": "heeft",
             "items": {
               "type": "object",
-              "$ref": "raadsstuk",
-              "objectConfiguration": {
-                "register": "ggm-bestuur-politiek",
-                "schema": "raadsstuk"
-              }
+              "$ref": "raadsstuk"
             }
           }
         },
@@ -346,11 +299,7 @@
             "title": "hoortBij",
             "items": {
               "type": "object",
-              "$ref": "raadsstuk",
-              "objectConfiguration": {
-                "register": "ggm-bestuur-politiek",
-                "schema": "raadsstuk"
-              }
+              "$ref": "raadsstuk"
             }
           }
         },
@@ -376,11 +325,7 @@
             "title": "isLidVan",
             "items": {
               "type": "object",
-              "$ref": "raadslid",
-              "objectConfiguration": {
-                "register": "ggm-bestuur-politiek",
-                "schema": "raadslid"
-              }
+              "$ref": "raadslid"
             }
           },
           "heeft": {
@@ -388,11 +333,7 @@
             "title": "heeft",
             "items": {
               "type": "object",
-              "$ref": "vergadering",
-              "objectConfiguration": {
-                "register": "ggm-bestuur-politiek",
-                "schema": "vergadering"
-              }
+              "$ref": "vergadering"
             }
           }
         },
@@ -403,7 +344,7 @@
         "slug": "raadslid",
         "title": "Raadslid",
         "version": "2.5.0",
-        "description": "Iemand die behoort de gemeenteraad",
+        "description": "Iemand die behoort de gemeenteraad Extends: ingezetene.",
         "required": [
           "voornaam",
           "achternaam",
@@ -448,28 +389,17 @@
             "title": "isLidVan",
             "items": {
               "type": "object",
-              "$ref": "raadscommissie",
-              "objectConfiguration": {
-                "register": "ggm-bestuur-politiek",
-                "schema": "raadscommissie"
-              }
+              "$ref": "raadscommissie"
             }
           },
           "is": {
             "type": "object",
             "title": "is",
-            "$ref": "indiener",
-            "objectConfiguration": {
-              "register": "ggm-bestuur-politiek",
-              "schema": "indiener"
-            }
+            "$ref": "indiener"
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "ingezetene"
-        ]
+        "hardValidation": false
       },
       "raadsstuk": {
         "slug": "raadsstuk",
@@ -511,40 +441,24 @@
           "betreft": {
             "type": "object",
             "title": "betreft",
-            "$ref": "stemming",
-            "objectConfiguration": {
-              "register": "ggm-bestuur-politiek",
-              "schema": "stemming"
-            }
+            "$ref": "stemming"
           },
           "heeftVerslag": {
             "type": "object",
             "title": "heeftVerslag",
-            "$ref": "vergadering",
-            "objectConfiguration": {
-              "register": "ggm-bestuur-politiek",
-              "schema": "vergadering"
-            }
+            "$ref": "vergadering"
           },
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "taakveld",
-            "objectConfiguration": {
-              "register": "ggm-bestuur-politiek",
-              "schema": "taakveld"
-            }
+            "$ref": "taakveld"
           },
           "wordtBehandeldIn": {
             "type": "array",
             "title": "wordtBehandeldIn",
             "items": {
               "type": "object",
-              "$ref": "vergadering",
-              "objectConfiguration": {
-                "register": "ggm-bestuur-politiek",
-                "schema": "vergadering"
-              }
+              "$ref": "vergadering"
             }
           },
           "hoortBij": {
@@ -552,11 +466,7 @@
             "title": "hoortBij",
             "items": {
               "type": "object",
-              "$ref": "programma",
-              "objectConfiguration": {
-                "register": "ggm-bestuur-politiek",
-                "schema": "programma"
-              }
+              "$ref": "programma"
             }
           },
           "behandelt": {
@@ -564,11 +474,7 @@
             "title": "behandelt",
             "items": {
               "type": "object",
-              "$ref": "agendapunt",
-              "objectConfiguration": {
-                "register": "ggm-bestuur-politiek",
-                "schema": "agendapunt"
-              }
+              "$ref": "agendapunt"
             }
           }
         },
@@ -606,20 +512,12 @@
           "betreft": {
             "type": "object",
             "title": "betreft",
-            "$ref": "raadsstuk",
-            "objectConfiguration": {
-              "register": "ggm-bestuur-politiek",
-              "schema": "raadsstuk"
-            }
+            "$ref": "raadsstuk"
           },
           "hoortBij": {
             "type": "object",
             "title": "hoortBij",
-            "$ref": "agendapunt",
-            "objectConfiguration": {
-              "register": "ggm-bestuur-politiek",
-              "schema": "agendapunt"
-            }
+            "$ref": "agendapunt"
           }
         },
         "searchable": true,
@@ -644,11 +542,7 @@
             "title": "heeft",
             "items": {
               "type": "object",
-              "$ref": "raadsstuk",
-              "objectConfiguration": {
-                "register": "ggm-bestuur-politiek",
-                "schema": "raadsstuk"
-              }
+              "$ref": "raadsstuk"
             }
           }
         },
@@ -692,53 +586,33 @@
             "title": "betreft",
             "items": {
               "type": "object",
-              "$ref": "video-opname",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "video-opname"
-              }
+              "$ref": "video-opname"
             }
           },
           "heeftVerslag": {
             "type": "object",
             "title": "heeftVerslag",
-            "$ref": "raadsstuk",
-            "objectConfiguration": {
-              "register": "ggm-bestuur-politiek",
-              "schema": "raadsstuk"
-            }
+            "$ref": "raadsstuk"
           },
           "wordtBehandeldIn": {
             "type": "array",
             "title": "wordtBehandeldIn",
             "items": {
               "type": "object",
-              "$ref": "raadsstuk",
-              "objectConfiguration": {
-                "register": "ggm-bestuur-politiek",
-                "schema": "raadsstuk"
-              }
+              "$ref": "raadsstuk"
             }
           },
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "raadscommissie",
-            "objectConfiguration": {
-              "register": "ggm-bestuur-politiek",
-              "schema": "raadscommissie"
-            }
+            "$ref": "raadscommissie"
           },
           "aanwezigedeelnemer": {
             "type": "array",
             "title": "aanwezigedeelnemer",
             "items": {
               "type": "object",
-              "$ref": "aanwezige-deelnemer",
-              "objectConfiguration": {
-                "register": "ggm-bestuur-politiek",
-                "schema": "aanwezige-deelnemer"
-              }
+              "$ref": "aanwezige-deelnemer"
             }
           }
         },

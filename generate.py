@@ -476,17 +476,20 @@ class OpenRegisterGenerator:
             "hardValidation": False,
         }
 
-        # Handle generalizations (inheritance via allOf)
-        # OpenRegister expects allOf as a flat array of schema slugs
+        # Handle generalizations (inheritance)
+        # Note: allOf is not used because OpenRegister's extractSchemaDelta()
+        # tries to load parent schemas from the database during createFromArray(),
+        # which fails if the parent hasn't been imported yet. Instead, we record
+        # the inheritance as a description annotation.
         parent_ids = self.db.get_generalizations_for_object(obj_id)
         if parent_ids:
-            all_of = []
+            parent_names = []
             for parent_id in parent_ids:
                 if parent_id in self.object_slug_map:
-                    parent_slug = self.object_slug_map[parent_id]
-                    all_of.append(parent_slug)
-            if all_of:
-                schema["allOf"] = all_of
+                    parent_names.append(self.object_slug_map[parent_id])
+            if parent_names:
+                extends_note = f" Extends: {', '.join(parent_names)}."
+                schema["description"] = schema["description"] + extends_note
 
         return schema
 
@@ -574,11 +577,12 @@ class OpenRegisterGenerator:
             elif card_str in ("0..1", "1", "1..1"):
                 is_multiple = False
 
-        obj_config = {
-            "register": target_register,
-            "schema": target_slug,
-        }
-
+        # Note: We use $ref with bare slugs only. objectConfiguration is NOT
+        # included because OpenRegister's importSchema() calls schemaMapper->find()
+        # on objectConfiguration.schema, which throws ValidationException (not
+        # DoesNotExistException) when the schema doesn't exist yet with
+        # multitenancy/RBAC enabled, crashing the entire import.
+        # The $ref slugs are safely left as strings when not resolvable.
         if is_multiple:
             prop = {
                 "type": "array",
@@ -586,7 +590,6 @@ class OpenRegisterGenerator:
                 "items": {
                     "type": "object",
                     "$ref": target_slug,
-                    "objectConfiguration": obj_config,
                 },
             }
         else:
@@ -594,7 +597,6 @@ class OpenRegisterGenerator:
                 "type": "object",
                 "title": prop_name,
                 "$ref": target_slug,
-                "objectConfiguration": obj_config,
             }
 
         return (prop_name, prop)

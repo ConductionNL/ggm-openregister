@@ -29,11 +29,7 @@
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "project",
-            "objectConfiguration": {
-              "register": "ggm-sport-cultuur-recreatie",
-              "schema": "project"
-            }
+            "$ref": "project"
           }
         },
         "searchable": true,
@@ -210,38 +206,22 @@
           "bevat": {
             "type": "object",
             "title": "bevat",
-            "$ref": "vondst",
-            "objectConfiguration": {
-              "register": "ggm-sport-cultuur-recreatie",
-              "schema": "vondst"
-            }
+            "$ref": "vondst"
           },
           "isVanSoort": {
             "type": "object",
             "title": "isVanSoort",
-            "$ref": "artefactsoort",
-            "objectConfiguration": {
-              "register": "ggm-sport-cultuur-recreatie",
-              "schema": "artefactsoort"
-            }
+            "$ref": "artefactsoort"
           },
           "zitIn": {
             "type": "object",
             "title": "zitIn",
-            "$ref": "doos",
-            "objectConfiguration": {
-              "register": "ggm-sport-cultuur-recreatie",
-              "schema": "doos"
-            }
+            "$ref": "doos"
           },
           "vindbaarOp": {
             "type": "object",
             "title": "vindbaarOp",
-            "$ref": "magazijnplaatsing",
-            "objectConfiguration": {
-              "register": "ggm-sport-cultuur-recreatie",
-              "schema": "magazijnplaatsing"
-            }
+            "$ref": "magazijnplaatsing"
           }
         },
         "searchable": true,
@@ -277,11 +257,7 @@
             "title": "isVanSoort",
             "items": {
               "type": "object",
-              "$ref": "artefact",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "artefact"
-              }
+              "$ref": "artefact"
             }
           }
         },
@@ -298,11 +274,7 @@
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "project",
-            "objectConfiguration": {
-              "register": "ggm-sport-cultuur-recreatie",
-              "schema": "project"
-            }
+            "$ref": "project"
           }
         },
         "searchable": true,
@@ -353,20 +325,12 @@
           "zitIn": {
             "type": "object",
             "title": "zitIn",
-            "$ref": "magazijnplaatsing",
-            "objectConfiguration": {
-              "register": "ggm-sport-cultuur-recreatie",
-              "schema": "magazijnplaatsing"
-            }
+            "$ref": "magazijnplaatsing"
           },
           "staatOp": {
             "type": "object",
             "title": "staatOp",
-            "$ref": "magazijnlocatie",
-            "objectConfiguration": {
-              "register": "ggm-sport-cultuur-recreatie",
-              "schema": "magazijnlocatie"
-            }
+            "$ref": "magazijnlocatie"
           }
         },
         "searchable": true,
@@ -420,11 +384,7 @@
             "title": "wordtBegrensdDoor",
             "items": {
               "type": "object",
-              "$ref": "project",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "project"
-              }
+              "$ref": "project"
             }
           },
           "heeftLocatie": {
@@ -432,11 +392,7 @@
             "title": "heeftLocatie",
             "items": {
               "type": "object",
-              "$ref": "put",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "put"
-              }
+              "$ref": "put"
             }
           }
         },
@@ -478,22 +434,14 @@
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "stelling",
-            "objectConfiguration": {
-              "register": "ggm-sport-cultuur-recreatie",
-              "schema": "stelling"
-            }
+            "$ref": "stelling"
           },
           "staatOp": {
             "type": "array",
             "title": "staatOp",
             "items": {
               "type": "object",
-              "$ref": "magazijnplaatsing",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "magazijnplaatsing"
-              }
+              "$ref": "magazijnplaatsing"
             }
           }
         },
@@ -556,31 +504,19 @@
           "hoortBij": {
             "type": "object",
             "title": "hoortBij",
-            "$ref": "project",
-            "objectConfiguration": {
-              "register": "ggm-sport-cultuur-recreatie",
-              "schema": "project"
-            }
+            "$ref": "project"
           },
           "staatOp": {
             "type": "object",
             "title": "staatOp",
-            "$ref": "magazijnlocatie",
-            "objectConfiguration": {
-              "register": "ggm-sport-cultuur-recreatie",
-              "schema": "magazijnlocatie"
-            }
+            "$ref": "magazijnlocatie"
           },
           "zitIn": {
             "type": "array",
             "title": "zitIn",
             "items": {
               "type": "object",
-              "$ref": "doos",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "doos"
-              }
+              "$ref": "doos"
             }
           },
           "vindbaarOp": {
@@ -588,11 +524,7 @@
             "title": "vindbaarOp",
             "items": {
               "type": "object",
-              "$ref": "artefact",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "artefact"
-              }
+              "$ref": "artefact"
             }
           }
         },
@@ -674,22 +606,14 @@
           "hoortBij": {
             "type": "object",
             "title": "hoortBij",
-            "$ref": "vindplaats",
-            "objectConfiguration": {
-              "register": "ggm-sport-cultuur-recreatie",
-              "schema": "vindplaats"
-            }
+            "$ref": "vindplaats"
           },
           "heeft": {
             "type": "array",
             "title": "heeft",
             "items": {
               "type": "object",
-              "$ref": "put",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "put"
-              }
+              "$ref": "put"
             }
           },
           "wordtBegrensdDoor": {
@@ -697,11 +621,7 @@
             "title": "wordtBegrensdDoor",
             "items": {
               "type": "object",
-              "$ref": "locatie",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "locatie"
-              }
+              "$ref": "locatie"
             }
           }
         },
@@ -739,11 +659,7 @@
             "title": "heeft",
             "items": {
               "type": "object",
-              "$ref": "vlak",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "vlak"
-              }
+              "$ref": "vlak"
             }
           },
           "heeftLocatie": {
@@ -751,11 +667,7 @@
             "title": "heeftLocatie",
             "items": {
               "type": "object",
-              "$ref": "locatie",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "locatie"
-              }
+              "$ref": "locatie"
             }
           }
         },
@@ -850,11 +762,7 @@
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "vlak",
-            "objectConfiguration": {
-              "register": "ggm-sport-cultuur-recreatie",
-              "schema": "vlak"
-            }
+            "$ref": "vlak"
           }
         },
         "searchable": true,
@@ -884,11 +792,7 @@
             "title": "heeft",
             "items": {
               "type": "object",
-              "$ref": "magazijnlocatie",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "magazijnlocatie"
-              }
+              "$ref": "magazijnlocatie"
             }
           }
         },
@@ -988,11 +892,7 @@
           "hoortBij": {
             "type": "object",
             "title": "hoortBij",
-            "$ref": "project",
-            "objectConfiguration": {
-              "register": "ggm-sport-cultuur-recreatie",
-              "schema": "project"
-            }
+            "$ref": "project"
           }
         },
         "searchable": true,
@@ -1051,11 +951,7 @@
             "title": "heeft",
             "items": {
               "type": "object",
-              "$ref": "spoor",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "spoor"
-              }
+              "$ref": "spoor"
             }
           }
         },
@@ -1147,22 +1043,14 @@
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "vulling",
-            "objectConfiguration": {
-              "register": "ggm-sport-cultuur-recreatie",
-              "schema": "vulling"
-            }
+            "$ref": "vulling"
           },
           "bevat": {
             "type": "array",
             "title": "bevat",
             "items": {
               "type": "object",
-              "$ref": "artefact",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "artefact"
-              }
+              "$ref": "artefact"
             }
           }
         },
@@ -1241,11 +1129,7 @@
             "title": "heeft",
             "items": {
               "type": "object",
-              "$ref": "vondst",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "vondst"
-              }
+              "$ref": "vondst"
             }
           }
         },
@@ -1269,22 +1153,14 @@
           "doet": {
             "type": "object",
             "title": "doet",
-            "$ref": "bezoeker",
-            "objectConfiguration": {
-              "register": "ggm-sport-cultuur-recreatie",
-              "schema": "bezoeker"
-            }
+            "$ref": "bezoeker"
           },
           "voor": {
             "type": "array",
             "title": "voor",
             "items": {
               "type": "object",
-              "$ref": "archiefstuk",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "archiefstuk"
-              }
+              "$ref": "archiefstuk"
             }
           }
         },
@@ -1326,11 +1202,7 @@
             "title": "hoortBij",
             "items": {
               "type": "object",
-              "$ref": "indeling",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "indeling"
-              }
+              "$ref": "indeling"
             }
           },
           "isOnderdeelVan": {
@@ -1338,11 +1210,7 @@
             "title": "isOnderdeelVan",
             "items": {
               "type": "object",
-              "$ref": "archiefstuk",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "archiefstuk"
-              }
+              "$ref": "archiefstuk"
             }
           },
           "stamtUit": {
@@ -1350,32 +1218,20 @@
             "title": "stamtUit",
             "items": {
               "type": "object",
-              "$ref": "periode",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "periode"
-              }
+              "$ref": "periode"
             }
           },
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "rechthebbende",
-            "objectConfiguration": {
-              "register": "ggm-sport-cultuur-recreatie",
-              "schema": "rechthebbende"
-            }
+            "$ref": "rechthebbende"
           },
           "valtBinnen": {
             "type": "array",
             "title": "valtBinnen",
             "items": {
               "type": "object",
-              "$ref": "archiefcategorie",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "archiefcategorie"
-              }
+              "$ref": "archiefcategorie"
             }
           }
         },
@@ -1412,11 +1268,7 @@
             "title": "valtBinnen",
             "items": {
               "type": "object",
-              "$ref": "archief",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "archief"
-              }
+              "$ref": "archief"
             }
           }
         },
@@ -1427,7 +1279,7 @@
         "slug": "archiefstuk",
         "title": "Archiefstuk",
         "version": "2.5.0",
-        "description": "Bijeengebrachte informatie, ongeacht het medium, die wordt gecreëerd, ontvangen en gearchiveerd door een bureau, een instelling, een organisatie of een individu met het oog op het nakomen van wettelijke verplichtingen of het uitvoeren van zakelijke transacties.(AAT)",
+        "description": "Bijeengebrachte informatie, ongeacht het medium, die wordt gecreëerd, ontvangen en gearchiveerd door een bureau, een instelling, een organisatie of een individu met het oog op het nakomen van wettelijke verplichtingen of het uitvoeren van zakelijke transacties.(AAT) Extends: document, erfgoed-object.",
         "required": [
           "trefwoorden",
           "openbaarheidsbeperking",
@@ -1468,67 +1320,43 @@
           "valtBinnen": {
             "type": "object",
             "title": "valtBinnen",
-            "$ref": "indeling",
-            "objectConfiguration": {
-              "register": "ggm-sport-cultuur-recreatie",
-              "schema": "indeling"
-            }
+            "$ref": "indeling"
           },
           "stamtUit": {
             "type": "array",
             "title": "stamtUit",
             "items": {
               "type": "object",
-              "$ref": "periode",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "periode"
-              }
+              "$ref": "periode"
             }
           },
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "nadere-toegang",
-            "objectConfiguration": {
-              "register": "ggm-sport-cultuur-recreatie",
-              "schema": "nadere-toegang"
-            }
+            "$ref": "nadere-toegang"
           },
           "isOnderdeelVan": {
             "type": "object",
             "title": "isOnderdeelVan",
-            "$ref": "archief",
-            "objectConfiguration": {
-              "register": "ggm-sport-cultuur-recreatie",
-              "schema": "archief"
-            }
+            "$ref": "archief"
           },
           "voor": {
             "type": "array",
             "title": "voor",
             "items": {
               "type": "object",
-              "$ref": "aanvraag",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "aanvraag"
-              }
+              "$ref": "aanvraag"
             }
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "document",
-          "erfgoed-object"
-        ]
+        "hardValidation": false
       },
       "auteur": {
         "slug": "auteur",
         "title": "Auteur",
         "version": "2.5.0",
-        "description": "De persoon die verantwoordelijk is voor de inhoud van een (digitaal) document",
+        "description": "De persoon die verantwoordelijk is voor de inhoud van een (digitaal) document Extends: historisch-persoon.",
         "required": [
           "datumGeboorte",
           "datumOverlijden"
@@ -1546,16 +1374,13 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "historisch-persoon"
-        ]
+        "hardValidation": false
       },
       "bezoeker": {
         "slug": "bezoeker",
         "title": "Bezoeker",
         "version": "2.5.0",
-        "description": "Een persoon die iemand of iets bezoekt.",
+        "description": "Een persoon die iemand of iets bezoekt. Extends: natuurlijkpersoon.",
         "required": [],
         "properties": {
           "doet": {
@@ -1563,19 +1388,12 @@
             "title": "doet",
             "items": {
               "type": "object",
-              "$ref": "aanvraag",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "aanvraag"
-              }
+              "$ref": "aanvraag"
             }
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "natuurlijkpersoon"
-        ]
+        "hardValidation": false
       },
       "depot": {
         "slug": "depot",
@@ -1601,11 +1419,7 @@
             "title": "isTeVindenIn",
             "items": {
               "type": "object",
-              "$ref": "vindplaats",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "vindplaats"
-              }
+              "$ref": "vindplaats"
             }
           },
           "heeft": {
@@ -1613,11 +1427,7 @@
             "title": "heeft",
             "items": {
               "type": "object",
-              "$ref": "stelling",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "stelling"
-              }
+              "$ref": "stelling"
             }
           }
         },
@@ -1658,11 +1468,7 @@
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "archiefstuk",
-            "objectConfiguration": {
-              "register": "ggm-sport-cultuur-recreatie",
-              "schema": "archiefstuk"
-            }
+            "$ref": "archiefstuk"
           }
         },
         "searchable": true,
@@ -1704,21 +1510,13 @@
             "title": "valtBinnen",
             "items": {
               "type": "object",
-              "$ref": "indeling",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "indeling"
-              }
+              "$ref": "indeling"
             }
           },
           "hoortBij": {
             "type": "object",
             "title": "hoortBij",
-            "$ref": "archief",
-            "objectConfiguration": {
-              "register": "ggm-sport-cultuur-recreatie",
-              "schema": "archief"
-            }
+            "$ref": "archief"
           }
         },
         "searchable": true,
@@ -1747,11 +1545,7 @@
           "wordtBeschreven": {
             "type": "object",
             "title": "wordtBeschreven",
-            "$ref": "nadere-toegang",
-            "objectConfiguration": {
-              "register": "ggm-sport-cultuur-recreatie",
-              "schema": "nadere-toegang"
-            }
+            "$ref": "nadere-toegang"
           }
         },
         "searchable": true,
@@ -1774,22 +1568,14 @@
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "stelling",
-            "objectConfiguration": {
-              "register": "ggm-sport-cultuur-recreatie",
-              "schema": "stelling"
-            }
+            "$ref": "stelling"
           },
           "isTeVindenIn": {
             "type": "array",
             "title": "isTeVindenIn",
             "items": {
               "type": "object",
-              "$ref": "vindplaats",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "vindplaats"
-              }
+              "$ref": "vindplaats"
             }
           }
         },
@@ -1808,21 +1594,13 @@
             "title": "wordtBeschreven",
             "items": {
               "type": "object",
-              "$ref": "index",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "index"
-              }
+              "$ref": "index"
             }
           },
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "archiefstuk",
-            "objectConfiguration": {
-              "register": "ggm-sport-cultuur-recreatie",
-              "schema": "archiefstuk"
-            }
+            "$ref": "archiefstuk"
           }
         },
         "searchable": true,
@@ -1852,11 +1630,7 @@
             "title": "heeft",
             "items": {
               "type": "object",
-              "$ref": "archiefstuk",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "archiefstuk"
-              }
+              "$ref": "archiefstuk"
             }
           }
         },
@@ -1882,21 +1656,13 @@
             "title": "isTeVindenIn",
             "items": {
               "type": "object",
-              "$ref": "vindplaats",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "vindplaats"
-              }
+              "$ref": "vindplaats"
             }
           },
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "kast",
-            "objectConfiguration": {
-              "register": "ggm-sport-cultuur-recreatie",
-              "schema": "kast"
-            }
+            "$ref": "kast"
           }
         },
         "searchable": true,
@@ -1906,7 +1672,7 @@
         "slug": "rechthebbende",
         "title": "Rechthebbende",
         "version": "2.5.0",
-        "description": "Een rechthebbende is iemand die rechten heeft op een goed.",
+        "description": "Een rechthebbende is iemand die rechten heeft op een goed. Extends: rechtspersoon.",
         "required": [],
         "properties": {
           "heeft": {
@@ -1914,19 +1680,12 @@
             "title": "heeft",
             "items": {
               "type": "object",
-              "$ref": "archief",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "archief"
-              }
+              "$ref": "archief"
             }
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "rechtspersoon"
-        ]
+        "hardValidation": false
       },
       "stelling-2": {
         "slug": "stelling-2",
@@ -1947,11 +1706,7 @@
             "title": "isTeVindenIn",
             "items": {
               "type": "object",
-              "$ref": "vindplaats",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "vindplaats"
-              }
+              "$ref": "vindplaats"
             }
           },
           "heeft": {
@@ -1959,11 +1714,7 @@
             "title": "heeft",
             "items": {
               "type": "object",
-              "$ref": "kast",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "kast"
-              }
+              "$ref": "kast"
             }
           }
         },
@@ -1974,7 +1725,7 @@
         "slug": "uitgever",
         "title": "Uitgever",
         "version": "2.5.0",
-        "description": "Iemand die iets op de markt brengt; iemand die iets uitgeeft",
+        "description": "Iemand die iets op de markt brengt; iemand die iets uitgeeft Extends: rechtspersoon.",
         "required": [],
         "properties": {
           "heeft": {
@@ -1982,19 +1733,12 @@
             "title": "heeft",
             "items": {
               "type": "object",
-              "$ref": "archiefstuk",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "archiefstuk"
-              }
+              "$ref": "archiefstuk"
             }
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "rechtspersoon"
-        ]
+        "hardValidation": false
       },
       "vindplaats-2": {
         "slug": "vindplaats-2",
@@ -2006,22 +1750,14 @@
           "isTeVindenIn": {
             "type": "object",
             "title": "isTeVindenIn",
-            "$ref": "stelling",
-            "objectConfiguration": {
-              "register": "ggm-sport-cultuur-recreatie",
-              "schema": "stelling"
-            }
+            "$ref": "stelling"
           },
           "heeft": {
             "type": "array",
             "title": "heeft",
             "items": {
               "type": "object",
-              "$ref": "archiefstuk",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "archiefstuk"
-              }
+              "$ref": "archiefstuk"
             }
           }
         },
@@ -2062,11 +1798,7 @@
             "title": "speeltRolIn",
             "items": {
               "type": "object",
-              "$ref": "historisch-persoon",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "historisch-persoon"
-              }
+              "$ref": "historisch-persoon"
             }
           },
           "valtBinnen": {
@@ -2074,11 +1806,7 @@
             "title": "valtBinnen",
             "items": {
               "type": "object",
-              "$ref": "objectclassificatie",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "objectclassificatie"
-              }
+              "$ref": "objectclassificatie"
             }
           },
           "betreft": {
@@ -2086,11 +1814,7 @@
             "title": "betreft",
             "items": {
               "type": "object",
-              "$ref": "foto",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "foto"
-              }
+              "$ref": "foto"
             }
           }
         },
@@ -2101,7 +1825,7 @@
         "slug": "historisch-persoon",
         "title": "Historisch Persoon ",
         "version": "2.5.0",
-        "description": "Natuurlijk persoon waarvan informatie beschikbaar is uit het verleden.",
+        "description": "Natuurlijk persoon waarvan informatie beschikbaar is uit het verleden. Extends: natuurlijkpersoon.",
         "required": [
           "naam",
           "datumGeboorte",
@@ -2150,11 +1874,7 @@
             "title": "heeftVerbinding",
             "items": {
               "type": "object",
-              "$ref": "museumobject",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "museumobject"
-              }
+              "$ref": "museumobject"
             }
           },
           "speeltRolIn": {
@@ -2162,11 +1882,7 @@
             "title": "speeltRolIn",
             "items": {
               "type": "object",
-              "$ref": "erfgoed-object",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "erfgoed-object"
-              }
+              "$ref": "erfgoed-object"
             }
           },
           "isGewijdAan": {
@@ -2174,19 +1890,12 @@
             "title": "isGewijdAan",
             "items": {
               "type": "object",
-              "$ref": "tentoonstelling",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "tentoonstelling"
-              }
+              "$ref": "tentoonstelling"
             }
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "natuurlijkpersoon"
-        ]
+        "hardValidation": false
       },
       "objectclassificatie": {
         "slug": "objectclassificatie",
@@ -2212,11 +1921,7 @@
             "title": "valtBinnen",
             "items": {
               "type": "object",
-              "$ref": "erfgoed-object",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "erfgoed-object"
-              }
+              "$ref": "erfgoed-object"
             }
           }
         },
@@ -2252,11 +1957,7 @@
             "title": "monumentAmbacht",
             "items": {
               "type": "object",
-              "$ref": "beschermde-status",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "beschermde-status"
-              }
+              "$ref": "beschermde-status"
             }
           }
         },
@@ -2337,11 +2038,7 @@
             "title": "monumentFunctie",
             "items": {
               "type": "object",
-              "$ref": "oorspronkelijkefunctie",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "oorspronkelijkefunctie"
-              }
+              "$ref": "oorspronkelijkefunctie"
             }
           },
           "betreft": {
@@ -2349,11 +2046,7 @@
             "title": "betreft",
             "items": {
               "type": "object",
-              "$ref": "pand",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "pand"
-              }
+              "$ref": "pand"
             }
           },
           "monumentBouwtype": {
@@ -2361,11 +2054,7 @@
             "title": "monumentBouwtype",
             "items": {
               "type": "object",
-              "$ref": "bouwtype",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "bouwtype"
-              }
+              "$ref": "bouwtype"
             }
           },
           "monumentBouwactiviteit": {
@@ -2373,11 +2062,7 @@
             "title": "monumentBouwactiviteit",
             "items": {
               "type": "object",
-              "$ref": "bouwactiviteit",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "bouwactiviteit"
-              }
+              "$ref": "bouwactiviteit"
             }
           },
           "monumentFotos": {
@@ -2385,11 +2070,7 @@
             "title": "monumentFotos",
             "items": {
               "type": "object",
-              "$ref": "foto",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "foto"
-              }
+              "$ref": "foto"
             }
           },
           "monumentBouwstijl": {
@@ -2397,11 +2078,7 @@
             "title": "monumentBouwstijl",
             "items": {
               "type": "object",
-              "$ref": "bouwstijl",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "bouwstijl"
-              }
+              "$ref": "bouwstijl"
             }
           },
           "monumentAmbacht": {
@@ -2409,11 +2086,7 @@
             "title": "monumentAmbacht",
             "items": {
               "type": "object",
-              "$ref": "ambacht",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "ambacht"
-              }
+              "$ref": "ambacht"
             }
           }
         },
@@ -2461,11 +2134,7 @@
             "title": "monumentBouwactiviteit",
             "items": {
               "type": "object",
-              "$ref": "beschermde-status",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "beschermde-status"
-              }
+              "$ref": "beschermde-status"
             }
           }
         },
@@ -2508,11 +2177,7 @@
             "title": "monumentBouwstijl",
             "items": {
               "type": "object",
-              "$ref": "beschermde-status",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "beschermde-status"
-              }
+              "$ref": "beschermde-status"
             }
           }
         },
@@ -2549,11 +2214,7 @@
             "title": "monumentBouwtype",
             "items": {
               "type": "object",
-              "$ref": "beschermde-status",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "beschermde-status"
-              }
+              "$ref": "beschermde-status"
             }
           }
         },
@@ -2612,11 +2273,7 @@
             "title": "monumentFunctie",
             "items": {
               "type": "object",
-              "$ref": "beschermde-status",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "beschermde-status"
-              }
+              "$ref": "beschermde-status"
             }
           }
         },
@@ -2650,32 +2307,20 @@
           "bestaatUit": {
             "type": "object",
             "title": "bestaatUit",
-            "$ref": "programma",
-            "objectConfiguration": {
-              "register": "ggm-sport-cultuur-recreatie",
-              "schema": "programma"
-            }
+            "$ref": "programma"
           },
           "heeft": {
             "type": "array",
             "title": "heeft",
             "items": {
               "type": "object",
-              "$ref": "reservering",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "reservering"
-              }
+              "$ref": "reservering"
             }
           },
           "vanSoort": {
             "type": "object",
             "title": "vanSoort",
-            "$ref": "activiteitsoort",
-            "objectConfiguration": {
-              "register": "ggm-sport-cultuur-recreatie",
-              "schema": "activiteitsoort"
-            }
+            "$ref": "activiteitsoort"
           }
         },
         "searchable": true,
@@ -2705,11 +2350,7 @@
             "title": "vanSoort",
             "items": {
               "type": "object",
-              "$ref": "activiteit",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "activiteit"
-              }
+              "$ref": "activiteit"
             }
           }
         },
@@ -2745,20 +2386,12 @@
           "betreft": {
             "type": "object",
             "title": "betreft",
-            "$ref": "product",
-            "objectConfiguration": {
-              "register": "ggm-sport-cultuur-recreatie",
-              "schema": "product"
-            }
+            "$ref": "product"
           },
           "tegenPrijs": {
             "type": "object",
             "title": "tegenPrijs",
-            "$ref": "prijs",
-            "objectConfiguration": {
-              "register": "ggm-sport-cultuur-recreatie",
-              "schema": "prijs"
-            }
+            "$ref": "prijs"
           }
         },
         "searchable": true,
@@ -2768,7 +2401,7 @@
         "slug": "balieverkoop-entreekaart",
         "title": "Balieverkoop Entreekaart",
         "version": "2.5.0",
-        "description": "Verkoop van een entreekaart aan de balie",
+        "description": "Verkoop van een entreekaart aan de balie Extends: balieverkoop.",
         "required": [
           "rondleiding",
           "datumStart",
@@ -2797,16 +2430,13 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "balieverkoop"
-        ]
+        "hardValidation": false
       },
       "belanghebbende": {
         "slug": "belanghebbende",
         "title": "Belanghebbende",
         "version": "2.5.0",
-        "description": "Een persoon wiens belang rechtstreeks bij een besluit is betrokken.",
+        "description": "Een persoon wiens belang rechtstreeks bij een besluit is betrokken. Extends: rechtspersoon.",
         "required": [
           "datumStart",
           "datumTot"
@@ -2827,19 +2457,12 @@
             "title": "heeft",
             "items": {
               "type": "object",
-              "$ref": "museumobject",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "museumobject"
-              }
+              "$ref": "museumobject"
             }
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "rechtspersoon"
-        ]
+        "hardValidation": false
       },
       "bruikleen": {
         "slug": "bruikleen",
@@ -2884,11 +2507,7 @@
             "title": "betreft",
             "items": {
               "type": "object",
-              "$ref": "museumobject",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "museumobject"
-              }
+              "$ref": "museumobject"
             }
           },
           "is": {
@@ -2896,11 +2515,7 @@
             "title": "is",
             "items": {
               "type": "object",
-              "$ref": "lener",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "lener"
-              }
+              "$ref": "lener"
             }
           },
           "isBedoeldVoor": {
@@ -2908,11 +2523,7 @@
             "title": "isBedoeldVoor",
             "items": {
               "type": "object",
-              "$ref": "tentoonstelling",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "tentoonstelling"
-              }
+              "$ref": "tentoonstelling"
             }
           }
         },
@@ -2943,11 +2554,7 @@
             "title": "bevat",
             "items": {
               "type": "object",
-              "$ref": "museumobject",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "museumobject"
-              }
+              "$ref": "museumobject"
             }
           }
         },
@@ -2990,11 +2597,7 @@
             "title": "bestaatUit",
             "items": {
               "type": "object",
-              "$ref": "doelgroep",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "doelgroep"
-              }
+              "$ref": "doelgroep"
             }
           },
           "valtBinnen": {
@@ -3002,11 +2605,7 @@
             "title": "valtBinnen",
             "items": {
               "type": "object",
-              "$ref": "museumrelatie",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "museumrelatie"
-              }
+              "$ref": "museumrelatie"
             }
           }
         },
@@ -3017,7 +2616,7 @@
         "slug": "entreekaart",
         "title": "Entreekaart",
         "version": "2.5.0",
-        "description": "Bewijs van toegang tot een gebouw of voorstelling",
+        "description": "Bewijs van toegang tot een gebouw of voorstelling Extends: product.",
         "required": [
           "rondleiding"
         ],
@@ -3028,10 +2627,7 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "product"
-        ]
+        "hardValidation": false
       },
       "incident": {
         "slug": "incident",
@@ -3069,11 +2665,7 @@
             "title": "betreft",
             "items": {
               "type": "object",
-              "$ref": "museumobject",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "museumobject"
-              }
+              "$ref": "museumobject"
             }
           }
         },
@@ -3084,7 +2676,7 @@
         "slug": "lener",
         "title": "Lener",
         "version": "2.5.0",
-        "description": "Iemand die iets te leen krijgt, met name iemand die boeken, digitale bestanden of apparatuur leent bij een museum, bibliotheek, mediatheek of een andere uitleeninstantie",
+        "description": "Iemand die iets te leen krijgt, met name iemand die boeken, digitale bestanden of apparatuur leent bij een museum, bibliotheek, mediatheek of een andere uitleeninstantie Extends: rechtspersoon.",
         "required": [
           "opmerkingen"
         ],
@@ -3098,19 +2690,12 @@
             "title": "is",
             "items": {
               "type": "object",
-              "$ref": "bruikleen",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "bruikleen"
-              }
+              "$ref": "bruikleen"
             }
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "rechtspersoon"
-        ]
+        "hardValidation": false
       },
       "mailing": {
         "slug": "mailing",
@@ -3142,11 +2727,7 @@
             "title": "versturenAan",
             "items": {
               "type": "object",
-              "$ref": "museumrelatie",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "museumrelatie"
-              }
+              "$ref": "museumrelatie"
             }
           }
         },
@@ -3157,7 +2738,7 @@
         "slug": "museumobject",
         "title": "Museumobject",
         "version": "2.5.0",
-        "description": "Beschrijving van een fenomeen in de werkelijkheid met een zekere cultuurhistorische waarde die deel uitmaakt van de culthuurhistorisch object index. Een museum object kan gedifiniëerd worden als een object met betrekking tot gebouwd, archeologisch, roerend of cultuurlandschappelijk erfgoed. Denk hierbij bijvoorbeeld aan een gebouwd of archeologisch rijksmonument, een schilderij of een beschermd stads- of dorpsgezicht.",
+        "description": "Beschrijving van een fenomeen in de werkelijkheid met een zekere cultuurhistorische waarde die deel uitmaakt van de culthuurhistorisch object index. Een museum object kan gedifiniëerd worden als een object met betrekking tot gebouwd, archeologisch, roerend of cultuurlandschappelijk erfgoed. Denk hierbij bijvoorbeeld aan een gebouwd of archeologisch rijksmonument, een schilderij of een beschermd stads- of dorpsgezicht. Extends: erfgoed-object.",
         "required": [
           "verkrijging",
           "medium",
@@ -3199,32 +2780,20 @@
             "title": "heeftVerbinding",
             "items": {
               "type": "object",
-              "$ref": "historisch-persoon",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "historisch-persoon"
-              }
+              "$ref": "historisch-persoon"
             }
           },
           "locatie": {
             "type": "object",
             "title": "locatie",
-            "$ref": "standplaats",
-            "objectConfiguration": {
-              "register": "ggm-sport-cultuur-recreatie",
-              "schema": "standplaats"
-            }
+            "$ref": "standplaats"
           },
           "onderdeel": {
             "type": "array",
             "title": "onderdeel",
             "items": {
               "type": "object",
-              "$ref": "tentoonstelling",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "tentoonstelling"
-              }
+              "$ref": "tentoonstelling"
             }
           },
           "betreft": {
@@ -3232,11 +2801,7 @@
             "title": "betreft",
             "items": {
               "type": "object",
-              "$ref": "incident",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "incident"
-              }
+              "$ref": "incident"
             }
           },
           "bevat": {
@@ -3244,11 +2809,7 @@
             "title": "bevat",
             "items": {
               "type": "object",
-              "$ref": "collectie",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "collectie"
-              }
+              "$ref": "collectie"
             }
           },
           "heeft": {
@@ -3256,25 +2817,18 @@
             "title": "heeft",
             "items": {
               "type": "object",
-              "$ref": "belanghebbende",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "belanghebbende"
-              }
+              "$ref": "belanghebbende"
             }
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "erfgoed-object"
-        ]
+        "hardValidation": false
       },
       "museumrelatie": {
         "slug": "museumrelatie",
         "title": "Museumrelatie",
         "version": "2.5.0",
-        "description": "Betrekking waarin het museum en personen tot elkaar staan",
+        "description": "Betrekking waarin het museum en personen tot elkaar staan Extends: rechtspersoon.",
         "required": [
           "relatiesoort"
         ],
@@ -3289,11 +2843,7 @@
             "title": "voor",
             "items": {
               "type": "object",
-              "$ref": "programma",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "programma"
-              }
+              "$ref": "programma"
             }
           },
           "versturenAan": {
@@ -3301,11 +2851,7 @@
             "title": "versturenAan",
             "items": {
               "type": "object",
-              "$ref": "mailing",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "mailing"
-              }
+              "$ref": "mailing"
             }
           },
           "valtBinnen": {
@@ -3313,19 +2859,12 @@
             "title": "valtBinnen",
             "items": {
               "type": "object",
-              "$ref": "doelgroep",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "doelgroep"
-              }
+              "$ref": "doelgroep"
             }
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "rechtspersoon"
-        ]
+        "hardValidation": false
       },
       "omzetgroep": {
         "slug": "omzetgroep",
@@ -3351,11 +2890,7 @@
             "title": "valtBinnen",
             "items": {
               "type": "object",
-              "$ref": "product",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "product"
-              }
+              "$ref": "product"
             }
           }
         },
@@ -3390,22 +2925,14 @@
           "heeftPrijs": {
             "type": "object",
             "title": "heeftPrijs",
-            "$ref": "product",
-            "objectConfiguration": {
-              "register": "ggm-sport-cultuur-recreatie",
-              "schema": "product"
-            }
+            "$ref": "product"
           },
           "tegenPrijs": {
             "type": "array",
             "title": "tegenPrijs",
             "items": {
               "type": "object",
-              "$ref": "balieverkoop",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "balieverkoop"
-              }
+              "$ref": "balieverkoop"
             }
           }
         },
@@ -3457,31 +2984,19 @@
           "betreft": {
             "type": "object",
             "title": "betreft",
-            "$ref": "winkelvoorraaditem",
-            "objectConfiguration": {
-              "register": "ggm-sport-cultuur-recreatie",
-              "schema": "winkelvoorraaditem"
-            }
+            "$ref": "winkelvoorraaditem"
           },
           "leverancier": {
             "type": "object",
             "title": "leverancier",
-            "$ref": "leverancier",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "leverancier"
-            }
+            "$ref": "leverancier"
           },
           "valtBinnen": {
             "type": "array",
             "title": "valtBinnen",
             "items": {
               "type": "object",
-              "$ref": "productgroep",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "productgroep"
-              }
+              "$ref": "productgroep"
             }
           },
           "heeftPrijs": {
@@ -3489,11 +3004,7 @@
             "title": "heeftPrijs",
             "items": {
               "type": "object",
-              "$ref": "prijs",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "prijs"
-              }
+              "$ref": "prijs"
             }
           }
         },
@@ -3524,11 +3035,7 @@
             "title": "valtBinnen",
             "items": {
               "type": "object",
-              "$ref": "product",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "product"
-              }
+              "$ref": "product"
             }
           }
         },
@@ -3547,11 +3054,7 @@
             "title": "betreft",
             "items": {
               "type": "object",
-              "$ref": "reservering",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "reservering"
-              }
+              "$ref": "reservering"
             }
           }
         },
@@ -3623,32 +3126,20 @@
             "title": "bestaatUit",
             "items": {
               "type": "object",
-              "$ref": "activiteit",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "activiteit"
-              }
+              "$ref": "activiteit"
             }
           },
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "kostenplaats",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "kostenplaats"
-            }
+            "$ref": "kostenplaats"
           },
           "voor": {
             "type": "array",
             "title": "voor",
             "items": {
               "type": "object",
-              "$ref": "programmasoort",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "programmasoort"
-              }
+              "$ref": "programmasoort"
             }
           }
         },
@@ -3679,11 +3170,7 @@
             "title": "voor",
             "items": {
               "type": "object",
-              "$ref": "programma",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "programma"
-              }
+              "$ref": "programma"
             }
           }
         },
@@ -3730,20 +3217,12 @@
           "betreft": {
             "type": "object",
             "title": "betreft",
-            "$ref": "zaal",
-            "objectConfiguration": {
-              "register": "ggm-sport-cultuur-recreatie",
-              "schema": "zaal"
-            }
+            "$ref": "zaal"
           },
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "activiteit",
-            "objectConfiguration": {
-              "register": "ggm-sport-cultuur-recreatie",
-              "schema": "activiteit"
-            }
+            "$ref": "activiteit"
           }
         },
         "searchable": true,
@@ -3783,22 +3262,14 @@
           "voor": {
             "type": "object",
             "title": "voor",
-            "$ref": "tentoonstelling",
-            "objectConfiguration": {
-              "register": "ggm-sport-cultuur-recreatie",
-              "schema": "tentoonstelling"
-            }
+            "$ref": "tentoonstelling"
           },
           "heeft": {
             "type": "array",
             "title": "heeft",
             "items": {
               "type": "object",
-              "$ref": "activiteit",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "activiteit"
-              }
+              "$ref": "activiteit"
             }
           }
         },
@@ -3809,7 +3280,7 @@
         "slug": "samensteller",
         "title": "Samensteller",
         "version": "2.5.0",
-        "description": "Iemand die stukken informatie samenbrengt in tentoonstelingen, presentaties en naslagwerken.",
+        "description": "Iemand die stukken informatie samenbrengt in tentoonstelingen, presentaties en naslagwerken. Extends: medewerker.",
         "required": [
           "rol"
         ],
@@ -3824,19 +3295,12 @@
             "title": "steltSamen",
             "items": {
               "type": "object",
-              "$ref": "tentoonstelling",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "tentoonstelling"
-              }
+              "$ref": "tentoonstelling"
             }
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "medewerker"
-        ]
+        "hardValidation": false
       },
       "standplaats": {
         "slug": "standplaats",
@@ -3868,11 +3332,7 @@
             "title": "locatie",
             "items": {
               "type": "object",
-              "$ref": "museumobject",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "museumobject"
-              }
+              "$ref": "museumobject"
             }
           }
         },
@@ -3921,11 +3381,7 @@
             "title": "zaal",
             "items": {
               "type": "object",
-              "$ref": "zaal",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "zaal"
-              }
+              "$ref": "zaal"
             }
           },
           "steltSamen": {
@@ -3933,11 +3389,7 @@
             "title": "steltSamen",
             "items": {
               "type": "object",
-              "$ref": "samensteller",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "samensteller"
-              }
+              "$ref": "samensteller"
             }
           },
           "voor": {
@@ -3945,11 +3397,7 @@
             "title": "voor",
             "items": {
               "type": "object",
-              "$ref": "rondleiding",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "rondleiding"
-              }
+              "$ref": "rondleiding"
             }
           },
           "onderdeel": {
@@ -3957,11 +3405,7 @@
             "title": "onderdeel",
             "items": {
               "type": "object",
-              "$ref": "museumobject",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "museumobject"
-              }
+              "$ref": "museumobject"
             }
           },
           "isBedoeldVoor": {
@@ -3969,11 +3413,7 @@
             "title": "isBedoeldVoor",
             "items": {
               "type": "object",
-              "$ref": "bruikleen",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "bruikleen"
-              }
+              "$ref": "bruikleen"
             }
           },
           "isGewijdAan": {
@@ -3981,11 +3421,7 @@
             "title": "isGewijdAan",
             "items": {
               "type": "object",
-              "$ref": "historisch-persoon",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "historisch-persoon"
-              }
+              "$ref": "historisch-persoon"
             }
           }
         },
@@ -4021,11 +3457,7 @@
             "title": "betreft",
             "items": {
               "type": "object",
-              "$ref": "reservering",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "reservering"
-              }
+              "$ref": "reservering"
             }
           }
         },
@@ -4075,11 +3507,7 @@
           "betreft": {
             "type": "object",
             "title": "betreft",
-            "$ref": "product",
-            "objectConfiguration": {
-              "register": "ggm-sport-cultuur-recreatie",
-              "schema": "product"
-            }
+            "$ref": "product"
           }
         },
         "searchable": true,
@@ -4119,11 +3547,7 @@
             "title": "tentoonstelling",
             "items": {
               "type": "object",
-              "$ref": "tentoonstelling",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "tentoonstelling"
-              }
+              "$ref": "tentoonstelling"
             }
           },
           "betreft": {
@@ -4131,11 +3555,7 @@
             "title": "betreft",
             "items": {
               "type": "object",
-              "$ref": "reservering",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "reservering"
-              }
+              "$ref": "reservering"
             }
           }
         },
@@ -4161,11 +3581,7 @@
             "title": "heeft",
             "items": {
               "type": "object",
-              "$ref": "veld",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "veld"
-              }
+              "$ref": "veld"
             }
           }
         },
@@ -4186,7 +3602,7 @@
         "slug": "binnenlocatie",
         "title": "Binnenlocatie",
         "version": "2.5.0",
-        "description": "Locatie binnen een gebouw",
+        "description": "Locatie binnen een gebouw Extends: sportlocatie.",
         "required": [
           "bouwjaar",
           "vloeroppervlakte",
@@ -4257,39 +3673,24 @@
           "bedient": {
             "type": "object",
             "title": "bedient",
-            "$ref": "wijk",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "wijk"
-            }
+            "$ref": "wijk"
           },
           "isGevestigdIn": {
             "type": "object",
             "title": "isGevestigdIn",
-            "$ref": "verblijfsobject",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "verblijfsobject"
-            }
+            "$ref": "verblijfsobject"
           },
           "heeft": {
             "type": "array",
             "title": "heeft",
             "items": {
               "type": "object",
-              "$ref": "sportmateriaal",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "sportmateriaal"
-              }
+              "$ref": "sportmateriaal"
             }
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "sportlocatie"
-        ]
+        "hardValidation": false
       },
       "onderhoudskosten": {
         "slug": "onderhoudskosten",
@@ -4320,11 +3721,7 @@
             "title": "oefentUit",
             "items": {
               "type": "object",
-              "$ref": "sportvereniging",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "sportvereniging"
-              }
+              "$ref": "sportvereniging"
             }
           }
         },
@@ -4350,11 +3747,7 @@
             "title": "gebruikt",
             "items": {
               "type": "object",
-              "$ref": "sportvereniging",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "sportvereniging"
-              }
+              "$ref": "sportvereniging"
             }
           }
         },
@@ -4380,11 +3773,7 @@
             "title": "heeft",
             "items": {
               "type": "object",
-              "$ref": "binnenlocatie",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "binnenlocatie"
-              }
+              "$ref": "binnenlocatie"
             }
           }
         },
@@ -4395,42 +3784,31 @@
         "slug": "sportpark",
         "title": "Sportpark",
         "version": "2.5.0",
-        "description": "Geheel van terreinen, gebouwen en voorzieningen voor verschillende takken van sport.",
+        "description": "Geheel van terreinen, gebouwen en voorzieningen voor verschillende takken van sport. Extends: sportlocatie.",
         "required": [],
         "properties": {
           "ligtOp": {
             "type": "object",
             "title": "ligtOp",
-            "$ref": "overigbenoemdterrein",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "overigbenoemdterrein"
-            }
+            "$ref": "overigbenoemdterrein"
           },
           "heeft": {
             "type": "array",
             "title": "heeft",
             "items": {
               "type": "object",
-              "$ref": "veld",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "veld"
-              }
+              "$ref": "veld"
             }
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "sportlocatie"
-        ]
+        "hardValidation": false
       },
       "sportvereniging": {
         "slug": "sportvereniging",
         "title": "Sportvereniging",
         "version": "2.5.0",
-        "description": "Organisatievorm waarin sport bedreven kan worden",
+        "description": "Organisatievorm waarin sport bedreven kan worden Extends: nietnatuurlijkpersoon.",
         "required": [
           "naam",
           "typeSport",
@@ -4481,11 +3859,7 @@
             "title": "gebruikt",
             "items": {
               "type": "object",
-              "$ref": "sportlocatie",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "sportlocatie"
-              }
+              "$ref": "sportlocatie"
             }
           },
           "oefentUit": {
@@ -4493,19 +3867,12 @@
             "title": "oefentUit",
             "items": {
               "type": "object",
-              "$ref": "sport",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "sport"
-              }
+              "$ref": "sport"
             }
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "nietnatuurlijkpersoon"
-        ]
+        "hardValidation": false
       },
       "veld": {
         "slug": "veld",
@@ -4517,20 +3884,12 @@
           "ligtOp": {
             "type": "object",
             "title": "ligtOp",
-            "$ref": "overigbenoemdterrein",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "overigbenoemdterrein"
-            }
+            "$ref": "overigbenoemdterrein"
           },
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "sportpark",
-            "objectConfiguration": {
-              "register": "ggm-sport-cultuur-recreatie",
-              "schema": "sportpark"
-            }
+            "$ref": "sportpark"
           }
         },
         "searchable": true,

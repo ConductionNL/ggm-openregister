@@ -38,11 +38,7 @@
             "title": "heeft",
             "items": {
               "type": "object",
-              "$ref": "vthzaak",
-              "objectConfiguration": {
-                "register": "ggm-veiligheid-vergunningen",
-                "schema": "vthzaak"
-              }
+              "$ref": "vthzaak"
             }
           }
         },
@@ -90,11 +86,7 @@
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "aanvraagofmelding",
-            "objectConfiguration": {
-              "register": "ggm-dienstverlening",
-              "schema": "aanvraagofmelding"
-            }
+            "$ref": "aanvraagofmelding"
           }
         },
         "searchable": true,
@@ -179,11 +171,7 @@
             "title": "bevinding",
             "items": {
               "type": "object",
-              "$ref": "bevinding",
-              "objectConfiguration": {
-                "register": "ggm-veiligheid-vergunningen",
-                "schema": "bevinding"
-              }
+              "$ref": "bevinding"
             }
           },
           "heeft": {
@@ -191,11 +179,7 @@
             "title": "heeft",
             "items": {
               "type": "object",
-              "$ref": "inspectie",
-              "objectConfiguration": {
-                "register": "ggm-veiligheid-vergunningen",
-                "schema": "inspectie"
-              }
+              "$ref": "inspectie"
             }
           }
         },
@@ -214,11 +198,7 @@
             "title": "verbalisant",
             "items": {
               "type": "object",
-              "$ref": "vth-melding",
-              "objectConfiguration": {
-                "register": "ggm-veiligheid-vergunningen",
-                "schema": "vth-melding"
-              }
+              "$ref": "vth-melding"
             }
           }
         },
@@ -229,7 +209,7 @@
         "slug": "combibon",
         "title": "Combibon",
         "version": "2.5.0",
-        "description": "Een Combibon is een modelformulier dat handhavende ambtenaren gebruiken om geconstateerde overtredingen en de gekozen afdoeningsmodaliteit (bijv. bekeuring of strafbeschikking) vast te leggen.",
+        "description": "Een Combibon is een modelformulier dat handhavende ambtenaren gebruiken om geconstateerde overtredingen en de gekozen afdoeningsmodaliteit (bijv. bekeuring of strafbeschikking) vast te leggen. Extends: vth-melding.",
         "required": [
           "sanctie"
         ],
@@ -241,16 +221,13 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "vth-melding"
-        ]
+        "hardValidation": false
       },
       "fietsregistratie": {
         "slug": "fietsregistratie",
         "title": "Fietsregistratie",
         "version": "2.5.0",
-        "description": "Adminstreren van fietsen",
+        "description": "Adminstreren van fietsen Extends: vth-melding.",
         "required": [
           "verwijderd",
           "gelabeld"
@@ -266,10 +243,7 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "vth-melding"
-        ]
+        "hardValidation": false
       },
       "grondslag": {
         "slug": "grondslag",
@@ -296,11 +270,7 @@
             "title": "heeft",
             "items": {
               "type": "object",
-              "$ref": "zaak",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "zaak"
-              }
+              "$ref": "zaak"
             }
           }
         },
@@ -346,22 +316,14 @@
           "vermeldIn": {
             "type": "object",
             "title": "vermeldIn",
-            "$ref": "heffingsverordening",
-            "objectConfiguration": {
-              "register": "ggm-veiligheid-vergunningen",
-              "schema": "heffingsverordening"
-            }
+            "$ref": "heffingsverordening"
           },
           "heeft": {
             "type": "array",
             "title": "heeft",
             "items": {
               "type": "object",
-              "$ref": "activiteit-omgevingswet",
-              "objectConfiguration": {
-                "register": "ggm-veiligheid-vergunningen",
-                "schema": "activiteit-omgevingswet"
-              }
+              "$ref": "activiteit-omgevingswet"
             }
           },
           "heeftGrondslag": {
@@ -369,11 +331,7 @@
             "title": "heeftGrondslag",
             "items": {
               "type": "object",
-              "$ref": "heffing",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "heffing"
-              }
+              "$ref": "heffing"
             }
           }
         },
@@ -384,7 +342,7 @@
         "slug": "heffingsverordening",
         "title": "Heffingsverordening",
         "version": "2.5.0",
-        "description": "Een *heffingsverordening* is een door de gemeenteraad vastgestelde verordening die de **heffing en invordering van gemeentelijke belastingen en rechten** regelt, zoals afvalstoffenheffing, precariobelasting of marktgelden.",
+        "description": "Een *heffingsverordening* is een door de gemeenteraad vastgestelde verordening die de **heffing en invordering van gemeentelijke belastingen en rechten** regelt, zoals afvalstoffenheffing, precariobelasting of marktgelden. Extends: document.",
         "required": [],
         "properties": {
           "vermeldIn": {
@@ -392,25 +350,18 @@
             "title": "vermeldIn",
             "items": {
               "type": "object",
-              "$ref": "heffinggrondslag",
-              "objectConfiguration": {
-                "register": "ggm-veiligheid-vergunningen",
-                "schema": "heffinggrondslag"
-              }
+              "$ref": "heffinggrondslag"
             }
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "document"
-        ]
+        "hardValidation": false
       },
       "indiener": {
         "slug": "indiener",
         "title": "Indiener",
         "version": "2.5.0",
-        "description": "Persoon die meldiing of aanvraag doet",
+        "description": "Persoon die meldiing of aanvraag doet Extends: rechtspersoon.",
         "required": [],
         "properties": {
           "ingediendDoor": {
@@ -418,19 +369,12 @@
             "title": "ingediendDoor",
             "items": {
               "type": "object",
-              "$ref": "aanvraagofmelding",
-              "objectConfiguration": {
-                "register": "ggm-dienstverlening",
-                "schema": "aanvraagofmelding"
-              }
+              "$ref": "aanvraagofmelding"
             }
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "rechtspersoon"
-        ]
+        "hardValidation": false
       },
       "inspectie": {
         "slug": "inspectie",
@@ -511,11 +455,7 @@
             "title": "heeft",
             "items": {
               "type": "object",
-              "$ref": "vthzaak",
-              "objectConfiguration": {
-                "register": "ggm-veiligheid-vergunningen",
-                "schema": "vthzaak"
-              }
+              "$ref": "vthzaak"
             }
           }
         },
@@ -626,11 +566,7 @@
             "title": "betreft",
             "items": {
               "type": "object",
-              "$ref": "vorderingregel",
-              "objectConfiguration": {
-                "register": "ggm-veiligheid-vergunningen",
-                "schema": "vorderingregel"
-              }
+              "$ref": "vorderingregel"
             }
           },
           "heeft": {
@@ -638,11 +574,7 @@
             "title": "heeft",
             "items": {
               "type": "object",
-              "$ref": "vthzaak",
-              "objectConfiguration": {
-                "register": "ggm-veiligheid-vergunningen",
-                "schema": "vthzaak"
-              }
+              "$ref": "vthzaak"
             }
           }
         },
@@ -721,21 +653,13 @@
             "title": "isVan",
             "items": {
               "type": "object",
-              "$ref": "vthzaak",
-              "objectConfiguration": {
-                "register": "ggm-veiligheid-vergunningen",
-                "schema": "vthzaak"
-              }
+              "$ref": "vthzaak"
             }
           },
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "grondslag",
-            "objectConfiguration": {
-              "register": "ggm-veiligheid-vergunningen",
-              "schema": "grondslag"
-            }
+            "$ref": "grondslag"
           }
         },
         "searchable": true,
@@ -762,7 +686,7 @@
         "slug": "moraanvraagofmelding",
         "title": "MORAanvraagOfMelding",
         "version": "2.5.0",
-        "description": "*MORAanvraagOfMelding* is een aanvraag of melding die een burger of organisatie doet bij de gemeente om een **situatie in de openbare ruimte te melden of te laten beoordelen**, zoals schade, overlast, gevaarlijke situaties of onderhoudsproblemen.",
+        "description": "*MORAanvraagOfMelding* is een aanvraag of melding die een burger of organisatie doet bij de gemeente om een **situatie in de openbare ruimte te melden of te laten beoordelen**, zoals schade, overlast, gevaarlijke situaties of onderhoudsproblemen. Extends: aanvraagofmelding.",
         "required": [
           "locatie",
           "locatieOmschrijving",
@@ -803,10 +727,7 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "aanvraagofmelding"
-        ]
+        "hardValidation": false
       },
       "openbareactiviteit": {
         "slug": "openbareactiviteit",
@@ -883,21 +804,13 @@
             "title": "heeft",
             "items": {
               "type": "object",
-              "$ref": "subproducttype",
-              "objectConfiguration": {
-                "register": "ggm-veiligheid-vergunningen",
-                "schema": "subproducttype"
-              }
+              "$ref": "subproducttype"
             }
           },
           "heeftProduct": {
             "type": "object",
             "title": "heeftProduct",
-            "$ref": "zaak",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "zaak"
-            }
+            "$ref": "zaak"
           }
         },
         "searchable": true,
@@ -928,11 +841,7 @@
             "title": "heeft",
             "items": {
               "type": "object",
-              "$ref": "vthzaak",
-              "objectConfiguration": {
-                "register": "ggm-veiligheid-vergunningen",
-                "schema": "vthzaak"
-              }
+              "$ref": "vthzaak"
             }
           }
         },
@@ -983,11 +892,7 @@
           "is": {
             "type": "object",
             "title": "is",
-            "$ref": "object",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "object"
-            }
+            "$ref": "object"
           }
         },
         "searchable": true,
@@ -997,7 +902,7 @@
         "slug": "vomaanvraagofmelding",
         "title": "VOMAanvraagOfMelding",
         "version": "2.5.0",
-        "description": "VOM staat voor Vergunning, Ontheffing of Melding. Het betreft hier een melding of een aanvraag voor een vergunning of een ontheffing.",
+        "description": "VOM staat voor Vergunning, Ontheffing of Melding. Het betreft hier een melding of een aanvraag voor een vergunning of een ontheffing. Extends: aanvraagofmelding.",
         "required": [
           "dossiernummer",
           "intaketype",
@@ -1067,10 +972,7 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "aanvraagofmelding"
-        ]
+        "hardValidation": false
       },
       "vordering": {
         "slug": "vordering",
@@ -1159,11 +1061,7 @@
             "title": "heeft",
             "items": {
               "type": "object",
-              "$ref": "vthzaak",
-              "objectConfiguration": {
-                "register": "ggm-veiligheid-vergunningen",
-                "schema": "vthzaak"
-              }
+              "$ref": "vthzaak"
             }
           }
         },
@@ -1241,21 +1139,13 @@
             "title": "heeft",
             "items": {
               "type": "object",
-              "$ref": "vordering",
-              "objectConfiguration": {
-                "register": "ggm-veiligheid-vergunningen",
-                "schema": "vordering"
-              }
+              "$ref": "vordering"
             }
           },
           "betreft": {
             "type": "object",
             "title": "betreft",
-            "$ref": "kosten",
-            "objectConfiguration": {
-              "register": "ggm-veiligheid-vergunningen",
-              "schema": "kosten"
-            }
+            "$ref": "kosten"
           }
         },
         "searchable": true,
@@ -1265,7 +1155,7 @@
         "slug": "vthaanvraagofmelding",
         "title": "VTHAanvraagOfMelding",
         "version": "2.5.0",
-        "description": "VTH staat voor Vergunning, Toezicht en Handhaving. Het betreft hier een melding of een aanvraag voor een vergunning of een melding voor Toezicht en/of Handhaving.",
+        "description": "VTH staat voor Vergunning, Toezicht en Handhaving. Het betreft hier een melding of een aanvraag voor een vergunning of een melding voor Toezicht en/of Handhaving. Extends: vomaanvraagofmelding.",
         "required": [
           "omschrijving"
         ],
@@ -1277,16 +1167,13 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "vomaanvraagofmelding"
-        ]
+        "hardValidation": false
       },
       "vth-melding": {
         "slug": "vth-melding",
         "title": "VTH-Melding",
         "version": "2.5.0",
-        "description": "Melding met betrekking tot Vergunningen, Toezicht en Handhaving",
+        "description": "Melding met betrekking tot Vergunningen, Toezicht en Handhaving Extends: aanvraagofmelding.",
         "required": [
           "referentienummer",
           "soortVTHMelding",
@@ -1394,11 +1281,7 @@
             "title": "betreft",
             "items": {
               "type": "object",
-              "$ref": "object",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "object"
-              }
+              "$ref": "object"
             }
           },
           "heeft": {
@@ -1406,34 +1289,23 @@
             "title": "heeft",
             "items": {
               "type": "object",
-              "$ref": "foto",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "foto"
-              }
+              "$ref": "foto"
             }
           },
           "verbalisant": {
             "type": "object",
             "title": "verbalisant",
-            "$ref": "boa",
-            "objectConfiguration": {
-              "register": "ggm-veiligheid-vergunningen",
-              "schema": "boa"
-            }
+            "$ref": "boa"
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "aanvraagofmelding"
-        ]
+        "hardValidation": false
       },
       "vthzaak": {
         "slug": "vthzaak",
         "title": "VTHzaak",
         "version": "2.5.0",
-        "description": "Een *VTHzaak* is een zaak of dossier binnen de gemeentelijke administratie die betrekking heeft op **vergunningverlening, toezicht en handhaving (VTH)** van regels en voorschriften in de fysieke leefomgeving.",
+        "description": "Een *VTHzaak* is een zaak of dossier binnen de gemeentelijke administratie die betrekking heeft op **vergunningverlening, toezicht en handhaving (VTH)** van regels en voorschriften in de fysieke leefomgeving. Extends: zaak.",
         "required": [
           "verkamering",
           "bevoegdGezag",
@@ -1482,11 +1354,7 @@
             "title": "heeft",
             "items": {
               "type": "object",
-              "$ref": "vordering",
-              "objectConfiguration": {
-                "register": "ggm-veiligheid-vergunningen",
-                "schema": "vordering"
-              }
+              "$ref": "vordering"
             }
           },
           "isVan": {
@@ -1494,38 +1362,28 @@
             "title": "isVan",
             "items": {
               "type": "object",
-              "$ref": "legesgrondslag",
-              "objectConfiguration": {
-                "register": "ggm-veiligheid-vergunningen",
-                "schema": "legesgrondslag"
-              }
+              "$ref": "legesgrondslag"
             }
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "zaak"
-        ]
+        "hardValidation": false
       },
       "waarneming": {
         "slug": "waarneming",
         "title": "Waarneming",
         "version": "2.5.0",
-        "description": "Handhavende taak in het kader van VTH",
+        "description": "Handhavende taak in het kader van VTH Extends: vth-melding.",
         "required": [],
         "properties": {},
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "vth-melding"
-        ]
+        "hardValidation": false
       },
       "waboaanvraagofmelding": {
         "slug": "waboaanvraagofmelding",
         "title": "WABOAanvraagOfMelding",
         "version": "2.5.0",
-        "description": "Aanvraag of medling in het kader van de Wet algemene bepalingen omgevingsrecht (WABO)",
+        "description": "Aanvraag of medling in het kader van de Wet algemene bepalingen omgevingsrecht (WABO) Extends: vomaanvraagofmelding.",
         "required": [
           "bouwkosten",
           "projectkosten",
@@ -1559,16 +1417,13 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "vomaanvraagofmelding"
-        ]
+        "hardValidation": false
       },
       "woonfraudeaanvraagofmelding": {
         "slug": "woonfraudeaanvraagofmelding",
         "title": "WoonfraudeAanvraagOfMelding",
         "version": "2.5.0",
-        "description": "Melding of aanvraag van woonfraude",
+        "description": "Melding of aanvraag van woonfraude Extends: aanvraagofmelding.",
         "required": [
           "meldingTekst",
           "meldingOmschrijving",
@@ -1604,16 +1459,13 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "aanvraagofmelding"
-        ]
+        "hardValidation": false
       },
       "woonoverlastaanvraagofmelding": {
         "slug": "woonoverlastaanvraagofmelding",
         "title": "WoonoverlastAanvraagOfMelding",
         "version": "2.5.0",
-        "description": "Melding of aanvraag met betrekking tot Woonoverlast",
+        "description": "Melding of aanvraag met betrekking tot Woonoverlast Extends: aanvraagofmelding.",
         "required": [
           "locatie",
           "locatieOmschrijving",
@@ -1643,10 +1495,7 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "aanvraagofmelding"
-        ]
+        "hardValidation": false
       }
     },
     "registers": {

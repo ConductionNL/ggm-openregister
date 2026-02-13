@@ -33,7 +33,7 @@
         "slug": "applicatie",
         "title": "Applicatie",
         "version": "2.5.0",
-        "description": "Een applicatiecomponent die gericht is op het ondersteunen van eindgebruikers.",
+        "description": "Een applicatiecomponent die gericht is op het ondersteunen van eindgebruikers. Extends: linkbaar-cmdb-item.",
         "required": [
           "naam",
           "categorie",
@@ -94,11 +94,7 @@
             "title": "rollen",
             "items": {
               "type": "object",
-              "$ref": "medewerker",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "medewerker"
-              }
+              "$ref": "medewerker"
             }
           },
           "heeftPackages": {
@@ -106,11 +102,7 @@
             "title": "heeftPackages",
             "items": {
               "type": "object",
-              "$ref": "package",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "package"
-              }
+              "$ref": "package"
             }
           },
           "heeftNotities": {
@@ -118,11 +110,7 @@
             "title": "heeftNotities",
             "items": {
               "type": "object",
-              "$ref": "notitie",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "notitie"
-              }
+              "$ref": "notitie"
             }
           },
           "heeftHerkomst": {
@@ -130,11 +118,7 @@
             "title": "heeftHerkomst",
             "items": {
               "type": "object",
-              "$ref": "batch",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "batch"
-              }
+              "$ref": "batch"
             }
           },
           "bevat": {
@@ -142,11 +126,7 @@
             "title": "bevat",
             "items": {
               "type": "object",
-              "$ref": "gegeven",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "gegeven"
-              }
+              "$ref": "gegeven"
             }
           },
           "heeftDocumenten": {
@@ -154,40 +134,25 @@
             "title": "heeftDocumenten",
             "items": {
               "type": "object",
-              "$ref": "document",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "document"
-              }
+              "$ref": "document"
             }
           },
           "heeftLeverancier": {
             "type": "object",
             "title": "heeftLeverancier",
-            "$ref": "leverancier",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "leverancier"
-            }
+            "$ref": "leverancier"
           },
           "heeftVersies": {
             "type": "array",
             "title": "heeftVersies",
             "items": {
               "type": "object",
-              "$ref": "versie",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "versie"
-              }
+              "$ref": "versie"
             }
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "linkbaar-cmdb-item"
-        ]
+        "hardValidation": false
       },
       "attribuutsoort": {
         "slug": "attribuutsoort",
@@ -315,20 +280,12 @@
           "bezit": {
             "type": "object",
             "title": "bezit",
-            "$ref": "objecttype",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "objecttype"
-            }
+            "$ref": "objecttype"
           },
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "datatype",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "datatype"
-            }
+            "$ref": "datatype"
           }
         },
         "searchable": true,
@@ -358,11 +315,7 @@
             "title": "geclassificeerdAls",
             "items": {
               "type": "object",
-              "$ref": "gegeven",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "gegeven"
-              }
+              "$ref": "gegeven"
             }
           }
         },
@@ -393,11 +346,7 @@
             "title": "heeftChangelog",
             "items": {
               "type": "object",
-              "$ref": "log",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "log"
-              }
+              "$ref": "log"
             }
           }
         },
@@ -408,7 +357,7 @@
         "slug": "database",
         "title": "Database",
         "version": "2.5.0",
-        "description": "Een applicatiecomponent die een dataset bevat.",
+        "description": "Een applicatiecomponent die een dataset bevat. Extends: linkbaar-cmdb-item.",
         "required": [
           "databaseInstantie",
           "omschrijving",
@@ -456,18 +405,11 @@
           "serverVanDatabase": {
             "type": "object",
             "title": "serverVanDatabase",
-            "$ref": "server",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "server"
-            }
+            "$ref": "server"
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "linkbaar-cmdb-item"
-        ]
+        "hardValidation": false
       },
       "datatype": {
         "slug": "datatype",
@@ -552,11 +494,7 @@
             "title": "heeft",
             "items": {
               "type": "object",
-              "$ref": "attribuutsoort",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "attribuutsoort"
-              }
+              "$ref": "attribuutsoort"
             }
           }
         },
@@ -573,38 +511,22 @@
           "betreft": {
             "type": "object",
             "title": "betreft",
-            "$ref": "product",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "product"
-            }
+            "$ref": "product"
           },
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "onderwerp",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "onderwerp"
-            }
+            "$ref": "onderwerp"
           },
           "start": {
             "type": "object",
             "title": "start",
-            "$ref": "zaaktype",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "zaaktype"
-            }
+            "$ref": "zaaktype"
           },
           "valtBinnen": {
             "type": "object",
             "title": "valtBinnen",
-            "$ref": "domeintaakveld",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "domeintaakveld"
-            }
+            "$ref": "domeintaakveld"
           }
         },
         "searchable": true,
@@ -622,11 +544,7 @@
             "title": "valtBinnen",
             "items": {
               "type": "object",
-              "$ref": "product",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "product"
-              }
+              "$ref": "product"
             }
           }
         },
@@ -658,11 +576,7 @@
             "title": "levert",
             "items": {
               "type": "object",
-              "$ref": "gegeven",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "gegeven"
-              }
+              "$ref": "gegeven"
             }
           }
         },
@@ -714,41 +628,25 @@
           "gedefinieerdDoor": {
             "type": "object",
             "title": "gedefinieerdDoor",
-            "$ref": "objecttype",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "objecttype"
-            }
+            "$ref": "objecttype"
           },
           "levert": {
             "type": "object",
             "title": "levert",
-            "$ref": "externe-bron",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "externe-bron"
-            }
+            "$ref": "externe-bron"
           },
           "geclassificeerdAls": {
             "type": "array",
             "title": "geclassificeerdAls",
             "items": {
               "type": "object",
-              "$ref": "classificatie",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "classificatie"
-              }
+              "$ref": "classificatie"
             }
           },
           "bevat": {
             "type": "object",
             "title": "bevat",
-            "$ref": "applicatie",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "applicatie"
-            }
+            "$ref": "applicatie"
           }
         },
         "searchable": true,
@@ -819,11 +717,7 @@
           "subtype": {
             "type": "object",
             "title": "subtype",
-            "$ref": "objecttype",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "objecttype"
-            }
+            "$ref": "objecttype"
           }
         },
         "searchable": true,
@@ -833,27 +727,21 @@
         "slug": "hardware",
         "title": "Hardware",
         "version": "2.5.0",
-        "description": "Alle fysieke componenten of onderdelen die in een computer een rol spelen.",
+        "description": "Alle fysieke componenten of onderdelen die in een computer een rol spelen. Extends: cmdb-item.",
         "required": [],
         "properties": {},
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "cmdb-item"
-        ]
+        "hardValidation": false
       },
       "inventaris": {
         "slug": "inventaris",
         "title": "Inventaris",
         "version": "2.5.0",
-        "description": "Een inboedel of een opsomming van voorwerpen op een bepaalde plaats, gemaakt volgens een vaste procedure.",
+        "description": "Een inboedel of een opsomming van voorwerpen op een bepaalde plaats, gemaakt volgens een vaste procedure. Extends: cmdb-item.",
         "required": [],
         "properties": {},
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "cmdb-item"
-        ]
+        "hardValidation": false
       },
       "koppeling": {
         "slug": "koppeling",
@@ -882,20 +770,12 @@
           "linkVan": {
             "type": "object",
             "title": "linkVan",
-            "$ref": "linkbaar-cmdb-item",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "linkbaar-cmdb-item"
-            }
+            "$ref": "linkbaar-cmdb-item"
           },
           "linkNaar": {
             "type": "object",
             "title": "linkNaar",
-            "$ref": "linkbaar-cmdb-item",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "linkbaar-cmdb-item"
-            }
+            "$ref": "linkbaar-cmdb-item"
           }
         },
         "searchable": true,
@@ -905,20 +785,17 @@
         "slug": "licentie",
         "title": "Licentie",
         "version": "2.5.0",
-        "description": "Een gebruiksrecht en autorisatie om van een product of dienst gebruik te maken binnen bepaalde voorwaarden",
+        "description": "Een gebruiksrecht en autorisatie om van een product of dienst gebruik te maken binnen bepaalde voorwaarden Extends: cmdb-item.",
         "required": [],
         "properties": {},
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "cmdb-item"
-        ]
+        "hardValidation": false
       },
       "linkbaar-cmdb-item": {
         "slug": "linkbaar-cmdb-item",
         "title": "Linkbaar CMDB-item",
         "version": "2.5.0",
-        "description": "Niet opnemen",
+        "description": "Niet opnemen Extends: cmdb-item.",
         "required": [],
         "properties": {
           "linkVan": {
@@ -926,11 +803,7 @@
             "title": "linkVan",
             "items": {
               "type": "object",
-              "$ref": "koppeling",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "koppeling"
-              }
+              "$ref": "koppeling"
             }
           },
           "linkNaar": {
@@ -938,19 +811,12 @@
             "title": "linkNaar",
             "items": {
               "type": "object",
-              "$ref": "koppeling",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "koppeling"
-              }
+              "$ref": "koppeling"
             }
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "cmdb-item"
-        ]
+        "hardValidation": false
       },
       "log": {
         "slug": "log",
@@ -980,11 +846,7 @@
           "heeftChangelog": {
             "type": "object",
             "title": "heeftChangelog",
-            "$ref": "cmdb-item",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "cmdb-item"
-            }
+            "$ref": "cmdb-item"
           }
         },
         "searchable": true,
@@ -1004,14 +866,11 @@
         "slug": "nertwerkcomponent",
         "title": "Nertwerkcomponent",
         "version": "2.5.0",
-        "description": "Een *netwerkcomponent* is een hardware- of softwareonderdeel dat een **specifieke functie vervult binnen een netwerk** om communicatie, gegevensuitwisseling of het beheer van netwerkverkeer mogelijk te maken.",
+        "description": "Een *netwerkcomponent* is een hardware- of softwareonderdeel dat een **specifieke functie vervult binnen een netwerk** om communicatie, gegevensuitwisseling of het beheer van netwerkverkeer mogelijk te maken. Extends: cmdb-item.",
         "required": [],
         "properties": {},
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "cmdb-item"
-        ]
+        "hardValidation": false
       },
       "notitie": {
         "slug": "notitie",
@@ -1035,20 +894,12 @@
           "auteur": {
             "type": "object",
             "title": "auteur",
-            "$ref": "medewerker",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "medewerker"
-            }
+            "$ref": "medewerker"
           },
           "heeftNotities": {
             "type": "object",
             "title": "heeftNotities",
-            "$ref": "applicatie",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "applicatie"
-            }
+            "$ref": "applicatie"
           }
         },
         "searchable": true,
@@ -1147,11 +998,7 @@
             "title": "gerelateerdObjecttype",
             "items": {
               "type": "object",
-              "$ref": "relatiesoort",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "relatiesoort"
-              }
+              "$ref": "relatiesoort"
             }
           },
           "bezit": {
@@ -1159,32 +1006,20 @@
             "title": "bezit",
             "items": {
               "type": "object",
-              "$ref": "relatiesoort",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "relatiesoort"
-              }
+              "$ref": "relatiesoort"
             }
           },
           "supertype": {
             "type": "object",
             "title": "supertype",
-            "$ref": "generalisatie",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "generalisatie"
-            }
+            "$ref": "generalisatie"
           },
           "gedefinieerdDoor": {
             "type": "array",
             "title": "gedefinieerdDoor",
             "items": {
               "type": "object",
-              "$ref": "gegeven",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "gegeven"
-              }
+              "$ref": "gegeven"
             }
           }
         },
@@ -1201,22 +1036,14 @@
           "valtBinnen": {
             "type": "object",
             "title": "valtBinnen",
-            "$ref": "domeintaakveld",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "domeintaakveld"
-            }
+            "$ref": "domeintaakveld"
           },
           "heeft": {
             "type": "array",
             "title": "heeft",
             "items": {
               "type": "object",
-              "$ref": "dienst",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "dienst"
-              }
+              "$ref": "dienst"
             }
           }
         },
@@ -1263,11 +1090,7 @@
           "heeftPackages": {
             "type": "object",
             "title": "heeftPackages",
-            "$ref": "applicatie",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "applicatie"
-            }
+            "$ref": "applicatie"
           }
         },
         "searchable": true,
@@ -1285,11 +1108,7 @@
             "title": "heeftPrijs",
             "items": {
               "type": "object",
-              "$ref": "product",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "product"
-              }
+              "$ref": "product"
             }
           }
         },
@@ -1308,11 +1127,7 @@
             "title": "betreft",
             "items": {
               "type": "object",
-              "$ref": "zaaktype",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "zaaktype"
-              }
+              "$ref": "zaaktype"
             }
           },
           "heeftPrijs": {
@@ -1320,21 +1135,13 @@
             "title": "heeftPrijs",
             "items": {
               "type": "object",
-              "$ref": "prijzenboek",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "prijzenboek"
-              }
+              "$ref": "prijzenboek"
             }
           },
           "valtBinnen": {
             "type": "object",
             "title": "valtBinnen",
-            "$ref": "domeintaakveld",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "domeintaakveld"
-            }
+            "$ref": "domeintaakveld"
           }
         },
         "searchable": true,
@@ -1435,20 +1242,12 @@
           "gerelateerdObjecttype": {
             "type": "object",
             "title": "gerelateerdObjecttype",
-            "$ref": "objecttype",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "objecttype"
-            }
+            "$ref": "objecttype"
           },
           "bezit": {
             "type": "object",
             "title": "bezit",
-            "$ref": "objecttype",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "objecttype"
-            }
+            "$ref": "objecttype"
           }
         },
         "searchable": true,
@@ -1458,7 +1257,7 @@
         "slug": "server",
         "title": "Server",
         "version": "2.5.0",
-        "description": "Computer die in een netwerk een ondersteunende taak vervult.",
+        "description": "Computer die in een netwerk een ondersteunende taak vervult. Extends: linkbaar-cmdb-item.",
         "required": [
           "serverID",
           "organisatie",
@@ -1515,43 +1314,29 @@
           "heeftLeverancier": {
             "type": "object",
             "title": "heeftLeverancier",
-            "$ref": "leverancier",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "leverancier"
-            }
+            "$ref": "leverancier"
           },
           "serverVanDatabase": {
             "type": "array",
             "title": "serverVanDatabase",
             "items": {
               "type": "object",
-              "$ref": "database",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "database"
-              }
+              "$ref": "database"
             }
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "linkbaar-cmdb-item"
-        ]
+        "hardValidation": false
       },
       "software": {
         "slug": "software",
         "title": "Software",
         "version": "2.5.0",
-        "description": "Een geheel van computerprogramma's met bijbehorende data, die bewerkingen en taken uitvoeren",
+        "description": "Een geheel van computerprogramma's met bijbehorende data, die bewerkingen en taken uitvoeren Extends: cmdb-item.",
         "required": [],
         "properties": {},
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "cmdb-item"
-        ]
+        "hardValidation": false
       },
       "storing": {
         "slug": "storing",
@@ -1577,14 +1362,11 @@
         "slug": "toegangsmiddel",
         "title": "Toegangsmiddel",
         "version": "2.5.0",
-        "description": "Een middel waarmee men zich toegang tot iets kan verschaffen.",
+        "description": "Een middel waarmee men zich toegang tot iets kan verschaffen. Extends: cmdb-item.",
         "required": [],
         "properties": {},
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "cmdb-item"
-        ]
+        "hardValidation": false
       },
       "versie": {
         "slug": "versie",
@@ -1631,11 +1413,7 @@
           "heeftVersies": {
             "type": "object",
             "title": "heeftVersies",
-            "$ref": "applicatie",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "applicatie"
-            }
+            "$ref": "applicatie"
           }
         },
         "searchable": true,
@@ -1645,14 +1423,11 @@
         "slug": "vervoersmiddel",
         "title": "Vervoersmiddel",
         "version": "2.5.0",
-        "description": "Een voertuig dat zich over het land verplaatst.",
+        "description": "Een voertuig dat zich over het land verplaatst. Extends: cmdb-item.",
         "required": [],
         "properties": {},
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "cmdb-item"
-        ]
+        "hardValidation": false
       },
       "wijzigingsverzoek": {
         "slug": "wijzigingsverzoek",
@@ -1691,11 +1466,7 @@
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "subsidiecomponent",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "subsidiecomponent"
-            }
+            "$ref": "subsidiecomponent"
           }
         },
         "searchable": true,
@@ -1735,20 +1506,12 @@
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "subsidie",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "subsidie"
-            }
+            "$ref": "subsidie"
           },
           "projectleider": {
             "type": "object",
             "title": "projectleider",
-            "$ref": "rechtspersoon",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "rechtspersoon"
-            }
+            "$ref": "rechtspersoon"
           }
         },
         "searchable": true,
@@ -1778,11 +1541,7 @@
             "title": "valtBinnen",
             "items": {
               "type": "object",
-              "$ref": "subsidie",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "subsidie"
-              }
+              "$ref": "subsidie"
             }
           }
         },
@@ -1956,65 +1715,37 @@
           "gaatOver": {
             "type": "object",
             "title": "gaatOver",
-            "$ref": "subsidieprogramma",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "subsidieprogramma"
-            }
+            "$ref": "subsidieprogramma"
           },
           "betreft": {
             "type": "object",
             "title": "betreft",
-            "$ref": "subsidiebeschikking",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "subsidiebeschikking"
-            }
+            "$ref": "subsidiebeschikking"
           },
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "zaak",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "zaak"
-            }
+            "$ref": "zaak"
           },
           "verstrekker": {
             "type": "object",
             "title": "verstrekker",
-            "$ref": "rechtspersoon",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "rechtspersoon"
-            }
+            "$ref": "rechtspersoon"
           },
           "behandelaar": {
             "type": "object",
             "title": "behandelaar",
-            "$ref": "medewerker",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "medewerker"
-            }
+            "$ref": "medewerker"
           },
           "valtBinnen": {
             "type": "object",
             "title": "valtBinnen",
-            "$ref": "sector",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "sector"
-            }
+            "$ref": "sector"
           },
           "aanvrager": {
             "type": "object",
             "title": "aanvrager",
-            "$ref": "rechtspersoon",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "rechtspersoon"
-            }
+            "$ref": "rechtspersoon"
           }
         },
         "searchable": true,
@@ -2060,20 +1791,12 @@
           "mondtUit": {
             "type": "object",
             "title": "mondtUit",
-            "$ref": "subsidiebeschikking",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "subsidiebeschikking"
-            }
+            "$ref": "subsidiebeschikking"
           },
           "betreft": {
             "type": "object",
             "title": "betreft",
-            "$ref": "subsidie",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "subsidie"
-            }
+            "$ref": "subsidie"
           }
         },
         "searchable": true,
@@ -2130,20 +1853,12 @@
           "mondtUit": {
             "type": "object",
             "title": "mondtUit",
-            "$ref": "subsidieaanvraag",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "subsidieaanvraag"
-            }
+            "$ref": "subsidieaanvraag"
           },
           "betreft": {
             "type": "object",
             "title": "betreft",
-            "$ref": "subsidie",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "subsidie"
-            }
+            "$ref": "subsidie"
           }
         },
         "searchable": true,
@@ -2170,11 +1885,7 @@
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "kostenplaats",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "kostenplaats"
-            }
+            "$ref": "kostenplaats"
           }
         },
         "searchable": true,
@@ -2219,22 +1930,14 @@
           "verantwoordelijkVoor": {
             "type": "object",
             "title": "verantwoordelijkVoor",
-            "$ref": "organisatorischeeenheid",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "organisatorischeeenheid"
-            }
+            "$ref": "organisatorischeeenheid"
           },
           "gaatOver": {
             "type": "array",
             "title": "gaatOver",
             "items": {
               "type": "object",
-              "$ref": "subsidie",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "subsidie"
-              }
+              "$ref": "subsidie"
             }
           }
         },
@@ -2275,20 +1978,12 @@
           "projectleider": {
             "type": "object",
             "title": "projectleider",
-            "$ref": "rechtspersoon",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "rechtspersoon"
-            }
+            "$ref": "rechtspersoon"
           },
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "subsidie",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "subsidie"
-            }
+            "$ref": "subsidie"
           }
         },
         "searchable": true,
@@ -2298,7 +1993,7 @@
         "slug": "aanbesteding-vastgoed",
         "title": "Aanbesteding Vastgoed",
         "version": "2.5.0",
-        "description": "Een procedure waarbij een opdrachtgever bekendmaakt dat hij een opdracht of concessie wil laten uitvoeren en bedrijven uitnodigt om een offerte in te dienen. Dit in het kader van werkzaamheden rondom vastgoed.",
+        "description": "Een procedure waarbij een opdrachtgever bekendmaakt dat hij een opdracht of concessie wil laten uitvoeren en bedrijven uitnodigt om een offerte in te dienen. Dit in het kader van werkzaamheden rondom vastgoed. Extends: aanbesteding.",
         "required": [],
         "properties": {
           "heeftGekwalificeerd": {
@@ -2306,11 +2001,7 @@
             "title": "heeftGekwalificeerd",
             "items": {
               "type": "object",
-              "$ref": "leverancier",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "leverancier"
-              }
+              "$ref": "leverancier"
             }
           },
           "uitvoeringVan": {
@@ -2318,19 +2009,12 @@
             "title": "uitvoeringVan",
             "items": {
               "type": "object",
-              "$ref": "werkbon",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "werkbon"
-              }
+              "$ref": "werkbon"
             }
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "aanbesteding"
-        ]
+        "hardValidation": false
       },
       "adresaanduiding": {
         "slug": "adresaanduiding",
@@ -2350,11 +2034,7 @@
             "title": "heeftAdres",
             "items": {
               "type": "object",
-              "$ref": "kadastraleonroerendezaak",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "kadastraleonroerendezaak"
-              }
+              "$ref": "kadastraleonroerendezaak"
             }
           }
         },
@@ -2386,21 +2066,13 @@
             "title": "betreft",
             "items": {
               "type": "object",
-              "$ref": "mjop-item",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "mjop-item"
-              }
+              "$ref": "mjop-item"
             }
           },
           "bestaatUit": {
             "type": "object",
             "title": "bestaatUit",
-            "$ref": "vastgoedobject",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "vastgoedobject"
-            }
+            "$ref": "vastgoedobject"
           }
         },
         "searchable": true,
@@ -2431,21 +2103,13 @@
             "title": "betreft",
             "items": {
               "type": "object",
-              "$ref": "mjop-item",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "mjop-item"
-              }
+              "$ref": "mjop-item"
             }
           },
           "bestaatUit": {
             "type": "object",
             "title": "bestaatUit",
-            "$ref": "bouwdeel",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "bouwdeel"
-            }
+            "$ref": "bouwdeel"
           }
         },
         "searchable": true,
@@ -2467,11 +2131,7 @@
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "kadastraleonroerendezaak",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "kadastraleonroerendezaak"
-            }
+            "$ref": "kadastraleonroerendezaak"
           }
         },
         "searchable": true,
@@ -2481,7 +2141,7 @@
         "slug": "eigenaar",
         "title": "Eigenaar",
         "version": "2.5.0",
-        "description": "Eigenaar is een persoon die de eigenaar is van een gebouw of stuk grond en ook alle rechten daarvan bezit.",
+        "description": "Eigenaar is een persoon die de eigenaar is van een gebouw of stuk grond en ook alle rechten daarvan bezit. Extends: rechtspersoon.",
         "required": [],
         "properties": {
           "heeftEigenaar": {
@@ -2489,19 +2149,12 @@
             "title": "heeftEigenaar",
             "items": {
               "type": "object",
-              "$ref": "zakelijk-recht",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "zakelijk-recht"
-              }
+              "$ref": "zakelijk-recht"
             }
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "rechtspersoon"
-        ]
+        "hardValidation": false
       },
       "gebruiksdoel": {
         "slug": "gebruiksdoel",
@@ -2534,11 +2187,7 @@
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "gebouwdobject",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "gebouwdobject"
-            }
+            "$ref": "gebouwdobject"
           }
         },
         "searchable": true,
@@ -2548,7 +2197,7 @@
         "slug": "huurder",
         "title": "Huurder",
         "version": "2.5.0",
-        "description": "Een partij die een zaak of een gedeelte daarvan in gebruik verstrekt heeft gekregen en zich heeft verbonden tot een tegenprestatie.",
+        "description": "Een partij die een zaak of een gedeelte daarvan in gebruik verstrekt heeft gekregen en zich heeft verbonden tot een tegenprestatie. Extends: rechtspersoon.",
         "required": [],
         "properties": {
           "heeftHuurrecht": {
@@ -2556,19 +2205,12 @@
             "title": "heeftHuurrecht",
             "items": {
               "type": "object",
-              "$ref": "zakelijk-recht",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "zakelijk-recht"
-              }
+              "$ref": "zakelijk-recht"
             }
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "rechtspersoon"
-        ]
+        "hardValidation": false
       },
       "inspectie": {
         "slug": "inspectie",
@@ -2592,20 +2234,12 @@
           "betreft": {
             "type": "object",
             "title": "betreft",
-            "$ref": "vastgoedobject",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "vastgoedobject"
-            }
+            "$ref": "vastgoedobject"
           },
           "leidtTot": {
             "type": "object",
             "title": "leidtTot",
-            "$ref": "mjop",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "mjop"
-            }
+            "$ref": "mjop"
           }
         },
         "searchable": true,
@@ -2634,20 +2268,12 @@
           "isBetrokkenBij": {
             "type": "object",
             "title": "isBetrokkenBij",
-            "$ref": "zakelijkrecht",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "zakelijkrecht"
-            }
+            "$ref": "zakelijkrecht"
           },
           "appartementsrechtsplitsing": {
             "type": "object",
             "title": "appartementsrechtsplitsing",
-            "$ref": "appartementsrechtsplitsing",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "appartementsrechtsplitsing"
-            }
+            "$ref": "appartementsrechtsplitsing"
           }
         },
         "searchable": true,
@@ -2676,20 +2302,12 @@
           "isOntstaanUit": {
             "type": "object",
             "title": "isOntstaanUit",
-            "$ref": "zakelijkrecht",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "zakelijkrecht"
-            }
+            "$ref": "zakelijkrecht"
           },
           "appartementsrechtsplitsing": {
             "type": "object",
             "title": "appartementsrechtsplitsing",
-            "$ref": "appartementsrechtsplitsing",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "appartementsrechtsplitsing"
-            }
+            "$ref": "appartementsrechtsplitsing"
           }
         },
         "searchable": true,
@@ -2735,20 +2353,12 @@
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "woz-object",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "woz-object"
-            }
+            "$ref": "woz-object"
           },
           "verwijstNaar": {
             "type": "object",
             "title": "verwijstNaar",
-            "$ref": "nummeraanduiding",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "nummeraanduiding"
-            }
+            "$ref": "nummeraanduiding"
           }
         },
         "searchable": true,
@@ -2807,20 +2417,12 @@
           "heeftAdres": {
             "type": "object",
             "title": "heeftAdres",
-            "$ref": "kadastraleonroerendezaak",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "kadastraleonroerendezaak"
-            }
+            "$ref": "kadastraleonroerendezaak"
           },
           "heeftAdresseerbaarObject": {
             "type": "object",
             "title": "heeftAdresseerbaarObject",
-            "$ref": "adresseerbaarobject",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "adresseerbaarobject"
-            }
+            "$ref": "adresseerbaarobject"
           }
         },
         "searchable": true,
@@ -2850,42 +2452,26 @@
             "title": "gerealiseerdDoor",
             "items": {
               "type": "object",
-              "$ref": "werkbon",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "werkbon"
-              }
+              "$ref": "werkbon"
             }
           },
           "betreft": {
             "type": "object",
             "title": "betreft",
-            "$ref": "vastgoedobject",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "vastgoedobject"
-            }
+            "$ref": "vastgoedobject"
           },
           "bestaatUit": {
             "type": "array",
             "title": "bestaatUit",
             "items": {
               "type": "object",
-              "$ref": "mjop-item",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "mjop-item"
-              }
+              "$ref": "mjop-item"
             }
           },
           "leidtTot": {
             "type": "object",
             "title": "leidtTot",
-            "$ref": "inspectie",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "inspectie"
-            }
+            "$ref": "inspectie"
           }
         },
         "searchable": true,
@@ -2953,29 +2539,17 @@
           "betreft": {
             "type": "object",
             "title": "betreft",
-            "$ref": "vastgoedobject",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "vastgoedobject"
-            }
+            "$ref": "vastgoedobject"
           },
           "opBasisVan": {
             "type": "object",
             "title": "opBasisVan",
-            "$ref": "prijzenboekitem",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "prijzenboekitem"
-            }
+            "$ref": "prijzenboekitem"
           },
           "bestaatUit": {
             "type": "object",
             "title": "bestaatUit",
-            "$ref": "mjop",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "mjop"
-            }
+            "$ref": "mjop"
           }
         },
         "searchable": true,
@@ -2985,7 +2559,7 @@
         "slug": "nadaanvullingbrp",
         "title": "NADAanvullingBRP",
         "version": "2.5.0",
-        "description": "GGM entity: NADAanvullingBRP",
+        "description": "GGM entity: NADAanvullingBRP Extends: nummeraanduiding.",
         "required": [
           "opmerkingen"
         ],
@@ -2996,10 +2570,7 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "nummeraanduiding"
-        ]
+        "hardValidation": false
       },
       "objectrelatie": {
         "slug": "objectrelatie",
@@ -3025,11 +2596,7 @@
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "vastgoedobject",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "vastgoedobject"
-            }
+            "$ref": "vastgoedobject"
           }
         },
         "searchable": true,
@@ -3049,7 +2616,7 @@
         "slug": "pachter",
         "title": "Pachter",
         "version": "2.5.0",
-        "description": "Een persoon die een pachtovereenkomst heeft met de eigenaar van een perceel voor het gebruik als landbouwgrond.",
+        "description": "Een persoon die een pachtovereenkomst heeft met de eigenaar van een perceel voor het gebruik als landbouwgrond. Extends: rechtspersoon.",
         "required": [],
         "properties": {
           "pacht": {
@@ -3057,19 +2624,12 @@
             "title": "pacht",
             "items": {
               "type": "object",
-              "$ref": "zakelijk-recht",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "zakelijk-recht"
-              }
+              "$ref": "zakelijk-recht"
             }
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "rechtspersoon"
-        ]
+        "hardValidation": false
       },
       "prijzenboekitem": {
         "slug": "prijzenboekitem",
@@ -3107,11 +2667,7 @@
             "title": "opBasisVan",
             "items": {
               "type": "object",
-              "$ref": "mjop-item",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "mjop-item"
-              }
+              "$ref": "mjop-item"
             }
           }
         },
@@ -3178,11 +2734,7 @@
             "title": "heeft",
             "items": {
               "type": "object",
-              "$ref": "vastgoedcontractregel",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "vastgoedcontractregel"
-              }
+              "$ref": "vastgoedcontractregel"
             }
           }
         },
@@ -3249,21 +2801,13 @@
             "title": "heeft",
             "items": {
               "type": "object",
-              "$ref": "vastgoedobject",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "vastgoedobject"
-              }
+              "$ref": "vastgoedobject"
             }
           },
           "betreft": {
             "type": "object",
             "title": "betreft",
-            "$ref": "verhuurbaar-eenheid",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "verhuurbaar-eenheid"
-            }
+            "$ref": "verhuurbaar-eenheid"
           }
         },
         "searchable": true,
@@ -3654,22 +3198,14 @@
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "kostenplaats",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "kostenplaats"
-            }
+            "$ref": "kostenplaats"
           },
           "betreft": {
             "type": "array",
             "title": "betreft",
             "items": {
               "type": "object",
-              "$ref": "werkbon",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "werkbon"
-              }
+              "$ref": "werkbon"
             }
           },
           "bestaatUit": {
@@ -3677,11 +3213,7 @@
             "title": "bestaatUit",
             "items": {
               "type": "object",
-              "$ref": "bouwdeel",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "bouwdeel"
-              }
+              "$ref": "bouwdeel"
             }
           }
         },
@@ -3776,20 +3308,12 @@
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "vastgoedobject",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "vastgoedobject"
-            }
+            "$ref": "vastgoedobject"
           },
           "betreft": {
             "type": "object",
             "title": "betreft",
-            "$ref": "vastgoedcontractregel",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "vastgoedcontractregel"
-            }
+            "$ref": "vastgoedcontractregel"
           }
         },
         "searchable": true,
@@ -3805,47 +3329,27 @@
           "voertWerkUitConform": {
             "type": "object",
             "title": "voertWerkUitConform",
-            "$ref": "leverancier",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "leverancier"
-            }
+            "$ref": "leverancier"
           },
           "hoortBij": {
             "type": "object",
             "title": "hoortBij",
-            "$ref": "inkooporder",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "inkooporder"
-            }
+            "$ref": "inkooporder"
           },
           "betreft": {
             "type": "object",
             "title": "betreft",
-            "$ref": "vastgoedobject",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "vastgoedobject"
-            }
+            "$ref": "vastgoedobject"
           },
           "gerealiseerdDoor": {
             "type": "object",
             "title": "gerealiseerdDoor",
-            "$ref": "mjop",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "mjop"
-            }
+            "$ref": "mjop"
           },
           "uitvoeringVan": {
             "type": "object",
             "title": "uitvoeringVan",
-            "$ref": "aanbesteding-vastgoed",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "aanbesteding-vastgoed"
-            }
+            "$ref": "aanbesteding-vastgoed"
           }
         },
         "searchable": true,
@@ -3887,11 +3391,7 @@
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "woz-object",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "woz-object"
-            }
+            "$ref": "woz-object"
           }
         },
         "searchable": true,
@@ -3901,7 +3401,7 @@
         "slug": "zakelijk-recht",
         "title": "Zakelijk Recht",
         "version": "2.5.0",
-        "description": "Geeft een recht op een goed, zoals een onroerende zaak of een roerende zaak.",
+        "description": "Geeft een recht op een goed, zoals een onroerende zaak of een roerende zaak. Extends: zakelijkrecht.",
         "required": [
           "datumStart",
           "datumEinde",
@@ -3938,22 +3438,14 @@
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "kostenplaats",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "kostenplaats"
-            }
+            "$ref": "kostenplaats"
           },
           "betreft": {
             "type": "array",
             "title": "betreft",
             "items": {
               "type": "object",
-              "$ref": "vastgoedobject",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "vastgoedobject"
-              }
+              "$ref": "vastgoedobject"
             }
           },
           "pacht": {
@@ -3961,11 +3453,7 @@
             "title": "pacht",
             "items": {
               "type": "object",
-              "$ref": "pachter",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "pachter"
-              }
+              "$ref": "pachter"
             }
           },
           "heeftHuurrecht": {
@@ -3973,11 +3461,7 @@
             "title": "heeftHuurrecht",
             "items": {
               "type": "object",
-              "$ref": "huurder",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "huurder"
-              }
+              "$ref": "huurder"
             }
           },
           "heeftEigenaar": {
@@ -3985,19 +3469,12 @@
             "title": "heeftEigenaar",
             "items": {
               "type": "object",
-              "$ref": "eigenaar",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "eigenaar"
-              }
+              "$ref": "eigenaar"
             }
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "zakelijkrecht"
-        ]
+        "hardValidation": false
       },
       "activa": {
         "slug": "activa",
@@ -4024,21 +3501,13 @@
             "title": "heeft",
             "items": {
               "type": "object",
-              "$ref": "hoofdrekening",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "hoofdrekening"
-              }
+              "$ref": "hoofdrekening"
             }
           },
           "isSoort": {
             "type": "object",
             "title": "isSoort",
-            "$ref": "activasoort",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "activasoort"
-            }
+            "$ref": "activasoort"
           }
         },
         "searchable": true,
@@ -4069,11 +3538,7 @@
             "title": "isSoort",
             "items": {
               "type": "object",
-              "$ref": "activa",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "activa"
-              }
+              "$ref": "activa"
             }
           }
         },
@@ -4102,11 +3567,7 @@
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "bankrekening",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "bankrekening"
-            }
+            "$ref": "bankrekening"
           }
         },
         "searchable": true,
@@ -4145,31 +3606,19 @@
           "leidtTot": {
             "type": "object",
             "title": "leidtTot",
-            "$ref": "mutatie",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "mutatie"
-            }
+            "$ref": "mutatie"
           },
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "bankafschrift",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "bankafschrift"
-            }
+            "$ref": "bankafschrift"
           },
           "komtVoorOp": {
             "type": "array",
             "title": "komtVoorOp",
             "items": {
               "type": "object",
-              "$ref": "betaling",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "betaling"
-              }
+              "$ref": "betaling"
             }
           }
         },
@@ -4207,11 +3656,7 @@
             "title": "naar",
             "items": {
               "type": "object",
-              "$ref": "betaling",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "betaling"
-              }
+              "$ref": "betaling"
             }
           },
           "van": {
@@ -4219,11 +3664,7 @@
             "title": "van",
             "items": {
               "type": "object",
-              "$ref": "betaling",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "betaling"
-              }
+              "$ref": "betaling"
             }
           },
           "heeft": {
@@ -4231,11 +3672,7 @@
             "title": "heeft",
             "items": {
               "type": "object",
-              "$ref": "bankafschrift",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "bankafschrift"
-              }
+              "$ref": "bankafschrift"
             }
           }
         },
@@ -4272,21 +3709,13 @@
             "title": "heeft",
             "items": {
               "type": "object",
-              "$ref": "batchregel",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "batchregel"
-              }
+              "$ref": "batchregel"
             }
           },
           "heeftHerkomst": {
             "type": "object",
             "title": "heeftHerkomst",
-            "$ref": "externebron",
-            "objectConfiguration": {
-              "register": "ggm-dienstverlening",
-              "schema": "externebron"
-            }
+            "$ref": "externebron"
           }
         },
         "searchable": true,
@@ -4332,20 +3761,12 @@
           "leidtTot": {
             "type": "object",
             "title": "leidtTot",
-            "$ref": "mutatie",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "mutatie"
-            }
+            "$ref": "mutatie"
           },
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "batch",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "batch"
-            }
+            "$ref": "batch"
           }
         },
         "searchable": true,
@@ -4381,11 +3802,7 @@
             "title": "valtBinnen",
             "items": {
               "type": "object",
-              "$ref": "periode",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "periode"
-              }
+              "$ref": "periode"
             }
           },
           "heeft": {
@@ -4393,11 +3810,7 @@
             "title": "heeft",
             "items": {
               "type": "object",
-              "$ref": "begrotingregel",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "begrotingregel"
-              }
+              "$ref": "begrotingregel"
             }
           }
         },
@@ -4432,20 +3845,12 @@
           "betreft": {
             "type": "object",
             "title": "betreft",
-            "$ref": "hoofdstuk",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "hoofdstuk"
-            }
+            "$ref": "hoofdstuk"
           },
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "begroting",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "begroting"
-            }
+            "$ref": "begroting"
           }
         },
         "searchable": true,
@@ -4455,7 +3860,7 @@
         "slug": "debiteur",
         "title": "Debiteur",
         "version": "2.5.0",
-        "description": "Iemand aan wie een dienst of product geleverd is waardoor recht op een vergoeding is ontstaan",
+        "description": "Iemand aan wie een dienst of product geleverd is waardoor recht op een vergoeding is ontstaan Extends: rechtspersoon.",
         "required": [],
         "properties": {
           "heeft": {
@@ -4463,19 +3868,12 @@
             "title": "heeft",
             "items": {
               "type": "object",
-              "$ref": "factuur",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "factuur"
-              }
+              "$ref": "factuur"
             }
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "rechtspersoon"
-        ]
+        "hardValidation": false
       },
       "doelstelling": {
         "slug": "doelstelling",
@@ -4505,31 +3903,19 @@
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "hoofdstuk",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "hoofdstuk"
-            }
+            "$ref": "hoofdstuk"
           },
           "isOpdrachtgever": {
             "type": "object",
             "title": "isOpdrachtgever",
-            "$ref": "opdrachtgever",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "opdrachtgever"
-            }
+            "$ref": "opdrachtgever"
           },
           "betreft": {
             "type": "array",
             "title": "betreft",
             "items": {
               "type": "object",
-              "$ref": "begrotingregel",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "begrotingregel"
-              }
+              "$ref": "begrotingregel"
             }
           }
         },
@@ -4586,41 +3972,25 @@
           "crediteur": {
             "type": "object",
             "title": "crediteur",
-            "$ref": "leverancier",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "leverancier"
-            }
+            "$ref": "leverancier"
           },
           "heeft": {
             "type": "array",
             "title": "heeft",
             "items": {
               "type": "object",
-              "$ref": "factuurregel",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "factuurregel"
-              }
+              "$ref": "factuurregel"
             }
           },
           "gedektVia": {
             "type": "object",
             "title": "gedektVia",
-            "$ref": "inkooporder",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "inkooporder"
-            }
+            "$ref": "inkooporder"
           },
           "schrijftOp": {
             "type": "object",
             "title": "schrijftOp",
-            "$ref": "kostenplaats",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "kostenplaats"
-            }
+            "$ref": "kostenplaats"
           }
         },
         "searchable": true,
@@ -4668,20 +4038,12 @@
           "leidtTot": {
             "type": "object",
             "title": "leidtTot",
-            "$ref": "mutatie",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "mutatie"
-            }
+            "$ref": "mutatie"
           },
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "factuur",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "factuur"
-            }
+            "$ref": "factuur"
           }
         },
         "searchable": true,
@@ -4742,11 +4104,7 @@
             "title": "wordtGeschrevenOp",
             "items": {
               "type": "object",
-              "$ref": "inkooporder",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "inkooporder"
-              }
+              "$ref": "inkooporder"
             }
           },
           "naar": {
@@ -4754,11 +4112,7 @@
             "title": "naar",
             "items": {
               "type": "object",
-              "$ref": "mutatie",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "mutatie"
-              }
+              "$ref": "mutatie"
             }
           },
           "van": {
@@ -4766,11 +4120,7 @@
             "title": "van",
             "items": {
               "type": "object",
-              "$ref": "mutatie",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "mutatie"
-              }
+              "$ref": "mutatie"
             }
           },
           "heeft": {
@@ -4778,11 +4128,7 @@
             "title": "heeft",
             "items": {
               "type": "object",
-              "$ref": "werkorder",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "werkorder"
-              }
+              "$ref": "werkorder"
             }
           },
           "valtBinnen": {
@@ -4790,11 +4136,7 @@
             "title": "valtBinnen",
             "items": {
               "type": "object",
-              "$ref": "hoofdrekening",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "hoofdrekening"
-              }
+              "$ref": "hoofdrekening"
             }
           },
           "betreft": {
@@ -4802,11 +4144,7 @@
             "title": "betreft",
             "items": {
               "type": "object",
-              "$ref": "begrotingregel",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "begrotingregel"
-              }
+              "$ref": "begrotingregel"
             }
           }
         },
@@ -4843,11 +4181,7 @@
             "title": "binnen",
             "items": {
               "type": "object",
-              "$ref": "periode",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "periode"
-              }
+              "$ref": "periode"
             }
           },
           "heeft": {
@@ -4855,11 +4189,7 @@
             "title": "heeft",
             "items": {
               "type": "object",
-              "$ref": "doelstelling",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "doelstelling"
-              }
+              "$ref": "doelstelling"
             }
           },
           "betreft": {
@@ -4867,11 +4197,7 @@
             "title": "betreft",
             "items": {
               "type": "object",
-              "$ref": "begrotingregel",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "begrotingregel"
-              }
+              "$ref": "begrotingregel"
             }
           }
         },
@@ -4960,11 +4286,7 @@
             "title": "mondtUitIn",
             "items": {
               "type": "object",
-              "$ref": "aanvraag-inkooporder",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "aanvraag-inkooporder"
-              }
+              "$ref": "aanvraag-inkooporder"
             }
           },
           "heeft": {
@@ -4972,53 +4294,33 @@
             "title": "heeft",
             "items": {
               "type": "object",
-              "$ref": "kostenplaats",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "kostenplaats"
-              }
+              "$ref": "kostenplaats"
             }
           },
           "oorspronkelijk": {
             "type": "object",
             "title": "oorspronkelijk",
-            "$ref": "inkooporder",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "inkooporder"
-            }
+            "$ref": "inkooporder"
           },
           "gerelateerd": {
             "type": "array",
             "title": "gerelateerd",
             "items": {
               "type": "object",
-              "$ref": "inkooporder",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "inkooporder"
-              }
+              "$ref": "inkooporder"
             }
           },
           "verplichtingAan": {
             "type": "object",
             "title": "verplichtingAan",
-            "$ref": "leverancier",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "leverancier"
-            }
+            "$ref": "leverancier"
           },
           "wordtGeschrevenOp": {
             "type": "array",
             "title": "wordtGeschrevenOp",
             "items": {
               "type": "object",
-              "$ref": "hoofdrekening",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "hoofdrekening"
-              }
+              "$ref": "hoofdrekening"
             }
           },
           "gedektVia": {
@@ -5026,11 +4328,7 @@
             "title": "gedektVia",
             "items": {
               "type": "object",
-              "$ref": "factuur",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "factuur"
-              }
+              "$ref": "factuur"
             }
           },
           "hoortBij": {
@@ -5038,11 +4336,7 @@
             "title": "hoortBij",
             "items": {
               "type": "object",
-              "$ref": "werkbon",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "werkbon"
-              }
+              "$ref": "werkbon"
             }
           }
         },
@@ -5110,11 +4404,7 @@
             "title": "heeft",
             "items": {
               "type": "object",
-              "$ref": "project",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "project"
-              }
+              "$ref": "project"
             }
           },
           "heeftBetrekkingOp": {
@@ -5122,32 +4412,20 @@
             "title": "heeftBetrekkingOp",
             "items": {
               "type": "object",
-              "$ref": "mutatie",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "mutatie"
-              }
+              "$ref": "mutatie"
             }
           },
           "isBudgetverantwoordelijk": {
             "type": "object",
             "title": "isBudgetverantwoordelijk",
-            "$ref": "opdrachtnemer",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "opdrachtnemer"
-            }
+            "$ref": "opdrachtnemer"
           },
           "schrijftOp": {
             "type": "array",
             "title": "schrijftOp",
             "items": {
               "type": "object",
-              "$ref": "factuur",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "factuur"
-              }
+              "$ref": "factuur"
             }
           },
           "betreft": {
@@ -5155,11 +4433,7 @@
             "title": "betreft",
             "items": {
               "type": "object",
-              "$ref": "begrotingregel",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "begrotingregel"
-              }
+              "$ref": "begrotingregel"
             }
           }
         },
@@ -5188,38 +4462,22 @@
           "heeftBetrekkingOp": {
             "type": "object",
             "title": "heeftBetrekkingOp",
-            "$ref": "kostenplaats",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "kostenplaats"
-            }
+            "$ref": "kostenplaats"
           },
           "naar": {
             "type": "object",
             "title": "naar",
-            "$ref": "hoofdrekening",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "hoofdrekening"
-            }
+            "$ref": "hoofdrekening"
           },
           "van": {
             "type": "object",
             "title": "van",
-            "$ref": "hoofdrekening",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "hoofdrekening"
-            }
+            "$ref": "hoofdrekening"
           },
           "leidtTot": {
             "type": "object",
             "title": "leidtTot",
-            "$ref": "factuurregel",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "factuurregel"
-            }
+            "$ref": "factuurregel"
           }
         },
         "searchable": true,
@@ -5265,22 +4523,14 @@
           "uitgevoerdDoor": {
             "type": "object",
             "title": "uitgevoerdDoor",
-            "$ref": "functie",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "functie"
-            }
+            "$ref": "functie"
           },
           "isOpdrachtgever": {
             "type": "array",
             "title": "isOpdrachtgever",
             "items": {
               "type": "object",
-              "$ref": "product",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "product"
-              }
+              "$ref": "product"
             }
           }
         },
@@ -5328,22 +4578,14 @@
           "uitgevoerdDoor": {
             "type": "object",
             "title": "uitgevoerdDoor",
-            "$ref": "functie",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "functie"
-            }
+            "$ref": "functie"
           },
           "isOpdrachtnemer": {
             "type": "array",
             "title": "isOpdrachtnemer",
             "items": {
               "type": "object",
-              "$ref": "product",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "product"
-              }
+              "$ref": "product"
             }
           },
           "isBudgetverantwoordelijk": {
@@ -5351,11 +4593,7 @@
             "title": "isBudgetverantwoordelijk",
             "items": {
               "type": "object",
-              "$ref": "kostenplaats",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "kostenplaats"
-              }
+              "$ref": "kostenplaats"
             }
           }
         },
@@ -5390,40 +4628,24 @@
           "isOpdrachtnemer": {
             "type": "object",
             "title": "isOpdrachtnemer",
-            "$ref": "opdrachtnemer",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "opdrachtnemer"
-            }
+            "$ref": "opdrachtnemer"
           },
           "isOpdrachtgever": {
             "type": "object",
             "title": "isOpdrachtgever",
-            "$ref": "opdrachtgever",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "opdrachtgever"
-            }
+            "$ref": "opdrachtgever"
           },
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "kostenplaats",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "kostenplaats"
-            }
+            "$ref": "kostenplaats"
           },
           "betreft": {
             "type": "array",
             "title": "betreft",
             "items": {
               "type": "object",
-              "$ref": "begrotingregel",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "begrotingregel"
-              }
+              "$ref": "begrotingregel"
             }
           }
         },
@@ -5458,11 +4680,7 @@
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "kostenplaats",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "kostenplaats"
-            }
+            "$ref": "kostenplaats"
           }
         },
         "searchable": true,
@@ -5529,11 +4747,7 @@
             "title": "heeft",
             "items": {
               "type": "object",
-              "$ref": "kostenplaats",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "kostenplaats"
-              }
+              "$ref": "kostenplaats"
             }
           }
         },
@@ -5579,11 +4793,7 @@
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "kostenplaats",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "kostenplaats"
-            }
+            "$ref": "kostenplaats"
           }
         },
         "searchable": true,
@@ -5617,20 +4827,12 @@
           "beoordelingVan": {
             "type": "object",
             "title": "beoordelingVan",
-            "$ref": "werknemer",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "werknemer"
-            }
+            "$ref": "werknemer"
           },
           "beoordeeldDoor": {
             "type": "object",
             "title": "beoordeeldDoor",
-            "$ref": "werknemer",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "werknemer"
-            }
+            "$ref": "werknemer"
           }
         },
         "searchable": true,
@@ -5675,20 +4877,12 @@
           "dientIn": {
             "type": "object",
             "title": "dientIn",
-            "$ref": "werknemer",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "werknemer"
-            }
+            "$ref": "werknemer"
           },
           "soortDeclaratie": {
             "type": "object",
             "title": "soortDeclaratie",
-            "$ref": "declaratiesoort",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "declaratiesoort"
-            }
+            "$ref": "declaratiesoort"
           }
         },
         "searchable": true,
@@ -5718,11 +4912,7 @@
             "title": "soortDeclaratie",
             "items": {
               "type": "object",
-              "$ref": "declaratie",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "declaratie"
-              }
+              "$ref": "declaratie"
             }
           }
         },
@@ -5774,62 +4964,38 @@
             "title": "toegewezenAan",
             "items": {
               "type": "object",
-              "$ref": "formatieplaats",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "formatieplaats"
-              }
+              "$ref": "formatieplaats"
             }
           },
           "aantalVolgensInzet": {
             "type": "object",
             "title": "aantalVolgensInzet",
-            "$ref": "inzet",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "inzet"
-            }
+            "$ref": "inzet"
           },
           "medewerkerHeeftDienstverband": {
             "type": "object",
             "title": "medewerkerHeeftDienstverband",
-            "$ref": "werknemer",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "werknemer"
-            }
+            "$ref": "werknemer"
           },
           "isOpVestiging": {
             "type": "array",
             "title": "isOpVestiging",
             "items": {
               "type": "object",
-              "$ref": "vestigingvanzaakbehandelendeorganisatie",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "vestigingvanzaakbehandelendeorganisatie"
-              }
+              "$ref": "vestigingvanzaakbehandelendeorganisatie"
             }
           },
           "dienstverbandConformFunctie": {
             "type": "object",
             "title": "dienstverbandConformFunctie",
-            "$ref": "functie",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "functie"
-            }
+            "$ref": "functie"
           },
           "onderdeelVan": {
             "type": "array",
             "title": "onderdeelVan",
             "items": {
               "type": "object",
-              "$ref": "organisatorischeeenheidhr",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "organisatorischeeenheidhr"
-              }
+              "$ref": "organisatorischeeenheidhr"
             }
           }
         },
@@ -5869,20 +5035,12 @@
           "heeftMaatregel": {
             "type": "object",
             "title": "heeftMaatregel",
-            "$ref": "werknemer",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "werknemer"
-            }
+            "$ref": "werknemer"
           },
           "soortMaatregel": {
             "type": "object",
             "title": "soortMaatregel",
-            "$ref": "soortdisciplinairemaatregel",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "soortdisciplinairemaatregel"
-            }
+            "$ref": "soortdisciplinairemaatregel"
           }
         },
         "searchable": true,
@@ -5907,32 +5065,20 @@
             "title": "functieVanFormatieplaats",
             "items": {
               "type": "object",
-              "$ref": "functie",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "functie"
-              }
+              "$ref": "functie"
             }
           },
           "onderdeelVan": {
             "type": "object",
             "title": "onderdeelVan",
-            "$ref": "organisatorischeeenheidhr",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "organisatorischeeenheidhr"
-            }
+            "$ref": "organisatorischeeenheidhr"
           },
           "toegewezenAan": {
             "type": "array",
             "title": "toegewezenAan",
             "items": {
               "type": "object",
-              "$ref": "dienstverband",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "dienstverband"
-              }
+              "$ref": "dienstverband"
             }
           }
         },
@@ -5978,43 +5124,27 @@
           "inzetVoorFunctie": {
             "type": "object",
             "title": "inzetVoorFunctie",
-            "$ref": "inzet",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "inzet"
-            }
+            "$ref": "inzet"
           },
           "vacatureBijFunctie": {
             "type": "array",
             "title": "vacatureBijFunctie",
             "items": {
               "type": "object",
-              "$ref": "vacature",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "vacature"
-              }
+              "$ref": "vacature"
             }
           },
           "gebaseerdOp": {
             "type": "object",
             "title": "gebaseerdOp",
-            "$ref": "normprofiel",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "normprofiel"
-            }
+            "$ref": "normprofiel"
           },
           "functieVanFormatieplaats": {
             "type": "array",
             "title": "functieVanFormatieplaats",
             "items": {
               "type": "object",
-              "$ref": "formatieplaats",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "formatieplaats"
-              }
+              "$ref": "formatieplaats"
             }
           },
           "dienstverbandConformFunctie": {
@@ -6022,11 +5152,7 @@
             "title": "dienstverbandConformFunctie",
             "items": {
               "type": "object",
-              "$ref": "dienstverband",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "dienstverband"
-              }
+              "$ref": "dienstverband"
             }
           },
           "uitgevoerdDoor": {
@@ -6034,11 +5160,7 @@
             "title": "uitgevoerdDoor",
             "items": {
               "type": "object",
-              "$ref": "opdrachtnemer",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "opdrachtnemer"
-              }
+              "$ref": "opdrachtnemer"
             }
           }
         },
@@ -6069,11 +5191,7 @@
             "title": "onderdeelVan",
             "items": {
               "type": "object",
-              "$ref": "normprofiel",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "normprofiel"
-              }
+              "$ref": "normprofiel"
             }
           }
         },
@@ -6119,20 +5237,12 @@
           "heeftGenoten": {
             "type": "object",
             "title": "heeftGenoten",
-            "$ref": "werknemer",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "werknemer"
-            }
+            "$ref": "werknemer"
           },
           "soortOpleiding": {
             "type": "object",
             "title": "soortOpleiding",
-            "$ref": "opleiding",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "opleiding"
-            }
+            "$ref": "opleiding"
           }
         },
         "searchable": true,
@@ -6168,11 +5278,7 @@
             "title": "heeftOndergaan",
             "items": {
               "type": "object",
-              "$ref": "werknemer",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "werknemer"
-              }
+              "$ref": "werknemer"
             }
           }
         },
@@ -6215,21 +5321,13 @@
             "title": "besteding",
             "items": {
               "type": "object",
-              "$ref": "keuzebudgetbesteding",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "keuzebudgetbesteding"
-              }
+              "$ref": "keuzebudgetbesteding"
             }
           },
           "heeftIndividueelKeuzebudget": {
             "type": "object",
             "title": "heeftIndividueelKeuzebudget",
-            "$ref": "werknemer",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "werknemer"
-            }
+            "$ref": "werknemer"
           }
         },
         "searchable": true,
@@ -6270,31 +5368,19 @@
           "inzetBij": {
             "type": "object",
             "title": "inzetBij",
-            "$ref": "organisatorischeeenheidhr",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "organisatorischeeenheidhr"
-            }
+            "$ref": "organisatorischeeenheidhr"
           },
           "inzetVoorFunctie": {
             "type": "object",
             "title": "inzetVoorFunctie",
-            "$ref": "functie",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "functie"
-            }
+            "$ref": "functie"
           },
           "aantalVolgensInzet": {
             "type": "array",
             "title": "aantalVolgensInzet",
             "items": {
               "type": "object",
-              "$ref": "dienstverband",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "dienstverband"
-              }
+              "$ref": "dienstverband"
             }
           }
         },
@@ -6323,20 +5409,12 @@
           "soortBesteding": {
             "type": "object",
             "title": "soortBesteding",
-            "$ref": "keuzebudgetbestedingsoort",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "keuzebudgetbestedingsoort"
-            }
+            "$ref": "keuzebudgetbestedingsoort"
           },
           "besteding": {
             "type": "object",
             "title": "besteding",
-            "$ref": "individueel-keuzebudget",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "individueel-keuzebudget"
-            }
+            "$ref": "individueel-keuzebudget"
           }
         },
         "searchable": true,
@@ -6366,11 +5444,7 @@
             "title": "soortBesteding",
             "items": {
               "type": "object",
-              "$ref": "keuzebudgetbesteding",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "keuzebudgetbesteding"
-              }
+              "$ref": "keuzebudgetbesteding"
             }
           }
         },
@@ -6406,20 +5480,12 @@
           "onderdeelVan": {
             "type": "object",
             "title": "onderdeelVan",
-            "$ref": "functiehuis",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "functiehuis"
-            }
+            "$ref": "functiehuis"
           },
           "gebaseerdOp": {
             "type": "object",
             "title": "gebaseerdOp",
-            "$ref": "functie",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "functie"
-            }
+            "$ref": "functie"
           }
         },
         "searchable": true,
@@ -6429,7 +5495,7 @@
         "slug": "onderwijsinstituut",
         "title": "Onderwijsinstituut",
         "version": "2.5.0",
-        "description": "Een instituut waar onderwijs wordt gegeven.",
+        "description": "Een instituut waar onderwijs wordt gegeven. Extends: nietnatuurlijkpersoon.",
         "required": [],
         "properties": {
           "wordtGegevenDoor": {
@@ -6437,19 +5503,12 @@
             "title": "wordtGegevenDoor",
             "items": {
               "type": "object",
-              "$ref": "opleiding",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "opleiding"
-              }
+              "$ref": "opleiding"
             }
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "nietnatuurlijkpersoon"
-        ]
+        "hardValidation": false
       },
       "opleiding": {
         "slug": "opleiding",
@@ -6486,11 +5545,7 @@
             "title": "wordtGegevenDoor",
             "items": {
               "type": "object",
-              "$ref": "onderwijsinstituut",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "onderwijsinstituut"
-              }
+              "$ref": "onderwijsinstituut"
             }
           },
           "soortOpleiding": {
@@ -6498,11 +5553,7 @@
             "title": "soortOpleiding",
             "items": {
               "type": "object",
-              "$ref": "genotenopleiding",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "genotenopleiding"
-              }
+              "$ref": "genotenopleiding"
             }
           }
         },
@@ -6513,7 +5564,7 @@
         "slug": "organisatorischeeenheidhr",
         "title": "OrganisatorischeEenheidHR",
         "version": "2.5.0",
-        "description": "Specialisatie van de Organisatorische eenheid uit het RGBZ voor het HR domein.",
+        "description": "Specialisatie van de Organisatorische eenheid uit het RGBZ voor het HR domein. Extends: organisatorischeeenheid.",
         "required": [
           "naam",
           "type"
@@ -6532,11 +5583,7 @@
             "title": "hoortBij",
             "items": {
               "type": "object",
-              "$ref": "rol",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "rol"
-              }
+              "$ref": "rol"
             }
           },
           "inzetBij": {
@@ -6544,60 +5591,38 @@
             "title": "inzetBij",
             "items": {
               "type": "object",
-              "$ref": "inzet",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "inzet"
-              }
+              "$ref": "inzet"
             }
           },
           "onderdeelVan": {
             "type": "object",
             "title": "onderdeelVan",
-            "$ref": "formatieplaats",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "formatieplaats"
-            }
+            "$ref": "formatieplaats"
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "organisatorischeeenheid"
-        ]
+        "hardValidation": false
       },
       "relatie": {
         "slug": "relatie",
         "title": "Relatie",
         "version": "2.5.0",
-        "description": "Betrekking waarin personen, zaken, begrippen of grootheden van nature tot elkaar staan.",
+        "description": "Betrekking waarin personen, zaken, begrippen of grootheden van nature tot elkaar staan. Extends: natuurlijkpersoon.",
         "required": [],
         "properties": {
           "isPartnerVan": {
             "type": "object",
             "title": "isPartnerVan",
-            "$ref": "werknemer",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "werknemer"
-            }
+            "$ref": "werknemer"
           },
           "isKindVan": {
             "type": "object",
             "title": "isKindVan",
-            "$ref": "werknemer",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "werknemer"
-            }
+            "$ref": "werknemer"
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "natuurlijkpersoon"
-        ]
+        "hardValidation": false
       },
       "rol": {
         "slug": "rol",
@@ -6630,21 +5655,13 @@
             "title": "heeft",
             "items": {
               "type": "object",
-              "$ref": "werknemer",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "werknemer"
-              }
+              "$ref": "werknemer"
             }
           },
           "hoortBij": {
             "type": "object",
             "title": "hoortBij",
-            "$ref": "organisatorischeeenheidhr",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "organisatorischeeenheidhr"
-            }
+            "$ref": "organisatorischeeenheidhr"
           }
         },
         "searchable": true,
@@ -6654,7 +5671,7 @@
         "slug": "sollicitant",
         "title": "Sollicitant",
         "version": "2.5.0",
-        "description": "Persoon die werk zoekt",
+        "description": "Persoon die werk zoekt Extends: natuurlijkpersoon.",
         "required": [],
         "properties": {
           "kandidaat": {
@@ -6662,11 +5679,7 @@
             "title": "kandidaat",
             "items": {
               "type": "object",
-              "$ref": "sollicitatiegesprek",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "sollicitatiegesprek"
-              }
+              "$ref": "sollicitatiegesprek"
             }
           },
           "solliciteertOpFunctie": {
@@ -6674,19 +5687,12 @@
             "title": "solliciteertOpFunctie",
             "items": {
               "type": "object",
-              "$ref": "sollicitatie",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "sollicitatie"
-              }
+              "$ref": "sollicitatie"
             }
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "natuurlijkpersoon"
-        ]
+        "hardValidation": false
       },
       "sollicitatie": {
         "slug": "sollicitatie",
@@ -6705,41 +5711,25 @@
           "solliciteert": {
             "type": "object",
             "title": "solliciteert",
-            "$ref": "werknemer",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "werknemer"
-            }
+            "$ref": "werknemer"
           },
           "inKaderVan": {
             "type": "array",
             "title": "inKaderVan",
             "items": {
               "type": "object",
-              "$ref": "sollicitatiegesprek",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "sollicitatiegesprek"
-              }
+              "$ref": "sollicitatiegesprek"
             }
           },
           "opVacature": {
             "type": "object",
             "title": "opVacature",
-            "$ref": "vacature",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "vacature"
-            }
+            "$ref": "vacature"
           },
           "solliciteertOpFunctie": {
             "type": "object",
             "title": "solliciteertOpFunctie",
-            "$ref": "sollicitant",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "sollicitant"
-            }
+            "$ref": "sollicitant"
           }
         },
         "searchable": true,
@@ -6779,32 +5769,20 @@
             "title": "doetSollicitatiegesprek",
             "items": {
               "type": "object",
-              "$ref": "werknemer",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "werknemer"
-              }
+              "$ref": "werknemer"
             }
           },
           "inKaderVan": {
             "type": "object",
             "title": "inKaderVan",
-            "$ref": "sollicitatie",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "sollicitatie"
-            }
+            "$ref": "sollicitatie"
           },
           "kandidaat": {
             "type": "array",
             "title": "kandidaat",
             "items": {
               "type": "object",
-              "$ref": "sollicitant",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "sollicitant"
-              }
+              "$ref": "sollicitant"
             }
           }
         },
@@ -6835,11 +5813,7 @@
             "title": "soortMaatregel",
             "items": {
               "type": "object",
-              "$ref": "disciplinaire-maatregel",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "disciplinaire-maatregel"
-              }
+              "$ref": "disciplinaire-maatregel"
             }
           }
         },
@@ -6864,11 +5838,7 @@
             "title": "aantalVolgensInzet",
             "items": {
               "type": "object",
-              "$ref": "dienstverband",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "dienstverband"
-              }
+              "$ref": "dienstverband"
             }
           }
         },
@@ -6920,21 +5890,13 @@
             "title": "opVacature",
             "items": {
               "type": "object",
-              "$ref": "sollicitatie",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "sollicitatie"
-              }
+              "$ref": "sollicitatie"
             }
           },
           "vacatureBijFunctie": {
             "type": "object",
             "title": "vacatureBijFunctie",
-            "$ref": "functie",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "functie"
-            }
+            "$ref": "functie"
           }
         },
         "searchable": true,
@@ -6980,20 +5942,12 @@
           "heeftVerlof": {
             "type": "object",
             "title": "heeftVerlof",
-            "$ref": "werknemer",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "werknemer"
-            }
+            "$ref": "werknemer"
           },
           "soortVerlof": {
             "type": "object",
             "title": "soortVerlof",
-            "$ref": "verlofsoort",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "verlofsoort"
-            }
+            "$ref": "verlofsoort"
           }
         },
         "searchable": true,
@@ -7023,11 +5977,7 @@
             "title": "soortVerlof",
             "items": {
               "type": "object",
-              "$ref": "verlof",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "verlof"
-              }
+              "$ref": "verlof"
             }
           }
         },
@@ -7057,20 +6007,12 @@
           "heeftVerzuim": {
             "type": "object",
             "title": "heeftVerzuim",
-            "$ref": "werknemer",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "werknemer"
-            }
+            "$ref": "werknemer"
           },
           "soortVerzuim": {
             "type": "object",
             "title": "soortVerzuim",
-            "$ref": "verzuimsoort",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "verzuimsoort"
-            }
+            "$ref": "verzuimsoort"
           }
         },
         "searchable": true,
@@ -7100,11 +6042,7 @@
             "title": "soortVerzuim",
             "items": {
               "type": "object",
-              "$ref": "verzuim",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "verzuim"
-              }
+              "$ref": "verzuim"
             }
           }
         },
@@ -7115,7 +6053,7 @@
         "slug": "werknemer",
         "title": "Werknemer",
         "version": "2.5.0",
-        "description": "De contractuele wederpartij van de werkgever bij de arbeidsovereenkomst.",
+        "description": "De contractuele wederpartij van de werkgever bij de arbeidsovereenkomst. Extends: medewerker.",
         "required": [
           "naam",
           "voornaam",
@@ -7148,11 +6086,7 @@
             "title": "heeftVerzuim",
             "items": {
               "type": "object",
-              "$ref": "verzuim",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "verzuim"
-              }
+              "$ref": "verzuim"
             }
           },
           "heeftVerlof": {
@@ -7160,11 +6094,7 @@
             "title": "heeftVerlof",
             "items": {
               "type": "object",
-              "$ref": "verlof",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "verlof"
-              }
+              "$ref": "verlof"
             }
           },
           "doetSollicitatiegesprek": {
@@ -7172,11 +6102,7 @@
             "title": "doetSollicitatiegesprek",
             "items": {
               "type": "object",
-              "$ref": "sollicitatiegesprek",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "sollicitatiegesprek"
-              }
+              "$ref": "sollicitatiegesprek"
             }
           },
           "solliciteert": {
@@ -7184,11 +6110,7 @@
             "title": "solliciteert",
             "items": {
               "type": "object",
-              "$ref": "sollicitatie",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "sollicitatie"
-              }
+              "$ref": "sollicitatie"
             }
           },
           "heeft": {
@@ -7196,32 +6118,20 @@
             "title": "heeft",
             "items": {
               "type": "object",
-              "$ref": "rol",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "rol"
-              }
+              "$ref": "rol"
             }
           },
           "isPartnerVan": {
             "type": "object",
             "title": "isPartnerVan",
-            "$ref": "relatie",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "relatie"
-            }
+            "$ref": "relatie"
           },
           "isKindVan": {
             "type": "array",
             "title": "isKindVan",
             "items": {
               "type": "object",
-              "$ref": "relatie",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "relatie"
-              }
+              "$ref": "relatie"
             }
           },
           "heeftIndividueelKeuzebudget": {
@@ -7229,32 +6139,20 @@
             "title": "heeftIndividueelKeuzebudget",
             "items": {
               "type": "object",
-              "$ref": "individueel-keuzebudget",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "individueel-keuzebudget"
-              }
+              "$ref": "individueel-keuzebudget"
             }
           },
           "heeftOndergaan": {
             "type": "object",
             "title": "heeftOndergaan",
-            "$ref": "geweldsincident",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "geweldsincident"
-            }
+            "$ref": "geweldsincident"
           },
           "heeftGenoten": {
             "type": "array",
             "title": "heeftGenoten",
             "items": {
               "type": "object",
-              "$ref": "genotenopleiding",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "genotenopleiding"
-              }
+              "$ref": "genotenopleiding"
             }
           },
           "heeftMaatregel": {
@@ -7262,11 +6160,7 @@
             "title": "heeftMaatregel",
             "items": {
               "type": "object",
-              "$ref": "disciplinaire-maatregel",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "disciplinaire-maatregel"
-              }
+              "$ref": "disciplinaire-maatregel"
             }
           },
           "medewerkerHeeftDienstverband": {
@@ -7274,11 +6168,7 @@
             "title": "medewerkerHeeftDienstverband",
             "items": {
               "type": "object",
-              "$ref": "dienstverband",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "dienstverband"
-              }
+              "$ref": "dienstverband"
             }
           },
           "dientIn": {
@@ -7286,11 +6176,7 @@
             "title": "dientIn",
             "items": {
               "type": "object",
-              "$ref": "declaratie",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "declaratie"
-              }
+              "$ref": "declaratie"
             }
           },
           "beoordelingVan": {
@@ -7298,11 +6184,7 @@
             "title": "beoordelingVan",
             "items": {
               "type": "object",
-              "$ref": "beoordeling",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "beoordeling"
-              }
+              "$ref": "beoordeling"
             }
           },
           "beoordeeldDoor": {
@@ -7310,19 +6192,12 @@
             "title": "beoordeeldDoor",
             "items": {
               "type": "object",
-              "$ref": "beoordeling",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "beoordeling"
-              }
+              "$ref": "beoordeling"
             }
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "medewerker"
-        ]
+        "hardValidation": false
       },
       "aanbesteding": {
         "slug": "aanbesteding",
@@ -7409,41 +6284,25 @@
           "valtOnder": {
             "type": "object",
             "title": "valtOnder",
-            "$ref": "cpv-code",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "cpv-code"
-            }
+            "$ref": "cpv-code"
           },
           "betreft": {
             "type": "array",
             "title": "betreft",
             "items": {
               "type": "object",
-              "$ref": "inschrijving",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "inschrijving"
-              }
+              "$ref": "inschrijving"
             }
           },
           "mondtUit": {
             "type": "object",
             "title": "mondtUit",
-            "$ref": "startformulieraanbesteden",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "startformulieraanbesteden"
-            }
+            "$ref": "startformulieraanbesteden"
           },
           "procesleider": {
             "type": "object",
             "title": "procesleider",
-            "$ref": "medewerker",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "medewerker"
-            }
+            "$ref": "medewerker"
           }
         },
         "searchable": true,
@@ -7578,69 +6437,41 @@
             "title": "ingediendVoor",
             "items": {
               "type": "object",
-              "$ref": "kandidaat",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "kandidaat"
-              }
+              "$ref": "kandidaat"
             }
           },
           "mondtUitIn": {
             "type": "object",
             "title": "mondtUitIn",
-            "$ref": "formulierinhuur",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "formulierinhuur"
-            }
+            "$ref": "formulierinhuur"
           },
           "betreft": {
             "type": "array",
             "title": "betreft",
             "items": {
               "type": "object",
-              "$ref": "uitnodiging",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "uitnodiging"
-              }
+              "$ref": "uitnodiging"
             }
           },
           "valtBinnen": {
             "type": "object",
             "title": "valtBinnen",
-            "$ref": "categorie",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "categorie"
-            }
+            "$ref": "categorie"
           },
           "eigenaar": {
             "type": "object",
             "title": "eigenaar",
-            "$ref": "medewerker",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "medewerker"
-            }
+            "$ref": "medewerker"
           },
           "valtOnder": {
             "type": "object",
             "title": "valtOnder",
-            "$ref": "cpv-code",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "cpv-code"
-            }
+            "$ref": "cpv-code"
           },
           "mondtUit": {
             "type": "object",
             "title": "mondtUit",
-            "$ref": "gunning",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "gunning"
-            }
+            "$ref": "gunning"
           }
         },
         "searchable": true,
@@ -7695,11 +6526,7 @@
           "mondtUit": {
             "type": "object",
             "title": "mondtUit",
-            "$ref": "startformulieraanbesteden",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "startformulieraanbesteden"
-            }
+            "$ref": "startformulieraanbesteden"
           }
         },
         "searchable": true,
@@ -7771,56 +6598,32 @@
           "ingediendBij": {
             "type": "object",
             "title": "ingediendBij",
-            "$ref": "medewerker",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "medewerker"
-            }
+            "$ref": "medewerker"
           },
           "betreft": {
             "type": "object",
             "title": "betreft",
-            "$ref": "contract",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "contract"
-            }
+            "$ref": "contract"
           },
           "afgehandeldDoor": {
             "type": "object",
             "title": "afgehandeldDoor",
-            "$ref": "organisatorischeeenheid",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "organisatorischeeenheid"
-            }
+            "$ref": "organisatorischeeenheid"
           },
           "afhandeling": {
             "type": "object",
             "title": "afhandeling",
-            "$ref": "zaak",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "zaak"
-            }
+            "$ref": "zaak"
           },
           "mondtUitIn": {
             "type": "object",
             "title": "mondtUitIn",
-            "$ref": "inkooporder",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "inkooporder"
-            }
+            "$ref": "inkooporder"
           },
           "vraagtAan": {
             "type": "object",
             "title": "vraagtAan",
-            "$ref": "medewerker",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "medewerker"
-            }
+            "$ref": "medewerker"
           }
         },
         "searchable": true,
@@ -7851,11 +6654,7 @@
             "title": "gekwalificeerd",
             "items": {
               "type": "object",
-              "$ref": "leverancier",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "leverancier"
-              }
+              "$ref": "leverancier"
             }
           },
           "valtBinnen": {
@@ -7863,11 +6662,7 @@
             "title": "valtBinnen",
             "items": {
               "type": "object",
-              "$ref": "aanbesteding-inhuur",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "aanbesteding-inhuur"
-              }
+              "$ref": "aanbesteding-inhuur"
             }
           }
         },
@@ -7977,52 +6772,32 @@
           "contractant": {
             "type": "object",
             "title": "contractant",
-            "$ref": "leverancier",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "leverancier"
-            }
+            "$ref": "leverancier"
           },
           "bovenliggend": {
             "type": "object",
             "title": "bovenliggend",
-            "$ref": "contract",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "contract"
-            }
+            "$ref": "contract"
           },
           "betreft": {
             "type": "array",
             "title": "betreft",
             "items": {
               "type": "object",
-              "$ref": "aanvraag-inkooporder",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "aanvraag-inkooporder"
-              }
+              "$ref": "aanvraag-inkooporder"
             }
           },
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "leverancier",
-            "objectConfiguration": {
-              "register": "ggm-sociaal-domein",
-              "schema": "leverancier"
-            }
+            "$ref": "leverancier"
           },
           "bevat": {
             "type": "array",
             "title": "bevat",
             "items": {
               "type": "object",
-              "$ref": "tarief",
-              "objectConfiguration": {
-                "register": "ggm-sociaal-domein",
-                "schema": "tarief"
-              }
+              "$ref": "tarief"
             }
           }
         },
@@ -8054,11 +6829,7 @@
             "title": "heeft",
             "items": {
               "type": "object",
-              "$ref": "inkooppakket",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "inkooppakket"
-              }
+              "$ref": "inkooppakket"
             }
           },
           "valtOnder": {
@@ -8066,11 +6837,7 @@
             "title": "valtOnder",
             "items": {
               "type": "object",
-              "$ref": "aanbesteding-inhuur",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "aanbesteding-inhuur"
-              }
+              "$ref": "aanbesteding-inhuur"
             }
           }
         },
@@ -8110,29 +6877,17 @@
           "aanvrager": {
             "type": "object",
             "title": "aanvrager",
-            "$ref": "medewerker",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "medewerker"
-            }
+            "$ref": "medewerker"
           },
           "mondtUitIn": {
             "type": "object",
             "title": "mondtUitIn",
-            "$ref": "aanbesteding-inhuur",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "aanbesteding-inhuur"
-            }
+            "$ref": "aanbesteding-inhuur"
           },
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "kostenplaats",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "kostenplaats"
-            }
+            "$ref": "kostenplaats"
           }
         },
         "searchable": true,
@@ -8170,29 +6925,17 @@
           "betreft": {
             "type": "object",
             "title": "betreft",
-            "$ref": "medewerker",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "medewerker"
-            }
+            "$ref": "medewerker"
           },
           "ingehuurdVia": {
             "type": "object",
             "title": "ingehuurdVia",
-            "$ref": "leverancier",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "leverancier"
-            }
+            "$ref": "leverancier"
           },
           "aanvrager": {
             "type": "object",
             "title": "aanvrager",
-            "$ref": "medewerker",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "medewerker"
-            }
+            "$ref": "medewerker"
           }
         },
         "searchable": true,
@@ -8238,29 +6981,17 @@
           "inhuur": {
             "type": "object",
             "title": "inhuur",
-            "$ref": "medewerker",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "medewerker"
-            }
+            "$ref": "medewerker"
           },
           "betreft": {
             "type": "object",
             "title": "betreft",
-            "$ref": "offerte",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "offerte"
-            }
+            "$ref": "offerte"
           },
           "mondtUit": {
             "type": "object",
             "title": "mondtUit",
-            "$ref": "aanbesteding-inhuur",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "aanbesteding-inhuur"
-            }
+            "$ref": "aanbesteding-inhuur"
           }
         },
         "searchable": true,
@@ -8302,11 +7033,7 @@
             "title": "heeft",
             "items": {
               "type": "object",
-              "$ref": "cpv-code",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "cpv-code"
-              }
+              "$ref": "cpv-code"
             }
           }
         },
@@ -8340,20 +7067,12 @@
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "leverancier",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "leverancier"
-            }
+            "$ref": "leverancier"
           },
           "betreft": {
             "type": "object",
             "title": "betreft",
-            "$ref": "gunning",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "gunning"
-            }
+            "$ref": "gunning"
           }
         },
         "searchable": true,
@@ -8376,29 +7095,17 @@
           "biedtAan": {
             "type": "object",
             "title": "biedtAan",
-            "$ref": "leverancier",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "leverancier"
-            }
+            "$ref": "leverancier"
           },
           "betreft": {
             "type": "object",
             "title": "betreft",
-            "$ref": "natuurlijkpersoon",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "natuurlijkpersoon"
-            }
+            "$ref": "natuurlijkpersoon"
           },
           "ingediendVoor": {
             "type": "object",
             "title": "ingediendVoor",
-            "$ref": "aanbesteding-inhuur",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "aanbesteding-inhuur"
-            }
+            "$ref": "aanbesteding-inhuur"
           }
         },
         "searchable": true,
@@ -8427,20 +7134,12 @@
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "leverancier",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "leverancier"
-            }
+            "$ref": "leverancier"
           },
           "betreft": {
             "type": "object",
             "title": "betreft",
-            "$ref": "aanbesteding",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "aanbesteding"
-            }
+            "$ref": "aanbesteding"
           }
         },
         "searchable": true,
@@ -8450,7 +7149,7 @@
         "slug": "leverancier",
         "title": "Leverancier",
         "version": "2.5.0",
-        "description": "Een niet-natuurlijk persoon die een product of dienst levert aan de organisatie",
+        "description": "Een niet-natuurlijk persoon die een product of dienst levert aan de organisatie Extends: rechtspersoon.",
         "required": [
           "naam",
           "nummer"
@@ -8471,11 +7170,7 @@
             "title": "ingediendDoor",
             "items": {
               "type": "object",
-              "$ref": "offerte",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "offerte"
-              }
+              "$ref": "offerte"
             }
           },
           "gerichtAan": {
@@ -8483,11 +7178,7 @@
             "title": "gerichtAan",
             "items": {
               "type": "object",
-              "$ref": "offerteaanvraag",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "offerteaanvraag"
-              }
+              "$ref": "offerteaanvraag"
             }
           },
           "heeft": {
@@ -8495,11 +7186,7 @@
             "title": "heeft",
             "items": {
               "type": "object",
-              "$ref": "kwalificatie",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "kwalificatie"
-              }
+              "$ref": "kwalificatie"
             }
           },
           "biedtAan": {
@@ -8507,11 +7194,7 @@
             "title": "biedtAan",
             "items": {
               "type": "object",
-              "$ref": "kandidaat",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "kandidaat"
-              }
+              "$ref": "kandidaat"
             }
           },
           "ingehuurdVia": {
@@ -8519,11 +7202,7 @@
             "title": "ingehuurdVia",
             "items": {
               "type": "object",
-              "$ref": "formulierverlenginginhuur",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "formulierverlenginginhuur"
-              }
+              "$ref": "formulierverlenginginhuur"
             }
           },
           "contractant": {
@@ -8531,11 +7210,7 @@
             "title": "contractant",
             "items": {
               "type": "object",
-              "$ref": "contract",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "contract"
-              }
+              "$ref": "contract"
             }
           },
           "gekwalificeerd": {
@@ -8543,11 +7218,7 @@
             "title": "gekwalificeerd",
             "items": {
               "type": "object",
-              "$ref": "categorie",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "categorie"
-              }
+              "$ref": "categorie"
             }
           },
           "betreft": {
@@ -8555,11 +7226,7 @@
             "title": "betreft",
             "items": {
               "type": "object",
-              "$ref": "aanvraag-inkooporder",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "aanvraag-inkooporder"
-              }
+              "$ref": "aanvraag-inkooporder"
             }
           },
           "verplichtingAan": {
@@ -8567,11 +7234,7 @@
             "title": "verplichtingAan",
             "items": {
               "type": "object",
-              "$ref": "inkooporder",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "inkooporder"
-              }
+              "$ref": "inkooporder"
             }
           },
           "crediteur": {
@@ -8579,11 +7242,7 @@
             "title": "crediteur",
             "items": {
               "type": "object",
-              "$ref": "factuur",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "factuur"
-              }
+              "$ref": "factuur"
             }
           },
           "voertWerkUitConform": {
@@ -8591,11 +7250,7 @@
             "title": "voertWerkUitConform",
             "items": {
               "type": "object",
-              "$ref": "werkbon",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "werkbon"
-              }
+              "$ref": "werkbon"
             }
           },
           "heeftGekwalificeerd": {
@@ -8603,11 +7258,7 @@
             "title": "heeftGekwalificeerd",
             "items": {
               "type": "object",
-              "$ref": "aanbesteding-vastgoed",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "aanbesteding-vastgoed"
-              }
+              "$ref": "aanbesteding-vastgoed"
             }
           },
           "heeftLeverancier": {
@@ -8615,11 +7266,7 @@
             "title": "heeftLeverancier",
             "items": {
               "type": "object",
-              "$ref": "server",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "server"
-              }
+              "$ref": "server"
             }
           },
           "uitvoerder": {
@@ -8627,11 +7274,7 @@
             "title": "uitvoerder",
             "items": {
               "type": "object",
-              "$ref": "melding",
-              "objectConfiguration": {
-                "register": "ggm-volkshuisvesting-leefomgeving",
-                "schema": "melding"
-              }
+              "$ref": "melding"
             }
           },
           "leverancier": {
@@ -8639,11 +7282,7 @@
             "title": "leverancier",
             "items": {
               "type": "object",
-              "$ref": "product",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "product"
-              }
+              "$ref": "product"
             }
           },
           "geleverdVia": {
@@ -8651,19 +7290,12 @@
             "title": "geleverdVia",
             "items": {
               "type": "object",
-              "$ref": "medewerker",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "medewerker"
-              }
+              "$ref": "medewerker"
             }
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "rechtspersoon"
-        ]
+        "hardValidation": false
       },
       "offerte-2": {
         "slug": "offerte-2",
@@ -8698,20 +7330,12 @@
           "ingediendDoor": {
             "type": "object",
             "title": "ingediendDoor",
-            "$ref": "leverancier",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "leverancier"
-            }
+            "$ref": "leverancier"
           },
           "betreft": {
             "type": "object",
             "title": "betreft",
-            "$ref": "gunning",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "gunning"
-            }
+            "$ref": "gunning"
           }
         },
         "searchable": true,
@@ -8751,20 +7375,12 @@
           "gerichtAan": {
             "type": "object",
             "title": "gerichtAan",
-            "$ref": "leverancier",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "leverancier"
-            }
+            "$ref": "leverancier"
           },
           "betreft": {
             "type": "object",
             "title": "betreft",
-            "$ref": "aanbesteding",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "aanbesteding"
-            }
+            "$ref": "aanbesteding"
           }
         },
         "searchable": true,
@@ -8915,32 +7531,20 @@
           "betreft": {
             "type": "object",
             "title": "betreft",
-            "$ref": "zaak",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "zaak"
-            }
+            "$ref": "zaak"
           },
           "mondtUit": {
             "type": "array",
             "title": "mondtUit",
             "items": {
               "type": "object",
-              "$ref": "aankondiging",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "aankondiging"
-              }
+              "$ref": "aankondiging"
             }
           },
           "dientIn": {
             "type": "object",
             "title": "dientIn",
-            "$ref": "medewerker",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "medewerker"
-            }
+            "$ref": "medewerker"
           }
         },
         "searchable": true,
@@ -8973,20 +7577,12 @@
           "gerichtAan": {
             "type": "object",
             "title": "gerichtAan",
-            "$ref": "leverancier",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "leverancier"
-            }
+            "$ref": "leverancier"
           },
           "betreft": {
             "type": "object",
             "title": "betreft",
-            "$ref": "aanbesteding-inhuur",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "aanbesteding-inhuur"
-            }
+            "$ref": "aanbesteding-inhuur"
           }
         },
         "searchable": true,
@@ -9011,11 +7607,7 @@
             "title": "binnenProgramma",
             "items": {
               "type": "object",
-              "$ref": "plan",
-              "objectConfiguration": {
-                "register": "ggm-volkshuisvesting-leefomgeving",
-                "schema": "plan"
-              }
+              "$ref": "plan"
             }
           }
         },
@@ -9034,11 +7626,7 @@
             "title": "heeft",
             "items": {
               "type": "object",
-              "$ref": "kostenplaats",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "kostenplaats"
-              }
+              "$ref": "kostenplaats"
             }
           }
         },

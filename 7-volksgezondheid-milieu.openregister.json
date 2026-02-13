@@ -48,11 +48,7 @@
             "title": "subcategorie",
             "items": {
               "type": "object",
-              "$ref": "melding",
-              "objectConfiguration": {
-                "register": "ggm-volksgezondheid-milieu",
-                "schema": "melding"
-              }
+              "$ref": "melding"
             }
           },
           "hoofdcategorie": {
@@ -60,11 +56,7 @@
             "title": "hoofdcategorie",
             "items": {
               "type": "object",
-              "$ref": "melding",
-              "objectConfiguration": {
-                "register": "ggm-volksgezondheid-milieu",
-                "schema": "melding"
-              }
+              "$ref": "melding"
             }
           }
         },
@@ -96,11 +88,7 @@
             "title": "gelost",
             "items": {
               "type": "object",
-              "$ref": "ophaalmoment",
-              "objectConfiguration": {
-                "register": "ggm-volksgezondheid-milieu",
-                "schema": "ophaalmoment"
-              }
+              "$ref": "ophaalmoment"
             }
           },
           "heeft": {
@@ -108,30 +96,18 @@
             "title": "heeft",
             "items": {
               "type": "object",
-              "$ref": "vulgraadmeting",
-              "objectConfiguration": {
-                "register": "ggm-volksgezondheid-milieu",
-                "schema": "vulgraadmeting"
-              }
+              "$ref": "vulgraadmeting"
             }
           },
           "soort": {
             "type": "object",
             "title": "soort",
-            "$ref": "containertype",
-            "objectConfiguration": {
-              "register": "ggm-volksgezondheid-milieu",
-              "schema": "containertype"
-            }
+            "$ref": "containertype"
           },
           "geschiktVoor": {
             "type": "object",
             "title": "geschiktVoor",
-            "$ref": "fractie",
-            "objectConfiguration": {
-              "register": "ggm-volksgezondheid-milieu",
-              "schema": "fractie"
-            }
+            "$ref": "fractie"
           }
         },
         "searchable": true,
@@ -161,11 +137,7 @@
             "title": "betreft",
             "items": {
               "type": "object",
-              "$ref": "melding",
-              "objectConfiguration": {
-                "register": "ggm-volksgezondheid-milieu",
-                "schema": "melding"
-              }
+              "$ref": "melding"
             }
           },
           "geschiktVoor": {
@@ -173,11 +145,7 @@
             "title": "geschiktVoor",
             "items": {
               "type": "object",
-              "$ref": "vuilniswagen",
-              "objectConfiguration": {
-                "register": "ggm-volksgezondheid-milieu",
-                "schema": "vuilniswagen"
-              }
+              "$ref": "vuilniswagen"
             }
           },
           "soort": {
@@ -185,11 +153,7 @@
             "title": "soort",
             "items": {
               "type": "object",
-              "$ref": "container",
-              "objectConfiguration": {
-                "register": "ggm-volksgezondheid-milieu",
-                "schema": "container"
-              }
+              "$ref": "container"
             }
           }
         },
@@ -220,11 +184,7 @@
             "title": "ophalen",
             "items": {
               "type": "object",
-              "$ref": "route",
-              "objectConfiguration": {
-                "register": "ggm-volksgezondheid-milieu",
-                "schema": "route"
-              }
+              "$ref": "route"
             }
           },
           "fractie": {
@@ -232,11 +192,7 @@
             "title": "fractie",
             "items": {
               "type": "object",
-              "$ref": "storting",
-              "objectConfiguration": {
-                "register": "ggm-volksgezondheid-milieu",
-                "schema": "storting"
-              }
+              "$ref": "storting"
             }
           },
           "inzamelpuntVan": {
@@ -244,11 +200,7 @@
             "title": "inzamelpuntVan",
             "items": {
               "type": "object",
-              "$ref": "milieustraat",
-              "objectConfiguration": {
-                "register": "ggm-volksgezondheid-milieu",
-                "schema": "milieustraat"
-              }
+              "$ref": "milieustraat"
             }
           },
           "betreft": {
@@ -256,11 +208,7 @@
             "title": "betreft",
             "items": {
               "type": "object",
-              "$ref": "prijsregel",
-              "objectConfiguration": {
-                "register": "ggm-volksgezondheid-milieu",
-                "schema": "prijsregel"
-              }
+              "$ref": "prijsregel"
             }
           },
           "geschiktVoor": {
@@ -268,11 +216,7 @@
             "title": "geschiktVoor",
             "items": {
               "type": "object",
-              "$ref": "container",
-              "objectConfiguration": {
-                "register": "ggm-volksgezondheid-milieu",
-                "schema": "container"
-              }
+              "$ref": "container"
             }
           }
         },
@@ -309,11 +253,7 @@
             "title": "gestoptOp",
             "items": {
               "type": "object",
-              "$ref": "ophaalmoment",
-              "objectConfiguration": {
-                "register": "ggm-volksgezondheid-milieu",
-                "schema": "ophaalmoment"
-              }
+              "$ref": "ophaalmoment"
             }
           },
           "betreft": {
@@ -321,32 +261,20 @@
             "title": "betreft",
             "items": {
               "type": "object",
-              "$ref": "melding",
-              "objectConfiguration": {
-                "register": "ggm-volksgezondheid-milieu",
-                "schema": "melding"
-              }
+              "$ref": "melding"
             }
           },
           "gaatLangs": {
             "type": "object",
             "title": "gaatLangs",
-            "$ref": "route",
-            "objectConfiguration": {
-              "register": "ggm-volksgezondheid-milieu",
-              "schema": "route"
-            }
+            "$ref": "route"
           },
           "heeft": {
             "type": "array",
             "title": "heeft",
             "items": {
               "type": "object",
-              "$ref": "container",
-              "objectConfiguration": {
-                "register": "ggm-volksgezondheid-milieu",
-                "schema": "container"
-              }
+              "$ref": "container"
             }
           }
         },
@@ -357,7 +285,7 @@
         "slug": "melding",
         "title": "Melding",
         "version": "2.5.0",
-        "description": "De betekenisvolle formulering van een waargenomen feit, waaraan een waarde kan worden toegekend",
+        "description": "De betekenisvolle formulering van een waargenomen feit, waaraan een waarde kan worden toegekend Extends: aanvraagofmelding.",
         "required": [
           "illegaal",
           "24uurs",
@@ -391,36 +319,21 @@
           "betreft": {
             "type": "object",
             "title": "betreft",
-            "$ref": "locatie",
-            "objectConfiguration": {
-              "register": "ggm-volksgezondheid-milieu",
-              "schema": "locatie"
-            }
+            "$ref": "locatie"
           },
           "subcategorie": {
             "type": "object",
             "title": "subcategorie",
-            "$ref": "categorie",
-            "objectConfiguration": {
-              "register": "ggm-volksgezondheid-milieu",
-              "schema": "categorie"
-            }
+            "$ref": "categorie"
           },
           "hoofdcategorie": {
             "type": "object",
             "title": "hoofdcategorie",
-            "$ref": "categorie",
-            "objectConfiguration": {
-              "register": "ggm-volksgezondheid-milieu",
-              "schema": "categorie"
-            }
+            "$ref": "categorie"
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "aanvraagofmelding"
-        ]
+        "hardValidation": false
       },
       "milieustraat": {
         "slug": "milieustraat",
@@ -451,11 +364,7 @@
             "title": "geldigVoor",
             "items": {
               "type": "object",
-              "$ref": "pas",
-              "objectConfiguration": {
-                "register": "ggm-volksgezondheid-milieu",
-                "schema": "pas"
-              }
+              "$ref": "pas"
             }
           },
           "bij": {
@@ -463,11 +372,7 @@
             "title": "bij",
             "items": {
               "type": "object",
-              "$ref": "storting",
-              "objectConfiguration": {
-                "register": "ggm-volksgezondheid-milieu",
-                "schema": "storting"
-              }
+              "$ref": "storting"
             }
           },
           "inzamelpuntVan": {
@@ -475,11 +380,7 @@
             "title": "inzamelpuntVan",
             "items": {
               "type": "object",
-              "$ref": "fractie",
-              "objectConfiguration": {
-                "register": "ggm-volksgezondheid-milieu",
-                "schema": "fractie"
-              }
+              "$ref": "fractie"
             }
           }
         },
@@ -508,29 +409,17 @@
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "rit",
-            "objectConfiguration": {
-              "register": "ggm-volksgezondheid-milieu",
-              "schema": "rit"
-            }
+            "$ref": "rit"
           },
           "gestoptOp": {
             "type": "object",
             "title": "gestoptOp",
-            "$ref": "locatie",
-            "objectConfiguration": {
-              "register": "ggm-volksgezondheid-milieu",
-              "schema": "locatie"
-            }
+            "$ref": "locatie"
           },
           "gelost": {
             "type": "object",
             "title": "gelost",
-            "$ref": "container",
-            "objectConfiguration": {
-              "register": "ggm-volksgezondheid-milieu",
-              "schema": "container"
-            }
+            "$ref": "container"
           }
         },
         "searchable": true,
@@ -560,11 +449,7 @@
             "title": "uitgevoerdeStorting",
             "items": {
               "type": "object",
-              "$ref": "storting",
-              "objectConfiguration": {
-                "register": "ggm-volksgezondheid-milieu",
-                "schema": "storting"
-              }
+              "$ref": "storting"
             }
           },
           "geldigVoor": {
@@ -572,11 +457,7 @@
             "title": "geldigVoor",
             "items": {
               "type": "object",
-              "$ref": "milieustraat",
-              "objectConfiguration": {
-                "register": "ggm-volksgezondheid-milieu",
-                "schema": "milieustraat"
-              }
+              "$ref": "milieustraat"
             }
           }
         },
@@ -614,11 +495,7 @@
             "title": "heeft",
             "items": {
               "type": "object",
-              "$ref": "prijsregel",
-              "objectConfiguration": {
-                "register": "ggm-volksgezondheid-milieu",
-                "schema": "prijsregel"
-              }
+              "$ref": "prijsregel"
             }
           }
         },
@@ -646,20 +523,12 @@
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "prijsafspraak",
-            "objectConfiguration": {
-              "register": "ggm-volksgezondheid-milieu",
-              "schema": "prijsafspraak"
-            }
+            "$ref": "prijsafspraak"
           },
           "betreft": {
             "type": "object",
             "title": "betreft",
-            "$ref": "fractie",
-            "objectConfiguration": {
-              "register": "ggm-volksgezondheid-milieu",
-              "schema": "fractie"
-            }
+            "$ref": "fractie"
           }
         },
         "searchable": true,
@@ -694,31 +563,19 @@
           "uitgevoerdMet": {
             "type": "object",
             "title": "uitgevoerdMet",
-            "$ref": "vuilniswagen",
-            "objectConfiguration": {
-              "register": "ggm-volksgezondheid-milieu",
-              "schema": "vuilniswagen"
-            }
+            "$ref": "vuilniswagen"
           },
           "volgens": {
             "type": "object",
             "title": "volgens",
-            "$ref": "route",
-            "objectConfiguration": {
-              "register": "ggm-volksgezondheid-milieu",
-              "schema": "route"
-            }
+            "$ref": "route"
           },
           "heeft": {
             "type": "array",
             "title": "heeft",
             "items": {
               "type": "object",
-              "$ref": "ophaalmoment",
-              "objectConfiguration": {
-                "register": "ggm-volksgezondheid-milieu",
-                "schema": "ophaalmoment"
-              }
+              "$ref": "ophaalmoment"
             }
           }
         },
@@ -763,11 +620,7 @@
             "title": "volgens",
             "items": {
               "type": "object",
-              "$ref": "rit",
-              "objectConfiguration": {
-                "register": "ggm-volksgezondheid-milieu",
-                "schema": "rit"
-              }
+              "$ref": "rit"
             }
           },
           "gaatLangs": {
@@ -775,21 +628,13 @@
             "title": "gaatLangs",
             "items": {
               "type": "object",
-              "$ref": "locatie",
-              "objectConfiguration": {
-                "register": "ggm-volksgezondheid-milieu",
-                "schema": "locatie"
-              }
+              "$ref": "locatie"
             }
           },
           "ophalen": {
             "type": "object",
             "title": "ophalen",
-            "$ref": "fractie",
-            "objectConfiguration": {
-              "register": "ggm-volksgezondheid-milieu",
-              "schema": "fractie"
-            }
+            "$ref": "fractie"
           }
         },
         "searchable": true,
@@ -818,31 +663,19 @@
           "uitgevoerdeStorting": {
             "type": "object",
             "title": "uitgevoerdeStorting",
-            "$ref": "pas",
-            "objectConfiguration": {
-              "register": "ggm-volksgezondheid-milieu",
-              "schema": "pas"
-            }
+            "$ref": "pas"
           },
           "bij": {
             "type": "object",
             "title": "bij",
-            "$ref": "milieustraat",
-            "objectConfiguration": {
-              "register": "ggm-volksgezondheid-milieu",
-              "schema": "milieustraat"
-            }
+            "$ref": "milieustraat"
           },
           "fractie": {
             "type": "array",
             "title": "fractie",
             "items": {
               "type": "object",
-              "$ref": "fractie",
-              "objectConfiguration": {
-                "register": "ggm-volksgezondheid-milieu",
-                "schema": "fractie"
-              }
+              "$ref": "fractie"
             }
           }
         },
@@ -880,11 +713,7 @@
             "title": "uitgevoerdMet",
             "items": {
               "type": "object",
-              "$ref": "rit",
-              "objectConfiguration": {
-                "register": "ggm-volksgezondheid-milieu",
-                "schema": "rit"
-              }
+              "$ref": "rit"
             }
           },
           "geschiktVoor": {
@@ -892,11 +721,7 @@
             "title": "geschiktVoor",
             "items": {
               "type": "object",
-              "$ref": "containertype",
-              "objectConfiguration": {
-                "register": "ggm-volksgezondheid-milieu",
-                "schema": "containertype"
-              }
+              "$ref": "containertype"
             }
           }
         },
@@ -932,11 +757,7 @@
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "container",
-            "objectConfiguration": {
-              "register": "ggm-volksgezondheid-milieu",
-              "schema": "container"
-            }
+            "$ref": "container"
           }
         },
         "searchable": true,

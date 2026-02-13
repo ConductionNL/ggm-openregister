@@ -23,7 +23,7 @@
         "slug": "belprovider",
         "title": "Belprovider",
         "version": "2.5.0",
-        "description": "Leverancier of dienstverlener van modiele beldiensten",
+        "description": "Leverancier of dienstverlener van modiele beldiensten Extends: leverancier.",
         "required": [
           "code"
         ],
@@ -38,19 +38,12 @@
             "title": "leverancier",
             "items": {
               "type": "object",
-              "$ref": "parkeerrecht",
-              "objectConfiguration": {
-                "register": "ggm-verkeer-vervoer-waterstaat",
-                "schema": "parkeerrecht"
-              }
+              "$ref": "parkeerrecht"
             }
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "leverancier"
-        ]
+        "hardValidation": false
       },
       "mulderfeit": {
         "slug": "mulderfeit",
@@ -149,11 +142,7 @@
           "betreftVoertuig": {
             "type": "object",
             "title": "betreftVoertuig",
-            "$ref": "voertuig",
-            "objectConfiguration": {
-              "register": "ggm-verkeer-vervoer-waterstaat",
-              "schema": "voertuig"
-            }
+            "$ref": "voertuig"
           }
         },
         "searchable": true,
@@ -261,11 +250,7 @@
           "komtVoortUit": {
             "type": "object",
             "title": "komtVoortUit",
-            "$ref": "parkeerscan",
-            "objectConfiguration": {
-              "register": "ggm-verkeer-vervoer-waterstaat",
-              "schema": "parkeerscan"
-            }
+            "$ref": "parkeerscan"
           }
         },
         "searchable": true,
@@ -275,14 +260,11 @@
         "slug": "parkeergarage",
         "title": "Parkeergarage",
         "version": "2.5.0",
-        "description": "Open constructie die geheel of gedeeltelijk in gebruik is als voorziening voor het parkeren van voertuigen",
+        "description": "Open constructie die geheel of gedeeltelijk in gebruik is als voorziening voor het parkeren van voertuigen Extends: parkeerzone.",
         "required": [],
         "properties": {},
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "parkeerzone"
-        ]
+        "hardValidation": false
       },
       "parkeerrecht": {
         "slug": "parkeerrecht",
@@ -335,41 +317,25 @@
           "verificatie": {
             "type": "object",
             "title": "verificatie",
-            "$ref": "parkeerscan",
-            "objectConfiguration": {
-              "register": "ggm-verkeer-vervoer-waterstaat",
-              "schema": "parkeerscan"
-            }
+            "$ref": "parkeerscan"
           },
           "resulteert": {
             "type": "object",
             "title": "resulteert",
-            "$ref": "parkeervergunning",
-            "objectConfiguration": {
-              "register": "ggm-verkeer-vervoer-waterstaat",
-              "schema": "parkeervergunning"
-            }
+            "$ref": "parkeervergunning"
           },
           "betreft": {
             "type": "array",
             "title": "betreft",
             "items": {
               "type": "object",
-              "$ref": "parkeerzone",
-              "objectConfiguration": {
-                "register": "ggm-verkeer-vervoer-waterstaat",
-                "schema": "parkeerzone"
-              }
+              "$ref": "parkeerzone"
             }
           },
           "leverancier": {
             "type": "object",
             "title": "leverancier",
-            "$ref": "belprovider",
-            "objectConfiguration": {
-              "register": "ggm-verkeer-vervoer-waterstaat",
-              "schema": "belprovider"
-            }
+            "$ref": "belprovider"
           }
         },
         "searchable": true,
@@ -433,38 +399,22 @@
           "betreft": {
             "type": "object",
             "title": "betreft",
-            "$ref": "parkeervlak",
-            "objectConfiguration": {
-              "register": "ggm-verkeer-vervoer-waterstaat",
-              "schema": "parkeervlak"
-            }
+            "$ref": "parkeervlak"
           },
           "uitgevoerdDoor": {
             "type": "object",
             "title": "uitgevoerdDoor",
-            "$ref": "medewerker",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "medewerker"
-            }
+            "$ref": "medewerker"
           },
           "verificatie": {
             "type": "object",
             "title": "verificatie",
-            "$ref": "parkeerrecht",
-            "objectConfiguration": {
-              "register": "ggm-verkeer-vervoer-waterstaat",
-              "schema": "parkeerrecht"
-            }
+            "$ref": "parkeerrecht"
           },
           "komtVoortUit": {
             "type": "object",
             "title": "komtVoortUit",
-            "$ref": "naheffing",
-            "objectConfiguration": {
-              "register": "ggm-verkeer-vervoer-waterstaat",
-              "schema": "naheffing"
-            }
+            "$ref": "naheffing"
           }
         },
         "searchable": true,
@@ -531,50 +481,30 @@
           "soort": {
             "type": "object",
             "title": "soort",
-            "$ref": "productsoort",
-            "objectConfiguration": {
-              "register": "ggm-verkeer-vervoer-waterstaat",
-              "schema": "productsoort"
-            }
+            "$ref": "productsoort"
           },
           "houder": {
             "type": "object",
             "title": "houder",
-            "$ref": "rechtspersoon",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "rechtspersoon"
-            }
+            "$ref": "rechtspersoon"
           },
           "geldigVoor": {
             "type": "array",
             "title": "geldigVoor",
             "items": {
               "type": "object",
-              "$ref": "parkeerzone",
-              "objectConfiguration": {
-                "register": "ggm-verkeer-vervoer-waterstaat",
-                "schema": "parkeerzone"
-              }
+              "$ref": "parkeerzone"
             }
           },
           "ingezetene": {
             "type": "object",
             "title": "ingezetene",
-            "$ref": "ingezetene",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "ingezetene"
-            }
+            "$ref": "ingezetene"
           },
           "resulteert": {
             "type": "object",
             "title": "resulteert",
-            "$ref": "parkeerrecht",
-            "objectConfiguration": {
-              "register": "ggm-verkeer-vervoer-waterstaat",
-              "schema": "parkeerrecht"
-            }
+            "$ref": "parkeerrecht"
           }
         },
         "searchable": true,
@@ -632,22 +562,14 @@
           "bevat": {
             "type": "object",
             "title": "bevat",
-            "$ref": "straatsectie",
-            "objectConfiguration": {
-              "register": "ggm-verkeer-vervoer-waterstaat",
-              "schema": "straatsectie"
-            }
+            "$ref": "straatsectie"
           },
           "betreft": {
             "type": "array",
             "title": "betreft",
             "items": {
               "type": "object",
-              "$ref": "parkeerscan",
-              "objectConfiguration": {
-                "register": "ggm-verkeer-vervoer-waterstaat",
-                "schema": "parkeerscan"
-              }
+              "$ref": "parkeerscan"
             }
           }
         },
@@ -778,11 +700,7 @@
             "title": "bevat",
             "items": {
               "type": "object",
-              "$ref": "straatsectie",
-              "objectConfiguration": {
-                "register": "ggm-verkeer-vervoer-waterstaat",
-                "schema": "straatsectie"
-              }
+              "$ref": "straatsectie"
             }
           },
           "geldigVoor": {
@@ -790,11 +708,7 @@
             "title": "geldigVoor",
             "items": {
               "type": "object",
-              "$ref": "parkeervergunning",
-              "objectConfiguration": {
-                "register": "ggm-verkeer-vervoer-waterstaat",
-                "schema": "parkeervergunning"
-              }
+              "$ref": "parkeervergunning"
             }
           },
           "betreft": {
@@ -802,11 +716,7 @@
             "title": "betreft",
             "items": {
               "type": "object",
-              "$ref": "parkeerrecht",
-              "objectConfiguration": {
-                "register": "ggm-verkeer-vervoer-waterstaat",
-                "schema": "parkeerrecht"
-              }
+              "$ref": "parkeerrecht"
             }
           }
         },
@@ -844,11 +754,7 @@
             "title": "valtBinnen",
             "items": {
               "type": "object",
-              "$ref": "productsoort",
-              "objectConfiguration": {
-                "register": "ggm-verkeer-vervoer-waterstaat",
-                "schema": "productsoort"
-              }
+              "$ref": "productsoort"
             }
           },
           "soort": {
@@ -856,11 +762,7 @@
             "title": "soort",
             "items": {
               "type": "object",
-              "$ref": "parkeervergunning",
-              "objectConfiguration": {
-                "register": "ggm-verkeer-vervoer-waterstaat",
-                "schema": "parkeervergunning"
-              }
+              "$ref": "parkeervergunning"
             }
           }
         },
@@ -901,22 +803,14 @@
           "valtBinnen": {
             "type": "object",
             "title": "valtBinnen",
-            "$ref": "productgroep",
-            "objectConfiguration": {
-              "register": "ggm-verkeer-vervoer-waterstaat",
-              "schema": "productgroep"
-            }
+            "$ref": "productgroep"
           },
           "soort": {
             "type": "array",
             "title": "soort",
             "items": {
               "type": "object",
-              "$ref": "parkeervergunning",
-              "objectConfiguration": {
-                "register": "ggm-verkeer-vervoer-waterstaat",
-                "schema": "parkeervergunning"
-              }
+              "$ref": "parkeervergunning"
             }
           }
         },
@@ -955,11 +849,7 @@
           "bevat": {
             "type": "object",
             "title": "bevat",
-            "$ref": "parkeerzone",
-            "objectConfiguration": {
-              "register": "ggm-verkeer-vervoer-waterstaat",
-              "schema": "parkeerzone"
-            }
+            "$ref": "parkeerzone"
           }
         },
         "searchable": true,
@@ -1008,11 +898,7 @@
             "title": "betreft",
             "items": {
               "type": "object",
-              "$ref": "parkeerscan",
-              "objectConfiguration": {
-                "register": "ggm-verkeer-vervoer-waterstaat",
-                "schema": "parkeerscan"
-              }
+              "$ref": "parkeerscan"
             }
           },
           "betreftVoertuig": {
@@ -1020,21 +906,13 @@
             "title": "betreftVoertuig",
             "items": {
               "type": "object",
-              "$ref": "mulderfeit",
-              "objectConfiguration": {
-                "register": "ggm-verkeer-vervoer-waterstaat",
-                "schema": "mulderfeit"
-              }
+              "$ref": "mulderfeit"
             }
           },
           "is": {
             "type": "object",
             "title": "is",
-            "$ref": "object",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "object"
-            }
+            "$ref": "object"
           }
         },
         "searchable": true,
@@ -1135,30 +1013,18 @@
             "title": "betreft",
             "items": {
               "type": "object",
-              "$ref": "wegdeel",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "wegdeel"
-              }
+              "$ref": "wegdeel"
             }
           },
           "gewijzigdDoor": {
             "type": "object",
             "title": "gewijzigdDoor",
-            "$ref": "medewerker",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "medewerker"
-            }
+            "$ref": "medewerker"
           },
           "ingevoerdDoor": {
             "type": "object",
             "title": "ingevoerdDoor",
-            "$ref": "medewerker",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "medewerker"
-            }
+            "$ref": "medewerker"
           }
         },
         "searchable": true,
@@ -1205,11 +1071,7 @@
             "title": "uitvoeringOp",
             "items": {
               "type": "object",
-              "$ref": "strooirouteuitvoering",
-              "objectConfiguration": {
-                "register": "ggm-verkeer-vervoer-waterstaat",
-                "schema": "strooirouteuitvoering"
-              }
+              "$ref": "strooirouteuitvoering"
             }
           }
         },
@@ -1235,11 +1097,7 @@
             "title": "volgens",
             "items": {
               "type": "object",
-              "$ref": "strooirouteuitvoering",
-              "objectConfiguration": {
-                "register": "ggm-verkeer-vervoer-waterstaat",
-                "schema": "strooirouteuitvoering"
-              }
+              "$ref": "strooirouteuitvoering"
             }
           }
         },
@@ -1287,20 +1145,12 @@
           "volgens": {
             "type": "object",
             "title": "volgens",
-            "$ref": "strooiroute",
-            "objectConfiguration": {
-              "register": "ggm-verkeer-vervoer-waterstaat",
-              "schema": "strooiroute"
-            }
+            "$ref": "strooiroute"
           },
           "uitvoeringOp": {
             "type": "object",
             "title": "uitvoeringOp",
-            "$ref": "strooidag",
-            "objectConfiguration": {
-              "register": "ggm-verkeer-vervoer-waterstaat",
-              "schema": "strooidag"
-            }
+            "$ref": "strooidag"
           }
         },
         "searchable": true,
@@ -1364,11 +1214,7 @@
           "isVastgelegdIn": {
             "type": "object",
             "title": "isVastgelegdIn",
-            "$ref": "document",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "document"
-            }
+            "$ref": "document"
           }
         },
         "searchable": true,
@@ -1402,11 +1248,7 @@
           "gegenereerdDoor": {
             "type": "object",
             "title": "gegenereerdDoor",
-            "$ref": "sensor",
-            "objectConfiguration": {
-              "register": "ggm-volkshuisvesting-leefomgeving",
-              "schema": "sensor"
-            }
+            "$ref": "sensor"
           }
         },
         "searchable": true,
@@ -1459,11 +1301,7 @@
           "gegenereerdDoor": {
             "type": "object",
             "title": "gegenereerdDoor",
-            "$ref": "kast",
-            "objectConfiguration": {
-              "register": "ggm-volkshuisvesting-leefomgeving",
-              "schema": "kast"
-            }
+            "$ref": "kast"
           }
         },
         "searchable": true,

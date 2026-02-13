@@ -23,7 +23,7 @@
         "slug": "aansluitput",
         "title": "Aansluitput",
         "version": "2.5.0",
-        "description": "Type put met de functie aansluitleidingen aansluiten",
+        "description": "Type put met de functie aansluitleidingen aansluiten Extends: put.",
         "required": [
           "aansluitpunt",
           "risicogebied",
@@ -49,16 +49,13 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "put"
-        ]
+        "hardValidation": false
       },
       "afvalbak": {
         "slug": "afvalbak",
         "title": "Afvalbak",
         "version": "2.5.0",
-        "description": "Inzamelobject voor afval in de openbare ruimte dat handmatig kan worden leeggemaakt.\nToelichting: Inzamelobject voor afval in de openbare ruimte dat handmatig kan worden leeggemaakt.",
+        "description": "Inzamelobject voor afval in de openbare ruimte dat handmatig kan worden leeggemaakt.\nToelichting: Inzamelobject voor afval in de openbare ruimte dat handmatig kan worden leeggemaakt. Extends: bak.",
         "required": [
           "type",
           "typePlus"
@@ -76,16 +73,13 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "bak"
-        ]
+        "hardValidation": false
       },
       "bak": {
         "slug": "bak",
         "title": "Bak",
         "version": "2.5.0",
-        "description": "Object met een permanent karakter dat dient om iets in te bergen of te verzamelen. (bron: definities.geostandaarden.nl)\nSynoniemen: Bak",
+        "description": "Object met een permanent karakter dat dient om iets in te bergen of te verzamelen. (bron: definities.geostandaarden.nl)\nSynoniemen: Bak Extends: beheerobject.",
         "required": [
           "breedte",
           "diameter",
@@ -170,16 +164,13 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "beheerobject"
-        ]
+        "hardValidation": false
       },
       "bank": {
         "slug": "bank",
         "title": "Bank",
         "version": "2.5.0",
-        "description": "Aaneengesloten zitplaats voor verscheidene personen, bedoeld voor openbaar gebruik en geplaatst in de openbare ruimte (vnl. in parken, plantsoenen, bossen en langs wegen).",
+        "description": "Aaneengesloten zitplaats voor verscheidene personen, bedoeld voor openbaar gebruik en geplaatst in de openbare ruimte (vnl. in parken, plantsoenen, bossen en langs wegen). Extends: meubilair.",
         "required": [
           "type",
           "typePlus"
@@ -197,10 +188,7 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "meubilair"
-        ]
+        "hardValidation": false
       },
       "beheerobject": {
         "slug": "beheerobject",
@@ -495,32 +483,20 @@
           "verwijstNaar": {
             "type": "object",
             "title": "verwijstNaar",
-            "$ref": "geo-object",
-            "objectConfiguration": {
-              "register": "ggm-volkshuisvesting-leefomgeving",
-              "schema": "geo-object"
-            }
+            "$ref": "geo-object"
           },
           "betreft": {
             "type": "array",
             "title": "betreft",
             "items": {
               "type": "object",
-              "$ref": "melding",
-              "objectConfiguration": {
-                "register": "ggm-volkshuisvesting-leefomgeving",
-                "schema": "melding"
-              }
+              "$ref": "melding"
             }
           },
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "logboek",
-            "objectConfiguration": {
-              "register": "ggm-volkshuisvesting-leefomgeving",
-              "schema": "logboek"
-            }
+            "$ref": "logboek"
           }
         },
         "searchable": true,
@@ -530,7 +506,7 @@
         "slug": "bemalingsgebied",
         "title": "Bemalingsgebied",
         "version": "2.5.0",
-        "description": "Een rioleringsgebied waaruit het afvalwater door een gemaal wordt verwijderd.\nToelichting: Een rioleringsgebied waaruit het afvalwater door een gemaal wordt verwijderd",
+        "description": "Een rioleringsgebied waaruit het afvalwater door een gemaal wordt verwijderd.\nToelichting: Een rioleringsgebied waaruit het afvalwater door een gemaal wordt verwijderd Extends: functioneelgebied.",
         "required": [
           "rioleringsgebied"
         ],
@@ -543,16 +519,13 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "functioneelgebied"
-        ]
+        "hardValidation": false
       },
       "bergingsbassin": {
         "slug": "bergingsbassin",
         "title": "Bergingsbassin",
         "version": "2.5.0",
-        "description": "Een gesloten reservoir waarin het afvalwater tijdelijk wordt opgevangen\nSynoniemen: Retentiebassin, bufferbassin",
+        "description": "Een gesloten reservoir waarin het afvalwater tijdelijk wordt opgevangen\nSynoniemen: Retentiebassin, bufferbassin Extends: bouwwerk.",
         "required": [
           "bergendVermogen",
           "pompLedigingsVoorziening",
@@ -591,16 +564,13 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "bouwwerk"
-        ]
+        "hardValidation": false
       },
       "boom": {
         "slug": "boom",
         "title": "Boom",
         "version": "2.5.0",
-        "description": "Een houtachtig gewas (loofboom of conifeer) met een wortelgestel en een enkele, stevige, houtige stam, die zich boven de grond vertakt.\nToelichting: Een houtachtig gewas (loofboom of conifeer) met een wortelgestel en een enkele, stevige, houtige stam, die zich boven de grond vertakt.",
+        "description": "Een houtachtig gewas (loofboom of conifeer) met een wortelgestel en een enkele, stevige, houtige stam, die zich boven de grond vertakt.\nToelichting: Een houtachtig gewas (loofboom of conifeer) met een wortelgestel en een enkele, stevige, houtige stam, die zich boven de grond vertakt. Extends: vegetatieobject.",
         "required": [
           "beleidsstatus",
           "beoogdeOmlooptijd",
@@ -869,16 +839,13 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "vegetatieobject"
-        ]
+        "hardValidation": false
       },
       "bord": {
         "slug": "bord",
         "title": "Bord",
         "version": "2.5.0",
-        "description": "Paneel waarop (statische) informatie wordt afgebeeld, verwoord in tekst, pictogram of code.",
+        "description": "Paneel waarop (statische) informatie wordt afgebeeld, verwoord in tekst, pictogram of code. Extends: beheerobject.",
         "required": [
           "breedte",
           "diameter",
@@ -939,16 +906,13 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "beheerobject"
-        ]
+        "hardValidation": false
       },
       "bouwwerk": {
         "slug": "bouwwerk",
         "title": "Bouwwerk",
         "version": "2.5.0",
-        "description": "Met de aarde verbonden duurzaam bouwwerk, dat niet valt onder de definities van een pand of kunstwerk  (bron: definities.geostandaarden.nl)",
+        "description": "Met de aarde verbonden duurzaam bouwwerk, dat niet valt onder de definities van een pand of kunstwerk  (bron: definities.geostandaarden.nl) Extends: beheerobject.",
         "required": [
           "aanleghoogte",
           "bouwwerkMateriaal",
@@ -1014,16 +978,13 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "beheerobject"
-        ]
+        "hardValidation": false
       },
       "brug": {
         "slug": "brug",
         "title": "Brug",
         "version": "2.5.0",
-        "description": "Kunstwerk over een waterweg, watergang of waterloop, bestaande uit een brugdek gesteund door pijlers en/of landhoofden.",
+        "description": "Kunstwerk over een waterweg, watergang of waterloop, bestaande uit een brugdek gesteund door pijlers en/of landhoofden. Extends: overbruggingsobject.",
         "required": [
           "aantalOverspanningen",
           "bedienaar",
@@ -1134,16 +1095,13 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "overbruggingsobject"
-        ]
+        "hardValidation": false
       },
       "drainageput": {
         "slug": "drainageput",
         "title": "Drainageput",
         "version": "2.5.0",
-        "description": "Put welke toegang geeft naar een poreuze of geperforeerde buisleiding, aangebracht onder de grond om de afwatering van de grond te verbeteren.",
+        "description": "Put welke toegang geeft naar een poreuze of geperforeerde buisleiding, aangebracht onder de grond om de afwatering van de grond te verbeteren. Extends: put.",
         "required": [
           "risicogebied",
           "type"
@@ -1162,16 +1120,13 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "put"
-        ]
+        "hardValidation": false
       },
       "ecoduct": {
         "slug": "ecoduct",
         "title": "Ecoduct",
         "version": "2.5.0",
-        "description": "Wildwissel in de vorm van een viaduct voor passages van dieren over een weg of spoorweg. IMGeo\nSynoniemen: Natuurbrug, Faunabrug, Ecobrug, Ecopassage, Natuurpassage\nToelichting: Opheffen van barriÃ¨res en de migratie van fauna mogelijk maken tussen of binnen leefgebieden en populaties.",
+        "description": "Wildwissel in de vorm van een viaduct voor passages van dieren over een weg of spoorweg. IMGeo\nSynoniemen: Natuurbrug, Faunabrug, Ecobrug, Ecopassage, Natuurpassage\nToelichting: Opheffen van barriÃ¨res en de migratie van fauna mogelijk maken tussen of binnen leefgebieden en populaties. Extends: overbruggingsobject.",
         "required": [
           "aantalOverspanningen",
           "draagvermogen",
@@ -1226,16 +1181,13 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "overbruggingsobject"
-        ]
+        "hardValidation": false
       },
       "fietsparkeervoorziening": {
         "slug": "fietsparkeervoorziening",
         "title": "Fietsparkeervoorziening",
         "version": "2.5.0",
-        "description": "Een duurzaam verankerd rek in de openbare ruimte voor het stallen van fietsen",
+        "description": "Een duurzaam verankerd rek in de openbare ruimte voor het stallen van fietsen Extends: meubilair.",
         "required": [
           "aantalParkeerplaatsen",
           "type",
@@ -1259,16 +1211,13 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "meubilair"
-        ]
+        "hardValidation": false
       },
       "filterput": {
         "slug": "filterput",
         "title": "Filterput",
         "version": "2.5.0",
-        "description": "Put met een filterconstructie voor het onttrekken van grondwater. Kan ook beschouwd worden als een soort drainagevoorziening.",
+        "description": "Put met een filterconstructie voor het onttrekken van grondwater. Kan ook beschouwd worden als een soort drainagevoorziening. Extends: put.",
         "required": [
           "drain",
           "risicogebied"
@@ -1288,16 +1237,13 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "put"
-        ]
+        "hardValidation": false
       },
       "flyover": {
         "slug": "flyover",
         "title": "Flyover",
         "version": "2.5.0",
-        "description": "Kunstwerk in de vorm van een viaduct dat deel uitmaakt van een verkeersbaan en waarmee een verkeersstroom over twee of meer ongelijkvloerse verkeersstromen wordt geleid.",
+        "description": "Kunstwerk in de vorm van een viaduct dat deel uitmaakt van een verkeersbaan en waarmee een verkeersstroom over twee of meer ongelijkvloerse verkeersstromen wordt geleid. Extends: overbruggingsobject.",
         "required": [
           "aantalOverspanningen",
           "belastingklasseNieuw",
@@ -1364,16 +1310,13 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "overbruggingsobject"
-        ]
+        "hardValidation": false
       },
       "functioneelgebied": {
         "slug": "functioneelgebied",
         "title": "FunctioneelGebied",
         "version": "2.5.0",
-        "description": "Begrensd en benoemd gebied dat door een functionele eenheid beschreven wordt.   (bron: definities.geostandaarden.nl)",
+        "description": "Begrensd en benoemd gebied dat door een functionele eenheid beschreven wordt.   (bron: definities.geostandaarden.nl) Extends: beheerobject.",
         "required": [
           "functioneelGebiedCode",
           "functioneelGebiedNaam",
@@ -1405,16 +1348,13 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "beheerobject"
-        ]
+        "hardValidation": false
       },
       "geluidsscherm": {
         "slug": "geluidsscherm",
         "title": "Geluidsscherm",
         "version": "2.5.0",
-        "description": "Een scheiding bedoeld om geluidshinder in de buitenlucht te verminderen. (IMGeo)",
+        "description": "Een scheiding bedoeld om geluidshinder in de buitenlucht te verminderen. (IMGeo) Extends: scheiding.",
         "required": [
           "aantalDeuren",
           "aantalPanelen",
@@ -1438,16 +1378,13 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "scheiding"
-        ]
+        "hardValidation": false
       },
       "gemaal": {
         "slug": "gemaal",
         "title": "Gemaal",
         "version": "2.5.0",
-        "description": "Een constructie ten behoeve van het verplaatsen van water",
+        "description": "Een constructie ten behoeve van het verplaatsen van water Extends: kunstwerk.",
         "required": [
           "aantalBedrijfsaansluitingen",
           "aantalHuisaansluitingen",
@@ -1513,16 +1450,13 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "kunstwerk"
-        ]
+        "hardValidation": false
       },
       "groenobject": {
         "slug": "groenobject",
         "title": "Groenobject",
         "version": "2.5.0",
-        "description": "Kleinste functioneel onafhankelijk stukje van een terrein dat er binnen het objecttype Terrein van NEN 3610 wordt onderscheiden, met aaneengesloten vegetatie.",
+        "description": "Kleinste functioneel onafhankelijk stukje van een terrein dat er binnen het objecttype Terrein van NEN 3610 wordt onderscheiden, met aaneengesloten vegetatie. Extends: beheerobject.",
         "required": [
           "aantalObstakels",
           "aantalZijden",
@@ -1811,16 +1745,13 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "beheerobject"
-        ]
+        "hardValidation": false
       },
       "infiltratieput": {
         "slug": "infiltratieput",
         "title": "Infiltratieput",
         "version": "2.5.0",
-        "description": "Een put met waterdoorlatende wanden bestemd voor de inzameling van hemelwater, waarbij het hemelwater door middel van infiltratie door de wanden kan worden afgevoerd",
+        "description": "Een put met waterdoorlatende wanden bestemd voor de inzameling van hemelwater, waarbij het hemelwater door middel van infiltratie door de wanden kan worden afgevoerd Extends: put.",
         "required": [
           "porositeit",
           "risicogebied"
@@ -1839,16 +1770,13 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "put"
-        ]
+        "hardValidation": false
       },
       "installatie": {
         "slug": "installatie",
         "title": "Installatie",
         "version": "2.5.0",
-        "description": "Samenhangend systeem dat een bepaald doel dient.",
+        "description": "Samenhangend systeem dat een bepaald doel dient. Extends: beheerobject.",
         "required": [
           "breedte",
           "eANCode",
@@ -1919,16 +1847,13 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "beheerobject"
-        ]
+        "hardValidation": false
       },
       "kademuur": {
         "slug": "kademuur",
         "title": "Kademuur",
         "version": "2.5.0",
-        "description": "Verticale wand ter scheiding van land en water, opgebouwd uit een muur van gemetselde stenen of gestort beton. (bron: definities.geostandaarden.nl)",
+        "description": "Verticale wand ter scheiding van land en water, opgebouwd uit een muur van gemetselde stenen of gestort beton. (bron: definities.geostandaarden.nl) Extends: scheiding.",
         "required": [
           "belastingklasseNieuw",
           "belastingklasseOud",
@@ -2001,16 +1926,13 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "scheiding"
-        ]
+        "hardValidation": false
       },
       "kast": {
         "slug": "kast",
         "title": "Kast",
         "version": "2.5.0",
-        "description": "Object met een permanent karakter dat dient om iets in te bergen en te beschermen.",
+        "description": "Object met een permanent karakter dat dient om iets in te bergen en te beschermen. Extends: beheerobject.",
         "required": [
           "aantalDeuren",
           "adresTelecom",
@@ -2125,25 +2047,18 @@
             "title": "gegenereerdDoor",
             "items": {
               "type": "object",
-              "$ref": "vloginfo",
-              "objectConfiguration": {
-                "register": "ggm-verkeer-vervoer-waterstaat",
-                "schema": "vloginfo"
-              }
+              "$ref": "vloginfo"
             }
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "beheerobject"
-        ]
+        "hardValidation": false
       },
       "keermuur": {
         "slug": "keermuur",
         "title": "Keermuur",
         "version": "2.5.0",
-        "description": "Muur die door vorm, gewicht en fundering zonder verankering de grond keert, vaak van beton met L-vormige doorsnede.  Een keermuur of keerwand is een stijf, grond- of waterkerend kunstwerk dat door een groot gewicht en een brede voet een grote standzekerheid kan bereiken. Een keermuur is meestal van gewapend beton, maar er kan ook ander materiaal gebruikt worden. (IMGeo)\nSynoniemen: Keerwand, klip",
+        "description": "Muur die door vorm, gewicht en fundering zonder verankering de grond keert, vaak van beton met L-vormige doorsnede.  Een keermuur of keerwand is een stijf, grond- of waterkerend kunstwerk dat door een groot gewicht en een brede voet een grote standzekerheid kan bereiken. Een keermuur is meestal van gewapend beton, maar er kan ook ander materiaal gebruikt worden. (IMGeo)\nSynoniemen: Keerwand, klip Extends: scheiding.",
         "required": [
           "belastingklasseNieuw",
           "belastingklasseOud",
@@ -2167,16 +2082,13 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "scheiding"
-        ]
+        "hardValidation": false
       },
       "klimplant": {
         "slug": "klimplant",
         "title": "Klimplant",
         "version": "2.5.0",
-        "description": "Plant met buigzame stengels die zich op diverse manieren aan muren, bomen of constructies hecht en zodoende omhoog klimt.\nToelichting: Plant met buigzame stengels die zich op diverse manieren aan muren, bomen of constructies hecht en zodoende omhoog klimt.",
+        "description": "Plant met buigzame stengels die zich op diverse manieren aan muren, bomen of constructies hecht en zodoende omhoog klimt.\nToelichting: Plant met buigzame stengels die zich op diverse manieren aan muren, bomen of constructies hecht en zodoende omhoog klimt. Extends: vegetatieobject.",
         "required": [
           "hoogte",
           "knipfrequentie",
@@ -2212,16 +2124,13 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "vegetatieobject"
-        ]
+        "hardValidation": false
       },
       "kolk": {
         "slug": "kolk",
         "title": "Kolk",
         "version": "2.5.0",
-        "description": "Een reservoir bestemd voor de opvang van hemelwater afkomstig van erop aangesloten oppervlakken, het laten bezinken van in dit water meegevoerde bezinkbare stoffen en de afvoer van dit water naar een rioolstelsel of naar de ondergrond.\nSynoniemen: Afvoerput",
+        "description": "Een reservoir bestemd voor de opvang van hemelwater afkomstig van erop aangesloten oppervlakken, het laten bezinken van in dit water meegevoerde bezinkbare stoffen en de afvoer van dit water naar een rioolstelsel of naar de ondergrond.\nSynoniemen: Afvoerput Extends: put.",
         "required": [
           "bereikbaarheidKolk",
           "risicogebied",
@@ -2246,16 +2155,13 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "put"
-        ]
+        "hardValidation": false
       },
       "kunstwerk": {
         "slug": "kunstwerk",
         "title": "Kunstwerk",
         "version": "2.5.0",
-        "description": "Civiel-technisch werk voor de infrastructuur van wegen, water, spoorbanen, waterkeringen en/of leidingen en niet bedoeld voor permanent menselijk verblijf. http://definities.geostandaarden.nl",
+        "description": "Civiel-technisch werk voor de infrastructuur van wegen, water, spoorbanen, waterkeringen en/of leidingen en niet bedoeld voor permanent menselijk verblijf. http://definities.geostandaarden.nl Extends: beheerobject.",
         "required": [
           "aanleghoogte",
           "antiGraffitiVoorziening",
@@ -2476,16 +2382,13 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "beheerobject"
-        ]
+        "hardValidation": false
       },
       "leiding": {
         "slug": "leiding",
         "title": "Leiding",
         "version": "2.5.0",
-        "description": "Een geheel van geleiders welke voorzien zijn van één ommanteling en bestemd is voor transport van materie",
+        "description": "Een geheel van geleiders welke voorzien zijn van één ommanteling en bestemd is voor transport van materie Extends: beheerobject.",
         "required": [
           "afwijkendeDieptelegging",
           "breedte",
@@ -2570,16 +2473,13 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "beheerobject"
-        ]
+        "hardValidation": false
       },
       "leidingelement": {
         "slug": "leidingelement",
         "title": "Leidingelement",
         "version": "2.5.0",
-        "description": "Een object dat bij een leiding behoort.",
+        "description": "Een object dat bij een leiding behoort. Extends: beheerobject.",
         "required": [
           "afwijkendeDieptelegging",
           "diepte",
@@ -2621,29 +2521,23 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "beheerobject"
-        ]
+        "hardValidation": false
       },
       "mast": {
         "slug": "mast",
         "title": "Mast",
         "version": "2.5.0",
-        "description": "Draagconstructie, bestaande uit een verticale buispaal, die wordt gebruikt om iets op hoogte te brengen.",
+        "description": "Draagconstructie, bestaande uit een verticale buispaal, die wordt gebruikt om iets op hoogte te brengen. Extends: beheerobject.",
         "required": [],
         "properties": {},
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "beheerobject"
-        ]
+        "hardValidation": false
       },
       "meubilair": {
         "slug": "meubilair",
         "title": "Meubilair",
         "version": "2.5.0",
-        "description": "De verzameling van ruimtelijke objecten ter inrichting van de openbare ruimte of terreinen.\nEen ruimtelijk object ter inrichting van de openbare ruimte.",
+        "description": "De verzameling van ruimtelijke objecten ter inrichting van de openbare ruimte of terreinen.\nEen ruimtelijk object ter inrichting van de openbare ruimte. Extends: beheerobject.",
         "required": [
           "aanleghoogte",
           "bouwjaar",
@@ -2812,16 +2706,13 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "beheerobject"
-        ]
+        "hardValidation": false
       },
       "overbruggingsobject": {
         "slug": "overbruggingsobject",
         "title": "Overbruggingsobject",
         "version": "2.5.0",
-        "description": "Onderdeel van een beweegbare of vaste verbinding tussen twee punten, die door water, een weg of anderszins gescheiden zijn, dat essentieel is voor de constructie .",
+        "description": "Onderdeel van een beweegbare of vaste verbinding tussen twee punten, die door water, een weg of anderszins gescheiden zijn, dat essentieel is voor de constructie . Extends: beheerobject.",
         "required": [
           "aanleghoogte",
           "antiGraffitiVoorziening",
@@ -2966,16 +2857,13 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "beheerobject"
-        ]
+        "hardValidation": false
       },
       "overstortconstructie": {
         "slug": "overstortconstructie",
         "title": "Overstortconstructie",
         "version": "2.5.0",
-        "description": "Een constructie voorzien van een overstortdrempel met een ontworpen drempelbreedte en -hoogte.",
+        "description": "Een constructie voorzien van een overstortdrempel met een ontworpen drempelbreedte en -hoogte. Extends: kunstwerk.",
         "required": [
           "bassin",
           "drempelbreedte",
@@ -3024,16 +2912,13 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "kunstwerk"
-        ]
+        "hardValidation": false
       },
       "paal": {
         "slug": "paal",
         "title": "Paal",
         "version": "2.5.0",
-        "description": "Langwerpig stuk hout, ijzer, steen enz., dat in de grond staat.",
+        "description": "Langwerpig stuk hout, ijzer, steen enz., dat in de grond staat. Extends: beheerobject.",
         "required": [
           "breedte",
           "diameter",
@@ -3103,25 +2988,18 @@
             "title": "gegenereerdDoor",
             "items": {
               "type": "object",
-              "$ref": "vloginfo",
-              "objectConfiguration": {
-                "register": "ggm-verkeer-vervoer-waterstaat",
-                "schema": "vloginfo"
-              }
+              "$ref": "vloginfo"
             }
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "beheerobject"
-        ]
+        "hardValidation": false
       },
       "pomp": {
         "slug": "pomp",
         "title": "Pomp",
         "version": "2.5.0",
-        "description": "Een technische installatie die het (afval) water onder druk transporteert.",
+        "description": "Een technische installatie die het (afval) water onder druk transporteert. Extends: installatie.",
         "required": [
           "aanslagniveau",
           "beginstandDraaiurenteller",
@@ -3233,16 +3111,13 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "installatie"
-        ]
+        "hardValidation": false
       },
       "put": {
         "slug": "put",
         "title": "Put",
         "version": "2.5.0",
-        "description": "Verticale waterdichte constructie, toegepast om leidingen aan te sluiten, van richting of niveau te veranderen, om toegang te verschaffen aan personeel en/of apparatuur voor inspectie en onderhoud, en om beluchting en ventilatie mogelijk te maken",
+        "description": "Verticale waterdichte constructie, toegepast om leidingen aan te sluiten, van richting of niveau te veranderen, om toegang te verschaffen aan personeel en/of apparatuur voor inspectie en onderhoud, en om beluchting en ventilatie mogelijk te maken Extends: beheerobject.",
         "required": [
           "bovengrondsZichtbaar",
           "breedte",
@@ -3326,16 +3201,13 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "beheerobject"
-        ]
+        "hardValidation": false
       },
       "putdeksel": {
         "slug": "putdeksel",
         "title": "Putdeksel",
         "version": "2.5.0",
-        "description": "Deksel met als functie het afdekken van een put (GWSW). Dekt meestal de opening van een rioolput af, is meestal rond,  van zwaar metaal, soms van kunststof.",
+        "description": "Deksel met als functie het afdekken van een put (GWSW). Dekt meestal de opening van een rioolput af, is meestal rond,  van zwaar metaal, soms van kunststof. Extends: weginrichtingsobject.",
         "required": [
           "diameter",
           "put",
@@ -3366,16 +3238,13 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "weginrichtingsobject"
-        ]
+        "hardValidation": false
       },
       "rioleringsgebied": {
         "slug": "rioleringsgebied",
         "title": "Rioleringsgebied",
         "version": "2.5.0",
-        "description": "Het gebied waarbinnen één of meerdere inliggende rioolstelsel(s) het afvalwater naar één gemaal of overnamepunt transporteert/teren. Een rioleringsgebied kan een enkelvoudig gebied zijn, maar kan ook meerdere rioleringsgebieden omvatten. Een gebied is zodanig gekozen dat het voldoende inzicht geeft in de belasting van oppervlaktewater en overnamepunt.\nToelichting: Het gebied waarbinnen één of meerdere inliggende rioolstelsel(s) het afvalwater naar één gemaal of overnamepunt transporteert/teren. Een rioleringsgebied kan een enkelvoudig gebied zijn, maar kan ook meerdere rioleringsgebieden omvatten. Een gebied is zodanig gekozen dat het voldoende inzicht geeft in de belasting van oppervlaktewater en overnamepunt.",
+        "description": "Het gebied waarbinnen één of meerdere inliggende rioolstelsel(s) het afvalwater naar één gemaal of overnamepunt transporteert/teren. Een rioleringsgebied kan een enkelvoudig gebied zijn, maar kan ook meerdere rioleringsgebieden omvatten. Een gebied is zodanig gekozen dat het voldoende inzicht geeft in de belasting van oppervlaktewater en overnamepunt.\nToelichting: Het gebied waarbinnen één of meerdere inliggende rioolstelsel(s) het afvalwater naar één gemaal of overnamepunt transporteert/teren. Een rioleringsgebied kan een enkelvoudig gebied zijn, maar kan ook meerdere rioleringsgebieden omvatten. Een gebied is zodanig gekozen dat het voldoende inzicht geeft in de belasting van oppervlaktewater en overnamepunt. Extends: functioneelgebied.",
         "required": [
           "rioleringsgebied",
           "zuiveringsgebied"
@@ -3395,16 +3264,13 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "functioneelgebied"
-        ]
+        "hardValidation": false
       },
       "rioolput": {
         "slug": "rioolput",
         "title": "Rioolput",
         "version": "2.5.0",
-        "description": "Constructie toegang gevend tot het rioolstelsel",
+        "description": "Constructie toegang gevend tot het rioolstelsel Extends: put.",
         "required": [
           "aantalBedrijven",
           "aantalRecreatie",
@@ -3484,16 +3350,13 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "put"
-        ]
+        "hardValidation": false
       },
       "scheiding": {
         "slug": "scheiding",
         "title": "Scheiding",
         "version": "2.5.0",
-        "description": "Kunstmatig, meestal lineair obstakel met een werende functie.",
+        "description": "Kunstmatig, meestal lineair obstakel met een werende functie. Extends: beheerobject.",
         "required": [
           "aanleghoogte",
           "breedte",
@@ -3567,16 +3430,13 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "beheerobject"
-        ]
+        "hardValidation": false
       },
       "sensor": {
         "slug": "sensor",
         "title": "Sensor",
         "version": "2.5.0",
-        "description": "Apparaat voor de meting van een fysieke grootheid (bijv. temperatuur, licht, druk, elektriciteit).",
+        "description": "Apparaat voor de meting van een fysieke grootheid (bijv. temperatuur, licht, druk, elektriciteit). Extends: beheerobject.",
         "required": [
           "aanleghoogte",
           "elektrakast",
@@ -3637,25 +3497,18 @@
             "title": "gegenereerdDoor",
             "items": {
               "type": "object",
-              "$ref": "vloginfo",
-              "objectConfiguration": {
-                "register": "ggm-verkeer-vervoer-waterstaat",
-                "schema": "vloginfo"
-              }
+              "$ref": "vloginfo"
             }
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "beheerobject"
-        ]
+        "hardValidation": false
       },
       "solitaireplant": {
         "slug": "solitaireplant",
         "title": "SolitairePlant",
         "version": "2.5.0",
-        "description": "Plant, heester of siergras, te beheren als solitair beplantingselement.",
+        "description": "Plant, heester of siergras, te beheren als solitair beplantingselement. Extends: vegetatieobject.",
         "required": [
           "hoogte",
           "type"
@@ -3673,16 +3526,13 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "vegetatieobject"
-        ]
+        "hardValidation": false
       },
       "speelterrein": {
         "slug": "speelterrein",
         "title": "Speelterrein",
         "version": "2.5.0",
-        "description": "Geheel van begroeiing verharding opstallen en speelwerktuigen bedoeld als speelplaats voor kinderen.\nSynoniemen: Speelplek, Speelgelegenheid",
+        "description": "Geheel van begroeiing verharding opstallen en speelwerktuigen bedoeld als speelplaats voor kinderen.\nSynoniemen: Speelplek, Speelgelegenheid Extends: functioneelgebied.",
         "required": [
           "jaarHerinrichting",
           "speelterreinLeeftijdDoelgroep",
@@ -3712,16 +3562,13 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "functioneelgebied"
-        ]
+        "hardValidation": false
       },
       "speeltoestel": {
         "slug": "speeltoestel",
         "title": "Speeltoestel",
         "version": "2.5.0",
-        "description": "Toestel en structuren, met inbegrip van componenten en constructieve onderdelen, waarmee of waarop kinderen binnen of buiten kunnen spelen, individueel of gezamenlijk, volgens hun eigen spelregels of beweegredenen, die te allen tijde kunnen worden gewijzi\nSynoniemen: Speelvoorziening",
+        "description": "Toestel en structuren, met inbegrip van componenten en constructieve onderdelen, waarmee of waarop kinderen binnen of buiten kunnen spelen, individueel of gezamenlijk, volgens hun eigen spelregels of beweegredenen, die te allen tijde kunnen worden gewijzi\nSynoniemen: Speelvoorziening Extends: meubilair.",
         "required": [
           "catalogusprijs",
           "certificaat",
@@ -3857,16 +3704,13 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "meubilair"
-        ]
+        "hardValidation": false
       },
       "sportterrein": {
         "slug": "sportterrein",
         "title": "Sportterrein",
         "version": "2.5.0",
-        "description": "Terrein mogelijk met groenvoorziening, verharding en bebouwing bestemd voor sportbeoefening.\nSynoniemen: Sportveld",
+        "description": "Terrein mogelijk met groenvoorziening, verharding en bebouwing bestemd voor sportbeoefening.\nSynoniemen: Sportveld Extends: functioneelgebied.",
         "required": [
           "drainage",
           "gebruiksvorm",
@@ -3919,16 +3763,13 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "functioneelgebied"
-        ]
+        "hardValidation": false
       },
       "stuwgebied": {
         "slug": "stuwgebied",
         "title": "Stuwgebied",
         "version": "2.5.0",
-        "description": "Een deelgebied van een bemalingsgebied waarvan de afvoer via een stuwput of stuwriool wordt beperkt.",
+        "description": "Een deelgebied van een bemalingsgebied waarvan de afvoer via een stuwput of stuwriool wordt beperkt. Extends: functioneelgebied.",
         "required": [
           "bemalingsgebied"
         ],
@@ -3941,16 +3782,13 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "functioneelgebied"
-        ]
+        "hardValidation": false
       },
       "terreindeel": {
         "slug": "terreindeel",
         "title": "Terreindeel",
         "version": "2.5.0",
-        "description": "Kleinste functioneel onafhankelijk stukje van een terrein, dat er binnen het objecttype Terrein van NEN 3610 wordt onderscheiden, met of zonder aaneengesloten vegetatie.",
+        "description": "Kleinste functioneel onafhankelijk stukje van een terrein, dat er binnen het objecttype Terrein van NEN 3610 wordt onderscheiden, met of zonder aaneengesloten vegetatie. Extends: beheerobject.",
         "required": [
           "breedte",
           "cultuurhistorischWaardevol",
@@ -4023,16 +3861,13 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "beheerobject"
-        ]
+        "hardValidation": false
       },
       "tunnelobject": {
         "slug": "tunnelobject",
         "title": "Tunnelobject",
         "version": "2.5.0",
-        "description": "Onderdeel van een kunstmatig aangelegde, kokervormige onderdoorgang dat essentieel is voor de constructie.",
+        "description": "Onderdeel van een kunstmatig aangelegde, kokervormige onderdoorgang dat essentieel is voor de constructie. Extends: beheerobject.",
         "required": [
           "aanleghoogte",
           "aantalTunnelbuizen",
@@ -4124,16 +3959,13 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "beheerobject"
-        ]
+        "hardValidation": false
       },
       "uitlaatconstructie": {
         "slug": "uitlaatconstructie",
         "title": "Uitlaatconstructie",
         "version": "2.5.0",
-        "description": "Het eindpunt van een rioolleiding waar uitstroming van afvalwater uit het rioolstelsel naar het oppervlaktewater mogelijk is.",
+        "description": "Het eindpunt van een rioolleiding waar uitstroming van afvalwater uit het rioolstelsel naar het oppervlaktewater mogelijk is. Extends: kunstwerk.",
         "required": [
           "type",
           "waterobject"
@@ -4152,16 +3984,13 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "kunstwerk"
-        ]
+        "hardValidation": false
       },
       "vegetatieobject": {
         "slug": "vegetatieobject",
         "title": "Vegetatieobject",
         "version": "2.5.0",
-        "description": "Verzamelobject van alle vegetatieobjecten - niveau 2",
+        "description": "Verzamelobject van alle vegetatieobjecten - niveau 2 Extends: beheerobject.",
         "required": [
           "afvoeren",
           "bereikbaarheid",
@@ -4241,16 +4070,13 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "beheerobject"
-        ]
+        "hardValidation": false
       },
       "verhardingsobject": {
         "slug": "verhardingsobject",
         "title": "Verhardingsobject",
         "version": "2.5.0",
-        "description": "Verharde lagen van een weglichaam, speel- en sportondergronden en onbegroeid terreindelen inclusief de fundering.",
+        "description": "Verharde lagen van een weglichaam, speel- en sportondergronden en onbegroeid terreindelen inclusief de fundering. Extends: beheerobject.",
         "required": [
           "aanleghoogte",
           "aanOfVrijliggend",
@@ -4624,16 +4450,13 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "beheerobject"
-        ]
+        "hardValidation": false
       },
       "verkeersdrempel": {
         "slug": "verkeersdrempel",
         "title": "Verkeersdrempel",
         "version": "2.5.0",
-        "description": "Verhoging in de rijbaan, bedoeld om het gemotoriseerde verkeer met een lage(re) snelheid te laten rijden. Toelichting: Sinds ongeveer 2000 beschikt de Nederlandse wegenbouw over technische mogelijkheden om drempels uit te voeren in een doorlopende asfaltverharding en dan zodanig dat deze een specifieke snelheid uitlokken bij circa 80 procent van het gemotoriseerde verkeer.",
+        "description": "Verhoging in de rijbaan, bedoeld om het gemotoriseerde verkeer met een lage(re) snelheid te laten rijden. Toelichting: Sinds ongeveer 2000 beschikt de Nederlandse wegenbouw over technische mogelijkheden om drempels uit te voeren in een doorlopende asfaltverharding en dan zodanig dat deze een specifieke snelheid uitlokken bij circa 80 procent van het gemotoriseerde verkeer. Extends: weginrichtingsobject.",
         "required": [
           "ontwerpsnelheid",
           "type",
@@ -4658,29 +4481,23 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "weginrichtingsobject"
-        ]
+        "hardValidation": false
       },
       "verlichtingsobject": {
         "slug": "verlichtingsobject",
         "title": "Verlichtingsobject",
         "version": "2.5.0",
-        "description": "Paal of mast waaraan openbare verlichting is bevestigd.",
+        "description": "Paal of mast waaraan openbare verlichting is bevestigd. Extends: beheerobject.",
         "required": [],
         "properties": {},
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "beheerobject"
-        ]
+        "hardValidation": false
       },
       "viaduct": {
         "slug": "viaduct",
         "title": "Viaduct",
         "version": "2.5.0",
-        "description": "Kunstwerk over een weg, spoorweg of terreinverdieping, bestaande uit een dek gesteund door pijlers en/of landhoofden.",
+        "description": "Kunstwerk over een weg, spoorweg of terreinverdieping, bestaande uit een dek gesteund door pijlers en/of landhoofden. Extends: overbruggingsobject.",
         "required": [
           "aantalOverspanningen",
           "belastingklasseNieuw",
@@ -4754,16 +4571,13 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "overbruggingsobject"
-        ]
+        "hardValidation": false
       },
       "waterinrichtingsobject": {
         "slug": "waterinrichtingsobject",
         "title": "Waterinrichtingsobject",
         "version": "2.5.0",
-        "description": "Een ruimtelijk object ter inrichting van het water.",
+        "description": "Een ruimtelijk object ter inrichting van het water. Extends: beheerobject.",
         "required": [
           "aanleghoogte",
           "breedte",
@@ -4830,16 +4644,13 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "beheerobject"
-        ]
+        "hardValidation": false
       },
       "waterobject": {
         "slug": "waterobject",
         "title": "Waterobject",
         "version": "2.5.0",
-        "description": "Kleinste functioneel onafhankelijk stukje water met gelijkblijvende, homogene eigenschappen en relaties dat er binnen het objecttype Water van NEN 3610 wordt onderscheiden en dat permanent met water bedekt is. (imgeo.geostandaarden.nl)",
+        "description": "Kleinste functioneel onafhankelijk stukje water met gelijkblijvende, homogene eigenschappen en relaties dat er binnen het objecttype Water van NEN 3610 wordt onderscheiden en dat permanent met water bedekt is. (imgeo.geostandaarden.nl) Extends: beheerobject.",
         "required": [
           "breedte",
           "folie",
@@ -4987,16 +4798,13 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "beheerobject"
-        ]
+        "hardValidation": false
       },
       "weginrichtingsobject": {
         "slug": "weginrichtingsobject",
         "title": "Weginrichtingsobject",
         "version": "2.5.0",
-        "description": "Een ruimtelijk object dat dient voor de inrichting van de openbare weg.",
+        "description": "Een ruimtelijk object dat dient voor de inrichting van de openbare weg. Extends: beheerobject.",
         "required": [
           "aanleghoogte",
           "breedte",
@@ -5075,23 +4883,17 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "beheerobject"
-        ]
+        "hardValidation": false
       },
       "actie": {
         "slug": "actie",
         "title": "Actie",
         "version": "2.5.0",
-        "description": "Kleinst mogelijke eenheid van werk die zinvol onderscheiden kan worden, uitgevoerd door een persoon of machine op 1 plek op 1 moment.",
+        "description": "Kleinst mogelijke eenheid van werk die zinvol onderscheiden kan worden, uitgevoerd door een persoon of machine op 1 plek op 1 moment. Extends: melding.",
         "required": [],
         "properties": {},
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "melding"
-        ]
+        "hardValidation": false
       },
       "areaal": {
         "slug": "areaal",
@@ -5112,11 +4914,7 @@
             "title": "binnen",
             "items": {
               "type": "object",
-              "$ref": "schouwronde",
-              "objectConfiguration": {
-                "register": "ggm-volkshuisvesting-leefomgeving",
-                "schema": "schouwronde"
-              }
+              "$ref": "schouwronde"
             }
           },
           "valtBinnen": {
@@ -5124,11 +4922,7 @@
             "title": "valtBinnen",
             "items": {
               "type": "object",
-              "$ref": "wijk",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "wijk"
-              }
+              "$ref": "wijk"
             }
           },
           "ligtIn": {
@@ -5136,11 +4930,7 @@
             "title": "ligtIn",
             "items": {
               "type": "object",
-              "$ref": "buurt",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "buurt"
-              }
+              "$ref": "buurt"
             }
           }
         },
@@ -5151,7 +4941,7 @@
         "slug": "crow-melding",
         "title": "CROW-Melding",
         "version": "2.5.0",
-        "description": "BOR-MELD is een CROW-standaard voor het vastleggen van meldingen.",
+        "description": "BOR-MELD is een CROW-standaard voor het vastleggen van meldingen. Extends: melding.",
         "required": [
           "kwaliteitsniveau"
         ],
@@ -5170,18 +4960,11 @@
           "conform": {
             "type": "object",
             "title": "conform",
-            "$ref": "kwaliteitscatalogus-openbare-ruimte",
-            "objectConfiguration": {
-              "register": "ggm-volkshuisvesting-leefomgeving",
-              "schema": "kwaliteitscatalogus-openbare-ruimte"
-            }
+            "$ref": "kwaliteitscatalogus-openbare-ruimte"
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "melding"
-        ]
+        "hardValidation": false
       },
       "deelplanveld": {
         "slug": "deelplanveld",
@@ -5237,11 +5020,7 @@
           "verwijstNaar": {
             "type": "object",
             "title": "verwijstNaar",
-            "$ref": "beheerobject",
-            "objectConfiguration": {
-              "register": "ggm-volkshuisvesting-leefomgeving",
-              "schema": "beheerobject"
-            }
+            "$ref": "beheerobject"
           }
         },
         "searchable": true,
@@ -5251,27 +5030,21 @@
         "slug": "grondbeheerder",
         "title": "Grondbeheerder",
         "version": "2.5.0",
-        "description": "Beheerder van grondgrondbeheer., oplossing voor duurzaam landbeheer en voedselproductie",
+        "description": "Beheerder van grondgrondbeheer., oplossing voor duurzaam landbeheer en voedselproductie Extends: rechtspersoon.",
         "required": [],
         "properties": {},
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "rechtspersoon"
-        ]
+        "hardValidation": false
       },
       "inspectie": {
         "slug": "inspectie",
         "title": "Inspectie",
         "version": "2.5.0",
-        "description": "het inwinnen, verwerken en interpreteren van informatie met het doel om de momentane toestand van de boezemkade vast te stellen.",
+        "description": "het inwinnen, verwerken en interpreteren van informatie met het doel om de momentane toestand van de boezemkade vast te stellen. Extends: melding.",
         "required": [],
         "properties": {},
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "melding"
-        ]
+        "hardValidation": false
       },
       "kadastralemutatie": {
         "slug": "kadastralemutatie",
@@ -5285,11 +5058,7 @@
             "title": "betreft",
             "items": {
               "type": "object",
-              "$ref": "kadastraleonroerendezaak",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "kadastraleonroerendezaak"
-              }
+              "$ref": "kadastraleonroerendezaak"
             }
           },
           "heeftBetrekkingOp": {
@@ -5297,11 +5066,7 @@
             "title": "heeftBetrekkingOp",
             "items": {
               "type": "object",
-              "$ref": "zakelijkrecht",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "zakelijkrecht"
-              }
+              "$ref": "zakelijkrecht"
             }
           },
           "betrokkenen": {
@@ -5309,11 +5074,7 @@
             "title": "betrokkenen",
             "items": {
               "type": "object",
-              "$ref": "rechtspersoon",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "rechtspersoon"
-              }
+              "$ref": "rechtspersoon"
             }
           }
         },
@@ -5332,11 +5093,7 @@
             "title": "conform",
             "items": {
               "type": "object",
-              "$ref": "crow-melding",
-              "objectConfiguration": {
-                "register": "ggm-volkshuisvesting-leefomgeving",
-                "schema": "crow-melding"
-              }
+              "$ref": "crow-melding"
             }
           }
         },
@@ -5365,21 +5122,13 @@
             "title": "bevat",
             "items": {
               "type": "object",
-              "$ref": "melding",
-              "objectConfiguration": {
-                "register": "ggm-volkshuisvesting-leefomgeving",
-                "schema": "melding"
-              }
+              "$ref": "melding"
             }
           },
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "beheerobject",
-            "objectConfiguration": {
-              "register": "ggm-volkshuisvesting-leefomgeving",
-              "schema": "beheerobject"
-            }
+            "$ref": "beheerobject"
           }
         },
         "searchable": true,
@@ -5458,49 +5207,29 @@
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "schouwronde",
-            "objectConfiguration": {
-              "register": "ggm-volkshuisvesting-leefomgeving",
-              "schema": "schouwronde"
-            }
+            "$ref": "schouwronde"
           },
           "uitvoerder": {
             "type": "object",
             "title": "uitvoerder",
-            "$ref": "medewerker",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "medewerker"
-            }
+            "$ref": "medewerker"
           },
           "melder": {
             "type": "object",
             "title": "melder",
-            "$ref": "natuurlijkpersoon",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "natuurlijkpersoon"
-            }
+            "$ref": "natuurlijkpersoon"
           },
           "bevat": {
             "type": "object",
             "title": "bevat",
-            "$ref": "logboek",
-            "objectConfiguration": {
-              "register": "ggm-volkshuisvesting-leefomgeving",
-              "schema": "logboek"
-            }
+            "$ref": "logboek"
           },
           "betreft": {
             "type": "array",
             "title": "betreft",
             "items": {
               "type": "object",
-              "$ref": "beheerobject",
-              "objectConfiguration": {
-                "register": "ggm-volkshuisvesting-leefomgeving",
-                "schema": "beheerobject"
-              }
+              "$ref": "beheerobject"
             }
           }
         },
@@ -5511,14 +5240,11 @@
         "slug": "meldingongeval",
         "title": "MeldingOngeval",
         "version": "2.5.0",
-        "description": "Aangifte vna een ongeval",
+        "description": "Aangifte vna een ongeval Extends: melding.",
         "required": [],
         "properties": {},
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "melding"
-        ]
+        "hardValidation": false
       },
       "moor-melding": {
         "slug": "moor-melding",
@@ -5586,29 +5312,17 @@
           "doet": {
             "type": "object",
             "title": "doet",
-            "$ref": "uitvoerder-graafwerkzaamheden",
-            "objectConfiguration": {
-              "register": "ggm-volkshuisvesting-leefomgeving",
-              "schema": "uitvoerder-graafwerkzaamheden"
-            }
+            "$ref": "uitvoerder-graafwerkzaamheden"
           },
           "verplichtTot": {
             "type": "object",
             "title": "verplichtTot",
-            "$ref": "omgevingsvergunning",
-            "objectConfiguration": {
-              "register": "ggm-volkshuisvesting-leefomgeving",
-              "schema": "omgevingsvergunning"
-            }
+            "$ref": "omgevingsvergunning"
           },
           "betreft": {
             "type": "object",
             "title": "betreft",
-            "$ref": "opbreking",
-            "objectConfiguration": {
-              "register": "ggm-volkshuisvesting-leefomgeving",
-              "schema": "opbreking"
-            }
+            "$ref": "opbreking"
           }
         },
         "searchable": true,
@@ -5624,22 +5338,14 @@
           "betrekkingOp": {
             "type": "object",
             "title": "betrekkingOp",
-            "$ref": "plan",
-            "objectConfiguration": {
-              "register": "ggm-volkshuisvesting-leefomgeving",
-              "schema": "plan"
-            }
+            "$ref": "plan"
           },
           "verplichtTot": {
             "type": "array",
             "title": "verplichtTot",
             "items": {
               "type": "object",
-              "$ref": "moor-melding",
-              "objectConfiguration": {
-                "register": "ggm-volkshuisvesting-leefomgeving",
-                "schema": "moor-melding"
-              }
+              "$ref": "moor-melding"
             }
           }
         },
@@ -5668,21 +5374,13 @@
             "title": "maakt",
             "items": {
               "type": "object",
-              "$ref": "uitvoerder-graafwerkzaamheden",
-              "objectConfiguration": {
-                "register": "ggm-volkshuisvesting-leefomgeving",
-                "schema": "uitvoerder-graafwerkzaamheden"
-              }
+              "$ref": "uitvoerder-graafwerkzaamheden"
             }
           },
           "betreft": {
             "type": "object",
             "title": "betreft",
-            "$ref": "moor-melding",
-            "objectConfiguration": {
-              "register": "ggm-volkshuisvesting-leefomgeving",
-              "schema": "moor-melding"
-            }
+            "$ref": "moor-melding"
           }
         },
         "searchable": true,
@@ -5715,29 +5413,17 @@
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "document",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "document"
-            }
+            "$ref": "document"
           },
           "betreft": {
             "type": "object",
             "title": "betreft",
-            "$ref": "moor-melding",
-            "objectConfiguration": {
-              "register": "ggm-volkshuisvesting-leefomgeving",
-              "schema": "moor-melding"
-            }
+            "$ref": "moor-melding"
           },
           "verleent": {
             "type": "object",
             "title": "verleent",
-            "$ref": "medewerker",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "medewerker"
-            }
+            "$ref": "medewerker"
           }
         },
         "searchable": true,
@@ -5755,11 +5441,7 @@
             "title": "heeft",
             "items": {
               "type": "object",
-              "$ref": "melding",
-              "objectConfiguration": {
-                "register": "ggm-volkshuisvesting-leefomgeving",
-                "schema": "melding"
-              }
+              "$ref": "melding"
             }
           },
           "binnen": {
@@ -5767,21 +5449,13 @@
             "title": "binnen",
             "items": {
               "type": "object",
-              "$ref": "areaal",
-              "objectConfiguration": {
-                "register": "ggm-volkshuisvesting-leefomgeving",
-                "schema": "areaal"
-              }
+              "$ref": "areaal"
             }
           },
           "voertUit": {
             "type": "object",
             "title": "voertUit",
-            "$ref": "medewerker",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "medewerker"
-            }
+            "$ref": "medewerker"
           }
         },
         "searchable": true,
@@ -5791,14 +5465,11 @@
         "slug": "storing",
         "title": "Storing",
         "version": "2.5.0",
-        "description": "Verlies van de mogelijkheid om volgens een specificatie te werken of om het vereiste resultaat te leveren.",
+        "description": "Verlies van de mogelijkheid om volgens een specificatie te werken of om het vereiste resultaat te leveren. Extends: melding.",
         "required": [],
         "properties": {},
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "melding"
-        ]
+        "hardValidation": false
       },
       "taak": {
         "slug": "taak",
@@ -5814,7 +5485,7 @@
         "slug": "uitvoerder-graafwerkzaamheden",
         "title": "Uitvoerder Graafwerkzaamheden",
         "version": "2.5.0",
-        "description": "Degene die op de bouwlocatie van een project de leiding heeft met betrekking tot de graafwerkzaamheden",
+        "description": "Degene die op de bouwlocatie van een project de leiding heeft met betrekking tot de graafwerkzaamheden Extends: grondbeheerder, leverancier.",
         "required": [],
         "properties": {
           "maakt": {
@@ -5822,11 +5493,7 @@
             "title": "maakt",
             "items": {
               "type": "object",
-              "$ref": "opbreking",
-              "objectConfiguration": {
-                "register": "ggm-volkshuisvesting-leefomgeving",
-                "schema": "opbreking"
-              }
+              "$ref": "opbreking"
             }
           },
           "doet": {
@@ -5834,20 +5501,12 @@
             "title": "doet",
             "items": {
               "type": "object",
-              "$ref": "moor-melding",
-              "objectConfiguration": {
-                "register": "ggm-volkshuisvesting-leefomgeving",
-                "schema": "moor-melding"
-              }
+              "$ref": "moor-melding"
             }
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "grondbeheerder",
-          "leverancier"
-        ]
+        "hardValidation": false
       },
       "verkeerslicht": {
         "slug": "verkeerslicht",
@@ -5932,11 +5591,7 @@
           "bestaatUit": {
             "type": "object",
             "title": "bestaatUit",
-            "$ref": "plan",
-            "objectConfiguration": {
-              "register": "ggm-volkshuisvesting-leefomgeving",
-              "schema": "plan"
-            }
+            "$ref": "plan"
           }
         },
         "searchable": true,
@@ -5946,7 +5601,7 @@
         "slug": "huurwoningen",
         "title": "Huurwoningen",
         "version": "2.5.0",
-        "description": "Wen woning die de bewoner huurt van de eigenaar, veelal een woningcorporatie of een particulier.",
+        "description": "Wen woning die de bewoner huurt van de eigenaar, veelal een woningcorporatie of een particulier. Extends: gebouw.",
         "required": [
           "huurprijs"
         ],
@@ -5957,16 +5612,13 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "gebouw"
-        ]
+        "hardValidation": false
       },
       "koopwoningen": {
         "slug": "koopwoningen",
         "title": "Koopwoningen",
         "version": "2.5.0",
-        "description": "Een woning die eigendom is van een particulier (in het algemeen de bewoner van de woning).",
+        "description": "Een woning die eigendom is van een particulier (in het algemeen de bewoner van de woning). Extends: gebouw.",
         "required": [
           "koopprijs"
         ],
@@ -5977,10 +5629,7 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "gebouw"
-        ]
+        "hardValidation": false
       },
       "plan": {
         "slug": "plan",
@@ -6070,31 +5719,19 @@
           "isProjectleiderVan": {
             "type": "object",
             "title": "isProjectleiderVan",
-            "$ref": "projectleider",
-            "objectConfiguration": {
-              "register": "ggm-volkshuisvesting-leefomgeving",
-              "schema": "projectleider"
-            }
+            "$ref": "projectleider"
           },
           "binnenProgramma": {
             "type": "object",
             "title": "binnenProgramma",
-            "$ref": "programma",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "programma"
-            }
+            "$ref": "programma"
           },
           "heeft": {
             "type": "array",
             "title": "heeft",
             "items": {
               "type": "object",
-              "$ref": "projectontwikkelaar",
-              "objectConfiguration": {
-                "register": "ggm-volkshuisvesting-leefomgeving",
-                "schema": "projectontwikkelaar"
-              }
+              "$ref": "projectontwikkelaar"
             }
           },
           "bestaatUit": {
@@ -6102,11 +5739,7 @@
             "title": "bestaatUit",
             "items": {
               "type": "object",
-              "$ref": "gebouw",
-              "objectConfiguration": {
-                "register": "ggm-volkshuisvesting-leefomgeving",
-                "schema": "gebouw"
-              }
+              "$ref": "gebouw"
             }
           },
           "betrekkingOp": {
@@ -6114,11 +5747,7 @@
             "title": "betrekkingOp",
             "items": {
               "type": "object",
-              "$ref": "omgevingsvergunning",
-              "objectConfiguration": {
-                "register": "ggm-volkshuisvesting-leefomgeving",
-                "schema": "omgevingsvergunning"
-              }
+              "$ref": "omgevingsvergunning"
             }
           }
         },
@@ -6129,7 +5758,7 @@
         "slug": "projectleider",
         "title": "Projectleider",
         "version": "2.5.0",
-        "description": "De persoon die een project aanstuurt",
+        "description": "De persoon die een project aanstuurt Extends: natuurlijkpersoon.",
         "required": [
           "naam"
         ],
@@ -6144,25 +5773,18 @@
             "title": "isProjectleiderVan",
             "items": {
               "type": "object",
-              "$ref": "plan",
-              "objectConfiguration": {
-                "register": "ggm-volkshuisvesting-leefomgeving",
-                "schema": "plan"
-              }
+              "$ref": "plan"
             }
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "natuurlijkpersoon"
-        ]
+        "hardValidation": false
       },
       "projectontwikkelaar": {
         "slug": "projectontwikkelaar",
         "title": "Projectontwikkelaar",
         "version": "2.5.0",
-        "description": "Een persoon of een firma die een project ontwikkelt voor financieel gewin.",
+        "description": "Een persoon of een firma die een project ontwikkelt voor financieel gewin. Extends: nietnatuurlijkpersoon.",
         "required": [
           "naam",
           "adres"
@@ -6183,25 +5805,18 @@
             "title": "heeft",
             "items": {
               "type": "object",
-              "$ref": "plan",
-              "objectConfiguration": {
-                "register": "ggm-volkshuisvesting-leefomgeving",
-                "schema": "plan"
-              }
+              "$ref": "plan"
             }
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "nietnatuurlijkpersoon"
-        ]
+        "hardValidation": false
       },
       "studentenwoningen": {
         "slug": "studentenwoningen",
         "title": "Studentenwoningen",
         "version": "2.5.0",
-        "description": "Een woning waar uitsluitend (meerdere) studenten (of soms ook werkende jongeren) een woongemeenschap vorme",
+        "description": "Een woning waar uitsluitend (meerdere) studenten (of soms ook werkende jongeren) een woongemeenschap vorme Extends: gebouw.",
         "required": [
           "zelfstandig",
           "huurprijs"
@@ -6217,16 +5832,13 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "gebouw"
-        ]
+        "hardValidation": false
       },
       "bevoegd-gezag": {
         "slug": "bevoegd-gezag",
         "title": "Bevoegd Gezag",
         "version": "2.5.0",
-        "description": "Bestuursorgaan dat bevoegd is tot het geven van een beschikking of het nemen van een ander besluit.",
+        "description": "Bestuursorgaan dat bevoegd is tot het geven van een beschikking of het nemen van een ander besluit. Extends: rechtspersoon.",
         "required": [],
         "properties": {
           "verantwoordelijke": {
@@ -6234,25 +5846,18 @@
             "title": "verantwoordelijke",
             "items": {
               "type": "object",
-              "$ref": "verzoek",
-              "objectConfiguration": {
-                "register": "ggm-volkshuisvesting-leefomgeving",
-                "schema": "verzoek"
-              }
+              "$ref": "verzoek"
             }
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "rechtspersoon"
-        ]
+        "hardValidation": false
       },
       "gemachtigde": {
         "slug": "gemachtigde",
         "title": "Gemachtigde",
         "version": "2.5.0",
-        "description": "Een Natuurlijk Persoon of een Niet Natuurlijk Persoon die als vertegenwoordiger van een Initiatiefnemer optreedt.",
+        "description": "Een Natuurlijk Persoon of een Niet Natuurlijk Persoon die als vertegenwoordiger van een Initiatiefnemer optreedt. Extends: rechtspersoon.",
         "required": [],
         "properties": {
           "dientIn": {
@@ -6260,25 +5865,18 @@
             "title": "dientIn",
             "items": {
               "type": "object",
-              "$ref": "verzoek",
-              "objectConfiguration": {
-                "register": "ggm-volkshuisvesting-leefomgeving",
-                "schema": "verzoek"
-              }
+              "$ref": "verzoek"
             }
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "rechtspersoon"
-        ]
+        "hardValidation": false
       },
       "initiatiefnemer": {
         "slug": "initiatiefnemer",
         "title": "Initiatiefnemer",
         "version": "2.5.0",
-        "description": "Een Natuurlijk Persoon of een Niet Natuurlijk Persoon die het initiatief neemt tot (fysieke) ingrepen in de (leef)omgeving en daartoe een Verzoek bij het Bevoegd Gezag indient.",
+        "description": "Een Natuurlijk Persoon of een Niet Natuurlijk Persoon die het initiatief neemt tot (fysieke) ingrepen in de (leef)omgeving en daartoe een Verzoek bij het Bevoegd Gezag indient. Extends: rechtspersoon.",
         "required": [],
         "properties": {
           "heeftAlsVerantwoordelijke": {
@@ -6286,19 +5884,12 @@
             "title": "heeftAlsVerantwoordelijke",
             "items": {
               "type": "object",
-              "$ref": "verzoek",
-              "objectConfiguration": {
-                "register": "ggm-volkshuisvesting-leefomgeving",
-                "schema": "verzoek"
-              }
+              "$ref": "verzoek"
             }
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "rechtspersoon"
-        ]
+        "hardValidation": false
       },
       "project": {
         "slug": "project",
@@ -6323,11 +5914,7 @@
             "title": "betreft",
             "items": {
               "type": "object",
-              "$ref": "verzoek",
-              "objectConfiguration": {
-                "register": "ggm-volkshuisvesting-leefomgeving",
-                "schema": "verzoek"
-              }
+              "$ref": "verzoek"
             }
           },
           "heeft": {
@@ -6335,11 +5922,7 @@
             "title": "heeft",
             "items": {
               "type": "object",
-              "$ref": "projectactiviteit",
-              "objectConfiguration": {
-                "register": "ggm-volkshuisvesting-leefomgeving",
-                "schema": "projectactiviteit"
-              }
+              "$ref": "projectactiviteit"
             }
           }
         },
@@ -6358,11 +5941,7 @@
             "title": "betreft",
             "items": {
               "type": "object",
-              "$ref": "verzoek",
-              "objectConfiguration": {
-                "register": "ggm-volkshuisvesting-leefomgeving",
-                "schema": "verzoek"
-              }
+              "$ref": "verzoek"
             }
           },
           "gedefinieerdDoor": {
@@ -6370,30 +5949,18 @@
             "title": "gedefinieerdDoor",
             "items": {
               "type": "object",
-              "$ref": "specificatie",
-              "objectConfiguration": {
-                "register": "ggm-volkshuisvesting-leefomgeving",
-                "schema": "specificatie"
-              }
+              "$ref": "specificatie"
             }
           },
           "uitgevoerdOp": {
             "type": "object",
             "title": "uitgevoerdOp",
-            "$ref": "projectlocatie",
-            "objectConfiguration": {
-              "register": "ggm-volkshuisvesting-leefomgeving",
-              "schema": "projectlocatie"
-            }
+            "$ref": "projectlocatie"
           },
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "project",
-            "objectConfiguration": {
-              "register": "ggm-volkshuisvesting-leefomgeving",
-              "schema": "project"
-            }
+            "$ref": "project"
           }
         },
         "searchable": true,
@@ -6433,32 +6000,20 @@
           "betreft": {
             "type": "object",
             "title": "betreft",
-            "$ref": "locatie",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "locatie"
-            }
+            "$ref": "locatie"
           },
           "uitgevoerdOp": {
             "type": "array",
             "title": "uitgevoerdOp",
             "items": {
               "type": "object",
-              "$ref": "projectactiviteit",
-              "objectConfiguration": {
-                "register": "ggm-volkshuisvesting-leefomgeving",
-                "schema": "projectactiviteit"
-              }
+              "$ref": "projectactiviteit"
             }
           },
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "project",
-            "objectConfiguration": {
-              "register": "ggm-volkshuisvesting-leefomgeving",
-              "schema": "project"
-            }
+            "$ref": "project"
           }
         },
         "searchable": true,
@@ -6520,20 +6075,12 @@
           "bevat": {
             "type": "object",
             "title": "bevat",
-            "$ref": "verzoek",
-            "objectConfiguration": {
-              "register": "ggm-volkshuisvesting-leefomgeving",
-              "schema": "verzoek"
-            }
+            "$ref": "verzoek"
           },
           "gedefinieerdDoor": {
             "type": "object",
             "title": "gedefinieerdDoor",
-            "$ref": "projectactiviteit",
-            "objectConfiguration": {
-              "register": "ggm-volkshuisvesting-leefomgeving",
-              "schema": "projectactiviteit"
-            }
+            "$ref": "projectactiviteit"
           }
         },
         "searchable": true,
@@ -6558,11 +6105,7 @@
             "title": "behandelaar",
             "items": {
               "type": "object",
-              "$ref": "verzoek",
-              "objectConfiguration": {
-                "register": "ggm-volkshuisvesting-leefomgeving",
-                "schema": "verzoek"
-              }
+              "$ref": "verzoek"
             }
           },
           "werktBij": {
@@ -6570,11 +6113,7 @@
             "title": "werktBij",
             "items": {
               "type": "object",
-              "$ref": "medewerker",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "medewerker"
-              }
+              "$ref": "medewerker"
             }
           }
         },
@@ -6670,81 +6209,49 @@
             "title": "betreftEerderVerzoek",
             "items": {
               "type": "object",
-              "$ref": "verzoek",
-              "objectConfiguration": {
-                "register": "ggm-volkshuisvesting-leefomgeving",
-                "schema": "verzoek"
-              }
+              "$ref": "verzoek"
             }
           },
           "leidtTot": {
             "type": "object",
             "title": "leidtTot",
-            "$ref": "zaak",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "zaak"
-            }
+            "$ref": "zaak"
           },
           "betreft": {
             "type": "array",
             "title": "betreft",
             "items": {
               "type": "object",
-              "$ref": "locatie",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "locatie"
-              }
+              "$ref": "locatie"
             }
           },
           "behandelaar": {
             "type": "object",
             "title": "behandelaar",
-            "$ref": "uitvoerende-instantie",
-            "objectConfiguration": {
-              "register": "ggm-volkshuisvesting-leefomgeving",
-              "schema": "uitvoerende-instantie"
-            }
+            "$ref": "uitvoerende-instantie"
           },
           "bevat": {
             "type": "array",
             "title": "bevat",
             "items": {
               "type": "object",
-              "$ref": "specificatie",
-              "objectConfiguration": {
-                "register": "ggm-volkshuisvesting-leefomgeving",
-                "schema": "specificatie"
-              }
+              "$ref": "specificatie"
             }
           },
           "heeftAlsVerantwoordelijke": {
             "type": "object",
             "title": "heeftAlsVerantwoordelijke",
-            "$ref": "initiatiefnemer",
-            "objectConfiguration": {
-              "register": "ggm-volkshuisvesting-leefomgeving",
-              "schema": "initiatiefnemer"
-            }
+            "$ref": "initiatiefnemer"
           },
           "dientIn": {
             "type": "object",
             "title": "dientIn",
-            "$ref": "gemachtigde",
-            "objectConfiguration": {
-              "register": "ggm-volkshuisvesting-leefomgeving",
-              "schema": "gemachtigde"
-            }
+            "$ref": "gemachtigde"
           },
           "verantwoordelijke": {
             "type": "object",
             "title": "verantwoordelijke",
-            "$ref": "bevoegd-gezag",
-            "objectConfiguration": {
-              "register": "ggm-volkshuisvesting-leefomgeving",
-              "schema": "bevoegd-gezag"
-            }
+            "$ref": "bevoegd-gezag"
           }
         },
         "searchable": true,
@@ -6762,11 +6269,7 @@
             "title": "bevat",
             "items": {
               "type": "object",
-              "$ref": "regeltekst",
-              "objectConfiguration": {
-                "register": "ggm-volkshuisvesting-leefomgeving",
-                "schema": "regeltekst"
-              }
+              "$ref": "regeltekst"
             }
           }
         },
@@ -6802,11 +6305,7 @@
             "title": "isOpgenomenIn",
             "items": {
               "type": "object",
-              "$ref": "juridische-regel",
-              "objectConfiguration": {
-                "register": "ggm-volkshuisvesting-leefomgeving",
-                "schema": "juridische-regel"
-              }
+              "$ref": "juridische-regel"
             }
           },
           "werkingsgebied": {
@@ -6814,11 +6313,7 @@
             "title": "werkingsgebied",
             "items": {
               "type": "object",
-              "$ref": "locatie",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "locatie"
-              }
+              "$ref": "locatie"
             }
           },
           "isGerelateerd": {
@@ -6826,11 +6321,7 @@
             "title": "isGerelateerd",
             "items": {
               "type": "object",
-              "$ref": "regeltekst",
-              "objectConfiguration": {
-                "register": "ggm-volkshuisvesting-leefomgeving",
-                "schema": "regeltekst"
-              }
+              "$ref": "regeltekst"
             }
           },
           "heeftIdealisatie": {
@@ -6838,11 +6329,7 @@
             "title": "heeftIdealisatie",
             "items": {
               "type": "object",
-              "$ref": "idealisatie",
-              "objectConfiguration": {
-                "register": "ggm-volkshuisvesting-leefomgeving",
-                "schema": "idealisatie"
-              }
+              "$ref": "idealisatie"
             }
           },
           "heeftThema": {
@@ -6850,21 +6337,13 @@
             "title": "heeftThema",
             "items": {
               "type": "object",
-              "$ref": "thema",
-              "objectConfiguration": {
-                "register": "ggm-volkshuisvesting-leefomgeving",
-                "schema": "thema"
-              }
+              "$ref": "thema"
             }
           },
           "bevat": {
             "type": "object",
             "title": "bevat",
-            "$ref": "omgevingsdocument",
-            "objectConfiguration": {
-              "register": "ggm-volkshuisvesting-leefomgeving",
-              "schema": "omgevingsdocument"
-            }
+            "$ref": "omgevingsdocument"
           }
         },
         "searchable": true,
@@ -6901,11 +6380,7 @@
             "title": "geldtVoor",
             "items": {
               "type": "object",
-              "$ref": "juridische-regel",
-              "objectConfiguration": {
-                "register": "ggm-volkshuisvesting-leefomgeving",
-                "schema": "juridische-regel"
-              }
+              "$ref": "juridische-regel"
             }
           },
           "beschrijftActiviteit": {
@@ -6913,11 +6388,7 @@
             "title": "beschrijftActiviteit",
             "items": {
               "type": "object",
-              "$ref": "regel-voor-iedereen",
-              "objectConfiguration": {
-                "register": "ggm-volkshuisvesting-leefomgeving",
-                "schema": "regel-voor-iedereen"
-              }
+              "$ref": "regel-voor-iedereen"
             }
           },
           "betreft": {
@@ -6925,11 +6396,7 @@
             "title": "betreft",
             "items": {
               "type": "object",
-              "$ref": "toepasbare-regel",
-              "objectConfiguration": {
-                "register": "ggm-volkshuisvesting-leefomgeving",
-                "schema": "toepasbare-regel"
-              }
+              "$ref": "toepasbare-regel"
             }
           },
           "isVerbondenMet": {
@@ -6937,30 +6404,18 @@
             "title": "isVerbondenMet",
             "items": {
               "type": "object",
-              "$ref": "locatie",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "locatie"
-              }
+              "$ref": "locatie"
             }
           },
           "bovenliggendeActiviteit": {
             "type": "object",
             "title": "bovenliggendeActiviteit",
-            "$ref": "activiteit",
-            "objectConfiguration": {
-              "register": "ggm-volkshuisvesting-leefomgeving",
-              "schema": "activiteit"
-            }
+            "$ref": "activiteit"
           },
           "gerelateerdeActiviteit": {
             "type": "object",
             "title": "gerelateerdeActiviteit",
-            "$ref": "activiteit",
-            "objectConfiguration": {
-              "register": "ggm-volkshuisvesting-leefomgeving",
-              "schema": "activiteit"
-            }
+            "$ref": "activiteit"
           }
         },
         "searchable": true,
@@ -6970,7 +6425,7 @@
         "slug": "beperkingsgebied",
         "title": "Beperkingsgebied",
         "version": "2.5.0",
-        "description": "Een bij of krachtens de wet aangewezen gebied, waar vanwege de aanwezigheid van een werk of object regels gelden, ten aanzien van het beperken van activiteiten die gevolgen hebben of kunnen hebben voor dat werk of object.",
+        "description": "Een bij of krachtens de wet aangewezen gebied, waar vanwege de aanwezigheid van een werk of object regels gelden, ten aanzien van het beperken van activiteiten die gevolgen hebben of kunnen hebben voor dat werk of object. Extends: gebiedsaanwijzing.",
         "required": [
           "naam",
           "groep"
@@ -6988,16 +6443,13 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "gebiedsaanwijzing"
-        ]
+        "hardValidation": false
       },
       "functie": {
         "slug": "functie",
         "title": "Functie",
         "version": "2.5.0",
-        "description": "Een samenhangende verzameling van rollen",
+        "description": "Een samenhangende verzameling van rollen Extends: gebiedsaanwijzing.",
         "required": [
           "naam",
           "groep"
@@ -7015,10 +6467,7 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "gebiedsaanwijzing"
-        ]
+        "hardValidation": false
       },
       "gebiedsaanwijzing": {
         "slug": "gebiedsaanwijzing",
@@ -7051,11 +6500,7 @@
             "title": "beschrijftGebiedsaanwijzing",
             "items": {
               "type": "object",
-              "$ref": "regel-voor-iedereen",
-              "objectConfiguration": {
-                "register": "ggm-volkshuisvesting-leefomgeving",
-                "schema": "regel-voor-iedereen"
-              }
+              "$ref": "regel-voor-iedereen"
             }
           },
           "verwijstNaar": {
@@ -7063,11 +6508,7 @@
             "title": "verwijstNaar",
             "items": {
               "type": "object",
-              "$ref": "locatie",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "locatie"
-              }
+              "$ref": "locatie"
             }
           }
         },
@@ -7098,11 +6539,7 @@
             "title": "heeftIdealisatie",
             "items": {
               "type": "object",
-              "$ref": "juridische-regel",
-              "objectConfiguration": {
-                "register": "ggm-volkshuisvesting-leefomgeving",
-                "schema": "juridische-regel"
-              }
+              "$ref": "juridische-regel"
             }
           }
         },
@@ -7113,7 +6550,7 @@
         "slug": "instructieregel",
         "title": "Instructieregel",
         "version": "2.5.0",
-        "description": "Objecttype Instructieregel\nNaam Definitie\nToelichting\nInstructieregel\nDe beschrijving van een juridische regel die een instructie is voor een extern omgevingsdocument of een orgaan.\nHet betreft hier juridische regel die instructie geeft aan andere overheden, gericht op externe omgevingsdocumenten, of een taakuitoefening.\nEen ander omgevingsdocument is bijvoorbeeld een Omgevingsplan, Omgevingsverordening en Waterschapsverordening.\nEen taakuitoefening is voor bijvoorbeeld een gemeentebestuur of een wildbeheereenheid.\nEen instructieregel is alleen gericht op een Omgevingsnorm of een Gebiedsaanduiding, zoals een Functie of een Beperkingengebied (en eventueel meerdere).",
+        "description": "Objecttype Instructieregel\nNaam Definitie\nToelichting\nInstructieregel\nDe beschrijving van een juridische regel die een instructie is voor een extern omgevingsdocument of een orgaan.\nHet betreft hier juridische regel die instructie geeft aan andere overheden, gericht op externe omgevingsdocumenten, of een taakuitoefening.\nEen ander omgevingsdocument is bijvoorbeeld een Omgevingsplan, Omgevingsverordening en Waterschapsverordening.\nEen taakuitoefening is voor bijvoorbeeld een gemeentebestuur of een wildbeheereenheid.\nEen instructieregel is alleen gericht op een Omgevingsnorm of een Gebiedsaanduiding, zoals een Functie of een Beperkingengebied (en eventueel meerdere). Extends: juridische-regel.",
         "required": [
           "instructieregelInstrument",
           "instructieregelTaakuitoefening"
@@ -7135,19 +6572,12 @@
             "title": "beschrijftGebiedsaanwijzing",
             "items": {
               "type": "object",
-              "$ref": "gebiedsaanwijzing",
-              "objectConfiguration": {
-                "register": "ggm-volkshuisvesting-leefomgeving",
-                "schema": "gebiedsaanwijzing"
-              }
+              "$ref": "gebiedsaanwijzing"
             }
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "juridische-regel"
-        ]
+        "hardValidation": false
       },
       "juridische-regel": {
         "slug": "juridische-regel",
@@ -7204,11 +6634,7 @@
             "title": "komtVoortUit",
             "items": {
               "type": "object",
-              "$ref": "toepasbare-regel",
-              "objectConfiguration": {
-                "register": "ggm-volkshuisvesting-leefomgeving",
-                "schema": "toepasbare-regel"
-              }
+              "$ref": "toepasbare-regel"
             }
           },
           "werkingsgebied": {
@@ -7216,11 +6642,7 @@
             "title": "werkingsgebied",
             "items": {
               "type": "object",
-              "$ref": "locatie",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "locatie"
-              }
+              "$ref": "locatie"
             }
           },
           "heeftThema": {
@@ -7228,11 +6650,7 @@
             "title": "heeftThema",
             "items": {
               "type": "object",
-              "$ref": "thema",
-              "objectConfiguration": {
-                "register": "ggm-volkshuisvesting-leefomgeving",
-                "schema": "thema"
-              }
+              "$ref": "thema"
             }
           },
           "heeftIdealisatie": {
@@ -7240,11 +6658,7 @@
             "title": "heeftIdealisatie",
             "items": {
               "type": "object",
-              "$ref": "idealisatie",
-              "objectConfiguration": {
-                "register": "ggm-volkshuisvesting-leefomgeving",
-                "schema": "idealisatie"
-              }
+              "$ref": "idealisatie"
             }
           },
           "geldtVoor": {
@@ -7252,21 +6666,13 @@
             "title": "geldtVoor",
             "items": {
               "type": "object",
-              "$ref": "activiteit",
-              "objectConfiguration": {
-                "register": "ggm-volkshuisvesting-leefomgeving",
-                "schema": "activiteit"
-              }
+              "$ref": "activiteit"
             }
           },
           "isOpgenomenIn": {
             "type": "object",
             "title": "isOpgenomenIn",
-            "$ref": "regeltekst",
-            "objectConfiguration": {
-              "register": "ggm-volkshuisvesting-leefomgeving",
-              "schema": "regeltekst"
-            }
+            "$ref": "regeltekst"
           }
         },
         "searchable": true,
@@ -7291,11 +6697,7 @@
             "title": "bevat",
             "items": {
               "type": "object",
-              "$ref": "normwaarde",
-              "objectConfiguration": {
-                "register": "ggm-volkshuisvesting-leefomgeving",
-                "schema": "normwaarde"
-              }
+              "$ref": "normwaarde"
             }
           }
         },
@@ -7332,21 +6734,13 @@
             "title": "geldtVoor",
             "items": {
               "type": "object",
-              "$ref": "locatie",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "locatie"
-              }
+              "$ref": "locatie"
             }
           },
           "bevat": {
             "type": "object",
             "title": "bevat",
-            "$ref": "norm",
-            "objectConfiguration": {
-              "register": "ggm-volkshuisvesting-leefomgeving",
-              "schema": "norm"
-            }
+            "$ref": "norm"
           }
         },
         "searchable": true,
@@ -7356,7 +6750,7 @@
         "slug": "omgevingsnorm",
         "title": "Omgevingsnorm",
         "version": "2.5.0",
-        "description": "Een norm over de fysieke leefomgeving die in een kwantitatieve of kwalitatieve waarde wordt uitgedrukt en geen omgevingswaarde is.",
+        "description": "Een norm over de fysieke leefomgeving die in een kwantitatieve of kwalitatieve waarde wordt uitgedrukt en geen omgevingswaarde is. Extends: norm.",
         "required": [
           "naam",
           "omgevingsnormGroep"
@@ -7377,11 +6771,7 @@
             "title": "beschrijft",
             "items": {
               "type": "object",
-              "$ref": "omgevingswaarderegel",
-              "objectConfiguration": {
-                "register": "ggm-volkshuisvesting-leefomgeving",
-                "schema": "omgevingswaarderegel"
-              }
+              "$ref": "omgevingswaarderegel"
             }
           },
           "beschrijftNorm": {
@@ -7389,25 +6779,18 @@
             "title": "beschrijftNorm",
             "items": {
               "type": "object",
-              "$ref": "regel-voor-iedereen",
-              "objectConfiguration": {
-                "register": "ggm-volkshuisvesting-leefomgeving",
-                "schema": "regel-voor-iedereen"
-              }
+              "$ref": "regel-voor-iedereen"
             }
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "norm"
-        ]
+        "hardValidation": false
       },
       "omgevingswaarde": {
         "slug": "omgevingswaarde",
         "title": "Omgevingswaarde",
         "version": "2.5.0",
-        "description": "Een norm die voor (een onderdeel van) de fysieke leefomgeving de gewenste staat of kwaliteit, de toelaatbare belasting door activiteiten en/of de toelaatbare concentratie of depositie van stoffen als beleidsdoel vastlegt.",
+        "description": "Een norm die voor (een onderdeel van) de fysieke leefomgeving de gewenste staat of kwaliteit, de toelaatbare belasting door activiteiten en/of de toelaatbare concentratie of depositie van stoffen als beleidsdoel vastlegt. Extends: norm.",
         "required": [
           "naam",
           "omgevingswaardeGroep"
@@ -7428,25 +6811,18 @@
             "title": "beschrijft",
             "items": {
               "type": "object",
-              "$ref": "omgevingswaarderegel",
-              "objectConfiguration": {
-                "register": "ggm-volkshuisvesting-leefomgeving",
-                "schema": "omgevingswaarderegel"
-              }
+              "$ref": "omgevingswaarderegel"
             }
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "norm"
-        ]
+        "hardValidation": false
       },
       "omgevingswaarderegel": {
         "slug": "omgevingswaarderegel",
         "title": "Omgevingswaarderegel",
         "version": "2.5.0",
-        "description": "De beschrijving van een juridische regel gericht op een gestelde omgevingswaarde. Het betreft hier een juridische regel die verplichtingen oplegt aan het bevoegd gezag dat deze regel opstelt. Een omgevingswaarderegel is alleen gericht op een Omgevingswaarde (eventueel meerdere).",
+        "description": "De beschrijving van een juridische regel gericht op een gestelde omgevingswaarde. Het betreft hier een juridische regel die verplichtingen oplegt aan het bevoegd gezag dat deze regel opstelt. Een omgevingswaarderegel is alleen gericht op een Omgevingswaarde (eventueel meerdere). Extends: juridische-regel.",
         "required": [
           "naam",
           "groep"
@@ -7467,25 +6843,18 @@
             "title": "beschrijft",
             "items": {
               "type": "object",
-              "$ref": "omgevingswaarde",
-              "objectConfiguration": {
-                "register": "ggm-volkshuisvesting-leefomgeving",
-                "schema": "omgevingswaarde"
-              }
+              "$ref": "omgevingswaarde"
             }
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "juridische-regel"
-        ]
+        "hardValidation": false
       },
       "regel-voor-iedereen": {
         "slug": "regel-voor-iedereen",
         "title": "Regel voor Iedereen",
         "version": "2.5.0",
-        "description": "Een Juridische regel die voor eenieder werking heeft",
+        "description": "Een Juridische regel die voor eenieder werking heeft Extends: juridische-regel.",
         "required": [
           "activiteitRegelKwalificatie"
         ],
@@ -7501,11 +6870,7 @@
             "title": "beschrijftNorm",
             "items": {
               "type": "object",
-              "$ref": "omgevingsnorm",
-              "objectConfiguration": {
-                "register": "ggm-volkshuisvesting-leefomgeving",
-                "schema": "omgevingsnorm"
-              }
+              "$ref": "omgevingsnorm"
             }
           },
           "beschrijftGebiedsaanwijzing": {
@@ -7513,11 +6878,7 @@
             "title": "beschrijftGebiedsaanwijzing",
             "items": {
               "type": "object",
-              "$ref": "gebiedsaanwijzing",
-              "objectConfiguration": {
-                "register": "ggm-volkshuisvesting-leefomgeving",
-                "schema": "gebiedsaanwijzing"
-              }
+              "$ref": "gebiedsaanwijzing"
             }
           },
           "beschrijftActiviteit": {
@@ -7525,19 +6886,12 @@
             "title": "beschrijftActiviteit",
             "items": {
               "type": "object",
-              "$ref": "activiteit",
-              "objectConfiguration": {
-                "register": "ggm-volkshuisvesting-leefomgeving",
-                "schema": "activiteit"
-              }
+              "$ref": "activiteit"
             }
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "juridische-regel"
-        ]
+        "hardValidation": false
       },
       "thema": {
         "slug": "thema",
@@ -7563,11 +6917,7 @@
             "title": "subthema",
             "items": {
               "type": "object",
-              "$ref": "thema",
-              "objectConfiguration": {
-                "register": "ggm-volkshuisvesting-leefomgeving",
-                "schema": "thema"
-              }
+              "$ref": "thema"
             }
           },
           "heeftThema": {
@@ -7575,11 +6925,7 @@
             "title": "heeftThema",
             "items": {
               "type": "object",
-              "$ref": "juridische-regel",
-              "objectConfiguration": {
-                "register": "ggm-volkshuisvesting-leefomgeving",
-                "schema": "juridische-regel"
-              }
+              "$ref": "juridische-regel"
             }
           }
         },
@@ -7590,40 +6936,31 @@
         "slug": "conclusie",
         "title": "Conclusie",
         "version": "2.5.0",
-        "description": "Conclusie van de check. Antwoord op de vraag of ik een melding moet doen of een vergunning aan moet vragen voor een bepaalde activiteit.",
+        "description": "Conclusie van de check. Antwoord op de vraag of ik een melding moet doen of een vergunning aan moet vragen voor een bepaalde activiteit. Extends: toepasbare-regel.",
         "required": [],
         "properties": {},
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "toepasbare-regel"
-        ]
+        "hardValidation": false
       },
       "indieningsvereisten": {
         "slug": "indieningsvereisten",
         "title": "Indieningsvereisten",
         "version": "2.5.0",
-        "description": "Dat wat de initiatiefnemer moet aanleveren om het bevoegd gezag een aanvraag te kunnen laten beoordelen. De indieningsvereisten is de set aan informatie (gegevens en / of bijlagen) die aan een aanvraag moet worden toegevoegd voor een bepaalde vergunning of melding.",
+        "description": "Dat wat de initiatiefnemer moet aanleveren om het bevoegd gezag een aanvraag te kunnen laten beoordelen. De indieningsvereisten is de set aan informatie (gegevens en / of bijlagen) die aan een aanvraag moet worden toegevoegd voor een bepaalde vergunning of melding. Extends: toepasbare-regel.",
         "required": [],
         "properties": {},
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "toepasbare-regel"
-        ]
+        "hardValidation": false
       },
       "maatregelen": {
         "slug": "maatregelen",
         "title": "Maatregelen",
         "version": "2.5.0",
-        "description": "Beschrijft welke handelingen iemand moet uitvoeren om aan Voorschriften te kunnen voldoen.",
+        "description": "Beschrijft welke handelingen iemand moet uitvoeren om aan Voorschriften te kunnen voldoen. Extends: toepasbare-regel.",
         "required": [],
         "properties": {},
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "toepasbare-regel"
-        ]
+        "hardValidation": false
       },
       "toepasbare-regel": {
         "slug": "toepasbare-regel",
@@ -7678,22 +7015,14 @@
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "toepasbareregelbestand",
-            "objectConfiguration": {
-              "register": "ggm-volkshuisvesting-leefomgeving",
-              "schema": "toepasbareregelbestand"
-            }
+            "$ref": "toepasbareregelbestand"
           },
           "betreft": {
             "type": "array",
             "title": "betreft",
             "items": {
               "type": "object",
-              "$ref": "locatie",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "locatie"
-              }
+              "$ref": "locatie"
             }
           },
           "komtVoortUit": {
@@ -7701,11 +7030,7 @@
             "title": "komtVoortUit",
             "items": {
               "type": "object",
-              "$ref": "juridische-regel",
-              "objectConfiguration": {
-                "register": "ggm-volkshuisvesting-leefomgeving",
-                "schema": "juridische-regel"
-              }
+              "$ref": "juridische-regel"
             }
           }
         },
@@ -7737,11 +7062,7 @@
             "title": "bevat",
             "items": {
               "type": "object",
-              "$ref": "uitvoeringsregel",
-              "objectConfiguration": {
-                "register": "ggm-volkshuisvesting-leefomgeving",
-                "schema": "uitvoeringsregel"
-              }
+              "$ref": "uitvoeringsregel"
             }
           },
           "heeft": {
@@ -7749,11 +7070,7 @@
             "title": "heeft",
             "items": {
               "type": "object",
-              "$ref": "toepasbare-regel",
-              "objectConfiguration": {
-                "register": "ggm-volkshuisvesting-leefomgeving",
-                "schema": "toepasbare-regel"
-              }
+              "$ref": "toepasbare-regel"
             }
           }
         },
@@ -7787,20 +7104,12 @@
           "bevat": {
             "type": "object",
             "title": "bevat",
-            "$ref": "toepasbareregelbestand",
-            "objectConfiguration": {
-              "register": "ggm-volkshuisvesting-leefomgeving",
-              "schema": "toepasbareregelbestand"
-            }
+            "$ref": "toepasbareregelbestand"
           },
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "toepasbare-regel",
-            "objectConfiguration": {
-              "register": "ggm-volkshuisvesting-leefomgeving",
-              "schema": "toepasbare-regel"
-            }
+            "$ref": "toepasbare-regel"
           }
         },
         "searchable": true,

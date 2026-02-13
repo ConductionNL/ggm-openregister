@@ -47,22 +47,14 @@
           "bij": {
             "type": "object",
             "title": "bij",
-            "$ref": "vestiging",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "vestiging"
-            }
+            "$ref": "vestiging"
           },
           "met": {
             "type": "array",
             "title": "met",
             "items": {
               "type": "object",
-              "$ref": "natuurlijkpersoon",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "natuurlijkpersoon"
-              }
+              "$ref": "natuurlijkpersoon"
             }
           }
         },
@@ -73,7 +65,7 @@
         "slug": "hotel",
         "title": "Hotel",
         "version": "2.5.0",
-        "description": "Gebouw waar je tegen betaling kunt logeren.",
+        "description": "Gebouw waar je tegen betaling kunt logeren. Extends: vestiging.",
         "required": [
           "aantalKamers"
         ],
@@ -87,19 +79,12 @@
             "title": "heeft",
             "items": {
               "type": "object",
-              "$ref": "hotelbezoek",
-              "objectConfiguration": {
-                "register": "ggm-economie",
-                "schema": "hotelbezoek"
-              }
+              "$ref": "hotelbezoek"
             }
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "vestiging"
-        ]
+        "hardValidation": false
       },
       "hotelbezoek": {
         "slug": "hotelbezoek",
@@ -124,11 +109,7 @@
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "hotel",
-            "objectConfiguration": {
-              "register": "ggm-economie",
-              "schema": "hotel"
-            }
+            "$ref": "hotel"
           }
         },
         "searchable": true,
@@ -138,7 +119,7 @@
         "slug": "verkooppunt",
         "title": "Verkooppunt",
         "version": "2.5.0",
-        "description": "Locatie waar iets wordt verkocht",
+        "description": "Locatie waar iets wordt verkocht Extends: vestiging.",
         "required": [
           "winkelformule"
         ],
@@ -150,10 +131,7 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "vestiging"
-        ]
+        "hardValidation": false
       },
       "werkgelegenheid": {
         "slug": "werkgelegenheid",
@@ -193,11 +171,7 @@
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "vestiging",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "vestiging"
-            }
+            "$ref": "vestiging"
           }
         },
         "searchable": true,
@@ -240,11 +214,7 @@
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "gebouwdobject",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "gebouwdobject"
-            }
+            "$ref": "gebouwdobject"
           }
         },
         "searchable": true,

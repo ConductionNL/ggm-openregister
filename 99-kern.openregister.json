@@ -23,7 +23,7 @@
         "slug": "pand",
         "title": "Pand",
         "version": "2.5.0",
-        "description": "Een pand is een kleinste bij de totstandkoming functioneel en bouwkundig-constructief zelfstandige eenheid die direct en duurzaam met de aarde is verbonden en betreedbaar en afsluitbaar is. Beschrijving: Een zelfstandig bouwwerk, zowel zelfstandig in de manier hoe het is gebouwd als waarvoor het is bedoeld om te gebruiken. Een pand voldoet ook aan de volgende eisen: een pand is direct en voor lange tijd met de aarde verbonden (een pand is niet makkelijk te verplaatsen) en een pand kun je binnengaan en afsluiten. Een eenheid kan alleen een pand zijn als het voldoet aan alle eisen uit de Catalogus BAG 2018.",
+        "description": "Een pand is een kleinste bij de totstandkoming functioneel en bouwkundig-constructief zelfstandige eenheid die direct en duurzaam met de aarde is verbonden en betreedbaar en afsluitbaar is. Beschrijving: Een zelfstandig bouwwerk, zowel zelfstandig in de manier hoe het is gebouwd als waarvoor het is bedoeld om te gebruiken. Een pand voldoet ook aan de volgende eisen: een pand is direct en voor lange tijd met de aarde verbonden (een pand is niet makkelijk te verplaatsen) en een pand kun je binnengaan en afsluiten. Een eenheid kan alleen een pand zijn als het voldoet aan alle eisen uit de Catalogus BAG 2018. Extends: geo-object.",
         "required": [
           "identificatie",
           "status",
@@ -188,69 +188,42 @@
           "is": {
             "type": "object",
             "title": "is",
-            "$ref": "object",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "object"
-            }
+            "$ref": "object"
           },
           "zonderVerblijfsobjectLigtIn": {
             "type": "object",
             "title": "zonderVerblijfsobjectLigtIn",
-            "$ref": "buurt",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "buurt"
-            }
+            "$ref": "buurt"
           },
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "vastgoedobject",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "vastgoedobject"
-            }
+            "$ref": "vastgoedobject"
           },
           "bestaatUit": {
             "type": "array",
             "title": "bestaatUit",
             "items": {
               "type": "object",
-              "$ref": "woz-deelobject",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "woz-deelobject"
-              }
+              "$ref": "woz-deelobject"
             }
           },
           "objectidentificatie": {
             "type": "object",
             "title": "objectidentificatie",
-            "$ref": "onderzoek",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "onderzoek"
-            }
+            "$ref": "onderzoek"
           },
           "maaktDeelUitVan": {
             "type": "array",
             "title": "maaktDeelUitVan",
             "items": {
               "type": "object",
-              "$ref": "verblijfsobject",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "verblijfsobject"
-              }
+              "$ref": "verblijfsobject"
             }
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "geo-object"
-        ]
+        "hardValidation": false
       },
       "wijk": {
         "slug": "wijk",
@@ -334,11 +307,7 @@
             "title": "valtBinnen",
             "items": {
               "type": "object",
-              "$ref": "areaal",
-              "objectConfiguration": {
-                "register": "ggm-volkshuisvesting-leefomgeving",
-                "schema": "areaal"
-              }
+              "$ref": "areaal"
             }
           },
           "bedient": {
@@ -346,21 +315,13 @@
             "title": "bedient",
             "items": {
               "type": "object",
-              "$ref": "binnenlocatie",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "binnenlocatie"
-              }
+              "$ref": "binnenlocatie"
             }
           },
           "ligtIn": {
             "type": "object",
             "title": "ligtIn",
-            "$ref": "woonplaats",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "woonplaats"
-            }
+            "$ref": "woonplaats"
           }
         },
         "searchable": true,
@@ -501,32 +462,20 @@
             "title": "ligtIn",
             "items": {
               "type": "object",
-              "$ref": "nummeraanduiding",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "nummeraanduiding"
-              }
+              "$ref": "nummeraanduiding"
             }
           },
           "objectidentificatie": {
             "type": "object",
             "title": "objectidentificatie",
-            "$ref": "onderzoek",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "onderzoek"
-            }
+            "$ref": "onderzoek"
           },
           "heeftPlaatsgevondenIn": {
             "type": "array",
             "title": "heeftPlaatsgevondenIn",
             "items": {
               "type": "object",
-              "$ref": "geboorteingeschrevennatuurlijkpersoon",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "geboorteingeschrevennatuurlijkpersoon"
-              }
+              "$ref": "geboorteingeschrevennatuurlijkpersoon"
             }
           },
           "isGeslotenaangegaanIn": {
@@ -534,11 +483,7 @@
             "title": "isGeslotenaangegaanIn",
             "items": {
               "type": "object",
-              "$ref": "sluitingofaangaanhuwelijkofgeregistreerdpartnerschap",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "sluitingofaangaanhuwelijkofgeregistreerdpartnerschap"
-              }
+              "$ref": "sluitingofaangaanhuwelijkofgeregistreerdpartnerschap"
             }
           },
           "isOntbondenIn": {
@@ -546,11 +491,7 @@
             "title": "isOntbondenIn",
             "items": {
               "type": "object",
-              "$ref": "ontbindinghuwelijkgeregistreerdpartnerschap",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "ontbindinghuwelijkgeregistreerdpartnerschap"
-              }
+              "$ref": "ontbindinghuwelijkgeregistreerdpartnerschap"
             }
           },
           "verblijftOp": {
@@ -558,11 +499,7 @@
             "title": "verblijftOp",
             "items": {
               "type": "object",
-              "$ref": "verblijfadresingeschrevennatuurlijkpersoon",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "verblijfadresingeschrevennatuurlijkpersoon"
-              }
+              "$ref": "verblijfadresingeschrevennatuurlijkpersoon"
             }
           },
           "heeftAlsCorrespondentieadresPostadresIn": {
@@ -570,11 +507,7 @@
             "title": "heeftAlsCorrespondentieadresPostadresIn",
             "items": {
               "type": "object",
-              "$ref": "postadres",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "postadres"
-              }
+              "$ref": "postadres"
             }
           },
           "heeftPlaatsegevondenIn": {
@@ -582,11 +515,7 @@
             "title": "heeftPlaatsegevondenIn",
             "items": {
               "type": "object",
-              "$ref": "overlijdeningeschrevennatuurlijkpersoon",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "overlijdeningeschrevennatuurlijkpersoon"
-              }
+              "$ref": "overlijdeningeschrevennatuurlijkpersoon"
             }
           }
         },
@@ -719,89 +648,53 @@
             "title": "heeftAlsAdres",
             "items": {
               "type": "object",
-              "$ref": "huishouden",
-              "objectConfiguration": {
-                "register": "ggm-sociaal-domein",
-                "schema": "huishouden"
-              }
+              "$ref": "huishouden"
             }
           },
           "heeftAlsNevenadres": {
             "type": "object",
             "title": "heeftAlsNevenadres",
-            "$ref": "adresseerbaarobject",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "adresseerbaarobject"
-            }
+            "$ref": "adresseerbaarobject"
           },
           "verwijstNaar": {
             "type": "object",
             "title": "verwijstNaar",
-            "$ref": "adresaanduiding",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "adresaanduiding"
-            }
+            "$ref": "adresaanduiding"
           },
           "ligtIn": {
             "type": "object",
             "title": "ligtIn",
-            "$ref": "buurt",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "buurt"
-            }
+            "$ref": "buurt"
           },
           "heeftAlsHoofdadres": {
             "type": "object",
             "title": "heeftAlsHoofdadres",
-            "$ref": "adresseerbaarobject",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "adresseerbaarobject"
-            }
+            "$ref": "adresseerbaarobject"
           },
           "briefadres": {
             "type": "array",
             "title": "briefadres",
             "items": {
               "type": "object",
-              "$ref": "briefadres",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "briefadres"
-              }
+              "$ref": "briefadres"
             }
           },
           "objectidentificatie": {
             "type": "object",
             "title": "objectidentificatie",
-            "$ref": "onderzoek",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "onderzoek"
-            }
+            "$ref": "onderzoek"
           },
           "ligtAan": {
             "type": "object",
             "title": "ligtAan",
-            "$ref": "openbareruimte",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "openbareruimte"
-            }
+            "$ref": "openbareruimte"
           },
           "heeftAlsLocatieadres": {
             "type": "array",
             "title": "heeftAlsLocatieadres",
             "items": {
               "type": "object",
-              "$ref": "vestiging",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "vestiging"
-              }
+              "$ref": "vestiging"
             }
           }
         },
@@ -897,41 +790,25 @@
             "title": "ligtIn",
             "items": {
               "type": "object",
-              "$ref": "areaal",
-              "objectConfiguration": {
-                "register": "ggm-volkshuisvesting-leefomgeving",
-                "schema": "areaal"
-              }
+              "$ref": "areaal"
             }
           },
           "is": {
             "type": "object",
             "title": "is",
-            "$ref": "object",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "object"
-            }
+            "$ref": "object"
           },
           "komtOvereen": {
             "type": "object",
             "title": "komtOvereen",
-            "$ref": "gebied",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "gebied"
-            }
+            "$ref": "gebied"
           },
           "zonderVerblijfsobjectLigtIn": {
             "type": "array",
             "title": "zonderVerblijfsobjectLigtIn",
             "items": {
               "type": "object",
-              "$ref": "pand",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "pand"
-              }
+              "$ref": "pand"
             }
           }
         },
@@ -942,7 +819,7 @@
         "slug": "verblijfsobject",
         "title": "Verblijfsobject",
         "version": "2.5.0",
-        "description": "Een verblijfsobject is een kleinste binnen &#233;&#233;n of meer panden gelegen en voor woon-, bedrijfsmatige, of recreatieve doeleinden geschikte eenheid van gebruik die ontsloten wordt via een eigen afsluitbare toegang vanaf de openbare weg, een erf of een gedeelde verkeersruimte, onderwerp kan zijn van goederenrechtelijke rechtshandelingen en in functioneel opzicht zelfstandig is. Beschrijving: Een verblijfsobject is een ruimte in 1 of meer panden en voldoet aan de volgende eisen: kan worden gebruikt om in te wonen, een bedrijf in te hebben of om voor plezier in te verblijven, is bereikbaar via een eigen afsluitbare toegang vanaf de openbare weg, een erf of een gedeelde verkeersruimte, kan worden gekocht en verkocht, kan helemaal zelf worden gebruikt voor het doel dat ervoor is gegeven. Deze eisen voor verblijfsobjecten worden toegelicht in de Catalogus BAG 2018. Een verblijfsobject krijgt een adres.",
+        "description": "Een verblijfsobject is een kleinste binnen &#233;&#233;n of meer panden gelegen en voor woon-, bedrijfsmatige, of recreatieve doeleinden geschikte eenheid van gebruik die ontsloten wordt via een eigen afsluitbare toegang vanaf de openbare weg, een erf of een gedeelde verkeersruimte, onderwerp kan zijn van goederenrechtelijke rechtshandelingen en in functioneel opzicht zelfstandig is. Beschrijving: Een verblijfsobject is een ruimte in 1 of meer panden en voldoet aan de volgende eisen: kan worden gebruikt om in te wonen, een bedrijf in te hebben of om voor plezier in te verblijven, is bereikbaar via een eigen afsluitbare toegang vanaf de openbare weg, een erf of een gedeelde verkeersruimte, kan worden gekocht en verkocht, kan helemaal zelf worden gebruikt voor het doel dat ervoor is gegeven. Deze eisen voor verblijfsobjecten worden toegelicht in de Catalogus BAG 2018. Een verblijfsobject krijgt een adres. Extends: adresseerbaarobject.",
         "required": [
           "identificatie",
           "status",
@@ -1110,61 +987,38 @@
             "title": "isGevestigdIn",
             "items": {
               "type": "object",
-              "$ref": "binnenlocatie",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "binnenlocatie"
-              }
+              "$ref": "binnenlocatie"
             }
           },
           "objectidentificatie": {
             "type": "object",
             "title": "objectidentificatie",
-            "$ref": "onderzoek",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "onderzoek"
-            }
+            "$ref": "onderzoek"
           },
           "verblijftIn": {
             "type": "array",
             "title": "verblijftIn",
             "items": {
               "type": "object",
-              "$ref": "verblijfadresingeschrevennatuurlijkpersoon",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "verblijfadresingeschrevennatuurlijkpersoon"
-              }
+              "$ref": "verblijfadresingeschrevennatuurlijkpersoon"
             }
           },
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "vastgoedobject",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "vastgoedobject"
-            }
+            "$ref": "vastgoedobject"
           },
           "maaktDeelUitVan": {
             "type": "array",
             "title": "maaktDeelUitVan",
             "items": {
               "type": "object",
-              "$ref": "pand",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "pand"
-              }
+              "$ref": "pand"
             }
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "adresseerbaarobject"
-        ]
+        "hardValidation": false
       },
       "onderzoek": {
         "slug": "onderzoek",
@@ -1261,11 +1115,7 @@
           "objectidentificatie": {
             "type": "object",
             "title": "objectidentificatie",
-            "$ref": "openbareruimte",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "openbareruimte"
-            }
+            "$ref": "openbareruimte"
           }
         },
         "searchable": true,
@@ -1275,7 +1125,7 @@
         "slug": "ligplaats",
         "title": "Ligplaats",
         "version": "2.5.0",
-        "description": "Definitie Een ligplaats is een door het bevoegde gemeentelijke orgaan als zodanig aangewezen plaats in het water al dan niet aangevuld met een op de oever aanwezig terrein of een gedeelte daarvan, die bestemd is voor het permanent afmeren van een voor woon-, bedrijfsmatige of recreatieve doeleinden geschikt drijvend object Beschrijving Een plaats in het water met soms ook een (deel van een) terrein op de oever. Deze plaats moet kunnen worden gebruikt door een drijvend object dat langere tijd daar wordt vastgemaakt. Het drijvende object moet geschikt zijn om in te wonen, om een bedrijf in te hebben of om voor plezier in te verblijven. Bijvoorbeeld een woonboot. De gemeente mag zeggen of er voor de BAG ergens een ligplaats komt.",
+        "description": "Definitie Een ligplaats is een door het bevoegde gemeentelijke orgaan als zodanig aangewezen plaats in het water al dan niet aangevuld met een op de oever aanwezig terrein of een gedeelte daarvan, die bestemd is voor het permanent afmeren van een voor woon-, bedrijfsmatige of recreatieve doeleinden geschikt drijvend object Beschrijving Een plaats in het water met soms ook een (deel van een) terrein op de oever. Deze plaats moet kunnen worden gebruikt door een drijvend object dat langere tijd daar wordt vastgemaakt. Het drijvende object moet geschikt zijn om in te wonen, om een bedrijf in te hebben of om voor plezier in te verblijven. Bijvoorbeeld een woonboot. De gemeente mag zeggen of er voor de BAG ergens een ligplaats komt. Extends: adresseerbaarobject.",
         "required": [
           "identificatie",
           "geconstateerd",
@@ -1366,45 +1216,30 @@
           "is": {
             "type": "object",
             "title": "is",
-            "$ref": "object",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "object"
-            }
+            "$ref": "object"
           },
           "verblijftOp": {
             "type": "array",
             "title": "verblijftOp",
             "items": {
               "type": "object",
-              "$ref": "verblijfadresingeschrevennatuurlijkpersoon",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "verblijfadresingeschrevennatuurlijkpersoon"
-              }
+              "$ref": "verblijfadresingeschrevennatuurlijkpersoon"
             }
           },
           "objectidentificatie": {
             "type": "object",
             "title": "objectidentificatie",
-            "$ref": "onderzoek",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "onderzoek"
-            }
+            "$ref": "onderzoek"
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "adresseerbaarobject"
-        ]
+        "hardValidation": false
       },
       "standplaats": {
         "slug": "standplaats",
         "title": "Standplaats",
         "version": "2.5.0",
-        "description": "Een standplaats is een door het bevoegde gemeentelijke orgaan als zodanig aangewezen terrein of gedeelte daarvan dat bestemd is voor het permanent plaatsen van een niet direct en niet duurzaam met de aarde verbonden en voor woon-, bedrijfsmatige, of recreatieve doeleinden geschikte ruimte. Beschrijving: Een terrein of een deel daarvan dat moet kunnen worden gebruikt om langere tijd een object neer te zetten. Dit object moet geschikt zijn om in te wonen, om een bedrijf in te hebben of om voor plezier in te verblijven. Het moet verplaatsbaar zijn en mag dus niet helemaal vastgemaakt worden aan de grond. Bijvoorbeeld een woonwagen of strandtent. De gemeente mag zeggen of er voor de BAG ergens een standplaats komt.",
+        "description": "Een standplaats is een door het bevoegde gemeentelijke orgaan als zodanig aangewezen terrein of gedeelte daarvan dat bestemd is voor het permanent plaatsen van een niet direct en niet duurzaam met de aarde verbonden en voor woon-, bedrijfsmatige, of recreatieve doeleinden geschikte ruimte. Beschrijving: Een terrein of een deel daarvan dat moet kunnen worden gebruikt om langere tijd een object neer te zetten. Dit object moet geschikt zijn om in te wonen, om een bedrijf in te hebben of om voor plezier in te verblijven. Het moet verplaatsbaar zijn en mag dus niet helemaal vastgemaakt worden aan de grond. Bijvoorbeeld een woonwagen of strandtent. De gemeente mag zeggen of er voor de BAG ergens een standplaats komt. Extends: adresseerbaarobject.",
         "required": [
           "identificatie",
           "geconstateerd",
@@ -1489,45 +1324,30 @@
           "is": {
             "type": "object",
             "title": "is",
-            "$ref": "object",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "object"
-            }
+            "$ref": "object"
           },
           "verblijftOp": {
             "type": "array",
             "title": "verblijftOp",
             "items": {
               "type": "object",
-              "$ref": "verblijfadresingeschrevennatuurlijkpersoon",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "verblijfadresingeschrevennatuurlijkpersoon"
-              }
+              "$ref": "verblijfadresingeschrevennatuurlijkpersoon"
             }
           },
           "objectidentificatie": {
             "type": "object",
             "title": "objectidentificatie",
-            "$ref": "onderzoek",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "onderzoek"
-            }
+            "$ref": "onderzoek"
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "adresseerbaarobject"
-        ]
+        "hardValidation": false
       },
       "adresseerbaarobject": {
         "slug": "adresseerbaarobject",
         "title": "AdresseerbaarObject",
         "version": "2.5.0",
-        "description": "Een adresseerbaar object is een object waaraan formeel adressen kunnen en moeten worden toegekend: een verblijfsobject, standplaats of ligplaats. Toelichting: Een object dat een adres heeft of krijgt. Adresseerbare objecten zijn: een verblijfsobject, een standplaats en een ligplaats.",
+        "description": "Een adresseerbaar object is een object waaraan formeel adressen kunnen en moeten worden toegekend: een verblijfsobject, standplaats of ligplaats. Toelichting: Een object dat een adres heeft of krijgt. Adresseerbare objecten zijn: een verblijfsobject, een standplaats en een ligplaats. Extends: object.",
         "required": [
           "identificatie",
           "versie",
@@ -1558,11 +1378,7 @@
             "title": "heeftAdresseerbaarObject",
             "items": {
               "type": "object",
-              "$ref": "locatieonroerendezaak",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "locatieonroerendezaak"
-              }
+              "$ref": "locatieonroerendezaak"
             }
           },
           "heeftHoofdlocatieInOfOp": {
@@ -1570,11 +1386,7 @@
             "title": "heeftHoofdlocatieInOfOp",
             "items": {
               "type": "object",
-              "$ref": "vestiging",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "vestiging"
-              }
+              "$ref": "vestiging"
             }
           },
           "heeftNevenlocatieInOfOp": {
@@ -1582,11 +1394,7 @@
             "title": "heeftNevenlocatieInOfOp",
             "items": {
               "type": "object",
-              "$ref": "vestiging",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "vestiging"
-              }
+              "$ref": "vestiging"
             }
           },
           "bestaatUit": {
@@ -1594,32 +1402,20 @@
             "title": "bestaatUit",
             "items": {
               "type": "object",
-              "$ref": "woz-deelobject",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "woz-deelobject"
-              }
+              "$ref": "woz-deelobject"
             }
           },
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "winkelvloeroppervlak",
-            "objectConfiguration": {
-              "register": "ggm-economie",
-              "schema": "winkelvloeroppervlak"
-            }
+            "$ref": "winkelvloeroppervlak"
           },
           "isIngeschrevenOp": {
             "type": "array",
             "title": "isIngeschrevenOp",
             "items": {
               "type": "object",
-              "$ref": "verblijfadresingeschrevennatuurlijkpersoon",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "verblijfadresingeschrevennatuurlijkpersoon"
-              }
+              "$ref": "verblijfadresingeschrevennatuurlijkpersoon"
             }
           },
           "heeftAlsNevenadres": {
@@ -1627,28 +1423,17 @@
             "title": "heeftAlsNevenadres",
             "items": {
               "type": "object",
-              "$ref": "nummeraanduiding",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "nummeraanduiding"
-              }
+              "$ref": "nummeraanduiding"
             }
           },
           "heeftAlsHoofdadres": {
             "type": "object",
             "title": "heeftAlsHoofdadres",
-            "$ref": "nummeraanduiding",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "nummeraanduiding"
-            }
+            "$ref": "nummeraanduiding"
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "object"
-        ]
+        "hardValidation": false
       },
       "openbareruimte": {
         "slug": "openbareruimte",
@@ -1811,50 +1596,30 @@
           "betreft": {
             "type": "object",
             "title": "betreft",
-            "$ref": "beschermde-status",
-            "objectConfiguration": {
-              "register": "ggm-sport-cultuur-recreatie",
-              "schema": "beschermde-status"
-            }
+            "$ref": "beschermde-status"
           },
           "is": {
             "type": "object",
             "title": "is",
-            "$ref": "object",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "object"
-            }
+            "$ref": "object"
           },
           "ligtIn": {
             "type": "object",
             "title": "ligtIn",
-            "$ref": "buurt",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "buurt"
-            }
+            "$ref": "buurt"
           },
           "ligtAan": {
             "type": "array",
             "title": "ligtAan",
             "items": {
               "type": "object",
-              "$ref": "woz-object",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "woz-object"
-              }
+              "$ref": "woz-object"
             }
           },
           "objectidentificatie": {
             "type": "object",
             "title": "objectidentificatie",
-            "$ref": "onderzoek",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "onderzoek"
-            }
+            "$ref": "onderzoek"
           }
         },
         "searchable": true,
@@ -1944,11 +1709,7 @@
             "title": "onderVerantwoordelijkheidVan",
             "items": {
               "type": "object",
-              "$ref": "schuldhulptraject",
-              "objectConfiguration": {
-                "register": "ggm-sociaal-domein",
-                "schema": "schuldhulptraject"
-              }
+              "$ref": "schuldhulptraject"
             }
           },
           "isGekoppeldAan": {
@@ -1956,11 +1717,7 @@
             "title": "isGekoppeldAan",
             "items": {
               "type": "object",
-              "$ref": "asielstatushouder",
-              "objectConfiguration": {
-                "register": "ggm-sociaal-domein",
-                "schema": "asielstatushouder"
-              }
+              "$ref": "asielstatushouder"
             }
           },
           "opgepaktNamens": {
@@ -1968,11 +1725,7 @@
             "title": "opgepaktNamens",
             "items": {
               "type": "object",
-              "$ref": "vroegsignaalzaak",
-              "objectConfiguration": {
-                "register": "ggm-sociaal-domein",
-                "schema": "vroegsignaalzaak"
-              }
+              "$ref": "vroegsignaalzaak"
             }
           },
           "nieuweGemeente": {
@@ -1980,11 +1733,7 @@
             "title": "nieuweGemeente",
             "items": {
               "type": "object",
-              "$ref": "gemeente",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "gemeente"
-              }
+              "$ref": "gemeente"
             }
           },
           "ligtIn": {
@@ -1992,11 +1741,7 @@
             "title": "ligtIn",
             "items": {
               "type": "object",
-              "$ref": "woonplaats",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "woonplaats"
-              }
+              "$ref": "woonplaats"
             }
           }
         },
@@ -2034,11 +1779,7 @@
             "title": "binnen",
             "items": {
               "type": "object",
-              "$ref": "hoofdstuk",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "hoofdstuk"
-              }
+              "$ref": "hoofdstuk"
             }
           },
           "valtBinnen": {
@@ -2046,11 +1787,7 @@
             "title": "valtBinnen",
             "items": {
               "type": "object",
-              "$ref": "begroting",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "begroting"
-              }
+              "$ref": "begroting"
             }
           },
           "stamtUit": {
@@ -2058,11 +1795,7 @@
             "title": "stamtUit",
             "items": {
               "type": "object",
-              "$ref": "archiefstuk",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "archiefstuk"
-              }
+              "$ref": "archiefstuk"
             }
           }
         },
@@ -2073,7 +1806,7 @@
         "slug": "gebied",
         "title": "Gebied",
         "version": "2.5.0",
-        "description": "Een aaneengesloten gedeelte van een wijk, waarvan de grenzen zo veel mogelijk gebaseerd zijn op topografische elementen.",
+        "description": "Een aaneengesloten gedeelte van een wijk, waarvan de grenzen zo veel mogelijk gebaseerd zijn op topografische elementen. Extends: locatie.",
         "required": [
           "gebiedsAanduiding"
         ],
@@ -2086,24 +1819,17 @@
           "omvat": {
             "type": "object",
             "title": "omvat",
-            "$ref": "gebiedengroep",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "gebiedengroep"
-            }
+            "$ref": "gebiedengroep"
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "locatie"
-        ]
+        "hardValidation": false
       },
       "punt": {
         "slug": "punt",
         "title": "Punt",
         "version": "2.5.0",
-        "description": "Plaats in de ruimte",
+        "description": "Plaats in de ruimte Extends: locatie.",
         "required": [
           "puntLocatie"
         ],
@@ -2116,18 +1842,11 @@
           "omvat": {
             "type": "object",
             "title": "omvat",
-            "$ref": "puntengroep",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "puntengroep"
-            }
+            "$ref": "puntengroep"
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "locatie"
-        ]
+        "hardValidation": false
       },
       "video-opname": {
         "slug": "video-opname",
@@ -2162,11 +1881,7 @@
           "betreft": {
             "type": "object",
             "title": "betreft",
-            "$ref": "vergadering",
-            "objectConfiguration": {
-              "register": "ggm-bestuur-politiek",
-              "schema": "vergadering"
-            }
+            "$ref": "vergadering"
           }
         },
         "searchable": true,
@@ -2176,7 +1891,7 @@
         "slug": "puntengroep",
         "title": "Puntengroep",
         "version": "2.5.0",
-        "description": "Verzameling van punten",
+        "description": "Verzameling van punten Extends: locatie.",
         "required": [],
         "properties": {
           "omvat": {
@@ -2184,19 +1899,12 @@
             "title": "omvat",
             "items": {
               "type": "object",
-              "$ref": "punt",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "punt"
-              }
+              "$ref": "punt"
             }
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "locatie"
-        ]
+        "hardValidation": false
       },
       "locatie": {
         "slug": "locatie",
@@ -2229,11 +1937,7 @@
             "title": "betreft",
             "items": {
               "type": "object",
-              "$ref": "toepasbare-regel",
-              "objectConfiguration": {
-                "register": "ggm-volkshuisvesting-leefomgeving",
-                "schema": "toepasbare-regel"
-              }
+              "$ref": "toepasbare-regel"
             }
           },
           "geldtVoor": {
@@ -2241,11 +1945,7 @@
             "title": "geldtVoor",
             "items": {
               "type": "object",
-              "$ref": "normwaarde",
-              "objectConfiguration": {
-                "register": "ggm-volkshuisvesting-leefomgeving",
-                "schema": "normwaarde"
-              }
+              "$ref": "normwaarde"
             }
           },
           "werkingsgebied": {
@@ -2253,11 +1953,7 @@
             "title": "werkingsgebied",
             "items": {
               "type": "object",
-              "$ref": "juridische-regel",
-              "objectConfiguration": {
-                "register": "ggm-volkshuisvesting-leefomgeving",
-                "schema": "juridische-regel"
-              }
+              "$ref": "juridische-regel"
             }
           },
           "verwijstNaar": {
@@ -2265,11 +1961,7 @@
             "title": "verwijstNaar",
             "items": {
               "type": "object",
-              "$ref": "gebiedsaanwijzing",
-              "objectConfiguration": {
-                "register": "ggm-volkshuisvesting-leefomgeving",
-                "schema": "gebiedsaanwijzing"
-              }
+              "$ref": "gebiedsaanwijzing"
             }
           },
           "isVerbondenMet": {
@@ -2277,11 +1969,7 @@
             "title": "isVerbondenMet",
             "items": {
               "type": "object",
-              "$ref": "activiteit",
-              "objectConfiguration": {
-                "register": "ggm-volkshuisvesting-leefomgeving",
-                "schema": "activiteit"
-              }
+              "$ref": "activiteit"
             }
           }
         },
@@ -2339,31 +2027,19 @@
           "monumentFotos": {
             "type": "object",
             "title": "monumentFotos",
-            "$ref": "beschermde-status",
-            "objectConfiguration": {
-              "register": "ggm-sport-cultuur-recreatie",
-              "schema": "beschermde-status"
-            }
+            "$ref": "beschermde-status"
           },
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "vth-melding",
-            "objectConfiguration": {
-              "register": "ggm-veiligheid-vergunningen",
-              "schema": "vth-melding"
-            }
+            "$ref": "vth-melding"
           },
           "betreft": {
             "type": "array",
             "title": "betreft",
             "items": {
               "type": "object",
-              "$ref": "erfgoed-object",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "erfgoed-object"
-              }
+              "$ref": "erfgoed-object"
             }
           }
         },
@@ -2374,7 +2050,7 @@
         "slug": "gebiedengroep",
         "title": "Gebiedengroep",
         "version": "2.5.0",
-        "description": "Verzameling van gebieden",
+        "description": "Verzameling van gebieden Extends: locatie.",
         "required": [],
         "properties": {
           "omvat": {
@@ -2382,25 +2058,18 @@
             "title": "omvat",
             "items": {
               "type": "object",
-              "$ref": "gebied",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "gebied"
-              }
+              "$ref": "gebied"
             }
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "locatie"
-        ]
+        "hardValidation": false
       },
       "lijnengroep": {
         "slug": "lijnengroep",
         "title": "Lijnengroep",
         "version": "2.5.0",
-        "description": "Verzameling van lijnen",
+        "description": "Verzameling van lijnen Extends: locatie.",
         "required": [],
         "properties": {
           "omvat": {
@@ -2408,25 +2077,18 @@
             "title": "omvat",
             "items": {
               "type": "object",
-              "$ref": "lijn",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "lijn"
-              }
+              "$ref": "lijn"
             }
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "locatie"
-        ]
+        "hardValidation": false
       },
       "lijn": {
         "slug": "lijn",
         "title": "Lijn",
         "version": "2.5.0",
-        "description": "Denkbeeldige streep op de aardoppervlakte",
+        "description": "Denkbeeldige streep op de aardoppervlakte Extends: locatie.",
         "required": [
           "lijnLocatie"
         ],
@@ -2439,18 +2101,11 @@
           "omvat": {
             "type": "object",
             "title": "omvat",
-            "$ref": "lijnengroep",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "lijnengroep"
-            }
+            "$ref": "lijnengroep"
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "locatie"
-        ]
+        "hardValidation": false
       },
       "bedrijfsprocestype": {
         "slug": "bedrijfsprocestype",
@@ -2471,11 +2126,7 @@
             "title": "isOnderdeelVan",
             "items": {
               "type": "object",
-              "$ref": "bedrijfsprocestype",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "bedrijfsprocestype"
-              }
+              "$ref": "bedrijfsprocestype"
             }
           },
           "isVan": {
@@ -2483,11 +2134,7 @@
             "title": "isVan",
             "items": {
               "type": "object",
-              "$ref": "bedrijfsproces",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "bedrijfsproces"
-              }
+              "$ref": "bedrijfsproces"
             }
           },
           "heeft": {
@@ -2495,21 +2142,13 @@
             "title": "heeft",
             "items": {
               "type": "object",
-              "$ref": "zaaktype",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "zaaktype"
-              }
+              "$ref": "zaaktype"
             }
           },
           "isDeelVan": {
             "type": "object",
             "title": "isDeelVan",
-            "$ref": "deelprocestype",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "deelprocestype"
-            }
+            "$ref": "deelprocestype"
           }
         },
         "searchable": true,
@@ -2611,11 +2250,7 @@
             "title": "met",
             "items": {
               "type": "object",
-              "$ref": "balieafspraak",
-              "objectConfiguration": {
-                "register": "ggm-dienstverlening",
-                "schema": "balieafspraak"
-              }
+              "$ref": "balieafspraak"
             }
           },
           "inhuur": {
@@ -2623,11 +2258,7 @@
             "title": "inhuur",
             "items": {
               "type": "object",
-              "$ref": "gunning",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "gunning"
-              }
+              "$ref": "gunning"
             }
           },
           "betreft": {
@@ -2635,11 +2266,7 @@
             "title": "betreft",
             "items": {
               "type": "object",
-              "$ref": "formulierverlenginginhuur",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "formulierverlenginginhuur"
-              }
+              "$ref": "formulierverlenginginhuur"
             }
           },
           "aanvrager": {
@@ -2647,11 +2274,7 @@
             "title": "aanvrager",
             "items": {
               "type": "object",
-              "$ref": "formulierverlenginginhuur",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "formulierverlenginginhuur"
-              }
+              "$ref": "formulierverlenginginhuur"
             }
           },
           "ingediendBij": {
@@ -2659,11 +2282,7 @@
             "title": "ingediendBij",
             "items": {
               "type": "object",
-              "$ref": "aanvraag-inkooporder",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "aanvraag-inkooporder"
-              }
+              "$ref": "aanvraag-inkooporder"
             }
           },
           "eigenaar": {
@@ -2671,11 +2290,7 @@
             "title": "eigenaar",
             "items": {
               "type": "object",
-              "$ref": "aanbesteding-inhuur",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "aanbesteding-inhuur"
-              }
+              "$ref": "aanbesteding-inhuur"
             }
           },
           "procesleider": {
@@ -2683,11 +2298,7 @@
             "title": "procesleider",
             "items": {
               "type": "object",
-              "$ref": "aanbesteding",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "aanbesteding"
-              }
+              "$ref": "aanbesteding"
             }
           },
           "behandelaar": {
@@ -2695,11 +2306,7 @@
             "title": "behandelaar",
             "items": {
               "type": "object",
-              "$ref": "subsidie",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "subsidie"
-              }
+              "$ref": "subsidie"
             }
           },
           "auteur": {
@@ -2707,11 +2314,7 @@
             "title": "auteur",
             "items": {
               "type": "object",
-              "$ref": "notitie",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "notitie"
-              }
+              "$ref": "notitie"
             }
           },
           "rollen": {
@@ -2719,11 +2322,7 @@
             "title": "rollen",
             "items": {
               "type": "object",
-              "$ref": "applicatie",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "applicatie"
-              }
+              "$ref": "applicatie"
             }
           },
           "uitvoerder": {
@@ -2731,11 +2330,7 @@
             "title": "uitvoerder",
             "items": {
               "type": "object",
-              "$ref": "melding",
-              "objectConfiguration": {
-                "register": "ggm-volkshuisvesting-leefomgeving",
-                "schema": "melding"
-              }
+              "$ref": "melding"
             }
           },
           "melder": {
@@ -2743,11 +2338,7 @@
             "title": "melder",
             "items": {
               "type": "object",
-              "$ref": "melding",
-              "objectConfiguration": {
-                "register": "ggm-volkshuisvesting-leefomgeving",
-                "schema": "melding"
-              }
+              "$ref": "melding"
             }
           },
           "betrokkenProfessional": {
@@ -2755,11 +2346,7 @@
             "title": "betrokkenProfessional",
             "items": {
               "type": "object",
-              "$ref": "zorgmelding",
-              "objectConfiguration": {
-                "register": "ggm-sociaal-domein",
-                "schema": "zorgmelding"
-              }
+              "$ref": "zorgmelding"
             }
           },
           "uitgevoerdDoor": {
@@ -2767,62 +2354,38 @@
             "title": "uitgevoerdDoor",
             "items": {
               "type": "object",
-              "$ref": "parkeerscan",
-              "objectConfiguration": {
-                "register": "ggm-verkeer-vervoer-waterstaat",
-                "schema": "parkeerscan"
-              }
+              "$ref": "parkeerscan"
             }
           },
           "isVerantwoordelijkVoor": {
             "type": "object",
             "title": "isVerantwoordelijkVoor",
-            "$ref": "organisatorischeeenheid",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "organisatorischeeenheid"
-            }
+            "$ref": "organisatorischeeenheid"
           },
           "is": {
             "type": "object",
             "title": "is",
-            "$ref": "betrokkene",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "betrokkene"
-            }
+            "$ref": "betrokkene"
           },
           "zaaktype": {
             "type": "array",
             "title": "zaaktype",
             "items": {
               "type": "object",
-              "$ref": "zaaktype",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "zaaktype"
-              }
+              "$ref": "zaaktype"
             }
           },
           "werktBij": {
             "type": "object",
             "title": "werktBij",
-            "$ref": "uitvoerende-instantie",
-            "objectConfiguration": {
-              "register": "ggm-volkshuisvesting-leefomgeving",
-              "schema": "uitvoerende-instantie"
-            }
+            "$ref": "uitvoerende-instantie"
           },
           "organisatorischeEenheid": {
             "type": "array",
             "title": "organisatorischeEenheid",
             "items": {
               "type": "object",
-              "$ref": "organisatorischeeenheid",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "organisatorischeeenheid"
-              }
+              "$ref": "organisatorischeeenheid"
             }
           },
           "gewijzigdDoor": {
@@ -2830,11 +2393,7 @@
             "title": "gewijzigdDoor",
             "items": {
               "type": "object",
-              "$ref": "stremming",
-              "objectConfiguration": {
-                "register": "ggm-verkeer-vervoer-waterstaat",
-                "schema": "stremming"
-              }
+              "$ref": "stremming"
             }
           },
           "ingevoerdDoor": {
@@ -2842,11 +2401,7 @@
             "title": "ingevoerdDoor",
             "items": {
               "type": "object",
-              "$ref": "stremming",
-              "objectConfiguration": {
-                "register": "ggm-verkeer-vervoer-waterstaat",
-                "schema": "stremming"
-              }
+              "$ref": "stremming"
             }
           },
           "verleent": {
@@ -2854,11 +2409,7 @@
             "title": "verleent",
             "items": {
               "type": "object",
-              "$ref": "proces-verbaal-moor-melding",
-              "objectConfiguration": {
-                "register": "ggm-volkshuisvesting-leefomgeving",
-                "schema": "proces-verbaal-moor-melding"
-              }
+              "$ref": "proces-verbaal-moor-melding"
             }
           },
           "isGevoerdDoor": {
@@ -2866,11 +2417,7 @@
             "title": "isGevoerdDoor",
             "items": {
               "type": "object",
-              "$ref": "klantcontact",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "klantcontact"
-              }
+              "$ref": "klantcontact"
             }
           },
           "vraagtAan": {
@@ -2878,11 +2425,7 @@
             "title": "vraagtAan",
             "items": {
               "type": "object",
-              "$ref": "aanvraag-inkooporder",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "aanvraag-inkooporder"
-              }
+              "$ref": "aanvraag-inkooporder"
             }
           },
           "afhandelendMedewerker": {
@@ -2890,11 +2433,7 @@
             "title": "afhandelendMedewerker",
             "items": {
               "type": "object",
-              "$ref": "zaak",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "zaak"
-              }
+              "$ref": "zaak"
             }
           },
           "dientIn": {
@@ -2902,11 +2441,7 @@
             "title": "dientIn",
             "items": {
               "type": "object",
-              "$ref": "startformulieraanbesteden",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "startformulieraanbesteden"
-              }
+              "$ref": "startformulieraanbesteden"
             }
           },
           "voertUit": {
@@ -2914,21 +2449,13 @@
             "title": "voertUit",
             "items": {
               "type": "object",
-              "$ref": "schouwronde",
-              "objectConfiguration": {
-                "register": "ggm-volkshuisvesting-leefomgeving",
-                "schema": "schouwronde"
-              }
+              "$ref": "schouwronde"
             }
           },
           "geleverdVia": {
             "type": "object",
             "title": "geleverdVia",
-            "$ref": "leverancier",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "leverancier"
-            }
+            "$ref": "leverancier"
           }
         },
         "searchable": true,
@@ -2938,7 +2465,7 @@
         "slug": "betrokkene",
         "title": "Betrokkene",
         "version": "2.5.0",
-        "description": "Een SUBJECT, zijnde een NATUURLIJK PERSOON, NIET-NATUURLIJK PERSOON of VESTIGING, ORGANISATORISCHE EENHEID (binnen een vestiging van de zaak-behandelende niet-natuurlijk persoon), of MEDEWERKER (van die organisatorische eenheid) die een rol kan spelen bij een ZAAK.",
+        "description": "Een SUBJECT, zijnde een NATUURLIJK PERSOON, NIET-NATUURLIJK PERSOON of VESTIGING, ORGANISATORISCHE EENHEID (binnen een vestiging van de zaak-behandelende niet-natuurlijk persoon), of MEDEWERKER (van die organisatorische eenheid) die een rol kan spelen bij een ZAAK. Extends: rechtspersoon.",
         "required": [
           "identificatie"
         ],
@@ -2969,81 +2496,50 @@
           "vestiging": {
             "type": "object",
             "title": "vestiging",
-            "$ref": "nietnatuurlijkpersoon",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "nietnatuurlijkpersoon"
-            }
+            "$ref": "nietnatuurlijkpersoon"
           },
           "doet": {
             "type": "array",
             "title": "doet",
             "items": {
               "type": "object",
-              "$ref": "klantbeoordeling",
-              "objectConfiguration": {
-                "register": "ggm-dienstverlening",
-                "schema": "klantbeoordeling"
-              }
+              "$ref": "klantbeoordeling"
             }
           },
           "organisatorischeEenheid": {
             "type": "object",
             "title": "organisatorischeEenheid",
-            "$ref": "organisatorischeeenheid",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "organisatorischeeenheid"
-            }
+            "$ref": "organisatorischeeenheid"
           },
           "heeftKlantcontacten": {
             "type": "array",
             "title": "heeftKlantcontacten",
             "items": {
               "type": "object",
-              "$ref": "klantcontact",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "klantcontact"
-              }
+              "$ref": "klantcontact"
             }
           },
           "betrokkene": {
             "type": "object",
             "title": "betrokkene",
-            "$ref": "natuurlijkpersoon",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "natuurlijkpersoon"
-            }
+            "$ref": "natuurlijkpersoon"
           },
           "rol": {
             "type": "array",
             "title": "rol",
             "items": {
               "type": "object",
-              "$ref": "zaak",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "zaak"
-              }
+              "$ref": "zaak"
             }
           },
           "medewerker": {
             "type": "object",
             "title": "medewerker",
-            "$ref": "medewerker",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "medewerker"
-            }
+            "$ref": "medewerker"
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "rechtspersoon"
-        ]
+        "hardValidation": false
       },
       "deelproces": {
         "slug": "deelproces",
@@ -3068,20 +2564,12 @@
           "isDeelVan": {
             "type": "object",
             "title": "isDeelVan",
-            "$ref": "bedrijfsproces",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "bedrijfsproces"
-            }
+            "$ref": "bedrijfsproces"
           },
           "isVan": {
             "type": "object",
             "title": "isVan",
-            "$ref": "deelprocestype",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "deelprocestype"
-            }
+            "$ref": "deelprocestype"
           }
         },
         "searchable": true,
@@ -3091,7 +2579,7 @@
         "slug": "samengestelddocument",
         "title": "SamengesteldDocument",
         "version": "2.5.0",
-        "description": "Een DOCUMENT waarbinnen twee of meer ENKELVOUDIGe DOCUMENTen onderscheiden worden die vanwege gezamenlijke vervaardiging en/of ontvangst en/of vanwege aard en/of omvang als één geheel beschouwd moeten worden dan wel behandeld worden.,",
+        "description": "Een DOCUMENT waarbinnen twee of meer ENKELVOUDIGe DOCUMENTen onderscheiden worden die vanwege gezamenlijke vervaardiging en/of ontvangst en/of vanwege aard en/of omvang als één geheel beschouwd moeten worden dan wel behandeld worden., Extends: document.",
         "required": [],
         "properties": {
           "document": {
@@ -3099,25 +2587,18 @@
             "title": "document",
             "items": {
               "type": "object",
-              "$ref": "enkelvoudigdocument",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "enkelvoudigdocument"
-              }
+              "$ref": "enkelvoudigdocument"
             }
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "document"
-        ]
+        "hardValidation": false
       },
       "enkelvoudigdocument": {
         "slug": "enkelvoudigdocument",
         "title": "EnkelvoudigDocument",
         "version": "2.5.0",
-        "description": "Een DOCUMENT waarvan aard, omvang en/of vorm aanleiding geven het als één geheel te behandelen en te beheren.",
+        "description": "Een DOCUMENT waarvan aard, omvang en/of vorm aanleiding geven het als één geheel te behandelen en te beheren. Extends: document.",
         "required": [
           "documentTaal"
         ],
@@ -3167,18 +2648,11 @@
           "omvat": {
             "type": "object",
             "title": "omvat",
-            "$ref": "samengestelddocument",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "samengestelddocument"
-            }
+            "$ref": "samengestelddocument"
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "document"
-        ]
+        "hardValidation": false
       },
       "document": {
         "slug": "document",
@@ -3244,73 +2718,45 @@
           "heeftDocumenten": {
             "type": "object",
             "title": "heeftDocumenten",
-            "$ref": "aanvraagofmelding",
-            "objectConfiguration": {
-              "register": "ggm-dienstverlening",
-              "schema": "aanvraagofmelding"
-            }
+            "$ref": "aanvraagofmelding"
           },
           "heeft": {
             "type": "array",
             "title": "heeft",
             "items": {
               "type": "object",
-              "$ref": "subsidie",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "subsidie"
-              }
+              "$ref": "subsidie"
             }
           },
           "isVastgelegdIn": {
             "type": "object",
             "title": "isVastgelegdIn",
-            "$ref": "verkeersbesluit",
-            "objectConfiguration": {
-              "register": "ggm-verkeer-vervoer-waterstaat",
-              "schema": "verkeersbesluit"
-            }
+            "$ref": "verkeersbesluit"
           },
           "type": {
             "type": "object",
             "title": "type",
-            "$ref": "documenttype",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "documenttype"
-            }
+            "$ref": "documenttype"
           },
           "kent": {
             "type": "array",
             "title": "kent",
             "items": {
               "type": "object",
-              "$ref": "zaak",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "zaak"
-              }
+              "$ref": "zaak"
             }
           },
           "heeftKenmerk": {
             "type": "object",
             "title": "heeftKenmerk",
-            "$ref": "identificatiekenmerk",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "identificatiekenmerk"
-            }
+            "$ref": "identificatiekenmerk"
           },
           "kanVastgelegdZijnAls": {
             "type": "array",
             "title": "kanVastgelegdZijnAls",
             "items": {
               "type": "object",
-              "$ref": "besluit",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "besluit"
-              }
+              "$ref": "besluit"
             }
           }
         },
@@ -3470,71 +2916,43 @@
             "title": "heeftBetrekkingOp",
             "items": {
               "type": "object",
-              "$ref": "balieafspraak",
-              "objectConfiguration": {
-                "register": "ggm-dienstverlening",
-                "schema": "balieafspraak"
-              }
+              "$ref": "balieafspraak"
             }
           },
           "kanLeidenTot": {
             "type": "object",
             "title": "kanLeidenTot",
-            "$ref": "aanvraagofmelding",
-            "objectConfiguration": {
-              "register": "ggm-dienstverlening",
-              "schema": "aanvraagofmelding"
-            }
+            "$ref": "aanvraagofmelding"
           },
           "betreft": {
             "type": "array",
             "title": "betreft",
             "items": {
               "type": "object",
-              "$ref": "startformulieraanbesteden",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "startformulieraanbesteden"
-              }
+              "$ref": "startformulieraanbesteden"
             }
           },
           "afhandeling": {
             "type": "object",
             "title": "afhandeling",
-            "$ref": "aanvraag-inkooporder",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "aanvraag-inkooporder"
-            }
+            "$ref": "aanvraag-inkooporder"
           },
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "subsidie",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "subsidie"
-            }
+            "$ref": "subsidie"
           },
           "leidtTot": {
             "type": "object",
             "title": "leidtTot",
-            "$ref": "verzoek",
-            "objectConfiguration": {
-              "register": "ggm-volkshuisvesting-leefomgeving",
-              "schema": "verzoek"
-            }
+            "$ref": "verzoek"
           },
           "status": {
             "type": "array",
             "title": "status",
             "items": {
               "type": "object",
-              "$ref": "status",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "status"
-              }
+              "$ref": "status"
             }
           },
           "heeftKenmerken": {
@@ -3542,11 +2960,7 @@
             "title": "heeftKenmerken",
             "items": {
               "type": "object",
-              "$ref": "kenmerkenzaak",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "kenmerkenzaak"
-              }
+              "$ref": "kenmerkenzaak"
             }
           },
           "heeftBetrekkingOpAndere": {
@@ -3554,32 +2968,20 @@
             "title": "heeftBetrekkingOpAndere",
             "items": {
               "type": "object",
-              "$ref": "zaak",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "zaak"
-              }
+              "$ref": "zaak"
             }
           },
           "heeftProduct": {
             "type": "object",
             "title": "heeftProduct",
-            "$ref": "producttype",
-            "objectConfiguration": {
-              "register": "ggm-veiligheid-vergunningen",
-              "schema": "producttype"
-            }
+            "$ref": "producttype"
           },
           "isUitkomstVan": {
             "type": "array",
             "title": "isUitkomstVan",
             "items": {
               "type": "object",
-              "$ref": "besluit",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "besluit"
-              }
+              "$ref": "besluit"
             }
           },
           "heeftBetaling": {
@@ -3587,41 +2989,25 @@
             "title": "heeftBetaling",
             "items": {
               "type": "object",
-              "$ref": "betaling",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "betaling"
-              }
+              "$ref": "betaling"
             }
           },
           "type": {
             "type": "object",
             "title": "type",
-            "$ref": "zaaktype",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "zaaktype"
-            }
+            "$ref": "zaaktype"
           },
           "isDeelzaakVan": {
             "type": "object",
             "title": "isDeelzaakVan",
-            "$ref": "zaak",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "zaak"
-            }
+            "$ref": "zaak"
           },
           "uitgevoerdBinnen": {
             "type": "array",
             "title": "uitgevoerdBinnen",
             "items": {
               "type": "object",
-              "$ref": "bedrijfsproces",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "bedrijfsproces"
-              }
+              "$ref": "bedrijfsproces"
             }
           },
           "document": {
@@ -3629,11 +3015,7 @@
             "title": "document",
             "items": {
               "type": "object",
-              "$ref": "document",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "document"
-              }
+              "$ref": "document"
             }
           },
           "oefentUit": {
@@ -3641,11 +3023,7 @@
             "title": "oefentUit",
             "items": {
               "type": "object",
-              "$ref": "betrokkene",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "betrokkene"
-              }
+              "$ref": "betrokkene"
             }
           },
           "afhandelendMedewerker": {
@@ -3653,11 +3031,7 @@
             "title": "afhandelendMedewerker",
             "items": {
               "type": "object",
-              "$ref": "medewerker",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "medewerker"
-              }
+              "$ref": "medewerker"
             }
           }
         },
@@ -3681,20 +3055,12 @@
           "isVan": {
             "type": "object",
             "title": "isVan",
-            "$ref": "deelproces",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "deelproces"
-            }
+            "$ref": "deelproces"
           },
           "isDeelVan": {
             "type": "object",
             "title": "isDeelVan",
-            "$ref": "bedrijfsprocestype",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "bedrijfsprocestype"
-            }
+            "$ref": "bedrijfsprocestype"
           }
         },
         "searchable": true,
@@ -3786,32 +3152,20 @@
             "title": "isAanleidingVoor",
             "items": {
               "type": "object",
-              "$ref": "formuliersoort",
-              "objectConfiguration": {
-                "register": "ggm-dienstverlening",
-                "schema": "formuliersoort"
-              }
+              "$ref": "formuliersoort"
             }
           },
           "betreft": {
             "type": "object",
             "title": "betreft",
-            "$ref": "product",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "product"
-            }
+            "$ref": "product"
           },
           "start": {
             "type": "array",
             "title": "start",
             "items": {
               "type": "object",
-              "$ref": "dienst",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "dienst"
-              }
+              "$ref": "dienst"
             }
           },
           "statustype": {
@@ -3819,41 +3173,25 @@
             "title": "statustype",
             "items": {
               "type": "object",
-              "$ref": "statustype",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "statustype"
-              }
+              "$ref": "statustype"
             }
           },
           "isVerantwoordelijkeVoor": {
             "type": "object",
             "title": "isVerantwoordelijkeVoor",
-            "$ref": "organisatorischeeenheid",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "organisatorischeeenheid"
-            }
+            "$ref": "organisatorischeeenheid"
           },
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "producttype",
-            "objectConfiguration": {
-              "register": "ggm-veiligheid-vergunningen",
-              "schema": "producttype"
-            }
+            "$ref": "producttype"
           },
           "isVan": {
             "type": "array",
             "title": "isVan",
             "items": {
               "type": "object",
-              "$ref": "zaak",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "zaak"
-              }
+              "$ref": "zaak"
             }
           }
         },
@@ -3993,22 +3331,14 @@
           "isDeelzaakVan": {
             "type": "object",
             "title": "isDeelzaakVan",
-            "$ref": "zaak-origineel",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "zaak-origineel"
-            }
+            "$ref": "zaak-origineel"
           },
           "heeftBetrekkingOpAndere": {
             "type": "array",
             "title": "heeftBetrekkingOpAndere",
             "items": {
               "type": "object",
-              "$ref": "zaak-origineel",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "zaak-origineel"
-              }
+              "$ref": "zaak-origineel"
             }
           }
         },
@@ -4065,11 +3395,7 @@
             "title": "isVan",
             "items": {
               "type": "object",
-              "$ref": "document",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "document"
-              }
+              "$ref": "document"
             }
           }
         },
@@ -4107,20 +3433,12 @@
           "type": {
             "type": "object",
             "title": "type",
-            "$ref": "statustype",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "statustype"
-            }
+            "$ref": "statustype"
           },
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "zaak",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "zaak"
-            }
+            "$ref": "zaak"
           }
         },
         "searchable": true,
@@ -4200,11 +3518,7 @@
             "title": "betreft",
             "items": {
               "type": "object",
-              "$ref": "vth-melding",
-              "objectConfiguration": {
-                "register": "ggm-veiligheid-vergunningen",
-                "schema": "vth-melding"
-              }
+              "$ref": "vth-melding"
             }
           },
           "is": {
@@ -4212,11 +3526,7 @@
             "title": "is",
             "items": {
               "type": "object",
-              "$ref": "natuurlijkpersoon",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "natuurlijkpersoon"
-              }
+              "$ref": "natuurlijkpersoon"
             }
           },
           "besluit": {
@@ -4224,30 +3534,18 @@
             "title": "besluit",
             "items": {
               "type": "object",
-              "$ref": "besluit",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "besluit"
-              }
+              "$ref": "besluit"
             }
           },
           "huishouden": {
             "type": "object",
             "title": "huishouden",
-            "$ref": "huishouden",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "huishouden"
-            }
+            "$ref": "huishouden"
           },
           "zaak": {
             "type": "object",
             "title": "zaak",
-            "$ref": "zaak",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "zaak"
-            }
+            "$ref": "zaak"
           }
         },
         "searchable": true,
@@ -4319,11 +3617,7 @@
             "title": "isVan",
             "items": {
               "type": "object",
-              "$ref": "besluit",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "besluit"
-              }
+              "$ref": "besluit"
             }
           }
         },
@@ -4412,11 +3706,7 @@
             "title": "afgehandeldDoor",
             "items": {
               "type": "object",
-              "$ref": "aanvraag-inkooporder",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "aanvraag-inkooporder"
-              }
+              "$ref": "aanvraag-inkooporder"
             }
           },
           "verantwoordelijkVoor": {
@@ -4424,90 +3714,54 @@
             "title": "verantwoordelijkVoor",
             "items": {
               "type": "object",
-              "$ref": "subsidieprogramma",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "subsidieprogramma"
-              }
+              "$ref": "subsidieprogramma"
             }
           },
           "isDeelVan": {
             "type": "object",
             "title": "isDeelVan",
-            "$ref": "organisatorischeeenheid",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "organisatorischeeenheid"
-            }
+            "$ref": "organisatorischeeenheid"
           },
           "vestiging": {
             "type": "object",
             "title": "vestiging",
-            "$ref": "vestigingvanzaakbehandelendeorganisatie",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "vestigingvanzaakbehandelendeorganisatie"
-            }
+            "$ref": "vestigingvanzaakbehandelendeorganisatie"
           },
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "kostenplaats",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "kostenplaats"
-            }
+            "$ref": "kostenplaats"
           },
           "zaaktype": {
             "type": "array",
             "title": "zaaktype",
             "items": {
               "type": "object",
-              "$ref": "zaaktype",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "zaaktype"
-              }
+              "$ref": "zaaktype"
             }
           },
           "is": {
             "type": "object",
             "title": "is",
-            "$ref": "betrokkene",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "betrokkene"
-            }
+            "$ref": "betrokkene"
           },
           "isVerantwoordelijkVoor": {
             "type": "object",
             "title": "isVerantwoordelijkVoor",
-            "$ref": "medewerker",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "medewerker"
-            }
+            "$ref": "medewerker"
           },
           "hoortBij": {
             "type": "array",
             "title": "hoortBij",
             "items": {
               "type": "object",
-              "$ref": "medewerker",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "medewerker"
-              }
+              "$ref": "medewerker"
             }
           },
           "isContactpersoonVoor": {
             "type": "object",
             "title": "isContactpersoonVoor",
-            "$ref": "medewerker",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "medewerker"
-            }
+            "$ref": "medewerker"
           }
         },
         "searchable": true,
@@ -4566,40 +3820,24 @@
           "mondtUitIn": {
             "type": "object",
             "title": "mondtUitIn",
-            "$ref": "telefoontje",
-            "objectConfiguration": {
-              "register": "ggm-dienstverlening",
-              "schema": "telefoontje"
-            }
+            "$ref": "telefoontje"
           },
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "telefoononderwerp",
-            "objectConfiguration": {
-              "register": "ggm-dienstverlening",
-              "schema": "telefoononderwerp"
-            }
+            "$ref": "telefoononderwerp"
           },
           "locatie": {
             "type": "object",
             "title": "locatie",
-            "$ref": "vestigingvanzaakbehandelendeorganisatie",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "vestigingvanzaakbehandelendeorganisatie"
-            }
+            "$ref": "vestigingvanzaakbehandelendeorganisatie"
           },
           "betreft": {
             "type": "array",
             "title": "betreft",
             "items": {
               "type": "object",
-              "$ref": "productofdienst",
-              "objectConfiguration": {
-                "register": "ggm-dienstverlening",
-                "schema": "productofdienst"
-              }
+              "$ref": "productofdienst"
             }
           },
           "kanLeidenTot": {
@@ -4607,39 +3845,23 @@
             "title": "kanLeidenTot",
             "items": {
               "type": "object",
-              "$ref": "aanvraagofmelding",
-              "objectConfiguration": {
-                "register": "ggm-dienstverlening",
-                "schema": "aanvraagofmelding"
-              }
+              "$ref": "aanvraagofmelding"
             }
           },
           "heeftBetrekkingOp": {
             "type": "object",
             "title": "heeftBetrekkingOp",
-            "$ref": "zaak",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "zaak"
-            }
+            "$ref": "zaak"
           },
           "heeftKlantcontacten": {
             "type": "object",
             "title": "heeftKlantcontacten",
-            "$ref": "betrokkene",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "betrokkene"
-            }
+            "$ref": "betrokkene"
           },
           "isGevoerdDoor": {
             "type": "object",
             "title": "isGevoerdDoor",
-            "$ref": "medewerker",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "medewerker"
-            }
+            "$ref": "medewerker"
           }
         },
         "searchable": true,
@@ -4693,21 +3915,13 @@
             "title": "isVan",
             "items": {
               "type": "object",
-              "$ref": "status",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "status"
-              }
+              "$ref": "status"
             }
           },
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "zaaktype",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "zaaktype"
-            }
+            "$ref": "zaaktype"
           }
         },
         "searchable": true,
@@ -4787,49 +4001,29 @@
           "type": {
             "type": "object",
             "title": "type",
-            "$ref": "besluittype",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "besluittype"
-            }
+            "$ref": "besluittype"
           },
           "is": {
             "type": "object",
             "title": "is",
-            "$ref": "object",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "object"
-            }
+            "$ref": "object"
           },
           "zaak": {
             "type": "object",
             "title": "zaak",
-            "$ref": "zaak",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "zaak"
-            }
+            "$ref": "zaak"
           },
           "isVastgelegdIn": {
             "type": "object",
             "title": "isVastgelegdIn",
-            "$ref": "document",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "document"
-            }
+            "$ref": "document"
           },
           "document": {
             "type": "array",
             "title": "document",
             "items": {
               "type": "object",
-              "$ref": "document",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "document"
-              }
+              "$ref": "document"
             }
           }
         },
@@ -4896,30 +4090,18 @@
             "title": "betreft",
             "items": {
               "type": "object",
-              "$ref": "vorderingregel",
-              "objectConfiguration": {
-                "register": "ggm-veiligheid-vergunningen",
-                "schema": "vorderingregel"
-              }
+              "$ref": "vorderingregel"
             }
           },
           "heeftGrondslag": {
             "type": "object",
             "title": "heeftGrondslag",
-            "$ref": "heffinggrondslag",
-            "objectConfiguration": {
-              "register": "ggm-veiligheid-vergunningen",
-              "schema": "heffinggrondslag"
-            }
+            "$ref": "heffinggrondslag"
           },
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "zaak",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "zaak"
-            }
+            "$ref": "zaak"
           }
         },
         "searchable": true,
@@ -4944,11 +4126,7 @@
             "title": "heeftKenmerk",
             "items": {
               "type": "object",
-              "$ref": "document",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "document"
-              }
+              "$ref": "document"
             }
           }
         },
@@ -4967,11 +4145,7 @@
             "title": "locatie",
             "items": {
               "type": "object",
-              "$ref": "balieafspraak",
-              "objectConfiguration": {
-                "register": "ggm-dienstverlening",
-                "schema": "balieafspraak"
-              }
+              "$ref": "balieafspraak"
             }
           },
           "isOpVestiging": {
@@ -4979,11 +4153,7 @@
             "title": "isOpVestiging",
             "items": {
               "type": "object",
-              "$ref": "dienstverband",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "dienstverband"
-              }
+              "$ref": "dienstverband"
             }
           },
           "isGehuisvestIn": {
@@ -4991,11 +4161,7 @@
             "title": "isGehuisvestIn",
             "items": {
               "type": "object",
-              "$ref": "organisatorischeeenheid",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "organisatorischeeenheid"
-              }
+              "$ref": "organisatorischeeenheid"
             }
           }
         },
@@ -5050,11 +4216,7 @@
             "title": "uitgevoerdBinnen",
             "items": {
               "type": "object",
-              "$ref": "zaak",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "zaak"
-              }
+              "$ref": "zaak"
             }
           },
           "isDeelVan": {
@@ -5062,11 +4224,7 @@
             "title": "isDeelVan",
             "items": {
               "type": "object",
-              "$ref": "deelproces",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "deelproces"
-              }
+              "$ref": "deelproces"
             }
           },
           "isVan": {
@@ -5074,11 +4232,7 @@
             "title": "isVan",
             "items": {
               "type": "object",
-              "$ref": "bedrijfsprocestype",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "bedrijfsprocestype"
-              }
+              "$ref": "bedrijfsprocestype"
             }
           }
         },
@@ -5119,38 +4273,22 @@
           "naar": {
             "type": "object",
             "title": "naar",
-            "$ref": "bankrekening",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "bankrekening"
-            }
+            "$ref": "bankrekening"
           },
           "van": {
             "type": "object",
             "title": "van",
-            "$ref": "bankrekening",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "bankrekening"
-            }
+            "$ref": "bankrekening"
           },
           "komtVoorOp": {
             "type": "object",
             "title": "komtVoorOp",
-            "$ref": "bankafschriftregel",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "bankafschriftregel"
-            }
+            "$ref": "bankafschriftregel"
           },
           "heeftBetaling": {
             "type": "object",
             "title": "heeftBetaling",
-            "$ref": "zaak",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "zaak"
-            }
+            "$ref": "zaak"
           }
         },
         "searchable": true,
@@ -5335,11 +4473,7 @@
           "heeftKenmerken": {
             "type": "object",
             "title": "heeftKenmerken",
-            "$ref": "zaak",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "zaak"
-            }
+            "$ref": "zaak"
           }
         },
         "searchable": true,
@@ -5577,11 +4711,7 @@
             "title": "isGeslotenaangegaanIn",
             "items": {
               "type": "object",
-              "$ref": "sluitingofaangaanhuwelijkofgeregistreerdpartnerschap",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "sluitingofaangaanhuwelijkofgeregistreerdpartnerschap"
-              }
+              "$ref": "sluitingofaangaanhuwelijkofgeregistreerdpartnerschap"
             }
           },
           "ligtIn": {
@@ -5589,11 +4719,7 @@
             "title": "ligtIn",
             "items": {
               "type": "object",
-              "$ref": "openbareruimte",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "openbareruimte"
-              }
+              "$ref": "openbareruimte"
             }
           },
           "isOntbondenIn": {
@@ -5601,11 +4727,7 @@
             "title": "isOntbondenIn",
             "items": {
               "type": "object",
-              "$ref": "ontbindinghuwelijkgeregistreerdpartnerschap",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "ontbindinghuwelijkgeregistreerdpartnerschap"
-              }
+              "$ref": "ontbindinghuwelijkgeregistreerdpartnerschap"
             }
           },
           "heeftPlaatsgevondenIn": {
@@ -5613,11 +4735,7 @@
             "title": "heeftPlaatsgevondenIn",
             "items": {
               "type": "object",
-              "$ref": "overlijdeningeschrevennatuurlijkpersoon",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "overlijdeningeschrevennatuurlijkpersoon"
-              }
+              "$ref": "overlijdeningeschrevennatuurlijkpersoon"
             }
           },
           "verblijftOpLocatieIn": {
@@ -5625,11 +4743,7 @@
             "title": "verblijftOpLocatieIn",
             "items": {
               "type": "object",
-              "$ref": "verblijfadresingeschrevennatuurlijkpersoon",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "verblijfadresingeschrevennatuurlijkpersoon"
-              }
+              "$ref": "verblijfadresingeschrevennatuurlijkpersoon"
             }
           },
           "heeftAlsCorrespondentieadresPostadresIn": {
@@ -5637,11 +4751,7 @@
             "title": "heeftAlsCorrespondentieadresPostadresIn",
             "items": {
               "type": "object",
-              "$ref": "postadres",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "postadres"
-              }
+              "$ref": "postadres"
             }
           }
         },
@@ -5652,7 +4762,7 @@
         "slug": "pand-2",
         "title": "Pand",
         "version": "2.5.0",
-        "description": "De kleinste bij de totstandkoming functioneel en bouwkundig-constructief zelfstandige eenheid die direct en duurzaam met de aarde is verbonden en betreedbaar en afsluitbaar is.",
+        "description": "De kleinste bij de totstandkoming functioneel en bouwkundig-constructief zelfstandige eenheid die direct en duurzaam met de aarde is verbonden en betreedbaar en afsluitbaar is. Extends: geo-object.",
         "required": [
           "pandidentificatie",
           "pandstatus",
@@ -5840,39 +4950,24 @@
           "betreft": {
             "type": "object",
             "title": "betreft",
-            "$ref": "vastgoedobject",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "vastgoedobject"
-            }
+            "$ref": "vastgoedobject"
           },
           "maaktDeelUitVan": {
             "type": "array",
             "title": "maaktDeelUitVan",
             "items": {
               "type": "object",
-              "$ref": "verblijfsobject",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "verblijfsobject"
-              }
+              "$ref": "verblijfsobject"
             }
           },
           "is": {
             "type": "object",
             "title": "is",
-            "$ref": "object",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "object"
-            }
+            "$ref": "object"
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "geo-object"
-        ]
+        "hardValidation": false
       },
       "wijk-2": {
         "slug": "wijk-2",
@@ -5932,11 +5027,7 @@
             "title": "valtBinnen",
             "items": {
               "type": "object",
-              "$ref": "areaal",
-              "objectConfiguration": {
-                "register": "ggm-volkshuisvesting-leefomgeving",
-                "schema": "areaal"
-              }
+              "$ref": "areaal"
             }
           },
           "bedient": {
@@ -5944,21 +5035,13 @@
             "title": "bedient",
             "items": {
               "type": "object",
-              "$ref": "binnenlocatie",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "binnenlocatie"
-              }
+              "$ref": "binnenlocatie"
             }
           },
           "ligtIn": {
             "type": "object",
             "title": "ligtIn",
-            "$ref": "gemeente",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "gemeente"
-            }
+            "$ref": "gemeente"
           }
         },
         "searchable": true,
@@ -5968,7 +5051,7 @@
         "slug": "nummeraanduiding-2",
         "title": "Nummeraanduiding",
         "version": "2.5.0",
-        "description": "Een door het bevoegde gemeentelijke orgaan als zodanig toegekende aanduiding van een VERBLIJFSOBJECT, een STANDPLAATS of een LIGPLAATS.",
+        "description": "Een door het bevoegde gemeentelijke orgaan als zodanig toegekende aanduiding van een VERBLIJFSOBJECT, een STANDPLAATS of een LIGPLAATS. Extends: object.",
         "required": [
           "huisnummer",
           "datumBeginGeldigheidNummeraanduiding",
@@ -6054,32 +5137,20 @@
             "title": "heeftAlsAdres",
             "items": {
               "type": "object",
-              "$ref": "huishouden",
-              "objectConfiguration": {
-                "register": "ggm-sociaal-domein",
-                "schema": "huishouden"
-              }
+              "$ref": "huishouden"
             }
           },
           "ligtIn": {
             "type": "object",
             "title": "ligtIn",
-            "$ref": "buurt",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "buurt"
-            }
+            "$ref": "buurt"
           },
           "heeftAlsLocatieadres": {
             "type": "array",
             "title": "heeftAlsLocatieadres",
             "items": {
               "type": "object",
-              "$ref": "vestiging",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "vestiging"
-              }
+              "$ref": "vestiging"
             }
           },
           "heeftAlsNevenadres": {
@@ -6087,11 +5158,7 @@
             "title": "heeftAlsNevenadres",
             "items": {
               "type": "object",
-              "$ref": "adresseerbaarobjectaanduiding",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "adresseerbaarobjectaanduiding"
-              }
+              "$ref": "adresseerbaarobjectaanduiding"
             }
           },
           "briefadres": {
@@ -6099,52 +5166,33 @@
             "title": "briefadres",
             "items": {
               "type": "object",
-              "$ref": "briefadres",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "briefadres"
-              }
+              "$ref": "briefadres"
             }
           },
           "ligtAan": {
             "type": "object",
             "title": "ligtAan",
-            "$ref": "openbareruimte",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "openbareruimte"
-            }
+            "$ref": "openbareruimte"
           },
           "verwijstNaar": {
             "type": "object",
             "title": "verwijstNaar",
-            "$ref": "adresaanduiding",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "adresaanduiding"
-            }
+            "$ref": "adresaanduiding"
           },
           "heeftAlsHoofdadres": {
             "type": "object",
             "title": "heeftAlsHoofdadres",
-            "$ref": "adresseerbaarobjectaanduiding",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "adresseerbaarobjectaanduiding"
-            }
+            "$ref": "adresseerbaarobjectaanduiding"
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "object"
-        ]
+        "hardValidation": false
       },
       "benoemdobject": {
         "slug": "benoemdobject",
         "title": "BenoemdObject",
         "version": "2.5.0",
-        "description": "Een GEBOUWD OBJECT of een BENOEMD TERREIN",
+        "description": "Een GEBOUWD OBJECT of een BENOEMD TERREIN Extends: object.",
         "required": [
           "identificatie",
           "datumBeginGeldigheid",
@@ -6183,11 +5231,7 @@
             "title": "isOntstaanUitOvergegaanIn",
             "items": {
               "type": "object",
-              "$ref": "benoemdobject",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "benoemdobject"
-              }
+              "$ref": "benoemdobject"
             }
           },
           "heeftHoofdlocatieInOfOp": {
@@ -6195,11 +5239,7 @@
             "title": "heeftHoofdlocatieInOfOp",
             "items": {
               "type": "object",
-              "$ref": "vestiging",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "vestiging"
-              }
+              "$ref": "vestiging"
             }
           },
           "heeftNevenlocatieInOfOp": {
@@ -6207,19 +5247,12 @@
             "title": "heeftNevenlocatieInOfOp",
             "items": {
               "type": "object",
-              "$ref": "vestiging",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "vestiging"
-              }
+              "$ref": "vestiging"
             }
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "object"
-        ]
+        "hardValidation": false
       },
       "buurt-2": {
         "slug": "buurt-2",
@@ -6278,41 +5311,25 @@
             "title": "ligtIn",
             "items": {
               "type": "object",
-              "$ref": "areaal",
-              "objectConfiguration": {
-                "register": "ggm-volkshuisvesting-leefomgeving",
-                "schema": "areaal"
-              }
+              "$ref": "areaal"
             }
           },
           "komtOvereen": {
             "type": "object",
             "title": "komtOvereen",
-            "$ref": "gebied",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "gebied"
-            }
+            "$ref": "gebied"
           },
           "is": {
             "type": "object",
             "title": "is",
-            "$ref": "object",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "object"
-            }
+            "$ref": "object"
           },
           "zonderVerblijfsobjectLigtIn": {
             "type": "array",
             "title": "zonderVerblijfsobjectLigtIn",
             "items": {
               "type": "object",
-              "$ref": "pand",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "pand"
-              }
+              "$ref": "pand"
             }
           }
         },
@@ -6323,7 +5340,7 @@
         "slug": "benoemdterrein",
         "title": "BenoemdTerrein",
         "version": "2.5.0",
-        "description": "Een STANDPLAATS, LIGPLAATS, of een OVERIG BENOEMD TERREIN.",
+        "description": "Een STANDPLAATS, LIGPLAATS, of een OVERIG BENOEMD TERREIN. Extends: benoemdobject, adresseerbaarobject.",
         "required": [
           "identificatie"
         ],
@@ -6335,17 +5352,13 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "benoemdobject",
-          "adresseerbaarobject"
-        ]
+        "hardValidation": false
       },
       "gebouwdobject": {
         "slug": "gebouwdobject",
         "title": "GebouwdObject",
         "version": "2.5.0",
-        "description": "Een VERBLIJFSOBJECT of een OVERIG GEBOUWD OBJECT",
+        "description": "Een VERBLIJFSOBJECT of een OVERIG GEBOUWD OBJECT Extends: benoemdobject.",
         "required": [
           "identificatie"
         ],
@@ -6499,24 +5512,17 @@
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "winkelvloeroppervlak",
-            "objectConfiguration": {
-              "register": "ggm-economie",
-              "schema": "winkelvloeroppervlak"
-            }
+            "$ref": "winkelvloeroppervlak"
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "benoemdobject"
-        ]
+        "hardValidation": false
       },
       "verblijfsobject-2": {
         "slug": "verblijfsobject-2",
         "title": "Verblijfsobject",
         "version": "2.5.0",
-        "description": "De kleinste binnen één of meer panden gelegen en voor woon -, bedrijfsmatige, of recreatieve doeleinden geschikte eenheid van gebruik die ontsloten wordt via een eigen afsluitbare toegang vanaf de openbare weg, een erf of een gedeelde verkeersruimte, onderwerp kan zijn van goederenrechtelijke rechtshandelingen en in functioneel opzicht zelfstandig is.",
+        "description": "De kleinste binnen één of meer panden gelegen en voor woon -, bedrijfsmatige, of recreatieve doeleinden geschikte eenheid van gebruik die ontsloten wordt via een eigen afsluitbare toegang vanaf de openbare weg, een erf of een gedeelde verkeersruimte, onderwerp kan zijn van goederenrechtelijke rechtshandelingen en in functioneel opzicht zelfstandig is. Extends: adresseerbaarobjectaanduiding, gebouwdobject.",
         "required": [
           "verblijfsobjectidentificatie",
           "verblijfsobjectstatus",
@@ -6609,11 +5615,7 @@
             "title": "isGevestigdIn",
             "items": {
               "type": "object",
-              "$ref": "binnenlocatie",
-              "objectConfiguration": {
-                "register": "ggm-sport-cultuur-recreatie",
-                "schema": "binnenlocatie"
-              }
+              "$ref": "binnenlocatie"
             }
           },
           "verblijftIn": {
@@ -6621,11 +5623,7 @@
             "title": "verblijftIn",
             "items": {
               "type": "object",
-              "$ref": "verblijfadresingeschrevennatuurlijkpersoon",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "verblijfadresingeschrevennatuurlijkpersoon"
-              }
+              "$ref": "verblijfadresingeschrevennatuurlijkpersoon"
             }
           },
           "maaktDeelUitVan": {
@@ -6633,20 +5631,12 @@
             "title": "maaktDeelUitVan",
             "items": {
               "type": "object",
-              "$ref": "pand",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "pand"
-              }
+              "$ref": "pand"
             }
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "adresseerbaarobjectaanduiding",
-          "gebouwdobject"
-        ]
+        "hardValidation": false
       },
       "gemeente-2": {
         "slug": "gemeente-2",
@@ -6707,11 +5697,7 @@
             "title": "onderVerantwoordelijkheidVan",
             "items": {
               "type": "object",
-              "$ref": "schuldhulptraject",
-              "objectConfiguration": {
-                "register": "ggm-sociaal-domein",
-                "schema": "schuldhulptraject"
-              }
+              "$ref": "schuldhulptraject"
             }
           },
           "isGekoppeldAan": {
@@ -6719,11 +5705,7 @@
             "title": "isGekoppeldAan",
             "items": {
               "type": "object",
-              "$ref": "asielstatushouder",
-              "objectConfiguration": {
-                "register": "ggm-sociaal-domein",
-                "schema": "asielstatushouder"
-              }
+              "$ref": "asielstatushouder"
             }
           },
           "nieuweGemeente": {
@@ -6731,11 +5713,7 @@
             "title": "nieuweGemeente",
             "items": {
               "type": "object",
-              "$ref": "gemeente",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "gemeente"
-              }
+              "$ref": "gemeente"
             }
           },
           "ligtIn": {
@@ -6743,11 +5721,7 @@
             "title": "ligtIn",
             "items": {
               "type": "object",
-              "$ref": "wijk",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "wijk"
-              }
+              "$ref": "wijk"
             }
           }
         },
@@ -6758,7 +5732,7 @@
         "slug": "standplaats-2",
         "title": "Standplaats",
         "version": "2.5.0",
-        "description": "Een door het bevoegde gemeentelijke orgaan als zodanig aangewezen terrein of gedeelte daarvan dat bestemd is voor het permanent plaatsen van een niet direct en niet duurzaam met de aarde verbonden en voor woon -, bedrijfsmatige, of recreatieve doeleinden geschikte ruimte.",
+        "description": "Een door het bevoegde gemeentelijke orgaan als zodanig aangewezen terrein of gedeelte daarvan dat bestemd is voor het permanent plaatsen van een niet direct en niet duurzaam met de aarde verbonden en voor woon -, bedrijfsmatige, of recreatieve doeleinden geschikte ruimte. Extends: adresseerbaarobjectaanduiding, benoemdterrein.",
         "required": [
           "standplaatsidentificatie",
           "indicatieGeconstateerdeStandplaats",
@@ -6791,29 +5765,17 @@
             "title": "verblijftOp",
             "items": {
               "type": "object",
-              "$ref": "verblijfadresingeschrevennatuurlijkpersoon",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "verblijfadresingeschrevennatuurlijkpersoon"
-              }
+              "$ref": "verblijfadresingeschrevennatuurlijkpersoon"
             }
           },
           "is": {
             "type": "object",
             "title": "is",
-            "$ref": "object",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "object"
-            }
+            "$ref": "object"
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "adresseerbaarobjectaanduiding",
-          "benoemdterrein"
-        ]
+        "hardValidation": false
       },
       "adresseerbaarobjectaanduiding": {
         "slug": "adresseerbaarobjectaanduiding",
@@ -6835,11 +5797,7 @@
             "title": "isIngeschrevenOp",
             "items": {
               "type": "object",
-              "$ref": "verblijfadresingeschrevennatuurlijkpersoon",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "verblijfadresingeschrevennatuurlijkpersoon"
-              }
+              "$ref": "verblijfadresingeschrevennatuurlijkpersoon"
             }
           },
           "heeftAlsNevenadres": {
@@ -6847,21 +5805,13 @@
             "title": "heeftAlsNevenadres",
             "items": {
               "type": "object",
-              "$ref": "nummeraanduiding",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "nummeraanduiding"
-              }
+              "$ref": "nummeraanduiding"
             }
           },
           "heeftAlsHoofdadres": {
             "type": "object",
             "title": "heeftAlsHoofdadres",
-            "$ref": "nummeraanduiding",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "nummeraanduiding"
-            }
+            "$ref": "nummeraanduiding"
           }
         },
         "searchable": true,
@@ -6871,7 +5821,7 @@
         "slug": "ligplaats-2",
         "title": "Ligplaats",
         "version": "2.5.0",
-        "description": "Definitie\nEen ligplaats is een door het bevoegde gemeentelijke orgaan als zodanig aangewezen plaats in het water al dan niet aangevuld met een op de oever aanwezig terrein of een gedeelte daarvan, die bestemd is voor het permanent afmeren van een voor woon-, bedrijfsmatige of recreatieve doeleinden geschikt drijvend object\n\nBeschrijving\nEen plaats in het water met soms ook een (deel van een) terrein op de oever. Deze plaats moet kunnen worden gebruikt door een drijvend object dat langere tijd daar wordt vastgemaakt. Het drijvende object moet geschikt zijn om in te wonen, om een bedrijf in te hebben of om voor plezier in te verblijven. Bijvoorbeeld een woonboot. De gemeente mag zeggen of er voor de BAG ergens een ligplaats komt.",
+        "description": "Definitie\nEen ligplaats is een door het bevoegde gemeentelijke orgaan als zodanig aangewezen plaats in het water al dan niet aangevuld met een op de oever aanwezig terrein of een gedeelte daarvan, die bestemd is voor het permanent afmeren van een voor woon-, bedrijfsmatige of recreatieve doeleinden geschikt drijvend object\n\nBeschrijving\nEen plaats in het water met soms ook een (deel van een) terrein op de oever. Deze plaats moet kunnen worden gebruikt door een drijvend object dat langere tijd daar wordt vastgemaakt. Het drijvende object moet geschikt zijn om in te wonen, om een bedrijf in te hebben of om voor plezier in te verblijven. Bijvoorbeeld een woonboot. De gemeente mag zeggen of er voor de BAG ergens een ligplaats komt. Extends: adresseerbaarobjectaanduiding, benoemdterrein.",
         "required": [
           "ligplaatsidentificatie",
           "indicatieGeconstateerdeLigplaats",
@@ -6923,29 +5873,17 @@
             "title": "verblijftOp",
             "items": {
               "type": "object",
-              "$ref": "verblijfadresingeschrevennatuurlijkpersoon",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "verblijfadresingeschrevennatuurlijkpersoon"
-              }
+              "$ref": "verblijfadresingeschrevennatuurlijkpersoon"
             }
           },
           "is": {
             "type": "object",
             "title": "is",
-            "$ref": "object",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "object"
-            }
+            "$ref": "object"
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "adresseerbaarobjectaanduiding",
-          "benoemdterrein"
-        ]
+        "hardValidation": false
       },
       "openbareruimte-2": {
         "slug": "openbareruimte-2",
@@ -7073,22 +6011,14 @@
           "betreft": {
             "type": "object",
             "title": "betreft",
-            "$ref": "beschermde-status",
-            "objectConfiguration": {
-              "register": "ggm-sport-cultuur-recreatie",
-              "schema": "beschermde-status"
-            }
+            "$ref": "beschermde-status"
           },
           "ligtAan": {
             "type": "array",
             "title": "ligtAan",
             "items": {
               "type": "object",
-              "$ref": "nummeraanduiding",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "nummeraanduiding"
-              }
+              "$ref": "nummeraanduiding"
             }
           },
           "ligtIn": {
@@ -7096,21 +6026,13 @@
             "title": "ligtIn",
             "items": {
               "type": "object",
-              "$ref": "woonplaats",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "woonplaats"
-              }
+              "$ref": "woonplaats"
             }
           },
           "is": {
             "type": "object",
             "title": "is",
-            "$ref": "object",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "object"
-            }
+            "$ref": "object"
           }
         },
         "searchable": true,
@@ -7157,11 +6079,7 @@
           "heeftBetrekkingOp": {
             "type": "object",
             "title": "heeftBetrekkingOp",
-            "$ref": "kadastraleonroerendezaak",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "kadastraleonroerendezaak"
-            }
+            "$ref": "kadastraleonroerendezaak"
           }
         },
         "searchable": true,
@@ -7171,7 +6089,7 @@
         "slug": "kadastraalperceel",
         "title": "KadastraalPerceel",
         "version": "2.5.0",
-        "description": "Een KADASTRALE ONROERENDE ZAAK dat een kadastraal geïdentificeerd en met kadastrale grenzen begrensd deel van het Nederlands grondgebied betreft (art. 1 lid 1 Kadasterwet).",
+        "description": "Een KADASTRALE ONROERENDE ZAAK dat een kadastraal geïdentificeerd en met kadastrale grenzen begrensd deel van het Nederlands grondgebied betreft (art. 1 lid 1 Kadasterwet). Extends: kadastraleonroerendezaak.",
         "required": [
           "indicatieDeelperceel"
         ],
@@ -7214,34 +6132,23 @@
             "title": "betreft",
             "items": {
               "type": "object",
-              "$ref": "vastgoedobject",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "vastgoedobject"
-              }
+              "$ref": "vastgoedobject"
             }
           },
           "is": {
             "type": "object",
             "title": "is",
-            "$ref": "object",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "object"
-            }
+            "$ref": "object"
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "kadastraleonroerendezaak"
-        ]
+        "hardValidation": false
       },
       "overigbouwwerk": {
         "slug": "overigbouwwerk",
         "title": "OverigBouwwerk",
         "version": "2.5.0",
-        "description": "Met de aarde verbonden duurzaam bouwwerk, dat niet valt onder de definities van een pand of kunstwerk.",
+        "description": "Met de aarde verbonden duurzaam bouwwerk, dat niet valt onder de definities van een pand of kunstwerk. Extends: geo-object.",
         "required": [
           "identificatieOverigBouwwerk",
           "statusOverigBouwwerk",
@@ -7312,27 +6219,16 @@
           "heeftAlsEquivalent": {
             "type": "object",
             "title": "heeftAlsEquivalent",
-            "$ref": "overiggebouwdobject",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "overiggebouwdobject"
-            }
+            "$ref": "overiggebouwdobject"
           },
           "soortoverigbouwwerk": {
             "type": "object",
             "title": "soortoverigbouwwerk",
-            "$ref": "soortoverigbouwwerk",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "soortoverigbouwwerk"
-            }
+            "$ref": "soortoverigbouwwerk"
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "geo-object"
-        ]
+        "hardValidation": false
       },
       "tenaamstelling": {
         "slug": "tenaamstelling",
@@ -7437,53 +6333,33 @@
             "title": "isBeperktTot",
             "items": {
               "type": "object",
-              "$ref": "zakelijkrecht",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "zakelijkrecht"
-              }
+              "$ref": "zakelijkrecht"
             }
           },
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "rechtspersoon",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "rechtspersoon"
-            }
+            "$ref": "rechtspersoon"
           },
           "aantekening": {
             "type": "array",
             "title": "aantekening",
             "items": {
               "type": "object",
-              "$ref": "aantekening",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "aantekening"
-              }
+              "$ref": "aantekening"
             }
           },
           "heeftBetrekkingOp": {
             "type": "object",
             "title": "heeftBetrekkingOp",
-            "$ref": "zakelijkrecht",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "zakelijkrecht"
-            }
+            "$ref": "zakelijkrecht"
           },
           "bezwaart": {
             "type": "array",
             "title": "bezwaart",
             "items": {
               "type": "object",
-              "$ref": "zekerheidsrecht",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "zekerheidsrecht"
-              }
+              "$ref": "zekerheidsrecht"
             }
           }
         },
@@ -7494,7 +6370,7 @@
         "slug": "overbruggingsdeel",
         "title": "Overbruggingsdeel",
         "version": "2.5.0",
-        "description": "Onderdeel van een beweegbare of vaste verbinding tussen twee punten, die door water, een weg of anderszins gescheiden zijn, dat essentieel is voor de constructie.",
+        "description": "Onderdeel van een beweegbare of vaste verbinding tussen twee punten, die door water, een weg of anderszins gescheiden zijn, dat essentieel is voor de constructie. Extends: geo-object.",
         "required": [
           "identificatieOverbruggingsdeel",
           "statusOverbruggingsdeel",
@@ -7578,16 +6454,13 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "geo-object"
-        ]
+        "hardValidation": false
       },
       "kunstwerkdeel": {
         "slug": "kunstwerkdeel",
         "title": "Kunstwerkdeel",
         "version": "2.5.0",
-        "description": "Onderdeel van een civiel-technisch werk voor de infrastructuur van wegen, water, spoorbanen, waterkeringen en/of leidingen.",
+        "description": "Onderdeel van een civiel-technisch werk voor de infrastructuur van wegen, water, spoorbanen, waterkeringen en/of leidingen. Extends: geo-object.",
         "required": [
           "identificatieKunstwerkdeel",
           "statusKunstwerkdeel",
@@ -7658,27 +6531,16 @@
           "soortkunstwerk": {
             "type": "object",
             "title": "soortkunstwerk",
-            "$ref": "soortkunstwerk",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "soortkunstwerk"
-            }
+            "$ref": "soortkunstwerk"
           },
           "is": {
             "type": "object",
             "title": "is",
-            "$ref": "object",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "object"
-            }
+            "$ref": "object"
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "geo-object"
-        ]
+        "hardValidation": false
       },
       "briefadres": {
         "slug": "briefadres",
@@ -7716,21 +6578,13 @@
             "title": "ingeschrevenpersoon",
             "items": {
               "type": "object",
-              "$ref": "ingeschrevenpersoon",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "ingeschrevenpersoon"
-              }
+              "$ref": "ingeschrevenpersoon"
             }
           },
           "nummeraanduiding": {
             "type": "object",
             "title": "nummeraanduiding",
-            "$ref": "nummeraanduiding",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "nummeraanduiding"
-            }
+            "$ref": "nummeraanduiding"
           }
         },
         "searchable": true,
@@ -7786,20 +6640,12 @@
           "rustOp": {
             "type": "object",
             "title": "rustOp",
-            "$ref": "kadastraleonroerendezaak",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "kadastraleonroerendezaak"
-            }
+            "$ref": "kadastraleonroerendezaak"
           },
           "bezwaart": {
             "type": "object",
             "title": "bezwaart",
-            "$ref": "tenaamstelling",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "tenaamstelling"
-            }
+            "$ref": "tenaamstelling"
           }
         },
         "searchable": true,
@@ -7809,7 +6655,7 @@
         "slug": "nietnatuurlijkpersoon",
         "title": "NietNatuurlijkPersoon",
         "version": "2.5.0",
-        "description": "Een INGESCHREVEN NIET-NATUURLIJK PERSOON of een ANDER BUITENLANDS NIET-NATUURLIJK PERSOON",
+        "description": "Een INGESCHREVEN NIET-NATUURLIJK PERSOON of een ANDER BUITENLANDS NIET-NATUURLIJK PERSOON Extends: rechtspersoon.",
         "required": [
           "nNPID",
           "statutaireNaam",
@@ -7926,11 +6772,7 @@
             "title": "opgepaktDoor",
             "items": {
               "type": "object",
-              "$ref": "vroegsignaalzaak",
-              "objectConfiguration": {
-                "register": "ggm-sociaal-domein",
-                "schema": "vroegsignaalzaak"
-              }
+              "$ref": "vroegsignaalzaak"
             }
           },
           "gezaghebbende": {
@@ -7938,11 +6780,7 @@
             "title": "gezaghebbende",
             "items": {
               "type": "object",
-              "$ref": "gezagsverhouding",
-              "objectConfiguration": {
-                "register": "ggm-sociaal-domein",
-                "schema": "gezagsverhouding"
-              }
+              "$ref": "gezagsverhouding"
             }
           },
           "heeft": {
@@ -7950,11 +6788,7 @@
             "title": "heeft",
             "items": {
               "type": "object",
-              "$ref": "vestiging",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "vestiging"
-              }
+              "$ref": "vestiging"
             }
           },
           "contactpersoon": {
@@ -7962,28 +6796,17 @@
             "title": "contactpersoon",
             "items": {
               "type": "object",
-              "$ref": "natuurlijkpersoon",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "natuurlijkpersoon"
-              }
+              "$ref": "natuurlijkpersoon"
             }
           },
           "is": {
             "type": "object",
             "title": "is",
-            "$ref": "object",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "object"
-            }
+            "$ref": "object"
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "rechtspersoon"
-        ]
+        "hardValidation": false
       },
       "maatschappelijkeactiviteit": {
         "slug": "maatschappelijkeactiviteit",
@@ -8069,31 +6892,19 @@
           "isHoofdvestigingVan": {
             "type": "object",
             "title": "isHoofdvestigingVan",
-            "$ref": "vestiging",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "vestiging"
-            }
+            "$ref": "vestiging"
           },
           "heeftAlsEigenaar": {
             "type": "object",
             "title": "heeftAlsEigenaar",
-            "$ref": "rechtspersoon",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "rechtspersoon"
-            }
+            "$ref": "rechtspersoon"
           },
           "uitoefeningVanActiviteiten": {
             "type": "array",
             "title": "uitoefeningVanActiviteiten",
             "items": {
               "type": "object",
-              "$ref": "vestiging",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "vestiging"
-              }
+              "$ref": "vestiging"
             }
           },
           "vertegenwoordiger": {
@@ -8101,21 +6912,13 @@
             "title": "vertegenwoordiger",
             "items": {
               "type": "object",
-              "$ref": "natuurlijkpersoon",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "natuurlijkpersoon"
-              }
+              "$ref": "natuurlijkpersoon"
             }
           },
           "is": {
             "type": "object",
             "title": "is",
-            "$ref": "object",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "object"
-            }
+            "$ref": "object"
           }
         },
         "searchable": true,
@@ -8197,11 +7000,7 @@
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "rechtspersoon",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "rechtspersoon"
-            }
+            "$ref": "rechtspersoon"
           }
         },
         "searchable": true,
@@ -8211,7 +7010,7 @@
         "slug": "inrichtingselement",
         "title": "Inrichtingselement",
         "version": "2.5.0",
-        "description": "Ruimtelijk object al dan niet ter detaillering dan wel ter inrichting van de\noverige benoemde ruimtelijke objecten of een ander inrichtingselement.",
+        "description": "Ruimtelijk object al dan niet ter detaillering dan wel ter inrichting van de\noverige benoemde ruimtelijke objecten of een ander inrichtingselement. Extends: geo-object.",
         "required": [
           "identificatieInrichtingselement",
           "statusInrichtingselement",
@@ -8391,18 +7190,11 @@
           "is": {
             "type": "object",
             "title": "is",
-            "$ref": "object",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "object"
-            }
+            "$ref": "object"
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "geo-object"
-        ]
+        "hardValidation": false
       },
       "gebied-2": {
         "slug": "gebied-2",
@@ -8459,22 +7251,14 @@
           "komtOvereen": {
             "type": "object",
             "title": "komtOvereen",
-            "$ref": "buurt",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "buurt"
-            }
+            "$ref": "buurt"
           },
           "ligtIn": {
             "type": "array",
             "title": "ligtIn",
             "items": {
               "type": "object",
-              "$ref": "nummeraanduiding",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "nummeraanduiding"
-              }
+              "$ref": "nummeraanduiding"
             }
           }
         },
@@ -8545,11 +7329,7 @@
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "natuurlijkpersoon",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "natuurlijkpersoon"
-            }
+            "$ref": "natuurlijkpersoon"
           }
         },
         "searchable": true,
@@ -8597,21 +7377,13 @@
             "title": "relatie",
             "items": {
               "type": "object",
-              "$ref": "ingeschrevenpersoon",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "ingeschrevenpersoon"
-              }
+              "$ref": "ingeschrevenpersoon"
             }
           },
           "is": {
             "type": "object",
             "title": "is",
-            "$ref": "object",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "object"
-            }
+            "$ref": "object"
           }
         },
         "searchable": true,
@@ -8621,7 +7393,7 @@
         "slug": "gebouwinstallatie",
         "title": "Gebouwinstallatie",
         "version": "2.5.0",
-        "description": "Een component aan de buitenzijde van een gebouw, die het aanzicht van het gebouw mede bepaalt.",
+        "description": "Een component aan de buitenzijde van een gebouw, die het aanzicht van het gebouw mede bepaalt. Extends: geo-object.",
         "required": [
           "identificatieGebouwinstallatie",
           "statusGebouwinstallatie",
@@ -8686,10 +7458,7 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "geo-object"
-        ]
+        "hardValidation": false
       },
       "aantekening": {
         "slug": "aantekening",
@@ -8747,11 +7516,7 @@
           "tenaamstelling": {
             "type": "object",
             "title": "tenaamstelling",
-            "$ref": "tenaamstelling",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "tenaamstelling"
-            }
+            "$ref": "tenaamstelling"
           }
         },
         "searchable": true,
@@ -8761,7 +7526,7 @@
         "slug": "onbestemd-adres",
         "title": "Onbestemd Adres",
         "version": "2.5.0",
-        "description": "*Onbestemd Adres* is een adres-aanduiding die officieel door een bevoegde gemeentelijke instantie is vastgelegd, maar waarbij niet kan worden vastgesteld dat het een regulier woon- of verblijfsadres betreft.",
+        "description": "*Onbestemd Adres* is een adres-aanduiding die officieel door een bevoegde gemeentelijke instantie is vastgelegd, maar waarbij niet kan worden vastgesteld dat het een regulier woon- of verblijfsadres betreft. Extends: object.",
         "required": [
           "huisletter",
           "huisnummer",
@@ -8797,16 +7562,13 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "object"
-        ]
+        "hardValidation": false
       },
       "overigeadresseerbaarobjectaanduiding": {
         "slug": "overigeadresseerbaarobjectaanduiding",
         "title": "OverigeAdresseerbaarObjectAanduiding",
         "version": "2.5.0",
-        "description": "Een door de gemeenteraad als zodanig toegekende aanduiding van een overig gebouwd object of een overig benoemd terrein.",
+        "description": "Een door de gemeenteraad als zodanig toegekende aanduiding van een overig gebouwd object of een overig benoemd terrein. Extends: nummeraanduiding, nummeraanduiding, nummeraanduiding.",
         "required": [
           "identificatiecode"
         ],
@@ -8819,26 +7581,17 @@
           "heeftAlsOfficieelAdres": {
             "type": "object",
             "title": "heeftAlsOfficieelAdres",
-            "$ref": "overigbenoemdterrein",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "overigbenoemdterrein"
-            }
+            "$ref": "overigbenoemdterrein"
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "nummeraanduiding",
-          "nummeraanduiding",
-          "nummeraanduiding"
-        ]
+        "hardValidation": false
       },
       "ondersteunendwaterdeel": {
         "slug": "ondersteunendwaterdeel",
         "title": "OndersteunendWaterdeel",
         "version": "2.5.0",
-        "description": "Object dat in het kader van de waterhuishouding periodiek gedeeltelijk of geheel met water is bedekt.",
+        "description": "Object dat in het kader van de waterhuishouding periodiek gedeeltelijk of geheel met water is bedekt. Extends: geo-object.",
         "required": [
           "identificatie",
           "status",
@@ -8902,10 +7655,7 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "geo-object"
-        ]
+        "hardValidation": false
       },
       "woz-waarde": {
         "slug": "woz-waarde",
@@ -8964,11 +7714,7 @@
           "isVoor": {
             "type": "object",
             "title": "isVoor",
-            "$ref": "woz-object",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "woz-object"
-            }
+            "$ref": "woz-object"
           }
         },
         "searchable": true,
@@ -8978,7 +7724,7 @@
         "slug": "overiggebouwdobject",
         "title": "OverigGebouwdObject",
         "version": "2.5.0",
-        "description": "De kleinste eenheid van gebruik, geen verblijfsobject zijnde, binnen een bij de totstandkoming functioneel en bouwkundig constructief zelfstandige eenheid die direct en duurzaam met de aarde is verbonden.",
+        "description": "De kleinste eenheid van gebruik, geen verblijfsobject zijnde, binnen een bij de totstandkoming functioneel en bouwkundig constructief zelfstandige eenheid die direct en duurzaam met de aarde is verbonden. Extends: adresseerbaarobjectaanduiding, gebouwdobject, adresseerbaarobject.",
         "required": [
           "overigGebouwdObjectIdentificatie",
           "indicatiePlanobject"
@@ -9002,42 +7748,26 @@
           "heeftAlsOfficieelAdres": {
             "type": "object",
             "title": "heeftAlsOfficieelAdres",
-            "$ref": "overigeadresseerbaarobjectaanduiding",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "overigeadresseerbaarobjectaanduiding"
-            }
+            "$ref": "overigeadresseerbaarobjectaanduiding"
           },
           "heeftAlsEquivalent": {
             "type": "object",
             "title": "heeftAlsEquivalent",
-            "$ref": "overigbouwwerk",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "overigbouwwerk"
-            }
+            "$ref": "overigbouwwerk"
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "adresseerbaarobjectaanduiding",
-          "gebouwdobject",
-          "adresseerbaarobject"
-        ]
+        "hardValidation": false
       },
       "appartementsrecht": {
         "slug": "appartementsrecht",
         "title": "Appartementsrecht",
         "version": "2.5.0",
-        "description": "Een KADASTRALE ONROERENDE ZAAK dat een aandeel is in de \ngoederen die in de splitsing zijn betrokken, dat de bevoegdheid omvat tot het uitsluitend gebruik van bepaalde gedeelten van het gebouw die blijkens hun inrichting bestemd zijn of worden om als afzonderlijk geheel te worden \ngebruikt (art. 5:106 lid 4 BW).",
+        "description": "Een KADASTRALE ONROERENDE ZAAK dat een aandeel is in de \ngoederen die in de splitsing zijn betrokken, dat de bevoegdheid omvat tot het uitsluitend gebruik van bepaalde gedeelten van het gebouw die blijkens hun inrichting bestemd zijn of worden om als afzonderlijk geheel te worden \ngebruikt (art. 5:106 lid 4 BW). Extends: kadastraleonroerendezaak.",
         "required": [],
         "properties": {},
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "kadastraleonroerendezaak"
-        ]
+        "hardValidation": false
       },
       "zakelijkrecht": {
         "slug": "zakelijkrecht",
@@ -9083,11 +7813,7 @@
             "title": "isOntstaanUit",
             "items": {
               "type": "object",
-              "$ref": "kponstaanuit",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "kponstaanuit"
-              }
+              "$ref": "kponstaanuit"
             }
           },
           "isBetrokkenBij": {
@@ -9095,53 +7821,33 @@
             "title": "isBetrokkenBij",
             "items": {
               "type": "object",
-              "$ref": "kpbetrokkenbij",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "kpbetrokkenbij"
-              }
+              "$ref": "kpbetrokkenbij"
             }
           },
           "heeftBetrekkingOp": {
             "type": "object",
             "title": "heeftBetrekkingOp",
-            "$ref": "kadastralemutatie",
-            "objectConfiguration": {
-              "register": "ggm-volkshuisvesting-leefomgeving",
-              "schema": "kadastralemutatie"
-            }
+            "$ref": "kadastralemutatie"
           },
           "gestapeldRecht": {
             "type": "array",
             "title": "gestapeldRecht",
             "items": {
               "type": "object",
-              "$ref": "zakelijkrecht",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "zakelijkrecht"
-              }
+              "$ref": "zakelijkrecht"
             }
           },
           "rustOp": {
             "type": "object",
             "title": "rustOp",
-            "$ref": "kadastraleonroerendezaak",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "kadastraleonroerendezaak"
-            }
+            "$ref": "kadastraleonroerendezaak"
           },
           "isBeperktTot": {
             "type": "array",
             "title": "isBeperktTot",
             "items": {
               "type": "object",
-              "$ref": "tenaamstelling",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "tenaamstelling"
-              }
+              "$ref": "tenaamstelling"
             }
           }
         },
@@ -9152,7 +7858,7 @@
         "slug": "kadastraleonroerendezaak",
         "title": "KadastraleOnroerendeZaak",
         "version": "2.5.0",
-        "description": "Een geregistreerd goed waarvoor bij overdracht of vestiging van rechten inschrijving in de openbare registers van het Kadaster is vereist zijnde een KADASTRAAL PERCEEL of een APPARTEMENTSRECHT.",
+        "description": "Een geregistreerd goed waarvoor bij overdracht of vestiging van rechten inschrijving in de openbare registers van het Kadaster is vereist zijnde een KADASTRAAL PERCEEL of een APPARTEMENTSRECHT. Extends: object.",
         "required": [
           "kadastraleGemeentecode",
           "perceelnummer",
@@ -9264,11 +7970,7 @@
             "title": "betreft",
             "items": {
               "type": "object",
-              "$ref": "vastgoedobject",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "vastgoedobject"
-              }
+              "$ref": "vastgoedobject"
             }
           },
           "heeftAdres": {
@@ -9276,11 +7978,7 @@
             "title": "heeftAdres",
             "items": {
               "type": "object",
-              "$ref": "locatieonroerendezaak",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "locatieonroerendezaak"
-              }
+              "$ref": "locatieonroerendezaak"
             }
           },
           "bevat": {
@@ -9288,11 +7986,7 @@
             "title": "bevat",
             "items": {
               "type": "object",
-              "$ref": "woz-object",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "woz-object"
-              }
+              "$ref": "woz-object"
             }
           },
           "oud": {
@@ -9300,11 +7994,7 @@
             "title": "oud",
             "items": {
               "type": "object",
-              "$ref": "kadastraleonroerendezaak",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "kadastraleonroerendezaak"
-              }
+              "$ref": "kadastraleonroerendezaak"
             }
           },
           "locatiekadastraleonroerendezaak": {
@@ -9312,32 +8002,20 @@
             "title": "locatiekadastraleonroerendezaak",
             "items": {
               "type": "object",
-              "$ref": "locatiekadastraleonroerendezaak",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "locatiekadastraleonroerendezaak"
-              }
+              "$ref": "locatiekadastraleonroerendezaak"
             }
           },
           "koopsomkadastraleonroerendezaak": {
             "type": "object",
             "title": "koopsomkadastraleonroerendezaak",
-            "$ref": "koopsomkadastraleonroerendezaak",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "koopsomkadastraleonroerendezaak"
-            }
+            "$ref": "koopsomkadastraleonroerendezaak"
           },
           "gerelateerd": {
             "type": "array",
             "title": "gerelateerd",
             "items": {
               "type": "object",
-              "$ref": "kadastraleonroerendezaak",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "kadastraleonroerendezaak"
-              }
+              "$ref": "kadastraleonroerendezaak"
             }
           },
           "heeft": {
@@ -9345,11 +8023,7 @@
             "title": "heeft",
             "items": {
               "type": "object",
-              "$ref": "cultuuronbebouwd",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "cultuuronbebouwd"
-              }
+              "$ref": "cultuuronbebouwd"
             }
           },
           "rustOp": {
@@ -9357,11 +8031,7 @@
             "title": "rustOp",
             "items": {
               "type": "object",
-              "$ref": "zakelijkrecht",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "zakelijkrecht"
-              }
+              "$ref": "zakelijkrecht"
             }
           },
           "heeftBetrekkingOp": {
@@ -9369,34 +8039,23 @@
             "title": "heeftBetrekkingOp",
             "items": {
               "type": "object",
-              "$ref": "kadastraleonroerendezaakaantekening",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "kadastraleonroerendezaakaantekening"
-              }
+              "$ref": "kadastraleonroerendezaakaantekening"
             }
           },
           "is": {
             "type": "object",
             "title": "is",
-            "$ref": "object",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "object"
-            }
+            "$ref": "object"
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "object"
-        ]
+        "hardValidation": false
       },
       "vegetatieobject": {
         "slug": "vegetatieobject",
         "title": "Vegetatieobject",
         "version": "2.5.0",
-        "description": "Solitair vegetatieobject of lijn- of vlakvormige groep gelijksoortige vegetatieobjecten met een beperkte omvang.",
+        "description": "Solitair vegetatieobject of lijn- of vlakvormige groep gelijksoortige vegetatieobjecten met een beperkte omvang. Extends: geo-object.",
         "required": [
           "identificatieVegetatieobject",
           "statusVegetatieobject",
@@ -9460,16 +8119,13 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "geo-object"
-        ]
+        "hardValidation": false
       },
       "wegdeel": {
         "slug": "wegdeel",
         "title": "Wegdeel",
         "version": "2.5.0",
-        "description": "Kleinste functioneel onafhankelijk stukje van een NEN 3610 Weg,  met gelijkblijvende homogene eigenschappen en relaties en primair bedoeld voor gebruik door weg-, spoor- en vliegverkeer te land",
+        "description": "Kleinste functioneel onafhankelijk stukje van een NEN 3610 Weg,  met gelijkblijvende homogene eigenschappen en relaties en primair bedoeld voor gebruik door weg-, spoor- en vliegverkeer te land Extends: geo-object.",
         "required": [
           "identificatieWegdeel",
           "statusWegdeel",
@@ -9606,19 +8262,12 @@
             "title": "betreft",
             "items": {
               "type": "object",
-              "$ref": "stremming",
-              "objectConfiguration": {
-                "register": "ggm-verkeer-vervoer-waterstaat",
-                "schema": "stremming"
-              }
+              "$ref": "stremming"
             }
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "geo-object"
-        ]
+        "hardValidation": false
       },
       "rechtspersoon": {
         "slug": "rechtspersoon",
@@ -9702,11 +8351,7 @@
             "title": "melder",
             "items": {
               "type": "object",
-              "$ref": "aanvraagofmelding",
-              "objectConfiguration": {
-                "register": "ggm-dienstverlening",
-                "schema": "aanvraagofmelding"
-              }
+              "$ref": "aanvraagofmelding"
             }
           },
           "heeft": {
@@ -9714,11 +8359,7 @@
             "title": "heeft",
             "items": {
               "type": "object",
-              "$ref": "vastgoed-contract",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "vastgoed-contract"
-              }
+              "$ref": "vastgoed-contract"
             }
           },
           "projectleider": {
@@ -9726,11 +8367,7 @@
             "title": "projectleider",
             "items": {
               "type": "object",
-              "$ref": "taak",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "taak"
-              }
+              "$ref": "taak"
             }
           },
           "verstrekker": {
@@ -9738,11 +8375,7 @@
             "title": "verstrekker",
             "items": {
               "type": "object",
-              "$ref": "subsidie",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "subsidie"
-              }
+              "$ref": "subsidie"
             }
           },
           "houder": {
@@ -9750,32 +8383,20 @@
             "title": "houder",
             "items": {
               "type": "object",
-              "$ref": "parkeervergunning",
-              "objectConfiguration": {
-                "register": "ggm-verkeer-vervoer-waterstaat",
-                "schema": "parkeervergunning"
-              }
+              "$ref": "parkeervergunning"
             }
           },
           "is": {
             "type": "object",
             "title": "is",
-            "$ref": "indiener",
-            "objectConfiguration": {
-              "register": "ggm-bestuur-politiek",
-              "schema": "indiener"
-            }
+            "$ref": "indiener"
           },
           "betrokkenen": {
             "type": "array",
             "title": "betrokkenen",
             "items": {
               "type": "object",
-              "$ref": "kadastralemutatie",
-              "objectConfiguration": {
-                "register": "ggm-volkshuisvesting-leefomgeving",
-                "schema": "kadastralemutatie"
-              }
+              "$ref": "kadastralemutatie"
             }
           },
           "aanvrager": {
@@ -9783,21 +8404,13 @@
             "title": "aanvrager",
             "items": {
               "type": "object",
-              "$ref": "subsidie",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "subsidie"
-              }
+              "$ref": "subsidie"
             }
           },
           "heeftAlsEigenaar": {
             "type": "object",
             "title": "heeftAlsEigenaar",
-            "$ref": "maatschappelijkeactiviteit",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "maatschappelijkeactiviteit"
-            }
+            "$ref": "maatschappelijkeactiviteit"
           }
         },
         "searchable": true,
@@ -9807,7 +8420,7 @@
         "slug": "natuurlijkpersoon",
         "title": "NatuurlijkPersoon",
         "version": "2.5.0",
-        "description": "Een INGESCHREVEN PERSOON of ANDER NATUURLIJK PERSOON",
+        "description": "Een INGESCHREVEN PERSOON of ANDER NATUURLIJK PERSOON Extends: rechtspersoon.",
         "required": [
           "geslachtsnaamAanschrijving",
           "geboorteplaats",
@@ -9988,11 +8601,7 @@
             "title": "betreft",
             "items": {
               "type": "object",
-              "$ref": "kandidaat",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "kandidaat"
-              }
+              "$ref": "kandidaat"
             }
           },
           "melder": {
@@ -10000,11 +8609,7 @@
             "title": "melder",
             "items": {
               "type": "object",
-              "$ref": "melding",
-              "objectConfiguration": {
-                "register": "ggm-volkshuisvesting-leefomgeving",
-                "schema": "melding"
-              }
+              "$ref": "melding"
             }
           },
           "heeft": {
@@ -10012,11 +8617,7 @@
             "title": "heeft",
             "items": {
               "type": "object",
-              "$ref": "sociale-relatie",
-              "objectConfiguration": {
-                "register": "ggm-sociaal-domein",
-                "schema": "sociale-relatie"
-              }
+              "$ref": "sociale-relatie"
             }
           },
           "betrokkenen": {
@@ -10024,11 +8625,7 @@
             "title": "betrokkenen",
             "items": {
               "type": "object",
-              "$ref": "zorgmelding",
-              "objectConfiguration": {
-                "register": "ggm-sociaal-domein",
-                "schema": "zorgmelding"
-              }
+              "$ref": "zorgmelding"
             }
           },
           "informering": {
@@ -10036,11 +8633,7 @@
             "title": "informering",
             "items": {
               "type": "object",
-              "$ref": "informering",
-              "objectConfiguration": {
-                "register": "ggm-sociaal-domein",
-                "schema": "informering"
-              }
+              "$ref": "informering"
             }
           },
           "met": {
@@ -10048,41 +8641,25 @@
             "title": "met",
             "items": {
               "type": "object",
-              "$ref": "contact",
-              "objectConfiguration": {
-                "register": "ggm-economie",
-                "schema": "contact"
-              }
+              "$ref": "contact"
             }
           },
           "is": {
             "type": "object",
             "title": "is",
-            "$ref": "aanwezige-deelnemer",
-            "objectConfiguration": {
-              "register": "ggm-bestuur-politiek",
-              "schema": "aanwezige-deelnemer"
-            }
+            "$ref": "aanwezige-deelnemer"
           },
           "maaktOnderdeelUitVan": {
             "type": "object",
             "title": "maaktOnderdeelUitVan",
-            "$ref": "huishouden",
-            "objectConfiguration": {
-              "register": "ggm-sociaal-domein",
-              "schema": "huishouden"
-            }
+            "$ref": "huishouden"
           },
           "maaktDeelUitVan": {
             "type": "array",
             "title": "maaktDeelUitVan",
             "items": {
               "type": "object",
-              "$ref": "sociale-groep",
-              "objectConfiguration": {
-                "register": "ggm-sociaal-domein",
-                "schema": "sociale-groep"
-              }
+              "$ref": "sociale-groep"
             }
           },
           "isFunctionarisVan": {
@@ -10090,11 +8667,7 @@
             "title": "isFunctionarisVan",
             "items": {
               "type": "object",
-              "$ref": "maatschappelijkeactiviteit",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "maatschappelijkeactiviteit"
-              }
+              "$ref": "maatschappelijkeactiviteit"
             }
           },
           "contactpersoon": {
@@ -10102,25 +8675,18 @@
             "title": "contactpersoon",
             "items": {
               "type": "object",
-              "$ref": "nietnatuurlijkpersoon",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "nietnatuurlijkpersoon"
-              }
+              "$ref": "nietnatuurlijkpersoon"
             }
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "rechtspersoon"
-        ]
+        "hardValidation": false
       },
       "scheiding": {
         "slug": "scheiding",
         "title": "Scheiding",
         "version": "2.5.0",
-        "description": "Kunstmatig, meestal lineair obstakel met een werende functie.",
+        "description": "Kunstmatig, meestal lineair obstakel met een werende functie. Extends: geo-object.",
         "required": [
           "identificatieScheiding",
           "statusScheiding",
@@ -10191,18 +8757,11 @@
           "soortscheiding": {
             "type": "object",
             "title": "soortscheiding",
-            "$ref": "soortscheiding",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "soortscheiding"
-            }
+            "$ref": "soortscheiding"
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "geo-object"
-        ]
+        "hardValidation": false
       },
       "verblijfstitel": {
         "slug": "verblijfstitel",
@@ -10255,11 +8814,7 @@
             "title": "heeft",
             "items": {
               "type": "object",
-              "$ref": "ingezetene",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "ingezetene"
-              }
+              "$ref": "ingezetene"
             }
           }
         },
@@ -10270,7 +8825,7 @@
         "slug": "ingeschrevenpersoon",
         "title": "IngeschrevenPersoon",
         "version": "2.5.0",
-        "description": "Een INGEZETENE of NIET-INGEZETENE",
+        "description": "Een INGEZETENE of NIET-INGEZETENE Extends: natuurlijkpersoon.",
         "required": [
           "adresHerkomst",
           "anummer",
@@ -10449,11 +9004,7 @@
             "title": "betreft",
             "items": {
               "type": "object",
-              "$ref": "gezagsverhouding",
-              "objectConfiguration": {
-                "register": "ggm-sociaal-domein",
-                "schema": "gezagsverhouding"
-              }
+              "$ref": "gezagsverhouding"
             }
           },
           "heeftUitkering": {
@@ -10461,11 +9012,7 @@
             "title": "heeftUitkering",
             "items": {
               "type": "object",
-              "$ref": "inkomensvoorziening",
-              "objectConfiguration": {
-                "register": "ggm-sociaal-domein",
-                "schema": "inkomensvoorziening"
-              }
+              "$ref": "inkomensvoorziening"
             }
           },
           "isVerstrektAan": {
@@ -10473,73 +9020,46 @@
             "title": "isVerstrektAan",
             "items": {
               "type": "object",
-              "$ref": "reisdocument",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "reisdocument"
-              }
+              "$ref": "reisdocument"
             }
           },
           "regeling": {
             "type": "object",
             "title": "regeling",
-            "$ref": "regeling",
-            "objectConfiguration": {
-              "register": "ggm-sociaal-domein",
-              "schema": "regeling"
-            }
+            "$ref": "regeling"
           },
           "gezaghebbende": {
             "type": "array",
             "title": "gezaghebbende",
             "items": {
               "type": "object",
-              "$ref": "gezagsverhouding",
-              "objectConfiguration": {
-                "register": "ggm-sociaal-domein",
-                "schema": "gezagsverhouding"
-              }
+              "$ref": "gezagsverhouding"
             }
           },
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "huishouden",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "huishouden"
-            }
+            "$ref": "huishouden"
           },
           "briefadres": {
             "type": "object",
             "title": "briefadres",
-            "$ref": "briefadres",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "briefadres"
-            }
+            "$ref": "briefadres"
           },
           "heeftAlsAdres": {
             "type": "object",
             "title": "heeftAlsAdres",
-            "$ref": "nummeraanduiding",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "nummeraanduiding"
-            }
+            "$ref": "nummeraanduiding"
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "natuurlijkpersoon"
-        ]
+        "hardValidation": false
       },
       "spoor": {
         "slug": "spoor",
         "title": "Spoor",
         "version": "2.5.0",
-        "description": "De as van het spoor, dat wil zeggen het midden van twee stalen staven op een onderling vaste afstand, waarover trein, tram, of sneltram rijdt.",
+        "description": "De as van het spoor, dat wil zeggen het midden van twee stalen staven op een onderling vaste afstand, waarover trein, tram, of sneltram rijdt. Extends: geo-object.",
         "required": [
           "identificatieSpoor",
           "statusSpoor",
@@ -10595,18 +9115,11 @@
           "soortspoor": {
             "type": "object",
             "title": "soortspoor",
-            "$ref": "soortspoor",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "soortspoor"
-            }
+            "$ref": "soortspoor"
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "geo-object"
-        ]
+        "hardValidation": false
       },
       "vestiging": {
         "slug": "vestiging",
@@ -10702,81 +9215,49 @@
             "title": "bij",
             "items": {
               "type": "object",
-              "$ref": "contact",
-              "objectConfiguration": {
-                "register": "ggm-economie",
-                "schema": "contact"
-              }
+              "$ref": "contact"
             }
           },
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "werkgelegenheid",
-            "objectConfiguration": {
-              "register": "ggm-economie",
-              "schema": "werkgelegenheid"
-            }
+            "$ref": "werkgelegenheid"
           },
           "sbiactiviteitvestiging": {
             "type": "array",
             "title": "sbiactiviteitvestiging",
             "items": {
               "type": "object",
-              "$ref": "sbiactiviteitvestiging",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "sbiactiviteitvestiging"
-              }
+              "$ref": "sbiactiviteitvestiging"
             }
           },
           "isHoofdvestigingVan": {
             "type": "object",
             "title": "isHoofdvestigingVan",
-            "$ref": "maatschappelijkeactiviteit",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "maatschappelijkeactiviteit"
-            }
+            "$ref": "maatschappelijkeactiviteit"
           },
           "uitoefeningVanActiviteiten": {
             "type": "object",
             "title": "uitoefeningVanActiviteiten",
-            "$ref": "maatschappelijkeactiviteit",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "maatschappelijkeactiviteit"
-            }
+            "$ref": "maatschappelijkeactiviteit"
           },
           "heeftHoofdlocatieInOfOp": {
             "type": "object",
             "title": "heeftHoofdlocatieInOfOp",
-            "$ref": "benoemdobject",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "benoemdobject"
-            }
+            "$ref": "benoemdobject"
           },
           "heeftNevenlocatieInOfOp": {
             "type": "array",
             "title": "heeftNevenlocatieInOfOp",
             "items": {
               "type": "object",
-              "$ref": "benoemdobject",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "benoemdobject"
-              }
+              "$ref": "benoemdobject"
             }
           },
           "heeftAlsLocatieadres": {
             "type": "object",
             "title": "heeftAlsLocatieadres",
-            "$ref": "nummeraanduiding",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "nummeraanduiding"
-            }
+            "$ref": "nummeraanduiding"
           }
         },
         "searchable": true,
@@ -10786,7 +9267,7 @@
         "slug": "functioneelgebied",
         "title": "FunctioneelGebied",
         "version": "2.5.0",
-        "description": "Begrensd en benoemd gebied dat door een functionele eenheid beschreven wordt.",
+        "description": "Begrensd en benoemd gebied dat door een functionele eenheid beschreven wordt. Extends: geo-object.",
         "required": [
           "identificatieFunctioneelGebied",
           "statusFunctioneelGebied",
@@ -10836,18 +9317,11 @@
           "soortfunctioneelgebied": {
             "type": "object",
             "title": "soortfunctioneelgebied",
-            "$ref": "soortfunctioneelgebied",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "soortfunctioneelgebied"
-            }
+            "$ref": "soortfunctioneelgebied"
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "geo-object"
-        ]
+        "hardValidation": false
       },
       "appartementsrechtsplitsing": {
         "slug": "appartementsrechtsplitsing",
@@ -10882,11 +9356,7 @@
             "title": "kponstaanuit",
             "items": {
               "type": "object",
-              "$ref": "kponstaanuit",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "kponstaanuit"
-              }
+              "$ref": "kponstaanuit"
             }
           },
           "kpbetrokkenbij": {
@@ -10894,11 +9364,7 @@
             "title": "kpbetrokkenbij",
             "items": {
               "type": "object",
-              "$ref": "kpbetrokkenbij",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "kpbetrokkenbij"
-              }
+              "$ref": "kpbetrokkenbij"
             }
           },
           "splitsingstekeningreferentie": {
@@ -10906,11 +9372,7 @@
             "title": "splitsingstekeningreferentie",
             "items": {
               "type": "object",
-              "$ref": "splitsingstekeningreferentie",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "splitsingstekeningreferentie"
-              }
+              "$ref": "splitsingstekeningreferentie"
             }
           }
         },
@@ -10921,7 +9383,7 @@
         "slug": "onbegroeidterreindeel",
         "title": "OnbegroeidTerreindeel",
         "version": "2.5.0",
-        "description": "Kleinste functioneel onafhankelijk stukje van een terrein, dat er binnen het objecttype Terrein van NEN 3610 wordt onderscheiden, zonder aaneengesloten vegetatie.",
+        "description": "Kleinste functioneel onafhankelijk stukje van een terrein, dat er binnen het objecttype Terrein van NEN 3610 wordt onderscheiden, zonder aaneengesloten vegetatie. Extends: geo-object.",
         "required": [
           "identificatie",
           "status",
@@ -11020,16 +9482,13 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "geo-object"
-        ]
+        "hardValidation": false
       },
       "ingezetene": {
         "slug": "ingezetene",
         "title": "Ingezetene",
         "version": "2.5.0",
-        "description": "Een individueel menselijk wezen, ingeschreven in het Nederlands Bevolkingsregister.",
+        "description": "Een individueel menselijk wezen, ingeschreven in het Nederlands Bevolkingsregister. Extends: ingeschrevenpersoon.",
         "required": [
           "indicatieBlokkering"
         ],
@@ -11079,37 +9538,22 @@
             "title": "parkeervergunning",
             "items": {
               "type": "object",
-              "$ref": "parkeervergunning",
-              "objectConfiguration": {
-                "register": "ggm-verkeer-vervoer-waterstaat",
-                "schema": "parkeervergunning"
-              }
+              "$ref": "parkeervergunning"
             }
           },
           "verblijfstitel": {
             "type": "object",
             "title": "verblijfstitel",
-            "$ref": "verblijfstitel",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "verblijfstitel"
-            }
+            "$ref": "verblijfstitel"
           },
           "is": {
             "type": "object",
             "title": "is",
-            "$ref": "object",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "object"
-            }
+            "$ref": "object"
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "ingeschrevenpersoon"
-        ]
+        "hardValidation": false
       },
       "reisdocument": {
         "slug": "reisdocument",
@@ -11179,11 +9623,7 @@
           "isVerstrektAan": {
             "type": "object",
             "title": "isVerstrektAan",
-            "$ref": "ingeschrevenpersoon",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "ingeschrevenpersoon"
-            }
+            "$ref": "ingeschrevenpersoon"
           }
         },
         "searchable": true,
@@ -11279,22 +9719,14 @@
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "locatieaanduidingwozobject",
-            "objectConfiguration": {
-              "register": "ggm-interne-organisatie",
-              "schema": "locatieaanduidingwozobject"
-            }
+            "$ref": "locatieaanduidingwozobject"
           },
           "isOnderdeelVan": {
             "type": "array",
             "title": "isOnderdeelVan",
             "items": {
               "type": "object",
-              "$ref": "woz-deelobject",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "woz-deelobject"
-              }
+              "$ref": "woz-deelobject"
             }
           },
           "bevat": {
@@ -11302,11 +9734,7 @@
             "title": "bevat",
             "items": {
               "type": "object",
-              "$ref": "kadastraleonroerendezaak",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "kadastraleonroerendezaak"
-              }
+              "$ref": "kadastraleonroerendezaak"
             }
           },
           "isVoor": {
@@ -11314,21 +9742,13 @@
             "title": "isVoor",
             "items": {
               "type": "object",
-              "$ref": "woz-waarde",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "woz-waarde"
-              }
+              "$ref": "woz-waarde"
             }
           },
           "ligtAan": {
             "type": "object",
             "title": "ligtAan",
-            "$ref": "openbareruimte",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "openbareruimte"
-            }
+            "$ref": "openbareruimte"
           }
         },
         "searchable": true,
@@ -11338,7 +9758,7 @@
         "slug": "overigbenoemdterrein",
         "title": "OverigBenoemdTerrein",
         "version": "2.5.0",
-        "description": "Een door het bevoegde gemeentelijke orgaan als zodanig aangewezen onbebouwd terrein of een gedeelte daarvan, geen standplaats of gedeelte van een ligplaats zijnde, dat bestemd is voor het gedurende langere tijd verrichten van een maatschappelijke activiteit.",
+        "description": "Een door het bevoegde gemeentelijke orgaan als zodanig aangewezen onbebouwd terrein of een gedeelte daarvan, geen standplaats of gedeelte van een ligplaats zijnde, dat bestemd is voor het gedurende langere tijd verrichten van een maatschappelijke activiteit. Extends: geo-object, adresseerbaarobject.",
         "required": [
           "overigBenoemdTerreinIdentificatie",
           "gebruiksdoelOverigBenoemdTerrein"
@@ -11372,34 +9792,22 @@
           "ligtOp": {
             "type": "object",
             "title": "ligtOp",
-            "$ref": "veld",
-            "objectConfiguration": {
-              "register": "ggm-sport-cultuur-recreatie",
-              "schema": "veld"
-            }
+            "$ref": "veld"
           },
           "heeftAlsOfficieelAdres": {
             "type": "object",
             "title": "heeftAlsOfficieelAdres",
-            "$ref": "overigeadresseerbaarobjectaanduiding",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "overigeadresseerbaarobjectaanduiding"
-            }
+            "$ref": "overigeadresseerbaarobjectaanduiding"
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "geo-object",
-          "adresseerbaarobject"
-        ]
+        "hardValidation": false
       },
       "begroeidterreindeel": {
         "slug": "begroeidterreindeel",
         "title": "BegroeidTerreindeel",
         "version": "2.5.0",
-        "description": "Kleinste functioneel onafhankelijk stukje van een terrein dat er binnen het objecttype Terrein van NEN 3610 wordt onderscheiden, met aaneengesloten homogene vegetatie.",
+        "description": "Kleinste functioneel onafhankelijk stukje van een terrein dat er binnen het objecttype Terrein van NEN 3610 wordt onderscheiden, met aaneengesloten homogene vegetatie. Extends: geo-object.",
         "required": [
           "identificatie",
           "status",
@@ -11514,16 +9922,13 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "geo-object"
-        ]
+        "hardValidation": false
       },
       "overigescheiding": {
         "slug": "overigescheiding",
         "title": "OverigeScheiding",
         "version": "2.5.0",
-        "description": "Kunstmatig, meestal lineair obstakel met een werende functie, met kleinere afmetingen dan toegestaan voor opname in de BGT.",
+        "description": "Kunstmatig, meestal lineair obstakel met een werende functie, met kleinere afmetingen dan toegestaan voor opname in de BGT. Extends: geo-object.",
         "required": [
           "identificatieOverigeScheiding",
           "statusOverigeScheiding",
@@ -11602,16 +10007,13 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "geo-object"
-        ]
+        "hardValidation": false
       },
       "tunneldeel": {
         "slug": "tunneldeel",
         "title": "Tunneldeel",
         "version": "2.5.0",
-        "description": "Onderdeel van een kunstmatig aangelegde, kokervormige onderdoorgang, dat essentieel is voor de constructie.",
+        "description": "Onderdeel van een kunstmatig aangelegde, kokervormige onderdoorgang, dat essentieel is voor de constructie. Extends: geo-object.",
         "required": [
           "identificatieTunneldeel",
           "statusTunneldeel",
@@ -11666,10 +10068,7 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "geo-object"
-        ]
+        "hardValidation": false
       },
       "woz-deelobject": {
         "slug": "woz-deelobject",
@@ -11719,20 +10118,12 @@
           "isOnderdeelVan": {
             "type": "object",
             "title": "isOnderdeelVan",
-            "$ref": "woz-object",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "woz-object"
-            }
+            "$ref": "woz-object"
           },
           "bestaatUit": {
             "type": "object",
             "title": "bestaatUit",
-            "$ref": "adresseerbaarobject",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "adresseerbaarobject"
-            }
+            "$ref": "adresseerbaarobject"
           }
         },
         "searchable": true,
@@ -11742,7 +10133,7 @@
         "slug": "ondersteunendwegdeel",
         "title": "OndersteunendWegdeel",
         "version": "2.5.0",
-        "description": "Een deel van de weg dat niet primair bedoeld is voor gebruik door het verkeer.",
+        "description": "Een deel van de weg dat niet primair bedoeld is voor gebruik door het verkeer. Extends: geo-object.",
         "required": [
           "identificatie",
           "status",
@@ -11863,16 +10254,13 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "geo-object"
-        ]
+        "hardValidation": false
       },
       "waterdeel": {
         "slug": "waterdeel",
         "title": "Waterdeel",
         "version": "2.5.0",
-        "description": "Kleinste functioneel onafhankelijk stukje water met gelijkblijvende, homogene eigenschappen en relaties dat er binnen het objecttype Water van NEN 3610 wordt onderscheiden.",
+        "description": "Kleinste functioneel onafhankelijk stukje water met gelijkblijvende, homogene eigenschappen en relaties dat er binnen het objecttype Water van NEN 3610 wordt onderscheiden. Extends: geo-object.",
         "required": [
           "identificatieWaterdeel",
           "statusWaterdeel",
@@ -11949,18 +10337,11 @@
           "is": {
             "type": "object",
             "title": "is",
-            "$ref": "object",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "object"
-            }
+            "$ref": "object"
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "geo-object"
-        ]
+        "hardValidation": false
       },
       "locatieaanduidingadreswozobject": {
         "slug": "locatieaanduidingadreswozobject",
@@ -12128,11 +10509,7 @@
           "isOntbondenIn": {
             "type": "object",
             "title": "isOntbondenIn",
-            "$ref": "woonplaats",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "woonplaats"
-            }
+            "$ref": "woonplaats"
           }
         },
         "searchable": true,
@@ -12196,11 +10573,7 @@
           "kadastraleonroerendezaak": {
             "type": "object",
             "title": "kadastraleonroerendezaak",
-            "$ref": "kadastraleonroerendezaak",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "kadastraleonroerendezaak"
-            }
+            "$ref": "kadastraleonroerendezaak"
           }
         },
         "searchable": true,
@@ -12377,20 +10750,12 @@
           "heeftPlaatsgevondenIn": {
             "type": "object",
             "title": "heeftPlaatsgevondenIn",
-            "$ref": "woonplaats",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "woonplaats"
-            }
+            "$ref": "woonplaats"
           },
           "heeftPlaatsegevondenIn": {
             "type": "object",
             "title": "heeftPlaatsegevondenIn",
-            "$ref": "woonplaats",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "woonplaats"
-            }
+            "$ref": "woonplaats"
           }
         },
         "searchable": true,
@@ -12444,11 +10809,7 @@
           "isGeslotenaangegaanIn": {
             "type": "object",
             "title": "isGeslotenaangegaanIn",
-            "$ref": "woonplaats",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "woonplaats"
-            }
+            "$ref": "woonplaats"
           }
         },
         "searchable": true,
@@ -12485,11 +10846,7 @@
             "title": "spoor",
             "items": {
               "type": "object",
-              "$ref": "spoor",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "spoor"
-              }
+              "$ref": "spoor"
             }
           }
         },
@@ -12602,11 +10959,7 @@
             "title": "overigbouwwerk",
             "items": {
               "type": "object",
-              "$ref": "overigbouwwerk",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "overigbouwwerk"
-              }
+              "$ref": "overigbouwwerk"
             }
           }
         },
@@ -12732,11 +11085,7 @@
             "title": "kunstwerkdeel",
             "items": {
               "type": "object",
-              "$ref": "kunstwerkdeel",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "kunstwerkdeel"
-              }
+              "$ref": "kunstwerkdeel"
             }
           }
         },
@@ -12805,11 +11154,7 @@
           "heeftAlsCorrespondentieadresPostadresIn": {
             "type": "object",
             "title": "heeftAlsCorrespondentieadresPostadresIn",
-            "$ref": "woonplaats",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "woonplaats"
-            }
+            "$ref": "woonplaats"
           }
         },
         "searchable": true,
@@ -12839,11 +11184,7 @@
           "kadastraleonroerendezaak": {
             "type": "object",
             "title": "kadastraleonroerendezaak",
-            "$ref": "kadastraleonroerendezaak",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "kadastraleonroerendezaak"
-            }
+            "$ref": "kadastraleonroerendezaak"
           }
         },
         "searchable": true,
@@ -12957,11 +11298,7 @@
           "verwijstNaar": {
             "type": "object",
             "title": "verwijstNaar",
-            "$ref": "nummeraanduiding",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "nummeraanduiding"
-            }
+            "$ref": "nummeraanduiding"
           }
         },
         "searchable": true,
@@ -13017,11 +11354,7 @@
             "title": "functioneelgebied",
             "items": {
               "type": "object",
-              "$ref": "functioneelgebied",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "functioneelgebied"
-              }
+              "$ref": "functioneelgebied"
             }
           }
         },
@@ -13066,11 +11399,7 @@
           "appartementsrechtsplitsing": {
             "type": "object",
             "title": "appartementsrechtsplitsing",
-            "$ref": "appartementsrechtsplitsing",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "appartementsrechtsplitsing"
-            }
+            "$ref": "appartementsrechtsplitsing"
           }
         },
         "searchable": true,
@@ -13123,11 +11452,7 @@
           "heeftPlaatsgevondenIn": {
             "type": "object",
             "title": "heeftPlaatsgevondenIn",
-            "$ref": "woonplaats",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "woonplaats"
-            }
+            "$ref": "woonplaats"
           }
         },
         "searchable": true,
@@ -13306,11 +11631,7 @@
             "title": "scheiding",
             "items": {
               "type": "object",
-              "$ref": "scheiding",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "scheiding"
-              }
+              "$ref": "scheiding"
             }
           }
         },
@@ -13341,38 +11662,22 @@
           "verblijftOp": {
             "type": "object",
             "title": "verblijftOp",
-            "$ref": "ligplaats",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "ligplaats"
-            }
+            "$ref": "ligplaats"
           },
           "isIngeschrevenOp": {
             "type": "object",
             "title": "isIngeschrevenOp",
-            "$ref": "adresseerbaarobjectaanduiding",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "adresseerbaarobjectaanduiding"
-            }
+            "$ref": "adresseerbaarobjectaanduiding"
           },
           "verblijftIn": {
             "type": "object",
             "title": "verblijftIn",
-            "$ref": "verblijfsobject",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "verblijfsobject"
-            }
+            "$ref": "verblijfsobject"
           },
           "verblijftOpLocatieIn": {
             "type": "object",
             "title": "verblijftOpLocatieIn",
-            "$ref": "woonplaats",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "woonplaats"
-            }
+            "$ref": "woonplaats"
           }
         },
         "searchable": true,
@@ -13403,11 +11708,7 @@
           "vestiging": {
             "type": "object",
             "title": "vestiging",
-            "$ref": "vestiging",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "vestiging"
-            }
+            "$ref": "vestiging"
           }
         },
         "searchable": true,
@@ -14565,22 +12866,14 @@
           "naam1Werkwoord": {
             "type": "object",
             "title": "naam1Werkwoord",
-            "$ref": "objecttypea",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "objecttypea"
-            }
+            "$ref": "objecttypea"
           },
           "naam2Werkwoord": {
             "type": "array",
             "title": "naam2Werkwoord",
             "items": {
               "type": "object",
-              "$ref": "objecttyped",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "objecttyped"
-              }
+              "$ref": "objecttyped"
             }
           }
         },
@@ -14599,11 +12892,7 @@
             "title": "naam3",
             "items": {
               "type": "object",
-              "$ref": "objecttypee",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "objecttypee"
-              }
+              "$ref": "objecttypee"
             }
           }
         },
@@ -14632,11 +12921,7 @@
             "title": "naam4",
             "items": {
               "type": "object",
-              "$ref": "objecttypee",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "objecttypee"
-              }
+              "$ref": "objecttypee"
             }
           }
         },
@@ -14647,7 +12932,7 @@
         "slug": "objecttypea",
         "title": "ObjecttypeA",
         "version": "2.5.0",
-        "description": "GGM entity: ObjecttypeA",
+        "description": "GGM entity: ObjecttypeA Extends: objecttypec.",
         "required": [],
         "properties": {
           "naam1Werkwoord": {
@@ -14655,19 +12940,12 @@
             "title": "naam1Werkwoord",
             "items": {
               "type": "object",
-              "$ref": "objecttypeb",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "objecttypeb"
-              }
+              "$ref": "objecttypeb"
             }
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "objecttypec"
-        ]
+        "hardValidation": false
       },
       "objecttyped": {
         "slug": "objecttyped",
@@ -14681,11 +12959,7 @@
             "title": "naam2Werkwoord",
             "items": {
               "type": "object",
-              "$ref": "objecttypeb",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "objecttypeb"
-              }
+              "$ref": "objecttypeb"
             }
           }
         },
@@ -14702,20 +12976,12 @@
           "naam4": {
             "type": "object",
             "title": "naam4",
-            "$ref": "objecttypeg",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "objecttypeg"
-            }
+            "$ref": "objecttypeg"
           },
           "naam3": {
             "type": "object",
             "title": "naam3",
-            "$ref": "objecttypef",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "objecttypef"
-            }
+            "$ref": "objecttypef"
           }
         },
         "searchable": true,

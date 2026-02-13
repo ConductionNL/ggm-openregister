@@ -41,20 +41,12 @@
           "heeftData": {
             "type": "object",
             "title": "heeftData",
-            "$ref": "aanvraagofmelding",
-            "objectConfiguration": {
-              "register": "ggm-dienstverlening",
-              "schema": "aanvraagofmelding"
-            }
+            "$ref": "aanvraagofmelding"
           },
           "isConform": {
             "type": "object",
             "title": "isConform",
-            "$ref": "formuliersoortveld",
-            "objectConfiguration": {
-              "register": "ggm-dienstverlening",
-              "schema": "formuliersoortveld"
-            }
+            "$ref": "formuliersoortveld"
           }
         },
         "searchable": true,
@@ -191,43 +183,27 @@
           "melder": {
             "type": "object",
             "title": "melder",
-            "$ref": "rechtspersoon",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "rechtspersoon"
-            }
+            "$ref": "rechtspersoon"
           },
           "heeftDocumenten": {
             "type": "array",
             "title": "heeftDocumenten",
             "items": {
               "type": "object",
-              "$ref": "document",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "document"
-              }
+              "$ref": "document"
             }
           },
           "aanvraagMet": {
             "type": "object",
             "title": "aanvraagMet",
-            "$ref": "formuliersoort",
-            "objectConfiguration": {
-              "register": "ggm-dienstverlening",
-              "schema": "formuliersoort"
-            }
+            "$ref": "formuliersoort"
           },
           "kanLeidenTot": {
             "type": "array",
             "title": "kanLeidenTot",
             "items": {
               "type": "object",
-              "$ref": "zaak",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "zaak"
-              }
+              "$ref": "zaak"
             }
           },
           "betreft": {
@@ -235,11 +211,7 @@
             "title": "betreft",
             "items": {
               "type": "object",
-              "$ref": "onderwerp",
-              "objectConfiguration": {
-                "register": "ggm-dienstverlening",
-                "schema": "onderwerp"
-              }
+              "$ref": "onderwerp"
             }
           },
           "heeftData": {
@@ -247,32 +219,20 @@
             "title": "heeftData",
             "items": {
               "type": "object",
-              "$ref": "aanvraagdata",
-              "objectConfiguration": {
-                "register": "ggm-dienstverlening",
-                "schema": "aanvraagdata"
-              }
+              "$ref": "aanvraagdata"
             }
           },
           "ingediendDoor": {
             "type": "object",
             "title": "ingediendDoor",
-            "$ref": "indiener",
-            "objectConfiguration": {
-              "register": "ggm-veiligheid-vergunningen",
-              "schema": "indiener"
-            }
+            "$ref": "indiener"
           },
           "heeft": {
             "type": "array",
             "title": "heeft",
             "items": {
               "type": "object",
-              "$ref": "aomstatus",
-              "objectConfiguration": {
-                "register": "ggm-veiligheid-vergunningen",
-                "schema": "aomstatus"
-              }
+              "$ref": "aomstatus"
             }
           }
         },
@@ -298,11 +258,7 @@
             "title": "heeft",
             "items": {
               "type": "object",
-              "$ref": "balieafspraak",
-              "objectConfiguration": {
-                "register": "ggm-dienstverlening",
-                "schema": "balieafspraak"
-              }
+              "$ref": "balieafspraak"
             }
           }
         },
@@ -387,59 +343,35 @@
           "locatie": {
             "type": "object",
             "title": "locatie",
-            "$ref": "vestigingvanzaakbehandelendeorganisatie",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "vestigingvanzaakbehandelendeorganisatie"
-            }
+            "$ref": "vestigingvanzaakbehandelendeorganisatie"
           },
           "betreft": {
             "type": "array",
             "title": "betreft",
             "items": {
               "type": "object",
-              "$ref": "productofdienst",
-              "objectConfiguration": {
-                "register": "ggm-dienstverlening",
-                "schema": "productofdienst"
-              }
+              "$ref": "productofdienst"
             }
           },
           "heeftBetrekkingOp": {
             "type": "object",
             "title": "heeftBetrekkingOp",
-            "$ref": "zaak",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "zaak"
-            }
+            "$ref": "zaak"
           },
           "met": {
             "type": "object",
             "title": "met",
-            "$ref": "medewerker",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "medewerker"
-            }
+            "$ref": "medewerker"
           },
           "mondtUitIn": {
             "type": "object",
             "title": "mondtUitIn",
-            "$ref": "klantcontact",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "klantcontact"
-            }
+            "$ref": "klantcontact"
           },
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "afspraakstatus",
-            "objectConfiguration": {
-              "register": "ggm-dienstverlening",
-              "schema": "afspraakstatus"
-            }
+            "$ref": "afspraakstatus"
           }
         },
         "searchable": true,
@@ -457,11 +389,7 @@
             "title": "heeftHerkomst",
             "items": {
               "type": "object",
-              "$ref": "batch",
-              "objectConfiguration": {
-                "register": "ggm-interne-organisatie",
-                "schema": "batch"
-              }
+              "$ref": "batch"
             }
           }
         },
@@ -498,11 +426,7 @@
             "title": "heeftVelden",
             "items": {
               "type": "object",
-              "$ref": "formuliersoortveld",
-              "objectConfiguration": {
-                "register": "ggm-dienstverlening",
-                "schema": "formuliersoortveld"
-              }
+              "$ref": "formuliersoortveld"
             }
           },
           "isAanleidingVoor": {
@@ -510,11 +434,7 @@
             "title": "isAanleidingVoor",
             "items": {
               "type": "object",
-              "$ref": "zaaktype",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "zaaktype"
-              }
+              "$ref": "zaaktype"
             }
           },
           "aanvraagMet": {
@@ -522,11 +442,7 @@
             "title": "aanvraagMet",
             "items": {
               "type": "object",
-              "$ref": "aanvraagofmelding",
-              "objectConfiguration": {
-                "register": "ggm-dienstverlening",
-                "schema": "aanvraagofmelding"
-              }
+              "$ref": "aanvraagofmelding"
             }
           }
         },
@@ -577,22 +493,14 @@
           "heeftVelden": {
             "type": "object",
             "title": "heeftVelden",
-            "$ref": "formuliersoort",
-            "objectConfiguration": {
-              "register": "ggm-dienstverlening",
-              "schema": "formuliersoort"
-            }
+            "$ref": "formuliersoort"
           },
           "isConform": {
             "type": "array",
             "title": "isConform",
             "items": {
               "type": "object",
-              "$ref": "aanvraagdata",
-              "objectConfiguration": {
-                "register": "ggm-dienstverlening",
-                "schema": "aanvraagdata"
-              }
+              "$ref": "aanvraagdata"
             }
           }
         },
@@ -657,21 +565,13 @@
             "title": "heeft",
             "items": {
               "type": "object",
-              "$ref": "productofdienst",
-              "objectConfiguration": {
-                "register": "ggm-dienstverlening",
-                "schema": "productofdienst"
-              }
+              "$ref": "productofdienst"
             }
           },
           "doet": {
             "type": "object",
             "title": "doet",
-            "$ref": "betrokkene",
-            "objectConfiguration": {
-              "register": "ggm-kern",
-              "schema": "betrokkene"
-            }
+            "$ref": "betrokkene"
           }
         },
         "searchable": true,
@@ -694,11 +594,7 @@
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "klantbeoordeling",
-            "objectConfiguration": {
-              "register": "ggm-dienstverlening",
-              "schema": "klantbeoordeling"
-            }
+            "$ref": "klantbeoordeling"
           }
         },
         "searchable": true,
@@ -708,7 +604,7 @@
         "slug": "mor-aanvraagofmelding",
         "title": "MOR-AanvraagOfMelding",
         "version": "2.5.0",
-        "description": "Bericht van een inwoner over een gebrek of opvallendheid in de openbare ruimte",
+        "description": "Bericht van een inwoner over een gebrek of opvallendheid in de openbare ruimte Extends: aanvraagofmelding.",
         "required": [
           "locatie",
           "locatieOmschrijving",
@@ -738,10 +634,7 @@
           }
         },
         "searchable": true,
-        "hardValidation": false,
-        "allOf": [
-          "aanvraagofmelding"
-        ]
+        "hardValidation": false
       },
       "onderwerp": {
         "slug": "onderwerp",
@@ -770,22 +663,14 @@
           "hoofdonderwerp": {
             "type": "object",
             "title": "hoofdonderwerp",
-            "$ref": "onderwerp",
-            "objectConfiguration": {
-              "register": "ggm-dienstverlening",
-              "schema": "onderwerp"
-            }
+            "$ref": "onderwerp"
           },
           "betreft": {
             "type": "array",
             "title": "betreft",
             "items": {
               "type": "object",
-              "$ref": "aanvraagofmelding",
-              "objectConfiguration": {
-                "register": "ggm-dienstverlening",
-                "schema": "aanvraagofmelding"
-              }
+              "$ref": "aanvraagofmelding"
             }
           }
         },
@@ -822,11 +707,7 @@
             "title": "heeft",
             "items": {
               "type": "object",
-              "$ref": "klantbeoordeling",
-              "objectConfiguration": {
-                "register": "ggm-dienstverlening",
-                "schema": "klantbeoordeling"
-              }
+              "$ref": "klantbeoordeling"
             }
           },
           "betreft": {
@@ -834,11 +715,7 @@
             "title": "betreft",
             "items": {
               "type": "object",
-              "$ref": "balieafspraak",
-              "objectConfiguration": {
-                "register": "ggm-dienstverlening",
-                "schema": "balieafspraak"
-              }
+              "$ref": "balieafspraak"
             }
           }
         },
@@ -864,11 +741,7 @@
             "title": "heeft",
             "items": {
               "type": "object",
-              "$ref": "telefoontje",
-              "objectConfiguration": {
-                "register": "ggm-dienstverlening",
-                "schema": "telefoontje"
-              }
+              "$ref": "telefoontje"
             }
           }
         },
@@ -900,11 +773,7 @@
             "title": "heeft",
             "items": {
               "type": "object",
-              "$ref": "telefoontje",
-              "objectConfiguration": {
-                "register": "ggm-dienstverlening",
-                "schema": "telefoontje"
-              }
+              "$ref": "telefoontje"
             }
           }
         },
@@ -980,21 +849,13 @@
             "title": "mondtUitIn",
             "items": {
               "type": "object",
-              "$ref": "klantcontact",
-              "objectConfiguration": {
-                "register": "ggm-kern",
-                "schema": "klantcontact"
-              }
+              "$ref": "klantcontact"
             }
           },
           "heeft": {
             "type": "object",
             "title": "heeft",
-            "$ref": "telefoonstatus",
-            "objectConfiguration": {
-              "register": "ggm-dienstverlening",
-              "schema": "telefoonstatus"
-            }
+            "$ref": "telefoonstatus"
           }
         },
         "searchable": true,
