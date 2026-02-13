@@ -1,0 +1,284 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "GGM - 3 Economie",
+    "description": "OpenRegister configuration for the Gemeentelijk Gegevensmodel (GGM) domain: 3 Economie. Auto-generated from GGM v2.5.0.",
+    "version": "2.5.0"
+  },
+  "x-openregister": {
+    "type": "application",
+    "sourceType": "github",
+    "sourceUrl": "https://github.com/ConductionNL/ggm-openregister",
+    "openregister": "^v0.2.10",
+    "github": {
+      "repo": "ConductionNL/ggm-openregister",
+      "branch": "main",
+      "path": "3-economie.openregister.json"
+    },
+    "description": "Gemeentelijk Gegevensmodel - 3 Economie"
+  },
+  "components": {
+    "schemas": {
+      "contact": {
+        "slug": "contact",
+        "title": "Contact",
+        "version": "2.5.0",
+        "description": "Persoon waarmee communicatie plaatsvindt",
+        "required": [
+          "contactsoort",
+          "datum",
+          "tekst"
+        ],
+        "properties": {
+          "contactsoort": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "contactsoort"
+          },
+          "datum": {
+            "type": "string",
+            "format": "date",
+            "title": "datum"
+          },
+          "tekst": {
+            "type": "string",
+            "title": "tekst"
+          },
+          "bij": {
+            "type": "object",
+            "title": "bij",
+            "$ref": "vestiging",
+            "objectConfiguration": {
+              "register": "ggm-kern",
+              "schema": "vestiging"
+            }
+          },
+          "met": {
+            "type": "array",
+            "title": "met",
+            "items": {
+              "type": "object",
+              "$ref": "natuurlijkpersoon",
+              "objectConfiguration": {
+                "register": "ggm-kern",
+                "schema": "natuurlijkpersoon"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "hotel": {
+        "slug": "hotel",
+        "title": "Hotel",
+        "version": "2.5.0",
+        "description": "Gebouw waar je tegen betaling kunt logeren.",
+        "required": [
+          "aantalKamers"
+        ],
+        "properties": {
+          "aantalKamers": {
+            "type": "integer",
+            "title": "aantalKamers"
+          },
+          "heeft": {
+            "type": "array",
+            "title": "heeft",
+            "items": {
+              "type": "object",
+              "$ref": "hotelbezoek",
+              "objectConfiguration": {
+                "register": "ggm-economie",
+                "schema": "hotelbezoek"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false,
+        "allOf": [
+          {
+            "$ref": "vestiging",
+            "objectConfiguration": {
+              "register": "ggm-kern",
+              "schema": "vestiging"
+            }
+          }
+        ]
+      },
+      "hotelbezoek": {
+        "slug": "hotelbezoek",
+        "title": "Hotelbezoek",
+        "version": "2.5.0",
+        "description": "Verblijf in een hotel",
+        "required": [
+          "datumStart",
+          "datumEinde"
+        ],
+        "properties": {
+          "datumStart": {
+            "type": "string",
+            "format": "date",
+            "title": "datumStart"
+          },
+          "datumEinde": {
+            "type": "string",
+            "format": "date",
+            "title": "datumEinde"
+          },
+          "heeft": {
+            "type": "object",
+            "title": "heeft",
+            "$ref": "hotel",
+            "objectConfiguration": {
+              "register": "ggm-economie",
+              "schema": "hotel"
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "verkooppunt": {
+        "slug": "verkooppunt",
+        "title": "Verkooppunt",
+        "version": "2.5.0",
+        "description": "Locatie waar iets wordt verkocht",
+        "required": [
+          "winkelformule"
+        ],
+        "properties": {
+          "winkelformule": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "winkelformule"
+          }
+        },
+        "searchable": true,
+        "hardValidation": false,
+        "allOf": [
+          {
+            "$ref": "vestiging",
+            "objectConfiguration": {
+              "register": "ggm-kern",
+              "schema": "vestiging"
+            }
+          }
+        ]
+      },
+      "werkgelegenheid": {
+        "slug": "werkgelegenheid",
+        "title": "Werkgelegenheid",
+        "version": "2.5.0",
+        "description": "De vraag naar arbeid, te berekenen door de totale productie te delen door de arbeidsproductiviteit per persoon.",
+        "required": [
+          "aantalFulltimeMannen",
+          "aantalFulltimeVrouwen",
+          "aantalParttimeVrouwen",
+          "aantalParttimeMannen",
+          "grootteklasse"
+        ],
+        "properties": {
+          "aantalFulltimeMannen": {
+            "type": "integer",
+            "title": "aantalFulltimeMannen"
+          },
+          "aantalFulltimeVrouwen": {
+            "type": "integer",
+            "title": "aantalFulltimeVrouwen"
+          },
+          "aantalParttimeVrouwen": {
+            "type": "integer",
+            "title": "aantalParttimeVrouwen"
+          },
+          "aantalParttimeMannen": {
+            "type": "integer",
+            "title": "aantalParttimeMannen"
+          },
+          "grootteklasse": {
+            "type": "string",
+            "maxLength": 2,
+            "title": "grootteklasse",
+            "description": "Grootteklasse volgens handboek LISA, zie lisa.nl"
+          },
+          "heeft": {
+            "type": "object",
+            "title": "heeft",
+            "$ref": "vestiging",
+            "objectConfiguration": {
+              "register": "ggm-kern",
+              "schema": "vestiging"
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "winkelvloeroppervlak": {
+        "slug": "winkelvloeroppervlak",
+        "title": "Winkelvloeroppervlak",
+        "version": "2.5.0",
+        "description": "Gemeten oppervlakte in vierkante meters van een winkel",
+        "required": [
+          "winkelvloeroppervlakte",
+          "wVOKlasse",
+          "bronWVO",
+          "leegstand",
+          "aantalKassa"
+        ],
+        "properties": {
+          "winkelvloeroppervlakte": {
+            "type": "integer",
+            "title": "winkelvloeroppervlakte"
+          },
+          "wVOKlasse": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "WVOKlasse"
+          },
+          "bronWVO": {
+            "type": "string",
+            "title": "bronWVO"
+          },
+          "leegstand": {
+            "type": "boolean",
+            "title": "leegstand"
+          },
+          "aantalKassa": {
+            "type": "integer",
+            "title": "aantalKassa"
+          },
+          "heeft": {
+            "type": "object",
+            "title": "heeft",
+            "$ref": "gebouwdobject",
+            "objectConfiguration": {
+              "register": "ggm-kern",
+              "schema": "gebouwdobject"
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      }
+    },
+    "registers": {
+      "ggm-economie": {
+        "slug": "ggm-economie",
+        "title": "GGM - 3 Economie",
+        "version": "2.5.0",
+        "description": "Gemeentelijk Gegevensmodel domain: 3 Economie",
+        "schemas": [
+          "contact",
+          "hotel",
+          "hotelbezoek",
+          "verkooppunt",
+          "werkgelegenheid",
+          "winkelvloeroppervlak"
+        ],
+        "source": "internal"
+      }
+    }
+  }
+}

@@ -1,0 +1,1254 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "GGM - 4 Onderwijs",
+    "description": "OpenRegister configuration for the Gemeentelijk Gegevensmodel (GGM) domain: 4 Onderwijs. Auto-generated from GGM v2.5.0.",
+    "version": "2.5.0"
+  },
+  "x-openregister": {
+    "type": "application",
+    "sourceType": "github",
+    "sourceUrl": "https://github.com/ConductionNL/ggm-openregister",
+    "openregister": "^v0.2.10",
+    "github": {
+      "repo": "ConductionNL/ggm-openregister",
+      "branch": "main",
+      "path": "4-onderwijs.openregister.json"
+    },
+    "description": "Gemeentelijk Gegevensmodel - 4 Onderwijs"
+  },
+  "components": {
+    "schemas": {
+      "aanvraag-leerlingenvervoer": {
+        "slug": "aanvraag-leerlingenvervoer",
+        "title": "Aanvraag Leerlingenvervoer",
+        "version": "2.5.0",
+        "description": "Een aanvraag voor een leerling die recht heeft op vervoer van en naar onderwijs.",
+        "required": [],
+        "properties": {},
+        "searchable": true,
+        "hardValidation": false
+      },
+      "aanvraagofmelding": {
+        "slug": "aanvraagofmelding",
+        "title": "AanvraagOfMelding",
+        "version": "2.5.0",
+        "description": "Komt overeen met een VJV",
+        "required": [
+          "datum",
+          "opmerkingen",
+          "soortVerzuimOfAanvraag",
+          "reden"
+        ],
+        "properties": {
+          "datum": {
+            "type": "string",
+            "format": "date",
+            "title": "datum"
+          },
+          "opmerkingen": {
+            "type": "string",
+            "maxLength": 300,
+            "title": "opmerkingen"
+          },
+          "soortVerzuimOfAanvraag": {
+            "type": "string",
+            "title": "soortVerzuimOfAanvraag",
+            "enum": [
+              "absoluut",
+              "relatief"
+            ]
+          },
+          "reden": {
+            "type": "string",
+            "maxLength": 300,
+            "title": "reden"
+          },
+          "betreft": {
+            "type": "object",
+            "title": "betreft",
+            "$ref": "school",
+            "objectConfiguration": {
+              "register": "ggm-onderwijs",
+              "schema": "school"
+            }
+          },
+          "leidtTot": {
+            "type": "object",
+            "title": "leidtTot",
+            "$ref": "beslissing",
+            "objectConfiguration": {
+              "register": "ggm-onderwijs",
+              "schema": "beslissing"
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false,
+        "allOf": [
+          {
+            "$ref": "aanvraagofmelding",
+            "objectConfiguration": {
+              "register": "ggm-dienstverlening",
+              "schema": "aanvraagofmelding"
+            }
+          }
+        ]
+      },
+      "aanvraagvrijstelling": {
+        "slug": "aanvraagvrijstelling",
+        "title": "AanvraagVrijstelling",
+        "version": "2.5.0",
+        "description": "Vrijstelling van een aanvraag voor leerlingenvervoer",
+        "required": [
+          "datumAanvraag",
+          "buitenlandseSchoollocatie"
+        ],
+        "properties": {
+          "datumAanvraag": {
+            "type": "string",
+            "format": "date",
+            "title": "datumAanvraag"
+          },
+          "buitenlandseSchoollocatie": {
+            "type": "string",
+            "maxLength": 300,
+            "title": "buitenlandseSchoollocatie"
+          }
+        },
+        "searchable": true,
+        "hardValidation": false,
+        "allOf": [
+          {
+            "$ref": "aanvraagofmelding",
+            "objectConfiguration": {
+              "register": "ggm-onderwijs",
+              "schema": "aanvraagofmelding"
+            }
+          }
+        ]
+      },
+      "beschikking-leerlingenvervoer": {
+        "slug": "beschikking-leerlingenvervoer",
+        "title": "Beschikking Leerlingenvervoer",
+        "version": "2.5.0",
+        "description": "Een formeel besluit dat genomen wordt door een bevoegde instantie over het al dan niet toekennen van leerlingenvervoer aan een bepaalde leerling.",
+        "required": [],
+        "properties": {
+          "vervoerder": {
+            "type": "array",
+            "title": "vervoerder",
+            "items": {
+              "type": "object",
+              "$ref": "vervoerder",
+              "objectConfiguration": {
+                "register": "ggm-onderwijs",
+                "schema": "vervoerder"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false,
+        "allOf": [
+          {
+            "$ref": "beslissing",
+            "objectConfiguration": {
+              "register": "ggm-onderwijs",
+              "schema": "beslissing"
+            }
+          }
+        ]
+      },
+      "beslissing": {
+        "slug": "beslissing",
+        "title": "Beslissing",
+        "version": "2.5.0",
+        "description": "Selectie van een voorstelbare werkelijkheid (voorkeursvariant) uit een aantal mogelijke werkelijkheden (varianten) op basis van een verzameling van criteria.",
+        "required": [
+          "datum",
+          "reden",
+          "opmerkingen"
+        ],
+        "properties": {
+          "datum": {
+            "type": "string",
+            "format": "date",
+            "title": "datum"
+          },
+          "reden": {
+            "type": "string",
+            "maxLength": 200,
+            "title": "reden"
+          },
+          "opmerkingen": {
+            "type": "string",
+            "title": "opmerkingen"
+          },
+          "betreft": {
+            "type": "object",
+            "title": "betreft",
+            "$ref": "school",
+            "objectConfiguration": {
+              "register": "ggm-onderwijs",
+              "schema": "school"
+            }
+          },
+          "behandelaar": {
+            "type": "object",
+            "title": "behandelaar",
+            "$ref": "leerplichtambtenaar",
+            "objectConfiguration": {
+              "register": "ggm-onderwijs",
+              "schema": "leerplichtambtenaar"
+            }
+          },
+          "leidtTot": {
+            "type": "object",
+            "title": "leidtTot",
+            "$ref": "aanvraagofmelding",
+            "objectConfiguration": {
+              "register": "ggm-onderwijs",
+              "schema": "aanvraagofmelding"
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "doorgeleiding-om": {
+        "slug": "doorgeleiding-om",
+        "title": "Doorgeleiding OM",
+        "version": "2.5.0",
+        "description": "De overdracht van een leerplichtzaak aan het Openbaar Ministerie voor juridische vervolging.",
+        "required": [
+          "afdoening"
+        ],
+        "properties": {
+          "afdoening": {
+            "type": "string",
+            "maxLength": 300,
+            "title": "afdoening"
+          },
+          "verantwoordelijkOuder": {
+            "type": "array",
+            "title": "verantwoordelijkOuder",
+            "items": {
+              "type": "object",
+              "$ref": "ouder-of-verzorger",
+              "objectConfiguration": {
+                "register": "ggm-onderwijs",
+                "schema": "ouder-of-verzorger"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false,
+        "allOf": [
+          {
+            "$ref": "beslissing",
+            "objectConfiguration": {
+              "register": "ggm-onderwijs",
+              "schema": "beslissing"
+            }
+          }
+        ]
+      },
+      "halt-verwijzing": {
+        "slug": "halt-verwijzing",
+        "title": "HALT-verwijzing",
+        "version": "2.5.0",
+        "description": "Jongeren van 12 tot 18 jaar die strafbare feiten plegen, zoals bijvoorbeeld: winkeldiefstal, vernieling, openbaar dronkenschap of oplichting kunnen naar Halt worden verwezen. In sommige gevallen is daarvoor toestemming nodig van het Openbaar Ministerie.",
+        "required": [
+          "afdoening",
+          "datumRetour",
+          "datumMutatie",
+          "memo"
+        ],
+        "properties": {
+          "afdoening": {
+            "type": "string",
+            "maxLength": 300,
+            "title": "afdoening"
+          },
+          "datumRetour": {
+            "type": "string",
+            "format": "date",
+            "title": "datumRetour"
+          },
+          "datumMutatie": {
+            "type": "string",
+            "format": "date",
+            "title": "datumMutatie"
+          },
+          "memo": {
+            "type": "string",
+            "title": "memo"
+          }
+        },
+        "searchable": true,
+        "hardValidation": false,
+        "allOf": [
+          {
+            "$ref": "beslissing",
+            "objectConfiguration": {
+              "register": "ggm-onderwijs",
+              "schema": "beslissing"
+            }
+          }
+        ]
+      },
+      "klacht-leerlingenvervoer": {
+        "slug": "klacht-leerlingenvervoer",
+        "title": "Klacht Leerlingenvervoer",
+        "version": "2.5.0",
+        "description": "Een uiting van ontevredenheid over het vervoer van leerlingen.",
+        "required": [],
+        "properties": {
+          "betreft": {
+            "type": "object",
+            "title": "betreft",
+            "$ref": "vervoerder",
+            "objectConfiguration": {
+              "register": "ggm-onderwijs",
+              "schema": "vervoerder"
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "leerplichtambtenaar": {
+        "slug": "leerplichtambtenaar",
+        "title": "Leerplichtambtenaar",
+        "version": "2.5.0",
+        "description": "Ambtenaar die toezicht houdt op de uitvoering van de leerplichtwet.",
+        "required": [],
+        "properties": {
+          "opgelegdDoor": {
+            "type": "array",
+            "title": "opgelegdDoor",
+            "items": {
+              "type": "object",
+              "$ref": "procesverbaal-onderwijs",
+              "objectConfiguration": {
+                "register": "ggm-onderwijs",
+                "schema": "procesverbaal-onderwijs"
+              }
+            }
+          },
+          "behandelaar": {
+            "type": "array",
+            "title": "behandelaar",
+            "items": {
+              "type": "object",
+              "$ref": "beslissing",
+              "objectConfiguration": {
+                "register": "ggm-onderwijs",
+                "schema": "beslissing"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false,
+        "allOf": [
+          {
+            "$ref": "medewerker",
+            "objectConfiguration": {
+              "register": "ggm-kern",
+              "schema": "medewerker"
+            }
+          }
+        ]
+      },
+      "procesverbaal-onderwijs": {
+        "slug": "procesverbaal-onderwijs",
+        "title": "Procesverbaal Onderwijs",
+        "version": "2.5.0",
+        "description": "Een officieel document dat een overtreding van de leerplichtwet vastlegt.",
+        "required": [
+          "reden",
+          "opmerkingen",
+          "datumIngelicht",
+          "sanctiesoort",
+          "uitspraak",
+          "proeftijd",
+          "geldboete",
+          "verzuimsoort",
+          "datumZitting",
+          "datumAfgehandeld",
+          "datumUitspraak",
+          "datumEindeProeftijd",
+          "geldboeteVoorwaardelijk"
+        ],
+        "properties": {
+          "reden": {
+            "type": "string",
+            "maxLength": 255,
+            "title": "reden"
+          },
+          "opmerkingen": {
+            "type": "string",
+            "title": "opmerkingen"
+          },
+          "datumIngelicht": {
+            "type": "string",
+            "format": "date",
+            "title": "datumIngelicht"
+          },
+          "sanctiesoort": {
+            "type": "string",
+            "maxLength": 100,
+            "title": "sanctiesoort"
+          },
+          "uitspraak": {
+            "type": "string",
+            "maxLength": 500,
+            "title": "uitspraak"
+          },
+          "proeftijd": {
+            "type": "integer",
+            "title": "proeftijd",
+            "description": "Proeftijd in dagen"
+          },
+          "geldboete": {
+            "type": "number",
+            "title": "geldboete"
+          },
+          "verzuimsoort": {
+            "type": "string",
+            "title": "verzuimsoort",
+            "enum": [
+              "absoluut",
+              "relatief"
+            ]
+          },
+          "datumZitting": {
+            "type": "string",
+            "format": "date",
+            "title": "datumZitting"
+          },
+          "datumAfgehandeld": {
+            "type": "string",
+            "format": "date",
+            "title": "datumAfgehandeld"
+          },
+          "datumUitspraak": {
+            "type": "string",
+            "format": "date",
+            "title": "datumUitspraak"
+          },
+          "datumEindeProeftijd": {
+            "type": "string",
+            "format": "date",
+            "title": "datumEindeProeftijd"
+          },
+          "geldboeteVoorwaardelijk": {
+            "type": "string",
+            "title": "geldboeteVoorwaardelijk",
+            "enum": [
+              "Ja",
+              "Nee",
+              "Onbekend",
+              "Leeg"
+            ]
+          },
+          "betreftLeerling": {
+            "type": "object",
+            "title": "betreftLeerling",
+            "$ref": "leerling",
+            "objectConfiguration": {
+              "register": "ggm-onderwijs",
+              "schema": "leerling"
+            }
+          },
+          "verantwoordelijkeOuder": {
+            "type": "array",
+            "title": "verantwoordelijkeOuder",
+            "items": {
+              "type": "object",
+              "$ref": "ouder-of-verzorger",
+              "objectConfiguration": {
+                "register": "ggm-onderwijs",
+                "schema": "ouder-of-verzorger"
+              }
+            }
+          },
+          "opgelegdDoor": {
+            "type": "object",
+            "title": "opgelegdDoor",
+            "$ref": "leerplichtambtenaar",
+            "objectConfiguration": {
+              "register": "ggm-onderwijs",
+              "schema": "leerplichtambtenaar"
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false,
+        "allOf": [
+          {
+            "$ref": "beslissing",
+            "objectConfiguration": {
+              "register": "ggm-onderwijs",
+              "schema": "beslissing"
+            }
+          }
+        ]
+      },
+      "verlofaanvraag": {
+        "slug": "verlofaanvraag",
+        "title": "Verlofaanvraag",
+        "version": "2.5.0",
+        "description": "Een verzoek om toestemming te krijgen iets te doen, bijvoorbeeld vakantie of studie",
+        "required": [
+          "datumStart",
+          "datumTot",
+          "soortVerlof"
+        ],
+        "properties": {
+          "datumStart": {
+            "type": "string",
+            "format": "date",
+            "title": "datumStart"
+          },
+          "datumTot": {
+            "type": "string",
+            "format": "date",
+            "title": "datumTot"
+          },
+          "soortVerlof": {
+            "type": "string",
+            "maxLength": 200,
+            "title": "soortVerlof"
+          }
+        },
+        "searchable": true,
+        "hardValidation": false,
+        "allOf": [
+          {
+            "$ref": "aanvraagofmelding",
+            "objectConfiguration": {
+              "register": "ggm-onderwijs",
+              "schema": "aanvraagofmelding"
+            }
+          }
+        ]
+      },
+      "vervoerder": {
+        "slug": "vervoerder",
+        "title": "Vervoerder",
+        "version": "2.5.0",
+        "description": "Degene die openbaar vervoer of besloten busvervoer verricht, niet in de hoedanigheid van bestuurder van een auto, bus, trein, metro, tram of een via een geleidesysteem voortbewogen voertuig.",
+        "required": [],
+        "properties": {
+          "betreft": {
+            "type": "array",
+            "title": "betreft",
+            "items": {
+              "type": "object",
+              "$ref": "klacht-leerlingenvervoer",
+              "objectConfiguration": {
+                "register": "ggm-onderwijs",
+                "schema": "klacht-leerlingenvervoer"
+              }
+            }
+          },
+          "vervoerder": {
+            "type": "array",
+            "title": "vervoerder",
+            "items": {
+              "type": "object",
+              "$ref": "beschikking-leerlingenvervoer",
+              "objectConfiguration": {
+                "register": "ggm-onderwijs",
+                "schema": "beschikking-leerlingenvervoer"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false,
+        "allOf": [
+          {
+            "$ref": "leverancier",
+            "objectConfiguration": {
+              "register": "ggm-interne-organisatie",
+              "schema": "leverancier"
+            }
+          }
+        ]
+      },
+      "verzuimmelding": {
+        "slug": "verzuimmelding",
+        "title": "Verzuimmelding",
+        "version": "2.5.0",
+        "description": "Een melding dat een leerling niet op school verschijnt. De school moet actie ondernemen naar de leerling (en zijn ouders). Een school moet het verzuim melden bij de gemeente.",
+        "required": [
+          "datumStart",
+          "datumEinde",
+          "voorstelSchool"
+        ],
+        "properties": {
+          "datumStart": {
+            "type": "string",
+            "format": "date",
+            "title": "datumStart"
+          },
+          "datumEinde": {
+            "type": "string",
+            "format": "date",
+            "title": "datumEinde"
+          },
+          "voorstelSchool": {
+            "type": "string",
+            "maxLength": 300,
+            "title": "voorstelSchool"
+          },
+          "heeft": {
+            "type": "object",
+            "title": "heeft",
+            "$ref": "leerling",
+            "objectConfiguration": {
+              "register": "ggm-onderwijs",
+              "schema": "leerling"
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false,
+        "allOf": [
+          {
+            "$ref": "aanvraagofmelding",
+            "objectConfiguration": {
+              "register": "ggm-onderwijs",
+              "schema": "aanvraagofmelding"
+            }
+          }
+        ]
+      },
+      "vrijstelling": {
+        "slug": "vrijstelling",
+        "title": "Vrijstelling",
+        "version": "2.5.0",
+        "description": "Een formeel besluit waarbij een leerling wordt ontheven van de leerplicht.",
+        "required": [
+          "datumStart",
+          "datumEinde",
+          "aanvraagToegekend",
+          "verzuimsoort",
+          "buitenlandseSchoollocatie"
+        ],
+        "properties": {
+          "datumStart": {
+            "type": "string",
+            "format": "date",
+            "title": "datumStart"
+          },
+          "datumEinde": {
+            "type": "string",
+            "format": "date",
+            "title": "datumEinde"
+          },
+          "aanvraagToegekend": {
+            "type": "string",
+            "title": "aanvraagToegekend",
+            "enum": [
+              "Ja",
+              "Nee",
+              "Onbekend",
+              "Leeg"
+            ]
+          },
+          "verzuimsoort": {
+            "type": "string",
+            "title": "verzuimsoort",
+            "enum": [
+              "absoluut",
+              "relatief"
+            ]
+          },
+          "buitenlandseSchoollocatie": {
+            "type": "string",
+            "maxLength": 500,
+            "title": "buitenlandseSchoollocatie"
+          },
+          "heeft": {
+            "type": "object",
+            "title": "heeft",
+            "$ref": "leerling",
+            "objectConfiguration": {
+              "register": "ggm-onderwijs",
+              "schema": "leerling"
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false,
+        "allOf": [
+          {
+            "$ref": "beslissing",
+            "objectConfiguration": {
+              "register": "ggm-onderwijs",
+              "schema": "beslissing"
+            }
+          }
+        ]
+      },
+      "ziekmelding-leerlingenvervoer": {
+        "slug": "ziekmelding-leerlingenvervoer",
+        "title": "Ziekmelding Leerlingenvervoer",
+        "version": "2.5.0",
+        "description": "Een melding van een zieke leerling die recht heeft op vervoer van en naar onderwijs.",
+        "required": [],
+        "properties": {
+          "betreft": {
+            "type": "object",
+            "title": "betreft",
+            "$ref": "leerling",
+            "objectConfiguration": {
+              "register": "ggm-onderwijs",
+              "schema": "leerling"
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "inschrijving": {
+        "slug": "inschrijving",
+        "title": "Inschrijving",
+        "version": "2.5.0",
+        "description": "Deelname van iemand aan een opleiding bij een onderwijsinstelling.",
+        "required": [
+          "datum"
+        ],
+        "properties": {
+          "datum": {
+            "type": "string",
+            "format": "date",
+            "title": "datum"
+          },
+          "heeft": {
+            "type": "object",
+            "title": "heeft",
+            "$ref": "leerling",
+            "objectConfiguration": {
+              "register": "ggm-onderwijs",
+              "schema": "leerling"
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "leerjaar": {
+        "slug": "leerjaar",
+        "title": "Leerjaar",
+        "version": "2.5.0",
+        "description": "Is de codering van het jaar of het niveau waarin de leerling onderwijs volgt.",
+        "required": [
+          "jaarStart",
+          "jaarEinde"
+        ],
+        "properties": {
+          "jaarStart": {
+            "type": "integer",
+            "title": "jaarStart"
+          },
+          "jaarEinde": {
+            "type": "integer",
+            "title": "jaarEinde"
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "leerling": {
+        "slug": "leerling",
+        "title": "Leerling",
+        "version": "2.5.0",
+        "description": "Mens die een opleiding volgt, heeft gevolgd of gaat volgen of opgaat of is opgegaan voor een toets. (Bron: KOI)",
+        "required": [
+          "kwetsbareJongere"
+        ],
+        "properties": {
+          "kwetsbareJongere": {
+            "type": "string",
+            "title": "kwetsbareJongere",
+            "enum": [
+              "Ja",
+              "Nee",
+              "Onbekend",
+              "Leeg"
+            ]
+          },
+          "heeft": {
+            "type": "array",
+            "title": "heeft",
+            "items": {
+              "type": "object",
+              "$ref": "uitschrijving",
+              "objectConfiguration": {
+                "register": "ggm-onderwijs",
+                "schema": "uitschrijving"
+              }
+            }
+          },
+          "betreft": {
+            "type": "array",
+            "title": "betreft",
+            "items": {
+              "type": "object",
+              "$ref": "ziekmelding-leerlingenvervoer",
+              "objectConfiguration": {
+                "register": "ggm-onderwijs",
+                "schema": "ziekmelding-leerlingenvervoer"
+              }
+            }
+          },
+          "betreftLeerling": {
+            "type": "array",
+            "title": "betreftLeerling",
+            "items": {
+              "type": "object",
+              "$ref": "procesverbaal-onderwijs",
+              "objectConfiguration": {
+                "register": "ggm-onderwijs",
+                "schema": "procesverbaal-onderwijs"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false,
+        "allOf": [
+          {
+            "$ref": "ingeschrevenpersoon",
+            "objectConfiguration": {
+              "register": "ggm-kern",
+              "schema": "ingeschrevenpersoon"
+            }
+          }
+        ]
+      },
+      "locatie": {
+        "slug": "locatie",
+        "title": "Locatie",
+        "version": "2.5.0",
+        "description": "De locatie beschrijft middels co&#246;rdinaten de ruimtelijke dimensie of ruimtelijke afbakening van een regel of van een objecttype die in de regel beschreven wordt. (CIMOW)",
+        "required": [
+          "adres"
+        ],
+        "properties": {
+          "adres": {
+            "type": "string",
+            "title": "adres"
+          },
+          "schoolHeeft": {
+            "type": "object",
+            "title": "schoolHeeft",
+            "$ref": "school",
+            "objectConfiguration": {
+              "register": "ggm-onderwijs",
+              "schema": "school"
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false,
+        "allOf": [
+          {
+            "$ref": "vastgoedobject",
+            "objectConfiguration": {
+              "register": "ggm-interne-organisatie",
+              "schema": "vastgoedobject"
+            }
+          }
+        ]
+      },
+      "loopbaanstap": {
+        "slug": "loopbaanstap",
+        "title": "Loopbaanstap",
+        "version": "2.5.0",
+        "description": "Een logische en ook uitdagende stap naar een volgende functie binnen dezelfde functiefamilie of een andere, op hetzelfde schaalniveau of op een schaalniveau hoger.",
+        "required": [
+          "schooljaar",
+          "onderwijstype",
+          "klas"
+        ],
+        "properties": {
+          "schooljaar": {
+            "type": "string",
+            "title": "schooljaar"
+          },
+          "onderwijstype": {
+            "type": "string",
+            "title": "onderwijstype",
+            "enum": [
+              "VMBO-T",
+              "VMBO-K",
+              "VMBO-B",
+              "HAVO",
+              "VWO"
+            ]
+          },
+          "klas": {
+            "type": "integer",
+            "title": "klas"
+          },
+          "onderwijsloopbaan": {
+            "type": "object",
+            "title": "onderwijsloopbaan",
+            "$ref": "onderwijsloopbaan",
+            "objectConfiguration": {
+              "register": "ggm-onderwijs",
+              "schema": "onderwijsloopbaan"
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "onderwijsloopbaan": {
+        "slug": "onderwijsloopbaan",
+        "title": "Onderwijsloopbaan",
+        "version": "2.5.0",
+        "description": "Loopbaan als leerling in het onderwijs; loopbaan als leerling op school; tijd die iemand als leerling heeft doorgebracht op school, vaak met de bijgedachte aan de daarbij opgedane kennis en ervaring; tijd die men schoolgegaan heeft; onderwijscarri&#232;re; schoolloopbaan; schoolcarri&#232;re; schooltijd; de schooljaren",
+        "required": [],
+        "properties": {
+          "loopbaanstap": {
+            "type": "array",
+            "title": "loopbaanstap",
+            "items": {
+              "type": "object",
+              "$ref": "loopbaanstap",
+              "objectConfiguration": {
+                "register": "ggm-onderwijs",
+                "schema": "loopbaanstap"
+              }
+            }
+          },
+          "kent": {
+            "type": "array",
+            "title": "kent",
+            "items": {
+              "type": "object",
+              "$ref": "school",
+              "objectConfiguration": {
+                "register": "ggm-onderwijs",
+                "schema": "school"
+              }
+            }
+          },
+          "heeft": {
+            "type": "object",
+            "title": "heeft",
+            "$ref": "leerling",
+            "objectConfiguration": {
+              "register": "ggm-onderwijs",
+              "schema": "leerling"
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "onderwijsniveau": {
+        "slug": "onderwijsniveau",
+        "title": "Onderwijsniveau",
+        "version": "2.5.0",
+        "description": "De hoogte van een soort onderwijs in relatie tot andere soorten onderwijs",
+        "required": [],
+        "properties": {},
+        "searchable": true,
+        "hardValidation": false
+      },
+      "onderwijssoort": {
+        "slug": "onderwijssoort",
+        "title": "Onderwijssoort",
+        "version": "2.5.0",
+        "description": "Typologie voor onderwijs",
+        "required": [
+          "onderwijstype",
+          "omschrijving"
+        ],
+        "properties": {
+          "onderwijstype": {
+            "type": "string",
+            "title": "onderwijstype",
+            "enum": [
+              "VMBO-T",
+              "VMBO-K",
+              "VMBO-B",
+              "HAVO",
+              "VWO"
+            ]
+          },
+          "omschrijving": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "omschrijving"
+          },
+          "heeft": {
+            "type": "array",
+            "title": "heeft",
+            "items": {
+              "type": "object",
+              "$ref": "school",
+              "objectConfiguration": {
+                "register": "ggm-onderwijs",
+                "schema": "school"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "ouder-of-verzorger": {
+        "slug": "ouder-of-verzorger",
+        "title": "Ouder Of Verzorger",
+        "version": "2.5.0",
+        "description": "Een persoon die wettelijk verantwoordelijk is voor de zorg en opvoeding van een kind.",
+        "required": [],
+        "properties": {
+          "verantwoordelijkeOuder": {
+            "type": "array",
+            "title": "verantwoordelijkeOuder",
+            "items": {
+              "type": "object",
+              "$ref": "procesverbaal-onderwijs",
+              "objectConfiguration": {
+                "register": "ggm-onderwijs",
+                "schema": "procesverbaal-onderwijs"
+              }
+            }
+          },
+          "verantwoordelijkOuder": {
+            "type": "array",
+            "title": "verantwoordelijkOuder",
+            "items": {
+              "type": "object",
+              "$ref": "doorgeleiding-om",
+              "objectConfiguration": {
+                "register": "ggm-onderwijs",
+                "schema": "doorgeleiding-om"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false,
+        "allOf": [
+          {
+            "$ref": "ingeschrevenpersoon",
+            "objectConfiguration": {
+              "register": "ggm-kern",
+              "schema": "ingeschrevenpersoon"
+            }
+          }
+        ]
+      },
+      "school": {
+        "slug": "school",
+        "title": "School",
+        "version": "2.5.0",
+        "description": "Gebouw in gebruik voor basis, middelbaar of hoger onderwijs.",
+        "required": [
+          "naam"
+        ],
+        "properties": {
+          "naam": {
+            "type": "string",
+            "maxLength": 200,
+            "title": "naam"
+          },
+          "gebruikt": {
+            "type": "array",
+            "title": "gebruikt",
+            "items": {
+              "type": "object",
+              "$ref": "sportlocatie",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "sportlocatie"
+              }
+            }
+          },
+          "heeft": {
+            "type": "array",
+            "title": "heeft",
+            "items": {
+              "type": "object",
+              "$ref": "uitschrijving",
+              "objectConfiguration": {
+                "register": "ggm-onderwijs",
+                "schema": "uitschrijving"
+              }
+            }
+          },
+          "kent": {
+            "type": "array",
+            "title": "kent",
+            "items": {
+              "type": "object",
+              "$ref": "onderwijsloopbaan",
+              "objectConfiguration": {
+                "register": "ggm-onderwijs",
+                "schema": "onderwijsloopbaan"
+              }
+            }
+          },
+          "schoolHeeft": {
+            "type": "array",
+            "title": "schoolHeeft",
+            "items": {
+              "type": "object",
+              "$ref": "locatie",
+              "objectConfiguration": {
+                "register": "ggm-onderwijs",
+                "schema": "locatie"
+              }
+            }
+          },
+          "betreft": {
+            "type": "array",
+            "title": "betreft",
+            "items": {
+              "type": "object",
+              "$ref": "beslissing",
+              "objectConfiguration": {
+                "register": "ggm-onderwijs",
+                "schema": "beslissing"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false,
+        "allOf": [
+          {
+            "$ref": "nietnatuurlijkpersoon",
+            "objectConfiguration": {
+              "register": "ggm-kern",
+              "schema": "nietnatuurlijkpersoon"
+            }
+          },
+          {
+            "$ref": "nietnatuurlijkpersoon",
+            "objectConfiguration": {
+              "register": "ggm-kern",
+              "schema": "nietnatuurlijkpersoon"
+            }
+          }
+        ]
+      },
+      "startkwalificatie": {
+        "slug": "startkwalificatie",
+        "title": "Startkwalificatie",
+        "version": "2.5.0",
+        "description": "Diploma van een opleiding als bedoeld in de WEB of een diploma hoger algemeen voortgezet onderwijs of voorbereidend wetenschappelijk onderwijs als bedoeld in de WVO;",
+        "required": [
+          "datumBehaald"
+        ],
+        "properties": {
+          "datumBehaald": {
+            "type": "string",
+            "format": "date",
+            "title": "datumBehaald"
+          },
+          "heeft": {
+            "type": "object",
+            "title": "heeft",
+            "$ref": "leerling",
+            "objectConfiguration": {
+              "register": "ggm-onderwijs",
+              "schema": "leerling"
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "uitschrijving": {
+        "slug": "uitschrijving",
+        "title": "Uitschrijving",
+        "version": "2.5.0",
+        "description": "Beeindiging van een inschrijving van een leerling bij een school",
+        "required": [
+          "datum",
+          "diplomaBehaald"
+        ],
+        "properties": {
+          "datum": {
+            "type": "string",
+            "format": "date",
+            "title": "datum"
+          },
+          "diplomaBehaald": {
+            "type": "string",
+            "title": "diplomaBehaald",
+            "enum": [
+              "Ja",
+              "Nee",
+              "Onbekend",
+              "Leeg"
+            ]
+          },
+          "heeft": {
+            "type": "object",
+            "title": "heeft",
+            "$ref": "school",
+            "objectConfiguration": {
+              "register": "ggm-onderwijs",
+              "schema": "school"
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      }
+    },
+    "registers": {
+      "ggm-onderwijs": {
+        "slug": "ggm-onderwijs",
+        "title": "GGM - 4 Onderwijs",
+        "version": "2.5.0",
+        "description": "Gemeentelijk Gegevensmodel domain: 4 Onderwijs",
+        "schemas": [
+          "aanvraag-leerlingenvervoer",
+          "aanvraagofmelding",
+          "aanvraagvrijstelling",
+          "beschikking-leerlingenvervoer",
+          "beslissing",
+          "doorgeleiding-om",
+          "halt-verwijzing",
+          "klacht-leerlingenvervoer",
+          "leerplichtambtenaar",
+          "procesverbaal-onderwijs",
+          "verlofaanvraag",
+          "vervoerder",
+          "verzuimmelding",
+          "vrijstelling",
+          "ziekmelding-leerlingenvervoer",
+          "inschrijving",
+          "leerjaar",
+          "leerling",
+          "locatie",
+          "loopbaanstap",
+          "onderwijsloopbaan",
+          "onderwijsniveau",
+          "onderwijssoort",
+          "ouder-of-verzorger",
+          "school",
+          "startkwalificatie",
+          "uitschrijving"
+        ],
+        "source": "internal"
+      }
+    }
+  }
+}

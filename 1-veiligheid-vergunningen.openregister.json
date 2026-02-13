@@ -1,0 +1,1772 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "GGM - 1 Veiligheid en Vergunningen",
+    "description": "OpenRegister configuration for the Gemeentelijk Gegevensmodel (GGM) domain: 1 Veiligheid en Vergunningen. Auto-generated from GGM v2.5.0.",
+    "version": "2.5.0"
+  },
+  "x-openregister": {
+    "type": "application",
+    "sourceType": "github",
+    "sourceUrl": "https://github.com/ConductionNL/ggm-openregister",
+    "openregister": "^v0.2.10",
+    "github": {
+      "repo": "ConductionNL/ggm-openregister",
+      "branch": "main",
+      "path": "1-veiligheid-vergunningen.openregister.json"
+    },
+    "description": "Gemeentelijk Gegevensmodel - 1 Veiligheid en Vergunningen"
+  },
+  "components": {
+    "schemas": {
+      "activiteit-omgevingswet": {
+        "slug": "activiteit-omgevingswet",
+        "title": "Activiteit Omgevingswet",
+        "version": "2.5.0",
+        "description": "Ieder menselijk handelen waarbij, of ieder menselijk nalaten waardoor een verandering of effect in de (fysieke) leefomgeving wordt of kan worden bewerkstelligd.",
+        "required": [
+          "omschrijving"
+        ],
+        "properties": {
+          "omschrijving": {
+            "type": "string",
+            "maxLength": 200,
+            "title": "omschrijving"
+          },
+          "heeft": {
+            "type": "array",
+            "title": "heeft",
+            "items": {
+              "type": "object",
+              "$ref": "vthzaak",
+              "objectConfiguration": {
+                "register": "ggm-veiligheid-vergunningen",
+                "schema": "vthzaak"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "aomstatus": {
+        "slug": "aomstatus",
+        "title": "AOMStatus",
+        "version": "2.5.0",
+        "description": "GGM entity: AOMStatus",
+        "required": [
+          "datumBeginStatus",
+          "datumEindeStatus",
+          "status",
+          "statusVolgorde",
+          "statuscode"
+        ],
+        "properties": {
+          "datumBeginStatus": {
+            "type": "string",
+            "format": "date",
+            "title": "datumBeginStatus"
+          },
+          "datumEindeStatus": {
+            "type": "string",
+            "format": "date",
+            "title": "datumEindeStatus"
+          },
+          "status": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "status"
+          },
+          "statusVolgorde": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "statusVolgorde"
+          },
+          "statuscode": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "statuscode"
+          },
+          "heeft": {
+            "type": "object",
+            "title": "heeft",
+            "$ref": "aanvraagofmelding",
+            "objectConfiguration": {
+              "register": "ggm-dienstverlening",
+              "schema": "aanvraagofmelding"
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "bevinding": {
+        "slug": "bevinding",
+        "title": "Bevinding",
+        "version": "2.5.0",
+        "description": "Een *bevinding* is de uitkomst van een waarneming of onderzoek die aangeeft wat is geconstateerd bij beoordeling of inspectie.",
+        "required": [
+          "controleElement",
+          "controleniveau",
+          "resultaat",
+          "risico",
+          "diepte",
+          "activiteit",
+          "fase",
+          "datumAanmaak",
+          "aangemaaktDoor",
+          "datumMutatie",
+          "gemuteerdDoor"
+        ],
+        "properties": {
+          "controleElement": {
+            "type": "string",
+            "maxLength": 50,
+            "title": "controleElement"
+          },
+          "controleniveau": {
+            "type": "string",
+            "maxLength": 50,
+            "title": "controleniveau"
+          },
+          "resultaat": {
+            "type": "string",
+            "maxLength": 50,
+            "title": "resultaat"
+          },
+          "risico": {
+            "type": "string",
+            "maxLength": 50,
+            "title": "risico"
+          },
+          "diepte": {
+            "type": "string",
+            "maxLength": 20,
+            "title": "diepte"
+          },
+          "activiteit": {
+            "type": "string",
+            "maxLength": 50,
+            "title": "activiteit"
+          },
+          "fase": {
+            "type": "string",
+            "maxLength": 20,
+            "title": "fase"
+          },
+          "datumAanmaak": {
+            "type": "string",
+            "format": "date",
+            "title": "datumAanmaak"
+          },
+          "aangemaaktDoor": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "aangemaaktDoor"
+          },
+          "datumMutatie": {
+            "type": "string",
+            "format": "date",
+            "title": "datumMutatie"
+          },
+          "gemuteerdDoor": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "gemuteerdDoor"
+          },
+          "bevinding": {
+            "type": "array",
+            "title": "bevinding",
+            "items": {
+              "type": "object",
+              "$ref": "bevinding",
+              "objectConfiguration": {
+                "register": "ggm-veiligheid-vergunningen",
+                "schema": "bevinding"
+              }
+            }
+          },
+          "heeft": {
+            "type": "array",
+            "title": "heeft",
+            "items": {
+              "type": "object",
+              "$ref": "inspectie",
+              "objectConfiguration": {
+                "register": "ggm-veiligheid-vergunningen",
+                "schema": "inspectie"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "boa": {
+        "slug": "boa",
+        "title": "BOA",
+        "version": "2.5.0",
+        "description": "Een buitengewoon opsporingsambtenaar (boa) is een ambtenaar met een specifieke opsporingsbevoegdheid.",
+        "required": [],
+        "properties": {
+          "verbalisant": {
+            "type": "array",
+            "title": "verbalisant",
+            "items": {
+              "type": "object",
+              "$ref": "vth-melding",
+              "objectConfiguration": {
+                "register": "ggm-veiligheid-vergunningen",
+                "schema": "vth-melding"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "combibon": {
+        "slug": "combibon",
+        "title": "Combibon",
+        "version": "2.5.0",
+        "description": "Een Combibon is een modelformulier dat handhavende ambtenaren gebruiken om geconstateerde overtredingen en de gekozen afdoeningsmodaliteit (bijv. bekeuring of strafbeschikking) vast te leggen.",
+        "required": [
+          "sanctie"
+        ],
+        "properties": {
+          "sanctie": {
+            "type": "string",
+            "maxLength": 250,
+            "title": "sanctie"
+          }
+        },
+        "searchable": true,
+        "hardValidation": false,
+        "allOf": [
+          {
+            "$ref": "vth-melding",
+            "objectConfiguration": {
+              "register": "ggm-veiligheid-vergunningen",
+              "schema": "vth-melding"
+            }
+          }
+        ]
+      },
+      "fietsregistratie": {
+        "slug": "fietsregistratie",
+        "title": "Fietsregistratie",
+        "version": "2.5.0",
+        "description": "Adminstreren van fietsen",
+        "required": [
+          "verwijderd",
+          "gelabeld"
+        ],
+        "properties": {
+          "verwijderd": {
+            "type": "boolean",
+            "title": "verwijderd"
+          },
+          "gelabeld": {
+            "type": "boolean",
+            "title": "gelabeld"
+          }
+        },
+        "searchable": true,
+        "hardValidation": false,
+        "allOf": [
+          {
+            "$ref": "vth-melding",
+            "objectConfiguration": {
+              "register": "ggm-veiligheid-vergunningen",
+              "schema": "vth-melding"
+            }
+          }
+        ]
+      },
+      "grondslag": {
+        "slug": "grondslag",
+        "title": "Grondslag",
+        "version": "2.5.0",
+        "description": "Een *grondslag* is de juridische of normatieve basis waarop een besluit, handeling of rechtspraak steunt; het is hetgeen zijn **basis vindt in wetgeving of andere geldende rechtsregels**.",
+        "required": [
+          "omschrijving",
+          "code"
+        ],
+        "properties": {
+          "omschrijving": {
+            "type": "string",
+            "maxLength": 200,
+            "title": "omschrijving"
+          },
+          "code": {
+            "type": "string",
+            "maxLength": 10,
+            "title": "code"
+          },
+          "heeft": {
+            "type": "array",
+            "title": "heeft",
+            "items": {
+              "type": "object",
+              "$ref": "zaak",
+              "objectConfiguration": {
+                "register": "ggm-kern",
+                "schema": "zaak"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "heffinggrondslag": {
+        "slug": "heffinggrondslag",
+        "title": "Heffinggrondslag",
+        "version": "2.5.0",
+        "description": "De maatstaf waarop een belasting is gebaseerd, het bedrag op basis waarvan een bepaalde belasting wordt geheven of de premie voor sociale zekerheid wordt vastgesteld.",
+        "required": [
+          "domein",
+          "hoofdstuk",
+          "paragraaf",
+          "omschrijving",
+          "bedrag"
+        ],
+        "properties": {
+          "domein": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "domein"
+          },
+          "hoofdstuk": {
+            "type": "integer",
+            "title": "hoofdstuk"
+          },
+          "paragraaf": {
+            "type": "string",
+            "maxLength": 8,
+            "title": "paragraaf"
+          },
+          "omschrijving": {
+            "type": "string",
+            "maxLength": 250,
+            "title": "omschrijving"
+          },
+          "bedrag": {
+            "type": "number",
+            "title": "bedrag"
+          },
+          "vermeldIn": {
+            "type": "object",
+            "title": "vermeldIn",
+            "$ref": "heffingsverordening",
+            "objectConfiguration": {
+              "register": "ggm-veiligheid-vergunningen",
+              "schema": "heffingsverordening"
+            }
+          },
+          "heeft": {
+            "type": "array",
+            "title": "heeft",
+            "items": {
+              "type": "object",
+              "$ref": "activiteit-omgevingswet",
+              "objectConfiguration": {
+                "register": "ggm-veiligheid-vergunningen",
+                "schema": "activiteit-omgevingswet"
+              }
+            }
+          },
+          "heeftGrondslag": {
+            "type": "array",
+            "title": "heeftGrondslag",
+            "items": {
+              "type": "object",
+              "$ref": "heffing",
+              "objectConfiguration": {
+                "register": "ggm-kern",
+                "schema": "heffing"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "heffingsverordening": {
+        "slug": "heffingsverordening",
+        "title": "Heffingsverordening",
+        "version": "2.5.0",
+        "description": "Een *heffingsverordening* is een door de gemeenteraad vastgestelde verordening die de **heffing en invordering van gemeentelijke belastingen en rechten** regelt, zoals afvalstoffenheffing, precariobelasting of marktgelden.",
+        "required": [],
+        "properties": {
+          "vermeldIn": {
+            "type": "array",
+            "title": "vermeldIn",
+            "items": {
+              "type": "object",
+              "$ref": "heffinggrondslag",
+              "objectConfiguration": {
+                "register": "ggm-veiligheid-vergunningen",
+                "schema": "heffinggrondslag"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false,
+        "allOf": [
+          {
+            "$ref": "document",
+            "objectConfiguration": {
+              "register": "ggm-kern",
+              "schema": "document"
+            }
+          }
+        ]
+      },
+      "indiener": {
+        "slug": "indiener",
+        "title": "Indiener",
+        "version": "2.5.0",
+        "description": "Persoon die meldiing of aanvraag doet",
+        "required": [],
+        "properties": {
+          "ingediendDoor": {
+            "type": "array",
+            "title": "ingediendDoor",
+            "items": {
+              "type": "object",
+              "$ref": "aanvraagofmelding",
+              "objectConfiguration": {
+                "register": "ggm-dienstverlening",
+                "schema": "aanvraagofmelding"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false,
+        "allOf": [
+          {
+            "$ref": "rechtspersoon",
+            "objectConfiguration": {
+              "register": "ggm-kern",
+              "schema": "rechtspersoon"
+            }
+          }
+        ]
+      },
+      "inspectie": {
+        "slug": "inspectie",
+        "title": "Inspectie",
+        "version": "2.5.0",
+        "description": "het inwinnen, verwerken en interpreteren van informatie met het doel om de momentane toestand van de boezemkade vast te stellen.",
+        "required": [
+          "datumInspectie",
+          "inspectietype",
+          "datumGepland",
+          "status",
+          "kenmerk",
+          "omschrijving",
+          "opmerkingen",
+          "datumAanmaak",
+          "aangemaaktDoor",
+          "datumMutatie",
+          "gemuteerdDoor"
+        ],
+        "properties": {
+          "datumInspectie": {
+            "type": "string",
+            "format": "date",
+            "title": "datumInspectie"
+          },
+          "inspectietype": {
+            "type": "string",
+            "maxLength": 50,
+            "title": "inspectietype"
+          },
+          "datumGepland": {
+            "type": "string",
+            "format": "date",
+            "title": "datumGepland"
+          },
+          "status": {
+            "type": "string",
+            "maxLength": 20,
+            "title": "status"
+          },
+          "kenmerk": {
+            "type": "string",
+            "maxLength": 20,
+            "title": "kenmerk"
+          },
+          "omschrijving": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "omschrijving"
+          },
+          "opmerkingen": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "opmerkingen"
+          },
+          "datumAanmaak": {
+            "type": "string",
+            "format": "date",
+            "title": "datumAanmaak"
+          },
+          "aangemaaktDoor": {
+            "type": "string",
+            "maxLength": 50,
+            "title": "aangemaaktDoor"
+          },
+          "datumMutatie": {
+            "type": "string",
+            "format": "date",
+            "title": "datumMutatie"
+          },
+          "gemuteerdDoor": {
+            "type": "string",
+            "maxLength": 50,
+            "title": "gemuteerdDoor"
+          },
+          "heeft": {
+            "type": "array",
+            "title": "heeft",
+            "items": {
+              "type": "object",
+              "$ref": "vthzaak",
+              "objectConfiguration": {
+                "register": "ggm-veiligheid-vergunningen",
+                "schema": "vthzaak"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "kosten": {
+        "slug": "kosten",
+        "title": "Kosten",
+        "version": "2.5.0",
+        "description": "*Kosten* zijn de prijs of uitgaven die men moet betalen voor het gebruik, verkrijgen of verbruiken van een product, dienst of middel, doorgaans uitgedrukt in geld.",
+        "required": [
+          "type",
+          "omschrijving",
+          "opBasisVanGrondslag",
+          "naam",
+          "aantal",
+          "bedrag",
+          "bedragTotaal",
+          "vastgesteldBedrag",
+          "tarief",
+          "eenheid",
+          "datumAanmaak",
+          "aangemaaktDoor",
+          "geaccordeerd",
+          "gefactureerdOp",
+          "datumMutatie",
+          "gemuteerdDoor"
+        ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "maxLength": 50,
+            "title": "type"
+          },
+          "omschrijving": {
+            "type": "string",
+            "title": "omschrijving"
+          },
+          "opBasisVanGrondslag": {
+            "type": "string",
+            "maxLength": 50,
+            "title": "opBasisVanGrondslag"
+          },
+          "naam": {
+            "type": "string",
+            "maxLength": 20,
+            "title": "naam"
+          },
+          "aantal": {
+            "type": "string",
+            "maxLength": 20,
+            "title": "aantal"
+          },
+          "bedrag": {
+            "type": "number",
+            "title": "bedrag"
+          },
+          "bedragTotaal": {
+            "type": "number",
+            "title": "bedragTotaal"
+          },
+          "vastgesteldBedrag": {
+            "type": "number",
+            "title": "vastgesteldBedrag"
+          },
+          "tarief": {
+            "type": "number",
+            "title": "tarief"
+          },
+          "eenheid": {
+            "type": "string",
+            "maxLength": 20,
+            "title": "eenheid"
+          },
+          "datumAanmaak": {
+            "type": "string",
+            "format": "date",
+            "title": "datumAanmaak"
+          },
+          "aangemaaktDoor": {
+            "type": "string",
+            "maxLength": 50,
+            "title": "aangemaaktDoor"
+          },
+          "geaccordeerd": {
+            "type": "string",
+            "maxLength": 20,
+            "title": "geaccordeerd"
+          },
+          "gefactureerdOp": {
+            "type": "string",
+            "format": "date",
+            "title": "gefactureerdOp"
+          },
+          "datumMutatie": {
+            "type": "string",
+            "format": "date",
+            "title": "datumMutatie"
+          },
+          "gemuteerdDoor": {
+            "type": "string",
+            "maxLength": 50,
+            "title": "gemuteerdDoor"
+          },
+          "betreft": {
+            "type": "array",
+            "title": "betreft",
+            "items": {
+              "type": "object",
+              "$ref": "vorderingregel",
+              "objectConfiguration": {
+                "register": "ggm-veiligheid-vergunningen",
+                "schema": "vorderingregel"
+              }
+            }
+          },
+          "heeft": {
+            "type": "array",
+            "title": "heeft",
+            "items": {
+              "type": "object",
+              "$ref": "vthzaak",
+              "objectConfiguration": {
+                "register": "ggm-veiligheid-vergunningen",
+                "schema": "vthzaak"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "legesgrondslag": {
+        "slug": "legesgrondslag",
+        "title": "Leges_Grondslag",
+        "version": "2.5.0",
+        "description": "*Leges_Grondslag* is de basis of maatstaf waarop de heffing van leges wordt berekend, zoals de omvang van de werkzaamheden, bouwkosten of andere relevante parameters die in de legesverordening zijn vastgelegd.",
+        "required": [
+          "omschrijving",
+          "datumAanmaak",
+          "legesGrondslag",
+          "aantalOpgegeven",
+          "aantalVastgesteld",
+          "eenheid",
+          "automatisch",
+          "aangemaaktDoor",
+          "datumMutatie",
+          "gemuteerdDoor"
+        ],
+        "properties": {
+          "omschrijving": {
+            "type": "string",
+            "title": "omschrijving"
+          },
+          "datumAanmaak": {
+            "type": "string",
+            "format": "date",
+            "title": "datumAanmaak"
+          },
+          "legesGrondslag": {
+            "type": "string",
+            "maxLength": 50,
+            "title": "legesGrondslag"
+          },
+          "aantalOpgegeven": {
+            "type": "string",
+            "maxLength": 20,
+            "title": "aantalOpgegeven"
+          },
+          "aantalVastgesteld": {
+            "type": "string",
+            "maxLength": 20,
+            "title": "aantalVastgesteld"
+          },
+          "eenheid": {
+            "type": "string",
+            "maxLength": 20,
+            "title": "eenheid"
+          },
+          "automatisch": {
+            "type": "string",
+            "maxLength": 20,
+            "title": "automatisch"
+          },
+          "aangemaaktDoor": {
+            "type": "string",
+            "maxLength": 50,
+            "title": "aangemaaktDoor"
+          },
+          "datumMutatie": {
+            "type": "string",
+            "format": "date",
+            "title": "datumMutatie"
+          },
+          "gemuteerdDoor": {
+            "type": "string",
+            "maxLength": 50,
+            "title": "gemuteerdDoor"
+          },
+          "isVan": {
+            "type": "array",
+            "title": "isVan",
+            "items": {
+              "type": "object",
+              "$ref": "vthzaak",
+              "objectConfiguration": {
+                "register": "ggm-veiligheid-vergunningen",
+                "schema": "vthzaak"
+              }
+            }
+          },
+          "heeft": {
+            "type": "object",
+            "title": "heeft",
+            "$ref": "grondslag",
+            "objectConfiguration": {
+              "register": "ggm-veiligheid-vergunningen",
+              "schema": "grondslag"
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "ligplaatsontheffing": {
+        "slug": "ligplaatsontheffing",
+        "title": "Ligplaatsontheffing",
+        "version": "2.5.0",
+        "description": "Tijdelijke toestemming voor het innemen van een ligplaats op een locatie in een gebied met een verbod op ligplaatsen.",
+        "required": [
+          "stickernummer"
+        ],
+        "properties": {
+          "stickernummer": {
+            "type": "integer",
+            "title": "stickernummer"
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "moraanvraagofmelding": {
+        "slug": "moraanvraagofmelding",
+        "title": "MORAanvraagOfMelding",
+        "version": "2.5.0",
+        "description": "*MORAanvraagOfMelding* is een aanvraag of melding die een burger of organisatie doet bij de gemeente om een **situatie in de openbare ruimte te melden of te laten beoordelen**, zoals schade, overlast, gevaarlijke situaties of onderhoudsproblemen.",
+        "required": [
+          "locatie",
+          "locatieOmschrijving",
+          "meldingOmschrijving",
+          "meldingTekst",
+          "cROW"
+        ],
+        "properties": {
+          "locatie": {
+            "type": "string",
+            "format": "geo",
+            "title": "locatie"
+          },
+          "locatieOmschrijving": {
+            "type": "string",
+            "maxLength": 300,
+            "title": "locatieOmschrijving"
+          },
+          "meldingOmschrijving": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "meldingOmschrijving"
+          },
+          "meldingTekst": {
+            "type": "string",
+            "maxLength": 4000,
+            "title": "meldingTekst"
+          },
+          "cROW": {
+            "type": "string",
+            "title": "CROW",
+            "enum": [
+              "Ja",
+              "Nee",
+              "Onbekend",
+              "Leeg"
+            ]
+          }
+        },
+        "searchable": true,
+        "hardValidation": false,
+        "allOf": [
+          {
+            "$ref": "aanvraagofmelding",
+            "objectConfiguration": {
+              "register": "ggm-dienstverlening",
+              "schema": "aanvraagofmelding"
+            }
+          }
+        ]
+      },
+      "openbareactiviteit": {
+        "slug": "openbareactiviteit",
+        "title": "OpenbareActiviteit",
+        "version": "2.5.0",
+        "description": "Activiteit in het publieke domein",
+        "required": [
+          "datumStart",
+          "datumEinde",
+          "evenmentnaam",
+          "locatieOmschrijving",
+          "status"
+        ],
+        "properties": {
+          "datumStart": {
+            "type": "string",
+            "format": "date",
+            "title": "datumStart"
+          },
+          "datumEinde": {
+            "type": "string",
+            "format": "date",
+            "title": "datumEinde"
+          },
+          "evenmentnaam": {
+            "type": "string",
+            "maxLength": 250,
+            "title": "evenmentnaam"
+          },
+          "locatieOmschrijving": {
+            "type": "string",
+            "maxLength": 250,
+            "title": "locatieOmschrijving"
+          },
+          "status": {
+            "type": "string",
+            "title": "status",
+            "enum": [
+              "Aangemeld",
+              "Aangevraagd",
+              "Verleend"
+            ]
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "precario": {
+        "slug": "precario",
+        "title": "Precario",
+        "version": "2.5.0",
+        "description": "Belasting die specifiek wordt geheven voor het plaatsen van voorwerpen onder, op of boven voor de openbare dienst bestemde gemeentegrond.",
+        "required": [],
+        "properties": {},
+        "searchable": true,
+        "hardValidation": false
+      },
+      "producttype": {
+        "slug": "producttype",
+        "title": "Producttype",
+        "version": "2.5.0",
+        "description": "Een *producttype* is een categorie of variant van producten die dezelfde aard of kenmerken delen, waarmee producten binnen een groep worden ingedeeld op basis van gemeenschappelijke eigenschappen.",
+        "required": [
+          "omschrijving"
+        ],
+        "properties": {
+          "omschrijving": {
+            "type": "string",
+            "maxLength": 200,
+            "title": "omschrijving"
+          },
+          "heeft": {
+            "type": "array",
+            "title": "heeft",
+            "items": {
+              "type": "object",
+              "$ref": "subproducttype",
+              "objectConfiguration": {
+                "register": "ggm-veiligheid-vergunningen",
+                "schema": "subproducttype"
+              }
+            }
+          },
+          "heeftProduct": {
+            "type": "object",
+            "title": "heeftProduct",
+            "$ref": "zaak",
+            "objectConfiguration": {
+              "register": "ggm-kern",
+              "schema": "zaak"
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "subproducttype": {
+        "slug": "subproducttype",
+        "title": "SubProducttype",
+        "version": "2.5.0",
+        "description": "*SubProducttype* is een afgeleide of meer specifieke categorie binnen een *Producttype* die producten verder onderscheidt op basis van gedetailleerde kenmerken.",
+        "required": [
+          "omschrijving",
+          "prioriteit"
+        ],
+        "properties": {
+          "omschrijving": {
+            "type": "string",
+            "maxLength": 200,
+            "title": "omschrijving"
+          },
+          "prioriteit": {
+            "type": "string",
+            "maxLength": 2,
+            "title": "prioriteit"
+          },
+          "heeft": {
+            "type": "array",
+            "title": "heeft",
+            "items": {
+              "type": "object",
+              "$ref": "vthzaak",
+              "objectConfiguration": {
+                "register": "ggm-veiligheid-vergunningen",
+                "schema": "vthzaak"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "vaartuig": {
+        "slug": "vaartuig",
+        "title": "Vaartuig",
+        "version": "2.5.0",
+        "description": "Een zee- of binnenvaartuig, tot de vaart gebruikt of bestemd, daaronder begrepen drijvende werktuigen, zoals baggerwerktuigen, kranen, bokken, elevators, alsmede woonschepen, glijboten en ponten.",
+        "required": [
+          "naamVaartuig",
+          "registratienummer",
+          "kleur",
+          "lengte",
+          "breedte",
+          "hoogte"
+        ],
+        "properties": {
+          "naamVaartuig": {
+            "type": "string",
+            "maxLength": 250,
+            "title": "naamVaartuig"
+          },
+          "registratienummer": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "registratienummer"
+          },
+          "kleur": {
+            "type": "string",
+            "maxLength": 20,
+            "title": "kleur"
+          },
+          "lengte": {
+            "type": "integer",
+            "title": "lengte"
+          },
+          "breedte": {
+            "type": "integer",
+            "title": "breedte"
+          },
+          "hoogte": {
+            "type": "integer",
+            "title": "hoogte"
+          },
+          "is": {
+            "type": "object",
+            "title": "is",
+            "$ref": "object",
+            "objectConfiguration": {
+              "register": "ggm-kern",
+              "schema": "object"
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "vomaanvraagofmelding": {
+        "slug": "vomaanvraagofmelding",
+        "title": "VOMAanvraagOfMelding",
+        "version": "2.5.0",
+        "description": "VOM staat voor Vergunning, Ontheffing of Melding. Het betreft hier een melding of een aanvraag voor een vergunning of een ontheffing.",
+        "required": [
+          "dossiernummer",
+          "intaketype",
+          "adres",
+          "locatie",
+          "kadastraleAanduiding",
+          "bAGID",
+          "activiteiten",
+          "toelichting",
+          "locatieOmschrijving",
+          "kenmerk",
+          "internNummer"
+        ],
+        "properties": {
+          "dossiernummer": {
+            "type": "string",
+            "maxLength": 200,
+            "title": "dossiernummer"
+          },
+          "intaketype": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "intaketype"
+          },
+          "adres": {
+            "type": "string",
+            "maxLength": 500,
+            "title": "adres"
+          },
+          "locatie": {
+            "type": "string",
+            "format": "geo",
+            "title": "locatie"
+          },
+          "kadastraleAanduiding": {
+            "type": "string",
+            "maxLength": 30,
+            "title": "kadastraleAanduiding"
+          },
+          "bAGID": {
+            "type": "string",
+            "title": "BAGID"
+          },
+          "activiteiten": {
+            "type": "string",
+            "maxLength": 500,
+            "title": "activiteiten"
+          },
+          "toelichting": {
+            "type": "string",
+            "title": "toelichting"
+          },
+          "locatieOmschrijving": {
+            "type": "string",
+            "maxLength": 300,
+            "title": "locatieOmschrijving"
+          },
+          "kenmerk": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "kenmerk"
+          },
+          "internNummer": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "internNummer"
+          }
+        },
+        "searchable": true,
+        "hardValidation": false,
+        "allOf": [
+          {
+            "$ref": "aanvraagofmelding",
+            "objectConfiguration": {
+              "register": "ggm-dienstverlening",
+              "schema": "aanvraagofmelding"
+            }
+          }
+        ]
+      },
+      "vordering": {
+        "slug": "vordering",
+        "title": "Vordering",
+        "version": "2.5.0",
+        "description": "Een *vordering* is een juridisch recht dat een schuldeiser heeft om van een andere partij (schuldenaar) een prestatie te ontvangen, zoals een geldbedrag, levering van goederen of uitvoering van een dienst.",
+        "required": [
+          "vorderingnummer",
+          "omschrijving",
+          "totaalbedrag",
+          "bedragBTW",
+          "totaalbedragInclusief",
+          "geaccordeerd",
+          "geexporteerd",
+          "geaccordeerdOp",
+          "geaccordeerdDoor",
+          "datumAanmaak",
+          "aangemaaktDoor",
+          "datumMutatie",
+          "gemuteerdDoor"
+        ],
+        "properties": {
+          "vorderingnummer": {
+            "type": "string",
+            "maxLength": 50,
+            "title": "vorderingnummer"
+          },
+          "omschrijving": {
+            "type": "string",
+            "title": "omschrijving"
+          },
+          "totaalbedrag": {
+            "type": "number",
+            "title": "totaalbedrag"
+          },
+          "bedragBTW": {
+            "type": "number",
+            "title": "bedragBTW"
+          },
+          "totaalbedragInclusief": {
+            "type": "number",
+            "title": "totaalbedragInclusief"
+          },
+          "geaccordeerd": {
+            "type": "string",
+            "maxLength": 50,
+            "title": "geaccordeerd"
+          },
+          "geexporteerd": {
+            "type": "string",
+            "maxLength": 50,
+            "title": "geexporteerd"
+          },
+          "geaccordeerdOp": {
+            "type": "string",
+            "format": "date",
+            "title": "geaccordeerdOp"
+          },
+          "geaccordeerdDoor": {
+            "type": "string",
+            "maxLength": 50,
+            "title": "geaccordeerdDoor"
+          },
+          "datumAanmaak": {
+            "type": "string",
+            "format": "date",
+            "title": "datumAanmaak"
+          },
+          "aangemaaktDoor": {
+            "type": "string",
+            "maxLength": 50,
+            "title": "aangemaaktDoor"
+          },
+          "datumMutatie": {
+            "type": "string",
+            "format": "date",
+            "title": "datumMutatie"
+          },
+          "gemuteerdDoor": {
+            "type": "string",
+            "maxLength": 50,
+            "title": "gemuteerdDoor"
+          },
+          "heeft": {
+            "type": "array",
+            "title": "heeft",
+            "items": {
+              "type": "object",
+              "$ref": "vthzaak",
+              "objectConfiguration": {
+                "register": "ggm-veiligheid-vergunningen",
+                "schema": "vthzaak"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "vorderingregel": {
+        "slug": "vorderingregel",
+        "title": "Vorderingregel",
+        "version": "2.5.0",
+        "description": "Een *vorderingregel* is een afzonderlijke regel of entry in een gegevensset of lijst die een specifieke *vordering* beschrijft, inclusief kenmerken zoals de omvang, datum, type en status van de vordering.",
+        "required": [
+          "omschrijving",
+          "bedrag_incl_btw",
+          "bedrag_excl_btw",
+          "type",
+          "btwcategorie",
+          "periodiek",
+          "gemuteerd_door",
+          "mutatiedatum",
+          "aangemaakt_door",
+          "aanmaakdatum"
+        ],
+        "properties": {
+          "omschrijving": {
+            "type": "string",
+            "maxLength": 50,
+            "title": "Omschrijving"
+          },
+          "bedrag_incl_btw": {
+            "type": "number",
+            "title": "Bedrag_incl_btw"
+          },
+          "bedrag_excl_btw": {
+            "type": "number",
+            "title": "Bedrag_excl_btw"
+          },
+          "type": {
+            "type": "string",
+            "maxLength": 50,
+            "title": "Type"
+          },
+          "btwcategorie": {
+            "type": "string",
+            "maxLength": 50,
+            "title": "Btwcategorie"
+          },
+          "periodiek": {
+            "type": "string",
+            "maxLength": 50,
+            "title": "Periodiek"
+          },
+          "gemuteerd_door": {
+            "type": "string",
+            "maxLength": 50,
+            "title": "Gemuteerd_door"
+          },
+          "mutatiedatum": {
+            "type": "string",
+            "format": "date",
+            "title": "Mutatiedatum"
+          },
+          "aangemaakt_door": {
+            "type": "string",
+            "maxLength": 50,
+            "title": "Aangemaakt_door"
+          },
+          "aanmaakdatum": {
+            "type": "string",
+            "format": "date",
+            "title": "Aanmaakdatum"
+          },
+          "heeft": {
+            "type": "array",
+            "title": "heeft",
+            "items": {
+              "type": "object",
+              "$ref": "vordering",
+              "objectConfiguration": {
+                "register": "ggm-veiligheid-vergunningen",
+                "schema": "vordering"
+              }
+            }
+          },
+          "betreft": {
+            "type": "object",
+            "title": "betreft",
+            "$ref": "kosten",
+            "objectConfiguration": {
+              "register": "ggm-veiligheid-vergunningen",
+              "schema": "kosten"
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "vthaanvraagofmelding": {
+        "slug": "vthaanvraagofmelding",
+        "title": "VTHAanvraagOfMelding",
+        "version": "2.5.0",
+        "description": "VTH staat voor Vergunning, Toezicht en Handhaving. Het betreft hier een melding of een aanvraag voor een vergunning of een melding voor Toezicht en/of Handhaving.",
+        "required": [
+          "omschrijving"
+        ],
+        "properties": {
+          "omschrijving": {
+            "type": "string",
+            "maxLength": 1000,
+            "title": "omschrijving"
+          }
+        },
+        "searchable": true,
+        "hardValidation": false,
+        "allOf": [
+          {
+            "$ref": "vomaanvraagofmelding",
+            "objectConfiguration": {
+              "register": "ggm-veiligheid-vergunningen",
+              "schema": "vomaanvraagofmelding"
+            }
+          }
+        ]
+      },
+      "vth-melding": {
+        "slug": "vth-melding",
+        "title": "VTH-Melding",
+        "version": "2.5.0",
+        "description": "Melding met betrekking tot Vergunningen, Toezicht en Handhaving",
+        "required": [
+          "referentienummer",
+          "soortVTHMelding",
+          "locatie",
+          "straatnaam",
+          "geseponeerd",
+          "datumSeponering",
+          "datumtijdTot",
+          "organisatieonderdeel",
+          "status",
+          "taaktype",
+          "beoordeling",
+          "overtredingsgroep",
+          "resultaat",
+          "activiteit",
+          "zaaknummer",
+          "overtredingscode"
+        ],
+        "properties": {
+          "referentienummer": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "referentienummer"
+          },
+          "soortVTHMelding": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "soortVTHMelding"
+          },
+          "locatie": {
+            "type": "string",
+            "format": "geo",
+            "title": "locatie"
+          },
+          "straatnaam": {
+            "type": "string",
+            "maxLength": 250,
+            "title": "straatnaam"
+          },
+          "geseponeerd": {
+            "type": "boolean",
+            "title": "geseponeerd"
+          },
+          "datumSeponering": {
+            "type": "string",
+            "format": "date",
+            "title": "datumSeponering"
+          },
+          "datumtijdTot": {
+            "type": "string",
+            "format": "date-time",
+            "title": "datumtijdTot"
+          },
+          "organisatieonderdeel": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "organisatieonderdeel"
+          },
+          "status": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "status"
+          },
+          "taaktype": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "taaktype"
+          },
+          "beoordeling": {
+            "type": "string",
+            "title": "beoordeling",
+            "enum": [
+              "Niet Relevant",
+              "Oke",
+              "Niet Oke"
+            ]
+          },
+          "overtredingsgroep": {
+            "type": "string",
+            "maxLength": 200,
+            "title": "overtredingsgroep"
+          },
+          "resultaat": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "resultaat"
+          },
+          "activiteit": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "activiteit"
+          },
+          "zaaknummer": {
+            "type": "string",
+            "maxLength": 20,
+            "title": "zaaknummer"
+          },
+          "overtredingscode": {
+            "type": "string",
+            "maxLength": 20,
+            "title": "overtredingscode"
+          },
+          "betreft": {
+            "type": "array",
+            "title": "betreft",
+            "items": {
+              "type": "object",
+              "$ref": "object",
+              "objectConfiguration": {
+                "register": "ggm-kern",
+                "schema": "object"
+              }
+            }
+          },
+          "heeft": {
+            "type": "array",
+            "title": "heeft",
+            "items": {
+              "type": "object",
+              "$ref": "foto",
+              "objectConfiguration": {
+                "register": "ggm-kern",
+                "schema": "foto"
+              }
+            }
+          },
+          "verbalisant": {
+            "type": "object",
+            "title": "verbalisant",
+            "$ref": "boa",
+            "objectConfiguration": {
+              "register": "ggm-veiligheid-vergunningen",
+              "schema": "boa"
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false,
+        "allOf": [
+          {
+            "$ref": "aanvraagofmelding",
+            "objectConfiguration": {
+              "register": "ggm-dienstverlening",
+              "schema": "aanvraagofmelding"
+            }
+          }
+        ]
+      },
+      "vthzaak": {
+        "slug": "vthzaak",
+        "title": "VTHzaak",
+        "version": "2.5.0",
+        "description": "Een *VTHzaak* is een zaak of dossier binnen de gemeentelijke administratie die betrekking heeft op **vergunningverlening, toezicht en handhaving (VTH)** van regels en voorschriften in de fysieke leefomgeving.",
+        "required": [
+          "verkamering",
+          "bevoegdGezag",
+          "uitvoerendeInstantie",
+          "behandelaar",
+          "prioritering",
+          "teamBehandelaar"
+        ],
+        "properties": {
+          "verkamering": {
+            "type": "string",
+            "title": "verkamering",
+            "enum": [
+              "Ja",
+              "Nee",
+              "Onbekend",
+              "Leeg"
+            ]
+          },
+          "bevoegdGezag": {
+            "type": "string",
+            "maxLength": 50,
+            "title": "bevoegdGezag"
+          },
+          "uitvoerendeInstantie": {
+            "type": "string",
+            "maxLength": 50,
+            "title": "uitvoerendeInstantie"
+          },
+          "behandelaar": {
+            "type": "string",
+            "maxLength": 20,
+            "title": "behandelaar"
+          },
+          "prioritering": {
+            "type": "integer",
+            "title": "prioritering"
+          },
+          "teamBehandelaar": {
+            "type": "string",
+            "maxLength": 20,
+            "title": "teamBehandelaar"
+          },
+          "heeft": {
+            "type": "array",
+            "title": "heeft",
+            "items": {
+              "type": "object",
+              "$ref": "vordering",
+              "objectConfiguration": {
+                "register": "ggm-veiligheid-vergunningen",
+                "schema": "vordering"
+              }
+            }
+          },
+          "isVan": {
+            "type": "array",
+            "title": "isVan",
+            "items": {
+              "type": "object",
+              "$ref": "legesgrondslag",
+              "objectConfiguration": {
+                "register": "ggm-veiligheid-vergunningen",
+                "schema": "legesgrondslag"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false,
+        "allOf": [
+          {
+            "$ref": "zaak",
+            "objectConfiguration": {
+              "register": "ggm-kern",
+              "schema": "zaak"
+            }
+          }
+        ]
+      },
+      "waarneming": {
+        "slug": "waarneming",
+        "title": "Waarneming",
+        "version": "2.5.0",
+        "description": "Handhavende taak in het kader van VTH",
+        "required": [],
+        "properties": {},
+        "searchable": true,
+        "hardValidation": false,
+        "allOf": [
+          {
+            "$ref": "vth-melding",
+            "objectConfiguration": {
+              "register": "ggm-veiligheid-vergunningen",
+              "schema": "vth-melding"
+            }
+          }
+        ]
+      },
+      "waboaanvraagofmelding": {
+        "slug": "waboaanvraagofmelding",
+        "title": "WABOAanvraagOfMelding",
+        "version": "2.5.0",
+        "description": "Aanvraag of medling in het kader van de Wet algemene bepalingen omgevingsrecht (WABO)",
+        "required": [
+          "bouwkosten",
+          "projectkosten",
+          "omschrijving",
+          "registratienummer",
+          "oLONummer"
+        ],
+        "properties": {
+          "bouwkosten": {
+            "type": "number",
+            "title": "bouwkosten"
+          },
+          "projectkosten": {
+            "type": "number",
+            "title": "projectkosten"
+          },
+          "omschrijving": {
+            "type": "string",
+            "maxLength": 1000,
+            "title": "omschrijving"
+          },
+          "registratienummer": {
+            "type": "string",
+            "maxLength": 100,
+            "title": "registratienummer"
+          },
+          "oLONummer": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "OLONummer"
+          }
+        },
+        "searchable": true,
+        "hardValidation": false,
+        "allOf": [
+          {
+            "$ref": "vomaanvraagofmelding",
+            "objectConfiguration": {
+              "register": "ggm-veiligheid-vergunningen",
+              "schema": "vomaanvraagofmelding"
+            }
+          }
+        ]
+      },
+      "woonfraudeaanvraagofmelding": {
+        "slug": "woonfraudeaanvraagofmelding",
+        "title": "WoonfraudeAanvraagOfMelding",
+        "version": "2.5.0",
+        "description": "Melding of aanvraag van woonfraude",
+        "required": [
+          "meldingTekst",
+          "meldingOmschrijving",
+          "adres",
+          "categorie",
+          "locatieOmschrijving"
+        ],
+        "properties": {
+          "meldingTekst": {
+            "type": "string",
+            "maxLength": 4000,
+            "title": "meldingTekst"
+          },
+          "meldingOmschrijving": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "meldingOmschrijving"
+          },
+          "adres": {
+            "type": "string",
+            "maxLength": 300,
+            "title": "adres"
+          },
+          "categorie": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "categorie"
+          },
+          "locatieOmschrijving": {
+            "type": "string",
+            "maxLength": 300,
+            "title": "locatieOmschrijving"
+          }
+        },
+        "searchable": true,
+        "hardValidation": false,
+        "allOf": [
+          {
+            "$ref": "aanvraagofmelding",
+            "objectConfiguration": {
+              "register": "ggm-dienstverlening",
+              "schema": "aanvraagofmelding"
+            }
+          }
+        ]
+      },
+      "woonoverlastaanvraagofmelding": {
+        "slug": "woonoverlastaanvraagofmelding",
+        "title": "WoonoverlastAanvraagOfMelding",
+        "version": "2.5.0",
+        "description": "Melding of aanvraag met betrekking tot Woonoverlast",
+        "required": [
+          "locatie",
+          "locatieOmschrijving",
+          "meldingOmschrijving",
+          "meldingTekst"
+        ],
+        "properties": {
+          "locatie": {
+            "type": "string",
+            "format": "geo",
+            "title": "locatie"
+          },
+          "locatieOmschrijving": {
+            "type": "string",
+            "maxLength": 300,
+            "title": "locatieOmschrijving"
+          },
+          "meldingOmschrijving": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "meldingOmschrijving"
+          },
+          "meldingTekst": {
+            "type": "string",
+            "maxLength": 4000,
+            "title": "meldingTekst"
+          }
+        },
+        "searchable": true,
+        "hardValidation": false,
+        "allOf": [
+          {
+            "$ref": "aanvraagofmelding",
+            "objectConfiguration": {
+              "register": "ggm-dienstverlening",
+              "schema": "aanvraagofmelding"
+            }
+          }
+        ]
+      }
+    },
+    "registers": {
+      "ggm-veiligheid-vergunningen": {
+        "slug": "ggm-veiligheid-vergunningen",
+        "title": "GGM - 1 Veiligheid en Vergunningen",
+        "version": "2.5.0",
+        "description": "Gemeentelijk Gegevensmodel domain: 1 Veiligheid en Vergunningen",
+        "schemas": [
+          "activiteit-omgevingswet",
+          "aomstatus",
+          "bevinding",
+          "boa",
+          "combibon",
+          "fietsregistratie",
+          "grondslag",
+          "heffinggrondslag",
+          "heffingsverordening",
+          "indiener",
+          "inspectie",
+          "kosten",
+          "legesgrondslag",
+          "ligplaatsontheffing",
+          "moraanvraagofmelding",
+          "openbareactiviteit",
+          "precario",
+          "producttype",
+          "subproducttype",
+          "vaartuig",
+          "vomaanvraagofmelding",
+          "vordering",
+          "vorderingregel",
+          "vthaanvraagofmelding",
+          "vth-melding",
+          "vthzaak",
+          "waarneming",
+          "waboaanvraagofmelding",
+          "woonfraudeaanvraagofmelding",
+          "woonoverlastaanvraagofmelding"
+        ],
+        "source": "internal"
+      }
+    }
+  }
+}

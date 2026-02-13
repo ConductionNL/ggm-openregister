@@ -1,0 +1,4738 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "GGM - 5 Sport, Cultuur en Recreatie",
+    "description": "OpenRegister configuration for the Gemeentelijk Gegevensmodel (GGM) domain: 5 Sport, Cultuur en Recreatie. Auto-generated from GGM v2.5.0.",
+    "version": "2.5.0"
+  },
+  "x-openregister": {
+    "type": "application",
+    "sourceType": "github",
+    "sourceUrl": "https://github.com/ConductionNL/ggm-openregister",
+    "openregister": "^v0.2.10",
+    "github": {
+      "repo": "ConductionNL/ggm-openregister",
+      "branch": "main",
+      "path": "5-sport-cultuur-recreatie.openregister.json"
+    },
+    "description": "Gemeentelijk Gegevensmodel - 5 Sport, Cultuur en Recreatie"
+  },
+  "components": {
+    "schemas": {
+      "archeologiebesluit": {
+        "slug": "archeologiebesluit",
+        "title": "Archeologiebesluit",
+        "version": "2.5.0",
+        "description": "Een professioneel oordeel dat gebaseerd is op algemeen aanvaarde wetenschap ten aanzien van de archeologie",
+        "required": [],
+        "properties": {
+          "heeft": {
+            "type": "object",
+            "title": "heeft",
+            "$ref": "project",
+            "objectConfiguration": {
+              "register": "ggm-sport-cultuur-recreatie",
+              "schema": "project"
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "artefact": {
+        "slug": "artefact",
+        "title": "Artefact",
+        "version": "2.5.0",
+        "description": "De benaming voor ieder verplaatsbaar object dat door de mens is vervaardigd, bewerkt en/of gebruikt.",
+        "required": [
+          "projectCD",
+          "putnummer",
+          "vondstnummer",
+          "artefectnummer",
+          "datering",
+          "maten",
+          "type",
+          "beschrijving",
+          "determinatieniveau",
+          "naam",
+          "doosnummer",
+          "tekeningnummer",
+          "dianummer",
+          "fotonummer",
+          "restauratieWenselijk",
+          "exposabel",
+          "conserveren",
+          "key",
+          "keyPut",
+          "keyMagazijnplaatsing",
+          "keyDoos",
+          "dateringComplex",
+          "opmerkingen",
+          "functie",
+          "origine",
+          "literatuur",
+          "herkomst",
+          "keyVondst"
+        ],
+        "properties": {
+          "projectCD": {
+            "type": "string",
+            "maxLength": 20,
+            "title": "projectCD"
+          },
+          "putnummer": {
+            "type": "string",
+            "maxLength": 20,
+            "title": "putnummer"
+          },
+          "vondstnummer": {
+            "type": "string",
+            "title": "vondstnummer"
+          },
+          "artefectnummer": {
+            "type": "string",
+            "maxLength": 20,
+            "title": "artefectnummer"
+          },
+          "datering": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "datering"
+          },
+          "maten": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "maten"
+          },
+          "type": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "type"
+          },
+          "beschrijving": {
+            "type": "string",
+            "title": "beschrijving"
+          },
+          "determinatieniveau": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "determinatieniveau"
+          },
+          "naam": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "naam"
+          },
+          "doosnummer": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "doosnummer"
+          },
+          "tekeningnummer": {
+            "type": "string",
+            "maxLength": 200,
+            "title": "tekeningnummer"
+          },
+          "dianummer": {
+            "type": "string",
+            "maxLength": 200,
+            "title": "dianummer"
+          },
+          "fotonummer": {
+            "type": "string",
+            "maxLength": 200,
+            "title": "fotonummer"
+          },
+          "restauratieWenselijk": {
+            "type": "boolean",
+            "title": "restauratieWenselijk"
+          },
+          "exposabel": {
+            "type": "boolean",
+            "title": "exposabel"
+          },
+          "conserveren": {
+            "type": "boolean",
+            "title": "conserveren"
+          },
+          "key": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "key"
+          },
+          "keyPut": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "keyPut"
+          },
+          "keyMagazijnplaatsing": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "keyMagazijnplaatsing"
+          },
+          "keyDoos": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "keyDoos"
+          },
+          "dateringComplex": {
+            "type": "string",
+            "maxLength": 20,
+            "title": "dateringComplex"
+          },
+          "opmerkingen": {
+            "type": "string",
+            "title": "opmerkingen"
+          },
+          "functie": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "functie"
+          },
+          "origine": {
+            "type": "string",
+            "title": "origine"
+          },
+          "literatuur": {
+            "type": "string",
+            "maxLength": 200,
+            "title": "literatuur"
+          },
+          "herkomst": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "herkomst"
+          },
+          "keyVondst": {
+            "type": "string",
+            "title": "keyVondst"
+          },
+          "bevat": {
+            "type": "object",
+            "title": "bevat",
+            "$ref": "vondst",
+            "objectConfiguration": {
+              "register": "ggm-sport-cultuur-recreatie",
+              "schema": "vondst"
+            }
+          },
+          "isVanSoort": {
+            "type": "object",
+            "title": "isVanSoort",
+            "$ref": "artefactsoort",
+            "objectConfiguration": {
+              "register": "ggm-sport-cultuur-recreatie",
+              "schema": "artefactsoort"
+            }
+          },
+          "zitIn": {
+            "type": "object",
+            "title": "zitIn",
+            "$ref": "doos",
+            "objectConfiguration": {
+              "register": "ggm-sport-cultuur-recreatie",
+              "schema": "doos"
+            }
+          },
+          "vindbaarOp": {
+            "type": "object",
+            "title": "vindbaarOp",
+            "$ref": "magazijnplaatsing",
+            "objectConfiguration": {
+              "register": "ggm-sport-cultuur-recreatie",
+              "schema": "magazijnplaatsing"
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "artefactsoort": {
+        "slug": "artefactsoort",
+        "title": "Artefactsoort",
+        "version": "2.5.0",
+        "description": "Typering van artefacten",
+        "required": [
+          "code",
+          "naam",
+          "omschrijving"
+        ],
+        "properties": {
+          "code": {
+            "type": "string",
+            "maxLength": 8,
+            "title": "code"
+          },
+          "naam": {
+            "type": "string",
+            "maxLength": 200,
+            "title": "naam"
+          },
+          "omschrijving": {
+            "type": "string",
+            "title": "omschrijving"
+          },
+          "isVanSoort": {
+            "type": "array",
+            "title": "isVanSoort",
+            "items": {
+              "type": "object",
+              "$ref": "artefact",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "artefact"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "boring": {
+        "slug": "boring",
+        "title": "boring",
+        "version": "2.5.0",
+        "description": "Een verticale grondmonstername binnen een project\nDe gegevens over het geheel van activiteiten, voor zover relevant voor het onderzoek, dat tot doel heeft door boren een gat in de ondergrond te maken om monsters uit de ondergrond te nemen en/of metingen aan de ondergrond te doen.\nEen middel om door boren of steken toegang te krijgen tot de ondergrond om bijvoorbeeld geroerde en/of ongeroerde monsters aan de ondergrond te ontlenen voor nader onderzoek.",
+        "required": [],
+        "properties": {
+          "heeft": {
+            "type": "object",
+            "title": "heeft",
+            "$ref": "project",
+            "objectConfiguration": {
+              "register": "ggm-sport-cultuur-recreatie",
+              "schema": "project"
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "doos": {
+        "slug": "doos",
+        "title": "Doos",
+        "version": "2.5.0",
+        "description": "Een afsluitbaar object waar iets in wordt opgeborgen of verpakt.",
+        "required": [
+          "projectCD",
+          "doosnummer",
+          "inhoud",
+          "herkomst",
+          "key",
+          "keyMagazijnlocatie"
+        ],
+        "properties": {
+          "projectCD": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "projectCD"
+          },
+          "doosnummer": {
+            "type": "string",
+            "title": "doosnummer"
+          },
+          "inhoud": {
+            "type": "string",
+            "title": "inhoud"
+          },
+          "herkomst": {
+            "type": "string",
+            "maxLength": 200,
+            "title": "herkomst"
+          },
+          "key": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "key"
+          },
+          "keyMagazijnlocatie": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "keyMagazijnlocatie"
+          },
+          "zitIn": {
+            "type": "object",
+            "title": "zitIn",
+            "$ref": "magazijnplaatsing",
+            "objectConfiguration": {
+              "register": "ggm-sport-cultuur-recreatie",
+              "schema": "magazijnplaatsing"
+            }
+          },
+          "staatOp": {
+            "type": "object",
+            "title": "staatOp",
+            "$ref": "magazijnlocatie",
+            "objectConfiguration": {
+              "register": "ggm-sport-cultuur-recreatie",
+              "schema": "magazijnlocatie"
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "kaart": {
+        "slug": "kaart",
+        "title": "Kaart",
+        "version": "2.5.0",
+        "description": "De geografische weergave van een gedeelte van het aardoppervlak",
+        "required": [
+          "naam",
+          "omschrijving",
+          "content"
+        ],
+        "properties": {
+          "naam": {
+            "type": "string",
+            "maxLength": 200,
+            "title": "naam"
+          },
+          "omschrijving": {
+            "type": "string",
+            "title": "omschrijving"
+          },
+          "content": {
+            "type": "string",
+            "format": "binary",
+            "title": "content"
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "locatie": {
+        "slug": "locatie",
+        "title": "locatie",
+        "version": "2.5.0",
+        "description": "Een specifieke plaats",
+        "required": [
+          "locatiePunt"
+        ],
+        "properties": {
+          "locatiePunt": {
+            "type": "string",
+            "format": "geo",
+            "title": "locatiePunt"
+          },
+          "wordtBegrensdDoor": {
+            "type": "array",
+            "title": "wordtBegrensdDoor",
+            "items": {
+              "type": "object",
+              "$ref": "project",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "project"
+              }
+            }
+          },
+          "heeftLocatie": {
+            "type": "array",
+            "title": "heeftLocatie",
+            "items": {
+              "type": "object",
+              "$ref": "put",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "put"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "magazijnlocatie": {
+        "slug": "magazijnlocatie",
+        "title": "Magazijnlocatie",
+        "version": "2.5.0",
+        "description": "Locatie van een magazijn",
+        "required": [
+          "vaknummer",
+          "volgletter",
+          "key",
+          "stelling"
+        ],
+        "properties": {
+          "vaknummer": {
+            "type": "string",
+            "maxLength": 8,
+            "title": "vaknummer"
+          },
+          "volgletter": {
+            "type": "string",
+            "maxLength": 8,
+            "title": "volgletter"
+          },
+          "key": {
+            "type": "string",
+            "maxLength": 20,
+            "title": "key"
+          },
+          "stelling": {
+            "type": "string",
+            "maxLength": 8,
+            "title": "stelling"
+          },
+          "heeft": {
+            "type": "object",
+            "title": "heeft",
+            "$ref": "stelling",
+            "objectConfiguration": {
+              "register": "ggm-sport-cultuur-recreatie",
+              "schema": "stelling"
+            }
+          },
+          "staatOp": {
+            "type": "array",
+            "title": "staatOp",
+            "items": {
+              "type": "object",
+              "$ref": "magazijnplaatsing",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "magazijnplaatsing"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "magazijnplaatsing": {
+        "slug": "magazijnplaatsing",
+        "title": "Magazijnplaatsing",
+        "version": "2.5.0",
+        "description": "Het ergens neerzetten van een object in een magazijn.",
+        "required": [
+          "uitgeleend",
+          "beschrijving",
+          "datumGeplaatst",
+          "key",
+          "keyDoos",
+          "keyMagazijnlocatie",
+          "projectCD",
+          "herkomst"
+        ],
+        "properties": {
+          "uitgeleend": {
+            "type": "boolean",
+            "title": "uitgeleend"
+          },
+          "beschrijving": {
+            "type": "string",
+            "title": "beschrijving"
+          },
+          "datumGeplaatst": {
+            "type": "string",
+            "format": "date",
+            "title": "datumGeplaatst"
+          },
+          "key": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "key"
+          },
+          "keyDoos": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "keyDoos"
+          },
+          "keyMagazijnlocatie": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "keyMagazijnlocatie"
+          },
+          "projectCD": {
+            "type": "string",
+            "title": "projectCD"
+          },
+          "herkomst": {
+            "type": "string",
+            "maxLength": 250,
+            "title": "herkomst"
+          },
+          "hoortBij": {
+            "type": "object",
+            "title": "hoortBij",
+            "$ref": "project",
+            "objectConfiguration": {
+              "register": "ggm-sport-cultuur-recreatie",
+              "schema": "project"
+            }
+          },
+          "staatOp": {
+            "type": "object",
+            "title": "staatOp",
+            "$ref": "magazijnlocatie",
+            "objectConfiguration": {
+              "register": "ggm-sport-cultuur-recreatie",
+              "schema": "magazijnlocatie"
+            }
+          },
+          "zitIn": {
+            "type": "array",
+            "title": "zitIn",
+            "items": {
+              "type": "object",
+              "$ref": "doos",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "doos"
+              }
+            }
+          },
+          "vindbaarOp": {
+            "type": "array",
+            "title": "vindbaarOp",
+            "items": {
+              "type": "object",
+              "$ref": "artefact",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "artefact"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "project": {
+        "slug": "project",
+        "title": "Project",
+        "version": "2.5.0",
+        "description": "Geheel van activiteiten uitgevoerd in een tijdelijk samenwerkingsverband gericht op het binnen bepaalde randvoorwaarden (bv. tijd, geld) bereiken van een vooraf gedefinieerd resultaat.",
+        "required": [
+          "projectCD",
+          "naam",
+          "datumStart",
+          "datumEinde",
+          "naamcode",
+          "toponiem",
+          "locatie",
+          "coordinaten",
+          "jaarVan",
+          "jaarTot",
+          "trefwoorden"
+        ],
+        "properties": {
+          "projectCD": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "projectCD"
+          },
+          "naam": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "naam"
+          },
+          "datumStart": {
+            "type": "string",
+            "format": "date",
+            "title": "datumStart"
+          },
+          "datumEinde": {
+            "type": "string",
+            "format": "date",
+            "title": "datumEinde"
+          },
+          "naamcode": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "naamcode"
+          },
+          "toponiem": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "toponiem"
+          },
+          "locatie": {
+            "type": "string",
+            "format": "geo",
+            "title": "locatie"
+          },
+          "coordinaten": {
+            "type": "string",
+            "format": "geo",
+            "title": "coordinaten"
+          },
+          "jaarVan": {
+            "type": "integer",
+            "title": "jaarVan"
+          },
+          "jaarTot": {
+            "type": "integer",
+            "title": "jaarTot"
+          },
+          "trefwoorden": {
+            "type": "string",
+            "maxLength": 250,
+            "title": "trefwoorden"
+          },
+          "hoortBij": {
+            "type": "object",
+            "title": "hoortBij",
+            "$ref": "vindplaats",
+            "objectConfiguration": {
+              "register": "ggm-sport-cultuur-recreatie",
+              "schema": "vindplaats"
+            }
+          },
+          "heeft": {
+            "type": "array",
+            "title": "heeft",
+            "items": {
+              "type": "object",
+              "$ref": "put",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "put"
+              }
+            }
+          },
+          "wordtBegrensdDoor": {
+            "type": "array",
+            "title": "wordtBegrensdDoor",
+            "items": {
+              "type": "object",
+              "$ref": "locatie",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "locatie"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "put": {
+        "slug": "put",
+        "title": "Put",
+        "version": "2.5.0",
+        "description": "Grondspoor, veelal verstevigd en gefundeerd aangelegd, bedoeld voor de tijdelijke opslag van danwel water (waterput) danwel uitwerpselen en afval (beerput).",
+        "required": [
+          "projectCD",
+          "putnummer",
+          "key"
+        ],
+        "properties": {
+          "projectCD": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "projectCD"
+          },
+          "putnummer": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "putnummer"
+          },
+          "key": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "key"
+          },
+          "heeft": {
+            "type": "array",
+            "title": "heeft",
+            "items": {
+              "type": "object",
+              "$ref": "vlak",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "vlak"
+              }
+            }
+          },
+          "heeftLocatie": {
+            "type": "array",
+            "title": "heeftLocatie",
+            "items": {
+              "type": "object",
+              "$ref": "locatie",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "locatie"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "spoor": {
+        "slug": "spoor",
+        "title": "Spoor",
+        "version": "2.5.0",
+        "description": "Een blijk van eerdere aanwezigheid.",
+        "required": [
+          "projectCD",
+          "putnummer",
+          "vlaknummer",
+          "spoornummer",
+          "hoogteBoven",
+          "hoogteOnder",
+          "aard",
+          "datering",
+          "datum",
+          "vorm",
+          "beschrijving",
+          "key",
+          "keyVlak"
+        ],
+        "properties": {
+          "projectCD": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "projectCD"
+          },
+          "putnummer": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "putnummer"
+          },
+          "vlaknummer": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "vlaknummer"
+          },
+          "spoornummer": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "spoornummer"
+          },
+          "hoogteBoven": {
+            "type": "string",
+            "maxLength": 20,
+            "title": "hoogteBoven"
+          },
+          "hoogteOnder": {
+            "type": "string",
+            "maxLength": 20,
+            "title": "hoogteOnder"
+          },
+          "aard": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "aard"
+          },
+          "datering": {
+            "type": "string",
+            "maxLength": 20,
+            "title": "datering"
+          },
+          "datum": {
+            "type": "string",
+            "format": "date",
+            "title": "datum"
+          },
+          "vorm": {
+            "type": "string",
+            "maxLength": 20,
+            "title": "vorm"
+          },
+          "beschrijving": {
+            "type": "string",
+            "title": "beschrijving"
+          },
+          "key": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "key"
+          },
+          "keyVlak": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "keyVlak"
+          },
+          "heeft": {
+            "type": "object",
+            "title": "heeft",
+            "$ref": "vlak",
+            "objectConfiguration": {
+              "register": "ggm-sport-cultuur-recreatie",
+              "schema": "vlak"
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "stelling": {
+        "slug": "stelling",
+        "title": "Stelling",
+        "version": "2.5.0",
+        "description": "Een systeem om goederen op te slaan die worden vervoerd en opgeslagen op pallets, in bundels of per stuk.(Wikipedia)",
+        "required": [
+          "stellingcode",
+          "inhoud"
+        ],
+        "properties": {
+          "stellingcode": {
+            "type": "string",
+            "maxLength": 2,
+            "title": "stellingcode"
+          },
+          "inhoud": {
+            "type": "string",
+            "title": "inhoud"
+          },
+          "heeft": {
+            "type": "array",
+            "title": "heeft",
+            "items": {
+              "type": "object",
+              "$ref": "magazijnlocatie",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "magazijnlocatie"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "vindplaats": {
+        "slug": "vindplaats",
+        "title": "Vindplaats",
+        "version": "2.5.0",
+        "description": "Een plek waar men iets gevonden heeft.",
+        "required": [
+          "projectcode",
+          "locatie",
+          "vindplaatsOmschrijving",
+          "gemeente",
+          "datering",
+          "begindatering",
+          "einddatering",
+          "aard",
+          "onderzoek",
+          "mobilia",
+          "depot",
+          "documentatie",
+          "bibliografie",
+          "beschrijving"
+        ],
+        "properties": {
+          "projectcode": {
+            "type": "string",
+            "maxLength": 20,
+            "title": "projectcode"
+          },
+          "locatie": {
+            "type": "string",
+            "format": "geo",
+            "title": "locatie"
+          },
+          "vindplaatsOmschrijving": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "vindplaatsOmschrijving"
+          },
+          "gemeente": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "gemeente"
+          },
+          "datering": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "datering"
+          },
+          "begindatering": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "begindatering"
+          },
+          "einddatering": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "einddatering"
+          },
+          "aard": {
+            "type": "string",
+            "maxLength": 20,
+            "title": "aard"
+          },
+          "onderzoek": {
+            "type": "string",
+            "title": "onderzoek"
+          },
+          "mobilia": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "mobilia"
+          },
+          "depot": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "depot"
+          },
+          "documentatie": {
+            "type": "string",
+            "maxLength": 200,
+            "title": "documentatie"
+          },
+          "bibliografie": {
+            "type": "string",
+            "maxLength": 200,
+            "title": "bibliografie"
+          },
+          "beschrijving": {
+            "type": "string",
+            "title": "beschrijving"
+          },
+          "hoortBij": {
+            "type": "object",
+            "title": "hoortBij",
+            "$ref": "project",
+            "objectConfiguration": {
+              "register": "ggm-sport-cultuur-recreatie",
+              "schema": "project"
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "vlak": {
+        "slug": "vlak",
+        "title": "Vlak",
+        "version": "2.5.0",
+        "description": "Plat, oneindig oppervlak of variëteit zonder enige kromming.",
+        "required": [
+          "projectCD",
+          "putnummer",
+          "vlaknummer",
+          "diepteVan",
+          "diepteTot",
+          "key",
+          "keyPut"
+        ],
+        "properties": {
+          "projectCD": {
+            "type": "string",
+            "maxLength": 20,
+            "title": "projectCD"
+          },
+          "putnummer": {
+            "type": "string",
+            "maxLength": 20,
+            "title": "putnummer"
+          },
+          "vlaknummer": {
+            "type": "string",
+            "maxLength": 20,
+            "title": "vlaknummer"
+          },
+          "diepteVan": {
+            "type": "integer",
+            "title": "diepteVan"
+          },
+          "diepteTot": {
+            "type": "integer",
+            "title": "diepteTot"
+          },
+          "key": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "key"
+          },
+          "keyPut": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "keyPut"
+          },
+          "heeft": {
+            "type": "array",
+            "title": "heeft",
+            "items": {
+              "type": "object",
+              "$ref": "spoor",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "spoor"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "vondst": {
+        "slug": "vondst",
+        "title": "Vondst",
+        "version": "2.5.0",
+        "description": "Overblijfsel, voorwerp of ander spoor van menselijke aanwezigheid in het verleden afkomstig van een archeologisch monument",
+        "required": [
+          "projectCD",
+          "vondstnummer",
+          "putnummer",
+          "vlaknummer",
+          "spoornummer",
+          "vullingnummer",
+          "omstandigheden",
+          "omschrijving",
+          "key",
+          "keyVulling",
+          "datum",
+          "xCoordinaat",
+          "yCoordinaat"
+        ],
+        "properties": {
+          "projectCD": {
+            "type": "string",
+            "maxLength": 20,
+            "title": "projectCD"
+          },
+          "vondstnummer": {
+            "type": "string",
+            "maxLength": 20,
+            "title": "vondstnummer"
+          },
+          "putnummer": {
+            "type": "string",
+            "maxLength": 20,
+            "title": "putnummer"
+          },
+          "vlaknummer": {
+            "type": "string",
+            "maxLength": 20,
+            "title": "vlaknummer"
+          },
+          "spoornummer": {
+            "type": "string",
+            "maxLength": 20,
+            "title": "spoornummer"
+          },
+          "vullingnummer": {
+            "type": "string",
+            "maxLength": 20,
+            "title": "vullingnummer"
+          },
+          "omstandigheden": {
+            "type": "string",
+            "title": "omstandigheden"
+          },
+          "omschrijving": {
+            "type": "string",
+            "title": "omschrijving"
+          },
+          "key": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "key"
+          },
+          "keyVulling": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "keyVulling"
+          },
+          "datum": {
+            "type": "string",
+            "format": "date",
+            "title": "datum"
+          },
+          "xCoordinaat": {
+            "type": "integer",
+            "title": "XCoordinaat"
+          },
+          "yCoordinaat": {
+            "type": "integer",
+            "title": "YCoordinaat"
+          },
+          "heeft": {
+            "type": "object",
+            "title": "heeft",
+            "$ref": "vulling",
+            "objectConfiguration": {
+              "register": "ggm-sport-cultuur-recreatie",
+              "schema": "vulling"
+            }
+          },
+          "bevat": {
+            "type": "array",
+            "title": "bevat",
+            "items": {
+              "type": "object",
+              "$ref": "artefact",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "artefact"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "vulling": {
+        "slug": "vulling",
+        "title": "Vulling",
+        "version": "2.5.0",
+        "description": "Dunne wegeringsplank gebruikt om de ruimte tussen de bovenste kimweger en de onderste balkweger op te vullen (Sopers, 1974).",
+        "required": [
+          "projectCD",
+          "putnummer",
+          "vlaknummer",
+          "spoornummer",
+          "vullingnummer",
+          "grondsoort",
+          "kleur",
+          "structuur",
+          "key",
+          "keySpoor"
+        ],
+        "properties": {
+          "projectCD": {
+            "type": "string",
+            "maxLength": 20,
+            "title": "projectCD"
+          },
+          "putnummer": {
+            "type": "string",
+            "title": "putnummer"
+          },
+          "vlaknummer": {
+            "type": "string",
+            "maxLength": 20,
+            "title": "vlaknummer"
+          },
+          "spoornummer": {
+            "type": "string",
+            "maxLength": 20,
+            "title": "spoornummer"
+          },
+          "vullingnummer": {
+            "type": "string",
+            "maxLength": 20,
+            "title": "vullingnummer"
+          },
+          "grondsoort": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "grondsoort"
+          },
+          "kleur": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "kleur"
+          },
+          "structuur": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "structuur"
+          },
+          "key": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "key"
+          },
+          "keySpoor": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "keySpoor"
+          },
+          "heeft": {
+            "type": "array",
+            "title": "heeft",
+            "items": {
+              "type": "object",
+              "$ref": "vondst",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "vondst"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "aanvraag": {
+        "slug": "aanvraag",
+        "title": "Aanvraag",
+        "version": "2.5.0",
+        "description": "(officieel) verzoek, iets (officieel) vragen aan een bevoegde macht.",
+        "required": [
+          "datumtijd"
+        ],
+        "properties": {
+          "datumtijd": {
+            "type": "string",
+            "format": "date-time",
+            "title": "datumtijd"
+          },
+          "doet": {
+            "type": "object",
+            "title": "doet",
+            "$ref": "bezoeker",
+            "objectConfiguration": {
+              "register": "ggm-sport-cultuur-recreatie",
+              "schema": "bezoeker"
+            }
+          },
+          "voor": {
+            "type": "array",
+            "title": "voor",
+            "items": {
+              "type": "object",
+              "$ref": "archiefstuk",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "archiefstuk"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "archief": {
+        "slug": "archief",
+        "title": "Archief",
+        "version": "2.5.0",
+        "description": "De bewaarplaats van belangrijke gegevens die zijn vastgelegd in documentvorm alsook de verzameling van documenten die voor een bepaald doel vervaardigd zijn.",
+        "required": [
+          "naam",
+          "omschrijving",
+          "openbaarheidsbeperking",
+          "archiefnummer"
+        ],
+        "properties": {
+          "naam": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "naam"
+          },
+          "omschrijving": {
+            "type": "string",
+            "title": "omschrijving"
+          },
+          "openbaarheidsbeperking": {
+            "type": "integer",
+            "title": "openbaarheidsbeperking"
+          },
+          "archiefnummer": {
+            "type": "string",
+            "maxLength": 20,
+            "title": "archiefnummer"
+          },
+          "hoortBij": {
+            "type": "array",
+            "title": "hoortBij",
+            "items": {
+              "type": "object",
+              "$ref": "indeling",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "indeling"
+              }
+            }
+          },
+          "isOnderdeelVan": {
+            "type": "array",
+            "title": "isOnderdeelVan",
+            "items": {
+              "type": "object",
+              "$ref": "archiefstuk",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "archiefstuk"
+              }
+            }
+          },
+          "stamtUit": {
+            "type": "array",
+            "title": "stamtUit",
+            "items": {
+              "type": "object",
+              "$ref": "periode",
+              "objectConfiguration": {
+                "register": "ggm-kern",
+                "schema": "periode"
+              }
+            }
+          },
+          "heeft": {
+            "type": "object",
+            "title": "heeft",
+            "$ref": "rechthebbende",
+            "objectConfiguration": {
+              "register": "ggm-sport-cultuur-recreatie",
+              "schema": "rechthebbende"
+            }
+          },
+          "valtBinnen": {
+            "type": "array",
+            "title": "valtBinnen",
+            "items": {
+              "type": "object",
+              "$ref": "archiefcategorie",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "archiefcategorie"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "archiefcategorie": {
+        "slug": "archiefcategorie",
+        "title": "Archiefcategorie",
+        "version": "2.5.0",
+        "description": "Typologie van een archief conform landelijke indeling",
+        "required": [
+          "naam",
+          "omschrijving",
+          "nummer"
+        ],
+        "properties": {
+          "naam": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "naam"
+          },
+          "omschrijving": {
+            "type": "string",
+            "title": "omschrijving"
+          },
+          "nummer": {
+            "type": "string",
+            "maxLength": 20,
+            "title": "nummer"
+          },
+          "valtBinnen": {
+            "type": "array",
+            "title": "valtBinnen",
+            "items": {
+              "type": "object",
+              "$ref": "archief",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "archief"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "archiefstuk": {
+        "slug": "archiefstuk",
+        "title": "Archiefstuk",
+        "version": "2.5.0",
+        "description": "Bijeengebrachte informatie, ongeacht het medium, die wordt gecreëerd, ontvangen en gearchiveerd door een bureau, een instelling, een organisatie of een individu met het oog op het nakomen van wettelijke verplichtingen of het uitvoeren van zakelijke transacties.(AAT)",
+        "required": [
+          "trefwoorden",
+          "openbaarheidsbeperking",
+          "inventarisnummer",
+          "omvang",
+          "beschrijving",
+          "uiterlijkeVorm"
+        ],
+        "properties": {
+          "trefwoorden": {
+            "type": "string",
+            "maxLength": 200,
+            "title": "trefwoorden"
+          },
+          "openbaarheidsbeperking": {
+            "type": "boolean",
+            "title": "openbaarheidsbeperking"
+          },
+          "inventarisnummer": {
+            "type": "string",
+            "maxLength": 20,
+            "title": "inventarisnummer"
+          },
+          "omvang": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "omvang"
+          },
+          "beschrijving": {
+            "type": "string",
+            "title": "beschrijving"
+          },
+          "uiterlijkeVorm": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "uiterlijkeVorm"
+          },
+          "valtBinnen": {
+            "type": "object",
+            "title": "valtBinnen",
+            "$ref": "indeling",
+            "objectConfiguration": {
+              "register": "ggm-sport-cultuur-recreatie",
+              "schema": "indeling"
+            }
+          },
+          "stamtUit": {
+            "type": "array",
+            "title": "stamtUit",
+            "items": {
+              "type": "object",
+              "$ref": "periode",
+              "objectConfiguration": {
+                "register": "ggm-kern",
+                "schema": "periode"
+              }
+            }
+          },
+          "heeft": {
+            "type": "object",
+            "title": "heeft",
+            "$ref": "nadere-toegang",
+            "objectConfiguration": {
+              "register": "ggm-sport-cultuur-recreatie",
+              "schema": "nadere-toegang"
+            }
+          },
+          "isOnderdeelVan": {
+            "type": "object",
+            "title": "isOnderdeelVan",
+            "$ref": "archief",
+            "objectConfiguration": {
+              "register": "ggm-sport-cultuur-recreatie",
+              "schema": "archief"
+            }
+          },
+          "voor": {
+            "type": "array",
+            "title": "voor",
+            "items": {
+              "type": "object",
+              "$ref": "aanvraag",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "aanvraag"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false,
+        "allOf": [
+          {
+            "$ref": "document",
+            "objectConfiguration": {
+              "register": "ggm-kern",
+              "schema": "document"
+            }
+          },
+          {
+            "$ref": "erfgoed-object",
+            "objectConfiguration": {
+              "register": "ggm-sport-cultuur-recreatie",
+              "schema": "erfgoed-object"
+            }
+          }
+        ]
+      },
+      "auteur": {
+        "slug": "auteur",
+        "title": "Auteur",
+        "version": "2.5.0",
+        "description": "De persoon die verantwoordelijk is voor de inhoud van een (digitaal) document",
+        "required": [
+          "datumGeboorte",
+          "datumOverlijden"
+        ],
+        "properties": {
+          "datumGeboorte": {
+            "type": "string",
+            "format": "date",
+            "title": "datumGeboorte"
+          },
+          "datumOverlijden": {
+            "type": "string",
+            "format": "date",
+            "title": "datumOverlijden"
+          }
+        },
+        "searchable": true,
+        "hardValidation": false,
+        "allOf": [
+          {
+            "$ref": "historisch-persoon",
+            "objectConfiguration": {
+              "register": "ggm-sport-cultuur-recreatie",
+              "schema": "historisch-persoon"
+            }
+          }
+        ]
+      },
+      "bezoeker": {
+        "slug": "bezoeker",
+        "title": "Bezoeker",
+        "version": "2.5.0",
+        "description": "Een persoon die iemand of iets bezoekt.",
+        "required": [],
+        "properties": {
+          "doet": {
+            "type": "array",
+            "title": "doet",
+            "items": {
+              "type": "object",
+              "$ref": "aanvraag",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "aanvraag"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false,
+        "allOf": [
+          {
+            "$ref": "natuurlijkpersoon",
+            "objectConfiguration": {
+              "register": "ggm-kern",
+              "schema": "natuurlijkpersoon"
+            }
+          }
+        ]
+      },
+      "depot": {
+        "slug": "depot",
+        "title": "Depot",
+        "version": "2.5.0",
+        "description": "Plaats waar iets bewaard wordt.",
+        "required": [
+          "naam",
+          "omschrijving"
+        ],
+        "properties": {
+          "naam": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "naam"
+          },
+          "omschrijving": {
+            "type": "string",
+            "title": "omschrijving"
+          },
+          "isTeVindenIn": {
+            "type": "array",
+            "title": "isTeVindenIn",
+            "items": {
+              "type": "object",
+              "$ref": "vindplaats",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "vindplaats"
+              }
+            }
+          },
+          "heeft": {
+            "type": "array",
+            "title": "heeft",
+            "items": {
+              "type": "object",
+              "$ref": "stelling",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "stelling"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "digitaalbestand": {
+        "slug": "digitaalbestand",
+        "title": "DigitaalBestand",
+        "version": "2.5.0",
+        "description": "Bestand dat uitsluitend met behulp van besturingsprogrammatuur of toepassingsprogrammatuur geraadpleegd kunnen worden",
+        "required": [
+          "naam",
+          "omschrijving",
+          "mimetype",
+          "blob"
+        ],
+        "properties": {
+          "naam": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "naam"
+          },
+          "omschrijving": {
+            "type": "string",
+            "title": "omschrijving"
+          },
+          "mimetype": {
+            "type": "string",
+            "maxLength": 20,
+            "title": "mimetype"
+          },
+          "blob": {
+            "type": "string",
+            "format": "binary",
+            "title": "blob"
+          },
+          "heeft": {
+            "type": "object",
+            "title": "heeft",
+            "$ref": "archiefstuk",
+            "objectConfiguration": {
+              "register": "ggm-sport-cultuur-recreatie",
+              "schema": "archiefstuk"
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "indeling": {
+        "slug": "indeling",
+        "title": "Indeling",
+        "version": "2.5.0",
+        "description": "Onderwerpen groeperen in samenhangende categorieën.",
+        "required": [
+          "naam",
+          "nummer",
+          "omschrijving",
+          "indelingsoort"
+        ],
+        "properties": {
+          "naam": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "naam"
+          },
+          "nummer": {
+            "type": "string",
+            "maxLength": 20,
+            "title": "nummer"
+          },
+          "omschrijving": {
+            "type": "string",
+            "title": "omschrijving"
+          },
+          "indelingsoort": {
+            "type": "string",
+            "maxLength": 20,
+            "title": "indelingsoort"
+          },
+          "valtBinnen": {
+            "type": "array",
+            "title": "valtBinnen",
+            "items": {
+              "type": "object",
+              "$ref": "indeling",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "indeling"
+              }
+            }
+          },
+          "hoortBij": {
+            "type": "object",
+            "title": "hoortBij",
+            "$ref": "archief",
+            "objectConfiguration": {
+              "register": "ggm-sport-cultuur-recreatie",
+              "schema": "archief"
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "index": {
+        "slug": "index",
+        "title": "Index",
+        "version": "2.5.0",
+        "description": "GGM entity: Index",
+        "required": [
+          "indexnaam",
+          "indexwaarde"
+        ],
+        "properties": {
+          "indexnaam": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "indexnaam"
+          },
+          "indexwaarde": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "indexwaarde"
+          },
+          "wordtBeschreven": {
+            "type": "object",
+            "title": "wordtBeschreven",
+            "$ref": "nadere-toegang",
+            "objectConfiguration": {
+              "register": "ggm-sport-cultuur-recreatie",
+              "schema": "nadere-toegang"
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "kast": {
+        "slug": "kast",
+        "title": "Kast",
+        "version": "2.5.0",
+        "description": "Object met een permanent karakter dat dient om iets in te bergen en te beschermen.",
+        "required": [
+          "kastnummer"
+        ],
+        "properties": {
+          "kastnummer": {
+            "type": "string",
+            "maxLength": 20,
+            "title": "kastnummer"
+          },
+          "heeft": {
+            "type": "object",
+            "title": "heeft",
+            "$ref": "stelling",
+            "objectConfiguration": {
+              "register": "ggm-sport-cultuur-recreatie",
+              "schema": "stelling"
+            }
+          },
+          "isTeVindenIn": {
+            "type": "array",
+            "title": "isTeVindenIn",
+            "items": {
+              "type": "object",
+              "$ref": "vindplaats",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "vindplaats"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "nadere-toegang": {
+        "slug": "nadere-toegang",
+        "title": "Nadere Toegang",
+        "version": "2.5.0",
+        "description": "De bevoegdheid om gegevens te raadplegen, bepaalde plaatsen te betreden of een bepaalde taak uit te oefenen.",
+        "required": [],
+        "properties": {
+          "wordtBeschreven": {
+            "type": "array",
+            "title": "wordtBeschreven",
+            "items": {
+              "type": "object",
+              "$ref": "index",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "index"
+              }
+            }
+          },
+          "heeft": {
+            "type": "object",
+            "title": "heeft",
+            "$ref": "archiefstuk",
+            "objectConfiguration": {
+              "register": "ggm-sport-cultuur-recreatie",
+              "schema": "archiefstuk"
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "ordeningsschema": {
+        "slug": "ordeningsschema",
+        "title": "Ordeningsschema",
+        "version": "2.5.0",
+        "description": "Ordening om archief en collecties beter vindbaar en bruikbaar voor betrokkenen.",
+        "required": [
+          "naam",
+          "text"
+        ],
+        "properties": {
+          "naam": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "naam"
+          },
+          "text": {
+            "type": "string",
+            "title": "text"
+          },
+          "heeft": {
+            "type": "array",
+            "title": "heeft",
+            "items": {
+              "type": "object",
+              "$ref": "archiefstuk",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "archiefstuk"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "plank": {
+        "slug": "plank",
+        "title": "Plank",
+        "version": "2.5.0",
+        "description": "Deel, plaat; stuk hout breder dan het dik is en langer dan breed.",
+        "required": [
+          "planknummer"
+        ],
+        "properties": {
+          "planknummer": {
+            "type": "string",
+            "maxLength": 20,
+            "title": "planknummer"
+          },
+          "isTeVindenIn": {
+            "type": "array",
+            "title": "isTeVindenIn",
+            "items": {
+              "type": "object",
+              "$ref": "vindplaats",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "vindplaats"
+              }
+            }
+          },
+          "heeft": {
+            "type": "object",
+            "title": "heeft",
+            "$ref": "kast",
+            "objectConfiguration": {
+              "register": "ggm-sport-cultuur-recreatie",
+              "schema": "kast"
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "rechthebbende": {
+        "slug": "rechthebbende",
+        "title": "Rechthebbende",
+        "version": "2.5.0",
+        "description": "Een rechthebbende is iemand die rechten heeft op een goed.",
+        "required": [],
+        "properties": {
+          "heeft": {
+            "type": "array",
+            "title": "heeft",
+            "items": {
+              "type": "object",
+              "$ref": "archief",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "archief"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false,
+        "allOf": [
+          {
+            "$ref": "rechtspersoon",
+            "objectConfiguration": {
+              "register": "ggm-kern",
+              "schema": "rechtspersoon"
+            }
+          }
+        ]
+      },
+      "stelling-2": {
+        "slug": "stelling-2",
+        "title": "Stelling",
+        "version": "2.5.0",
+        "description": "Een systeem om goederen op te slaan die worden vervoerd en opgeslagen op pallets, in bundels of per stuk.(Wikipedia)",
+        "required": [
+          "stellingnummer"
+        ],
+        "properties": {
+          "stellingnummer": {
+            "type": "string",
+            "maxLength": 20,
+            "title": "stellingnummer"
+          },
+          "isTeVindenIn": {
+            "type": "array",
+            "title": "isTeVindenIn",
+            "items": {
+              "type": "object",
+              "$ref": "vindplaats",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "vindplaats"
+              }
+            }
+          },
+          "heeft": {
+            "type": "array",
+            "title": "heeft",
+            "items": {
+              "type": "object",
+              "$ref": "kast",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "kast"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "uitgever": {
+        "slug": "uitgever",
+        "title": "Uitgever",
+        "version": "2.5.0",
+        "description": "Iemand die iets op de markt brengt; iemand die iets uitgeeft",
+        "required": [],
+        "properties": {
+          "heeft": {
+            "type": "array",
+            "title": "heeft",
+            "items": {
+              "type": "object",
+              "$ref": "archiefstuk",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "archiefstuk"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false,
+        "allOf": [
+          {
+            "$ref": "rechtspersoon",
+            "objectConfiguration": {
+              "register": "ggm-kern",
+              "schema": "rechtspersoon"
+            }
+          }
+        ]
+      },
+      "vindplaats-2": {
+        "slug": "vindplaats-2",
+        "title": "Vindplaats",
+        "version": "2.5.0",
+        "description": "Een plek waar men iets gevonden heeft.",
+        "required": [],
+        "properties": {
+          "isTeVindenIn": {
+            "type": "object",
+            "title": "isTeVindenIn",
+            "$ref": "stelling",
+            "objectConfiguration": {
+              "register": "ggm-sport-cultuur-recreatie",
+              "schema": "stelling"
+            }
+          },
+          "heeft": {
+            "type": "array",
+            "title": "heeft",
+            "items": {
+              "type": "object",
+              "$ref": "archiefstuk",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "archiefstuk"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "erfgoed-object": {
+        "slug": "erfgoed-object",
+        "title": "Erfgoed Object",
+        "version": "2.5.0",
+        "description": "Uit het verleden geërfde materiële en immateriële objecten",
+        "required": [
+          "titel",
+          "omschrijving",
+          "dateringVanaf",
+          "dateringTot"
+        ],
+        "properties": {
+          "titel": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "titel"
+          },
+          "omschrijving": {
+            "type": "string",
+            "title": "omschrijving"
+          },
+          "dateringVanaf": {
+            "type": "integer",
+            "title": "dateringVanaf"
+          },
+          "dateringTot": {
+            "type": "integer",
+            "title": "dateringTot"
+          },
+          "speeltRolIn": {
+            "type": "array",
+            "title": "speeltRolIn",
+            "items": {
+              "type": "object",
+              "$ref": "historisch-persoon",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "historisch-persoon"
+              }
+            }
+          },
+          "valtBinnen": {
+            "type": "array",
+            "title": "valtBinnen",
+            "items": {
+              "type": "object",
+              "$ref": "objectclassificatie",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "objectclassificatie"
+              }
+            }
+          },
+          "betreft": {
+            "type": "array",
+            "title": "betreft",
+            "items": {
+              "type": "object",
+              "$ref": "foto",
+              "objectConfiguration": {
+                "register": "ggm-kern",
+                "schema": "foto"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "historisch-persoon": {
+        "slug": "historisch-persoon",
+        "title": "Historisch Persoon ",
+        "version": "2.5.0",
+        "description": "Natuurlijk persoon waarvan informatie beschikbaar is uit het verleden.",
+        "required": [
+          "naam",
+          "datumGeboorte",
+          "datumOverlijden",
+          "omschrijving",
+          "woondeOp",
+          "beroep",
+          "publiekToegankelijk"
+        ],
+        "properties": {
+          "naam": {
+            "type": "string",
+            "maxLength": 200,
+            "title": "naam"
+          },
+          "datumGeboorte": {
+            "type": "string",
+            "format": "date",
+            "title": "datumGeboorte"
+          },
+          "datumOverlijden": {
+            "type": "string",
+            "format": "date",
+            "title": "datumOverlijden"
+          },
+          "omschrijving": {
+            "type": "string",
+            "title": "omschrijving"
+          },
+          "woondeOp": {
+            "type": "string",
+            "maxLength": 50,
+            "title": "woondeOp"
+          },
+          "beroep": {
+            "type": "string",
+            "maxLength": 200,
+            "title": "beroep"
+          },
+          "publiekToegankelijk": {
+            "type": "boolean",
+            "title": "publiekToegankelijk"
+          },
+          "heeftVerbinding": {
+            "type": "array",
+            "title": "heeftVerbinding",
+            "items": {
+              "type": "object",
+              "$ref": "museumobject",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "museumobject"
+              }
+            }
+          },
+          "speeltRolIn": {
+            "type": "array",
+            "title": "speeltRolIn",
+            "items": {
+              "type": "object",
+              "$ref": "erfgoed-object",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "erfgoed-object"
+              }
+            }
+          },
+          "isGewijdAan": {
+            "type": "array",
+            "title": "isGewijdAan",
+            "items": {
+              "type": "object",
+              "$ref": "tentoonstelling",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "tentoonstelling"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false,
+        "allOf": [
+          {
+            "$ref": "natuurlijkpersoon",
+            "objectConfiguration": {
+              "register": "ggm-kern",
+              "schema": "natuurlijkpersoon"
+            }
+          }
+        ]
+      },
+      "objectclassificatie": {
+        "slug": "objectclassificatie",
+        "title": "Objectclassificatie",
+        "version": "2.5.0",
+        "description": "Systematische identificatie en ordening van objecten in categorieën overeenkomstig logisch gestructureerde conventies, methoden en procedureregels weergegeven in een classificatiesysteem.",
+        "required": [
+          "naam",
+          "omschrijving"
+        ],
+        "properties": {
+          "naam": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "naam"
+          },
+          "omschrijving": {
+            "type": "string",
+            "title": "omschrijving"
+          },
+          "valtBinnen": {
+            "type": "array",
+            "title": "valtBinnen",
+            "items": {
+              "type": "object",
+              "$ref": "erfgoed-object",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "erfgoed-object"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "ambacht": {
+        "slug": "ambacht",
+        "title": "Ambacht",
+        "version": "2.5.0",
+        "description": "Beroep waarbij een handwerker met gereedschap eindproducten maakt.",
+        "required": [
+          "jaarAmbachtVanaf",
+          "jaarAmbachtTot",
+          "ambachtsoort"
+        ],
+        "properties": {
+          "jaarAmbachtVanaf": {
+            "type": "integer",
+            "title": "jaarAmbachtVanaf"
+          },
+          "jaarAmbachtTot": {
+            "type": "integer",
+            "title": "jaarAmbachtTot"
+          },
+          "ambachtsoort": {
+            "type": "string",
+            "maxLength": 300,
+            "title": "ambachtsoort"
+          },
+          "monumentAmbacht": {
+            "type": "array",
+            "title": "monumentAmbacht",
+            "items": {
+              "type": "object",
+              "$ref": "beschermde-status",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "beschermde-status"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "beschermde-status": {
+        "slug": "beschermde-status",
+        "title": "Beschermde Status",
+        "version": "2.5.0",
+        "description": "Status van de bescherming van een monument. Een monument / erfgoed is een overblijfsel van kunst, cultuur, architectuur of nijverheid dat van algemeen belang wordt geacht vanwege de historische, volkskundige, artistieke, wetenschappelijke, industrieel-archeologische of andere sociaal-culturele waarde. Vormen van monument / erfgoed met de status rijks- provinciaal- of gemeentelijke monument / erfgoed zijn beschermd op grond van een besluit van respectievelijk het Ministerie OCW, de provincie of de gemeente,",
+        "required": [
+          "rijksmonumentcode",
+          "gemeentelijkMonumentCode",
+          "datumInschrijvingRegister",
+          "naam",
+          "type",
+          "gezichtscode",
+          "complex",
+          "opmerkingen",
+          "bronnen",
+          "omschrijving"
+        ],
+        "properties": {
+          "rijksmonumentcode": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "rijksmonumentcode"
+          },
+          "gemeentelijkMonumentCode": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "gemeentelijkMonumentCode"
+          },
+          "datumInschrijvingRegister": {
+            "type": "string",
+            "format": "date",
+            "title": "datumInschrijvingRegister"
+          },
+          "naam": {
+            "type": "string",
+            "maxLength": 200,
+            "title": "naam"
+          },
+          "type": {
+            "type": "string",
+            "title": "type",
+            "enum": [
+              "rijksmonument",
+              "gemeentelijkmonument"
+            ]
+          },
+          "gezichtscode": {
+            "type": "string",
+            "maxLength": 20,
+            "title": "gezichtscode"
+          },
+          "complex": {
+            "type": "string",
+            "maxLength": 200,
+            "title": "complex"
+          },
+          "opmerkingen": {
+            "type": "string",
+            "title": "opmerkingen"
+          },
+          "bronnen": {
+            "type": "string",
+            "maxLength": 400,
+            "title": "bronnen"
+          },
+          "omschrijving": {
+            "type": "string",
+            "title": "omschrijving"
+          },
+          "monumentFunctie": {
+            "type": "array",
+            "title": "monumentFunctie",
+            "items": {
+              "type": "object",
+              "$ref": "oorspronkelijkefunctie",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "oorspronkelijkefunctie"
+              }
+            }
+          },
+          "betreft": {
+            "type": "array",
+            "title": "betreft",
+            "items": {
+              "type": "object",
+              "$ref": "pand",
+              "objectConfiguration": {
+                "register": "ggm-kern",
+                "schema": "pand"
+              }
+            }
+          },
+          "monumentBouwtype": {
+            "type": "array",
+            "title": "monumentBouwtype",
+            "items": {
+              "type": "object",
+              "$ref": "bouwtype",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "bouwtype"
+              }
+            }
+          },
+          "monumentBouwactiviteit": {
+            "type": "array",
+            "title": "monumentBouwactiviteit",
+            "items": {
+              "type": "object",
+              "$ref": "bouwactiviteit",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "bouwactiviteit"
+              }
+            }
+          },
+          "monumentFotos": {
+            "type": "array",
+            "title": "monumentFotos",
+            "items": {
+              "type": "object",
+              "$ref": "foto",
+              "objectConfiguration": {
+                "register": "ggm-kern",
+                "schema": "foto"
+              }
+            }
+          },
+          "monumentBouwstijl": {
+            "type": "array",
+            "title": "monumentBouwstijl",
+            "items": {
+              "type": "object",
+              "$ref": "bouwstijl",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "bouwstijl"
+              }
+            }
+          },
+          "monumentAmbacht": {
+            "type": "array",
+            "title": "monumentAmbacht",
+            "items": {
+              "type": "object",
+              "$ref": "ambacht",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "ambacht"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "bouwactiviteit": {
+        "slug": "bouwactiviteit",
+        "title": "Bouwactiviteit",
+        "version": "2.5.0",
+        "description": "Het bouwen van een bouwwerk.",
+        "required": [
+          "bouwjaarVan",
+          "bouwjaarTot",
+          "indicatie",
+          "bouwjaarklasse",
+          "omschrijving"
+        ],
+        "properties": {
+          "bouwjaarVan": {
+            "type": "integer",
+            "title": "bouwjaarVan"
+          },
+          "bouwjaarTot": {
+            "type": "integer",
+            "title": "bouwjaarTot"
+          },
+          "indicatie": {
+            "type": "string",
+            "maxLength": 8,
+            "title": "indicatie"
+          },
+          "bouwjaarklasse": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "bouwjaarklasse"
+          },
+          "omschrijving": {
+            "type": "string",
+            "maxLength": 300,
+            "title": "omschrijving"
+          },
+          "monumentBouwactiviteit": {
+            "type": "array",
+            "title": "monumentBouwactiviteit",
+            "items": {
+              "type": "object",
+              "$ref": "beschermde-status",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "beschermde-status"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "bouwstijl": {
+        "slug": "bouwstijl",
+        "title": "Bouwstijl",
+        "version": "2.5.0",
+        "description": "Trant van bouwen met bepaalde kenmerken in een bepaalde periode. In de betrokken tijdperken waren het geen levende voorstellingen; het zijn later geformuleerde (generaliserende) geschiedkundige constructies. Doelbewust komt deze tendens op sedert c. 1830. (Haslinghuis)",
+        "required": [
+          "hoofdstijl",
+          "substijl",
+          "zuiverheid",
+          "toelichting"
+        ],
+        "properties": {
+          "hoofdstijl": {
+            "type": "string",
+            "maxLength": 200,
+            "title": "hoofdstijl"
+          },
+          "substijl": {
+            "type": "string",
+            "maxLength": 200,
+            "title": "substijl"
+          },
+          "zuiverheid": {
+            "type": "string",
+            "maxLength": 200,
+            "title": "zuiverheid"
+          },
+          "toelichting": {
+            "type": "string",
+            "title": "toelichting"
+          },
+          "monumentBouwstijl": {
+            "type": "array",
+            "title": "monumentBouwstijl",
+            "items": {
+              "type": "object",
+              "$ref": "beschermde-status",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "beschermde-status"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "bouwtype": {
+        "slug": "bouwtype",
+        "title": "Bouwtype",
+        "version": "2.5.0",
+        "description": "Typering van een bouwstijl",
+        "required": [
+          "hoofdcategorie",
+          "subcategorie",
+          "toelichting"
+        ],
+        "properties": {
+          "hoofdcategorie": {
+            "type": "string",
+            "maxLength": 200,
+            "title": "hoofdcategorie"
+          },
+          "subcategorie": {
+            "type": "string",
+            "maxLength": 200,
+            "title": "subcategorie"
+          },
+          "toelichting": {
+            "type": "string",
+            "title": "toelichting"
+          },
+          "monumentBouwtype": {
+            "type": "array",
+            "title": "monumentBouwtype",
+            "items": {
+              "type": "object",
+              "$ref": "beschermde-status",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "beschermde-status"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "oorspronkelijkefunctie": {
+        "slug": "oorspronkelijkefunctie",
+        "title": "OorspronkelijkeFunctie",
+        "version": "2.5.0",
+        "description": "De functie van een object na bouw of oplevering",
+        "required": [
+          "hoofdfunctie",
+          "functiesoort",
+          "hoofdcategorie",
+          "subcategorie",
+          "functie",
+          "verbijzondering",
+          "toelichting"
+        ],
+        "properties": {
+          "hoofdfunctie": {
+            "type": "boolean",
+            "title": "hoofdfunctie"
+          },
+          "functiesoort": {
+            "type": "string",
+            "title": "functiesoort"
+          },
+          "hoofdcategorie": {
+            "type": "string",
+            "maxLength": 200,
+            "title": "hoofdcategorie"
+          },
+          "subcategorie": {
+            "type": "string",
+            "maxLength": 200,
+            "title": "subcategorie"
+          },
+          "functie": {
+            "type": "string",
+            "maxLength": 200,
+            "title": "functie"
+          },
+          "verbijzondering": {
+            "type": "string",
+            "maxLength": 200,
+            "title": "verbijzondering"
+          },
+          "toelichting": {
+            "type": "string",
+            "title": "toelichting"
+          },
+          "monumentFunctie": {
+            "type": "array",
+            "title": "monumentFunctie",
+            "items": {
+              "type": "object",
+              "$ref": "beschermde-status",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "beschermde-status"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "activiteit": {
+        "slug": "activiteit",
+        "title": "Activiteit",
+        "version": "2.5.0",
+        "description": "Ieder menselijk handelen waarbij, of ieder menselijk nalaten waardoor een verandering of effect in de (fysieke) leefomgeving wordt of kan worden bewerkstelligd.",
+        "required": [
+          "naam",
+          "omschrijving",
+          "aantalPersonen"
+        ],
+        "properties": {
+          "naam": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "naam"
+          },
+          "omschrijving": {
+            "type": "string",
+            "title": "omschrijving"
+          },
+          "aantalPersonen": {
+            "type": "integer",
+            "title": "aantalPersonen"
+          },
+          "bestaatUit": {
+            "type": "object",
+            "title": "bestaatUit",
+            "$ref": "programma",
+            "objectConfiguration": {
+              "register": "ggm-sport-cultuur-recreatie",
+              "schema": "programma"
+            }
+          },
+          "heeft": {
+            "type": "array",
+            "title": "heeft",
+            "items": {
+              "type": "object",
+              "$ref": "reservering",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "reservering"
+              }
+            }
+          },
+          "vanSoort": {
+            "type": "object",
+            "title": "vanSoort",
+            "$ref": "activiteitsoort",
+            "objectConfiguration": {
+              "register": "ggm-sport-cultuur-recreatie",
+              "schema": "activiteitsoort"
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "activiteitsoort": {
+        "slug": "activiteitsoort",
+        "title": "Activiteitsoort",
+        "version": "2.5.0",
+        "description": "Typering van een activiteit",
+        "required": [
+          "naam",
+          "omschrijving"
+        ],
+        "properties": {
+          "naam": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "naam"
+          },
+          "omschrijving": {
+            "type": "string",
+            "title": "omschrijving"
+          },
+          "vanSoort": {
+            "type": "array",
+            "title": "vanSoort",
+            "items": {
+              "type": "object",
+              "$ref": "activiteit",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "activiteit"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "balieverkoop": {
+        "slug": "balieverkoop",
+        "title": "Balieverkoop",
+        "version": "2.5.0",
+        "description": "Verkoop aan de balie",
+        "required": [
+          "verkooptijd",
+          "kanaal",
+          "aantal"
+        ],
+        "properties": {
+          "verkooptijd": {
+            "type": "string",
+            "format": "date-time",
+            "title": "verkooptijd"
+          },
+          "kanaal": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "kanaal",
+            "description": "Verkocht via kassa, online of ander kanaal"
+          },
+          "aantal": {
+            "type": "integer",
+            "title": "aantal"
+          },
+          "betreft": {
+            "type": "object",
+            "title": "betreft",
+            "$ref": "product",
+            "objectConfiguration": {
+              "register": "ggm-sport-cultuur-recreatie",
+              "schema": "product"
+            }
+          },
+          "tegenPrijs": {
+            "type": "object",
+            "title": "tegenPrijs",
+            "$ref": "prijs",
+            "objectConfiguration": {
+              "register": "ggm-sport-cultuur-recreatie",
+              "schema": "prijs"
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "balieverkoop-entreekaart": {
+        "slug": "balieverkoop-entreekaart",
+        "title": "Balieverkoop Entreekaart",
+        "version": "2.5.0",
+        "description": "Verkoop van een entreekaart aan de balie",
+        "required": [
+          "rondleiding",
+          "datumStart",
+          "datumEindeGeldigheid",
+          "gebruiktOp"
+        ],
+        "properties": {
+          "rondleiding": {
+            "type": "boolean",
+            "title": "rondleiding"
+          },
+          "datumStart": {
+            "type": "string",
+            "format": "date-time",
+            "title": "datumStart"
+          },
+          "datumEindeGeldigheid": {
+            "type": "string",
+            "format": "date-time",
+            "title": "datumEindeGeldigheid"
+          },
+          "gebruiktOp": {
+            "type": "string",
+            "format": "date-time",
+            "title": "gebruiktOp"
+          }
+        },
+        "searchable": true,
+        "hardValidation": false,
+        "allOf": [
+          {
+            "$ref": "balieverkoop",
+            "objectConfiguration": {
+              "register": "ggm-sport-cultuur-recreatie",
+              "schema": "balieverkoop"
+            }
+          }
+        ]
+      },
+      "belanghebbende": {
+        "slug": "belanghebbende",
+        "title": "Belanghebbende",
+        "version": "2.5.0",
+        "description": "Een persoon wiens belang rechtstreeks bij een besluit is betrokken.",
+        "required": [
+          "datumStart",
+          "datumTot"
+        ],
+        "properties": {
+          "datumStart": {
+            "type": "string",
+            "format": "date",
+            "title": "datumStart"
+          },
+          "datumTot": {
+            "type": "string",
+            "format": "date",
+            "title": "datumTot"
+          },
+          "heeft": {
+            "type": "array",
+            "title": "heeft",
+            "items": {
+              "type": "object",
+              "$ref": "museumobject",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "museumobject"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false,
+        "allOf": [
+          {
+            "$ref": "rechtspersoon",
+            "objectConfiguration": {
+              "register": "ggm-kern",
+              "schema": "rechtspersoon"
+            }
+          }
+        ]
+      },
+      "bruikleen": {
+        "slug": "bruikleen",
+        "title": "Bruikleen",
+        "version": "2.5.0",
+        "description": "Lening voor tijdelijk gebruik",
+        "required": [
+          "datumAanvraag",
+          "datumStart",
+          "datumEinde",
+          "aanvraagDoor",
+          "toestemmingDoor"
+        ],
+        "properties": {
+          "datumAanvraag": {
+            "type": "string",
+            "format": "date",
+            "title": "datumAanvraag"
+          },
+          "datumStart": {
+            "type": "string",
+            "format": "date",
+            "title": "datumStart"
+          },
+          "datumEinde": {
+            "type": "string",
+            "format": "date",
+            "title": "datumEinde"
+          },
+          "aanvraagDoor": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "aanvraagDoor"
+          },
+          "toestemmingDoor": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "toestemmingDoor"
+          },
+          "betreft": {
+            "type": "array",
+            "title": "betreft",
+            "items": {
+              "type": "object",
+              "$ref": "museumobject",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "museumobject"
+              }
+            }
+          },
+          "is": {
+            "type": "array",
+            "title": "is",
+            "items": {
+              "type": "object",
+              "$ref": "lener",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "lener"
+              }
+            }
+          },
+          "isBedoeldVoor": {
+            "type": "array",
+            "title": "isBedoeldVoor",
+            "items": {
+              "type": "object",
+              "$ref": "tentoonstelling",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "tentoonstelling"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "collectie": {
+        "slug": "collectie",
+        "title": "Collectie",
+        "version": "2.5.0",
+        "description": "Een verzameling van verworven voorwerpen die is samengesteld op grond van vastgestelde criteria.",
+        "required": [
+          "naam",
+          "omschrijving"
+        ],
+        "properties": {
+          "naam": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "naam"
+          },
+          "omschrijving": {
+            "type": "string",
+            "title": "omschrijving"
+          },
+          "bevat": {
+            "type": "array",
+            "title": "bevat",
+            "items": {
+              "type": "object",
+              "$ref": "museumobject",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "museumobject"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "doelgroep": {
+        "slug": "doelgroep",
+        "title": "Doelgroep",
+        "version": "2.5.0",
+        "description": "Een groep mensen of klanten die een bedrijf of organisatie wil benaderen om een product, dienst of informatie onder de aandacht te brengen",
+        "required": [
+          "naam",
+          "omschrijving",
+          "branch",
+          "segment"
+        ],
+        "properties": {
+          "naam": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "naam"
+          },
+          "omschrijving": {
+            "type": "string",
+            "title": "omschrijving"
+          },
+          "branch": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "branch"
+          },
+          "segment": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "segment"
+          },
+          "bestaatUit": {
+            "type": "array",
+            "title": "bestaatUit",
+            "items": {
+              "type": "object",
+              "$ref": "doelgroep",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "doelgroep"
+              }
+            }
+          },
+          "valtBinnen": {
+            "type": "array",
+            "title": "valtBinnen",
+            "items": {
+              "type": "object",
+              "$ref": "museumrelatie",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "museumrelatie"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "entreekaart": {
+        "slug": "entreekaart",
+        "title": "Entreekaart",
+        "version": "2.5.0",
+        "description": "Bewijs van toegang tot een gebouw of voorstelling",
+        "required": [
+          "rondleiding"
+        ],
+        "properties": {
+          "rondleiding": {
+            "type": "boolean",
+            "title": "rondleiding"
+          }
+        },
+        "searchable": true,
+        "hardValidation": false,
+        "allOf": [
+          {
+            "$ref": "product",
+            "objectConfiguration": {
+              "register": "ggm-sport-cultuur-recreatie",
+              "schema": "product"
+            }
+          }
+        ]
+      },
+      "incident": {
+        "slug": "incident",
+        "title": "Incident",
+        "version": "2.5.0",
+        "description": "Niet-gepland(e) gebeurtenis die of voorval dat tot schade of verlies leidt",
+        "required": [
+          "naam",
+          "omschrijving",
+          "datum",
+          "locatie"
+        ],
+        "properties": {
+          "naam": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "naam"
+          },
+          "omschrijving": {
+            "type": "string",
+            "title": "omschrijving"
+          },
+          "datum": {
+            "type": "string",
+            "format": "date",
+            "title": "datum"
+          },
+          "locatie": {
+            "type": "string",
+            "maxLength": 300,
+            "title": "locatie"
+          },
+          "betreft": {
+            "type": "array",
+            "title": "betreft",
+            "items": {
+              "type": "object",
+              "$ref": "museumobject",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "museumobject"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "lener": {
+        "slug": "lener",
+        "title": "Lener",
+        "version": "2.5.0",
+        "description": "Iemand die iets te leen krijgt, met name iemand die boeken, digitale bestanden of apparatuur leent bij een museum, bibliotheek, mediatheek of een andere uitleeninstantie",
+        "required": [
+          "opmerkingen"
+        ],
+        "properties": {
+          "opmerkingen": {
+            "type": "string",
+            "title": "opmerkingen"
+          },
+          "is": {
+            "type": "array",
+            "title": "is",
+            "items": {
+              "type": "object",
+              "$ref": "bruikleen",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "bruikleen"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false,
+        "allOf": [
+          {
+            "$ref": "rechtspersoon",
+            "objectConfiguration": {
+              "register": "ggm-kern",
+              "schema": "rechtspersoon"
+            }
+          }
+        ]
+      },
+      "mailing": {
+        "slug": "mailing",
+        "title": "Mailing",
+        "version": "2.5.0",
+        "description": "Per post verstuurde inhoud",
+        "required": [
+          "naam",
+          "omschrijving",
+          "datum"
+        ],
+        "properties": {
+          "naam": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "naam"
+          },
+          "omschrijving": {
+            "type": "string",
+            "title": "omschrijving"
+          },
+          "datum": {
+            "type": "string",
+            "format": "date",
+            "title": "datum"
+          },
+          "versturenAan": {
+            "type": "array",
+            "title": "versturenAan",
+            "items": {
+              "type": "object",
+              "$ref": "museumrelatie",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "museumrelatie"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "museumobject": {
+        "slug": "museumobject",
+        "title": "Museumobject",
+        "version": "2.5.0",
+        "description": "Beschrijving van een fenomeen in de werkelijkheid met een zekere cultuurhistorische waarde die deel uitmaakt van de culthuurhistorisch object index. Een museum object kan gedifiniëerd worden als een object met betrekking tot gebouwd, archeologisch, roerend of cultuurlandschappelijk erfgoed. Denk hierbij bijvoorbeeld aan een gebouwd of archeologisch rijksmonument, een schilderij of een beschermd stads- of dorpsgezicht.",
+        "required": [
+          "verkrijging",
+          "medium",
+          "afmeting",
+          "bezitVanaf",
+          "bezitTot"
+        ],
+        "properties": {
+          "verkrijging": {
+            "type": "string",
+            "maxLength": 300,
+            "title": "verkrijging",
+            "description": "Hoe en via wie object is verkregen. Informatie uit de Constituents-tabel."
+          },
+          "medium": {
+            "type": "string",
+            "maxLength": 300,
+            "title": "medium",
+            "description": "Materiaal waarvan object is vervaardigd"
+          },
+          "afmeting": {
+            "type": "string",
+            "maxLength": 300,
+            "title": "afmeting",
+            "description": "Omschrijving van afmeting"
+          },
+          "bezitVanaf": {
+            "type": "string",
+            "format": "date",
+            "title": "bezitVanaf"
+          },
+          "bezitTot": {
+            "type": "string",
+            "format": "date",
+            "title": "bezitTot"
+          },
+          "heeftVerbinding": {
+            "type": "array",
+            "title": "heeftVerbinding",
+            "items": {
+              "type": "object",
+              "$ref": "historisch-persoon",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "historisch-persoon"
+              }
+            }
+          },
+          "locatie": {
+            "type": "object",
+            "title": "locatie",
+            "$ref": "standplaats",
+            "objectConfiguration": {
+              "register": "ggm-sport-cultuur-recreatie",
+              "schema": "standplaats"
+            }
+          },
+          "onderdeel": {
+            "type": "array",
+            "title": "onderdeel",
+            "items": {
+              "type": "object",
+              "$ref": "tentoonstelling",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "tentoonstelling"
+              }
+            }
+          },
+          "betreft": {
+            "type": "array",
+            "title": "betreft",
+            "items": {
+              "type": "object",
+              "$ref": "incident",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "incident"
+              }
+            }
+          },
+          "bevat": {
+            "type": "array",
+            "title": "bevat",
+            "items": {
+              "type": "object",
+              "$ref": "collectie",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "collectie"
+              }
+            }
+          },
+          "heeft": {
+            "type": "array",
+            "title": "heeft",
+            "items": {
+              "type": "object",
+              "$ref": "belanghebbende",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "belanghebbende"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false,
+        "allOf": [
+          {
+            "$ref": "erfgoed-object",
+            "objectConfiguration": {
+              "register": "ggm-sport-cultuur-recreatie",
+              "schema": "erfgoed-object"
+            }
+          }
+        ]
+      },
+      "museumrelatie": {
+        "slug": "museumrelatie",
+        "title": "Museumrelatie",
+        "version": "2.5.0",
+        "description": "Betrekking waarin het museum en personen tot elkaar staan",
+        "required": [
+          "relatiesoort"
+        ],
+        "properties": {
+          "relatiesoort": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "relatiesoort"
+          },
+          "voor": {
+            "type": "array",
+            "title": "voor",
+            "items": {
+              "type": "object",
+              "$ref": "programma",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "programma"
+              }
+            }
+          },
+          "versturenAan": {
+            "type": "array",
+            "title": "versturenAan",
+            "items": {
+              "type": "object",
+              "$ref": "mailing",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "mailing"
+              }
+            }
+          },
+          "valtBinnen": {
+            "type": "array",
+            "title": "valtBinnen",
+            "items": {
+              "type": "object",
+              "$ref": "doelgroep",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "doelgroep"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false,
+        "allOf": [
+          {
+            "$ref": "rechtspersoon",
+            "objectConfiguration": {
+              "register": "ggm-kern",
+              "schema": "rechtspersoon"
+            }
+          }
+        ]
+      },
+      "omzetgroep": {
+        "slug": "omzetgroep",
+        "title": "Omzetgroep",
+        "version": "2.5.0",
+        "description": "Artikelen worden gebruikt om omzet te registreren in de shop, de horeca of elders. De omzet wordt vervolgens getotaliseerd op rapportages. Om de artikelen te groeperen moet ieder artikel tot een omzetgroep behoren.",
+        "required": [
+          "naam",
+          "omschrijving"
+        ],
+        "properties": {
+          "naam": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "naam"
+          },
+          "omschrijving": {
+            "type": "string",
+            "title": "omschrijving"
+          },
+          "valtBinnen": {
+            "type": "array",
+            "title": "valtBinnen",
+            "items": {
+              "type": "object",
+              "$ref": "product",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "product"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "prijs": {
+        "slug": "prijs",
+        "title": "Prijs",
+        "version": "2.5.0",
+        "description": "De te betalen hoeveelheid geld",
+        "required": [
+          "bedrag",
+          "datumStart",
+          "datumEindeGeldigheid"
+        ],
+        "properties": {
+          "bedrag": {
+            "type": "number",
+            "title": "bedrag"
+          },
+          "datumStart": {
+            "type": "string",
+            "format": "date",
+            "title": "datumStart"
+          },
+          "datumEindeGeldigheid": {
+            "type": "string",
+            "format": "date",
+            "title": "datumEindeGeldigheid"
+          },
+          "heeftPrijs": {
+            "type": "object",
+            "title": "heeftPrijs",
+            "$ref": "product",
+            "objectConfiguration": {
+              "register": "ggm-sport-cultuur-recreatie",
+              "schema": "product"
+            }
+          },
+          "tegenPrijs": {
+            "type": "array",
+            "title": "tegenPrijs",
+            "items": {
+              "type": "object",
+              "$ref": "balieverkoop",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "balieverkoop"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "product": {
+        "slug": "product",
+        "title": "Product",
+        "version": "2.5.0",
+        "description": "Het resultaat van een proces dat in het economisch verkeer een waarde bezit.",
+        "required": [
+          "omschrijving",
+          "prijs",
+          "datumStart",
+          "datumEindeGeldigheid",
+          "codeMuseumjaarkaart",
+          "entreekaart"
+        ],
+        "properties": {
+          "omschrijving": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "omschrijving"
+          },
+          "prijs": {
+            "type": "number",
+            "title": "prijs"
+          },
+          "datumStart": {
+            "type": "string",
+            "format": "date",
+            "title": "datumStart"
+          },
+          "datumEindeGeldigheid": {
+            "type": "string",
+            "format": "date",
+            "title": "datumEindeGeldigheid"
+          },
+          "codeMuseumjaarkaart": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "codeMuseumjaarkaart"
+          },
+          "entreekaart": {
+            "type": "integer",
+            "title": "entreekaart"
+          },
+          "betreft": {
+            "type": "object",
+            "title": "betreft",
+            "$ref": "winkelvoorraaditem",
+            "objectConfiguration": {
+              "register": "ggm-sport-cultuur-recreatie",
+              "schema": "winkelvoorraaditem"
+            }
+          },
+          "leverancier": {
+            "type": "object",
+            "title": "leverancier",
+            "$ref": "leverancier",
+            "objectConfiguration": {
+              "register": "ggm-interne-organisatie",
+              "schema": "leverancier"
+            }
+          },
+          "valtBinnen": {
+            "type": "array",
+            "title": "valtBinnen",
+            "items": {
+              "type": "object",
+              "$ref": "productgroep",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "productgroep"
+              }
+            }
+          },
+          "heeftPrijs": {
+            "type": "array",
+            "title": "heeftPrijs",
+            "items": {
+              "type": "object",
+              "$ref": "prijs",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "prijs"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "productgroep": {
+        "slug": "productgroep",
+        "title": "Productgroep",
+        "version": "2.5.0",
+        "description": "Groepering van producten",
+        "required": [
+          "naam",
+          "omschrijving"
+        ],
+        "properties": {
+          "naam": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "naam"
+          },
+          "omschrijving": {
+            "type": "string",
+            "title": "omschrijving"
+          },
+          "valtBinnen": {
+            "type": "array",
+            "title": "valtBinnen",
+            "items": {
+              "type": "object",
+              "$ref": "product",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "product"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "productie-eenheid": {
+        "slug": "productie-eenheid",
+        "title": "Productie-eenheid",
+        "version": "2.5.0",
+        "description": "Een (deel van een) productiemiddel, dat zelfstandig (ofwel onafhankelijk van de andere delen van het desbetreffende productiemiddel) kan worden ingezet.",
+        "required": [],
+        "properties": {
+          "betreft": {
+            "type": "array",
+            "title": "betreft",
+            "items": {
+              "type": "object",
+              "$ref": "reservering",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "reservering"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "programma": {
+        "slug": "programma",
+        "title": "Programma",
+        "version": "2.5.0",
+        "description": "Een tijdelijke, flexibele organisatiestructuur, die is opgezet om de implementatie van een verzameling met elkaar samenhangende projecten en activiteiten te co&#246;rdineren, te sturen en te controleren teneinde te zorgen voor de realisatie van de eindresultaten en benefits die zijn gerelateerd aan de strategische doelstellingen van de organisatie.",
+        "required": [
+          "naam",
+          "omschrijving",
+          "starttijd",
+          "eindtijd",
+          "prijsExclusiefBTW",
+          "bTW",
+          "locatie",
+          "publiekstaak",
+          "schoolniveau"
+        ],
+        "properties": {
+          "naam": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "naam"
+          },
+          "omschrijving": {
+            "type": "string",
+            "title": "omschrijving"
+          },
+          "starttijd": {
+            "type": "string",
+            "format": "date-time",
+            "title": "starttijd"
+          },
+          "eindtijd": {
+            "type": "string",
+            "format": "date-time",
+            "title": "eindtijd"
+          },
+          "prijsExclusiefBTW": {
+            "type": "number",
+            "title": "prijsExclusiefBTW"
+          },
+          "bTW": {
+            "type": "string",
+            "maxLength": 8,
+            "title": "BTW"
+          },
+          "locatie": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "locatie"
+          },
+          "publiekstaak": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "publiekstaak"
+          },
+          "schoolniveau": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "schoolniveau"
+          },
+          "bestaatUit": {
+            "type": "array",
+            "title": "bestaatUit",
+            "items": {
+              "type": "object",
+              "$ref": "activiteit",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "activiteit"
+              }
+            }
+          },
+          "heeft": {
+            "type": "object",
+            "title": "heeft",
+            "$ref": "kostenplaats",
+            "objectConfiguration": {
+              "register": "ggm-interne-organisatie",
+              "schema": "kostenplaats"
+            }
+          },
+          "voor": {
+            "type": "array",
+            "title": "voor",
+            "items": {
+              "type": "object",
+              "$ref": "programmasoort",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "programmasoort"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "programmasoort": {
+        "slug": "programmasoort",
+        "title": "Programmasoort",
+        "version": "2.5.0",
+        "description": "Typering van een programma",
+        "required": [
+          "naam",
+          "omschrijving"
+        ],
+        "properties": {
+          "naam": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "naam"
+          },
+          "omschrijving": {
+            "type": "string",
+            "title": "omschrijving"
+          },
+          "voor": {
+            "type": "array",
+            "title": "voor",
+            "items": {
+              "type": "object",
+              "$ref": "programma",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "programma"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "reservering": {
+        "slug": "reservering",
+        "title": "Reservering",
+        "version": "2.5.0",
+        "description": "Het vooraf bespreken van een plaats in een openbare gelegenheid, vervoermiddel, restaurant e.d.",
+        "required": [
+          "aantal",
+          "tijdVanaf",
+          "tijdTot",
+          "totaalprijs",
+          "bTW"
+        ],
+        "properties": {
+          "aantal": {
+            "type": "integer",
+            "title": "aantal"
+          },
+          "tijdVanaf": {
+            "type": "string",
+            "format": "date-time",
+            "title": "tijdVanaf"
+          },
+          "tijdTot": {
+            "type": "string",
+            "format": "date-time",
+            "title": "tijdTot"
+          },
+          "totaalprijs": {
+            "type": "number",
+            "title": "totaalprijs",
+            "description": "Bedrah exclusief BTW"
+          },
+          "bTW": {
+            "type": "string",
+            "maxLength": 8,
+            "title": "BTW"
+          },
+          "betreft": {
+            "type": "object",
+            "title": "betreft",
+            "$ref": "zaal",
+            "objectConfiguration": {
+              "register": "ggm-sport-cultuur-recreatie",
+              "schema": "zaal"
+            }
+          },
+          "heeft": {
+            "type": "object",
+            "title": "heeft",
+            "$ref": "activiteit",
+            "objectConfiguration": {
+              "register": "ggm-sport-cultuur-recreatie",
+              "schema": "activiteit"
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "rondleiding": {
+        "slug": "rondleiding",
+        "title": "Rondleiding",
+        "version": "2.5.0",
+        "description": "Bezichtiging met toelichting",
+        "required": [
+          "naam",
+          "omschrijving",
+          "starttijd",
+          "eindtijd"
+        ],
+        "properties": {
+          "naam": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "naam"
+          },
+          "omschrijving": {
+            "type": "string",
+            "title": "omschrijving"
+          },
+          "starttijd": {
+            "type": "string",
+            "format": "date-time",
+            "title": "starttijd"
+          },
+          "eindtijd": {
+            "type": "string",
+            "format": "date-time",
+            "title": "eindtijd"
+          },
+          "voor": {
+            "type": "object",
+            "title": "voor",
+            "$ref": "tentoonstelling",
+            "objectConfiguration": {
+              "register": "ggm-sport-cultuur-recreatie",
+              "schema": "tentoonstelling"
+            }
+          },
+          "heeft": {
+            "type": "array",
+            "title": "heeft",
+            "items": {
+              "type": "object",
+              "$ref": "activiteit",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "activiteit"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "samensteller": {
+        "slug": "samensteller",
+        "title": "Samensteller",
+        "version": "2.5.0",
+        "description": "Iemand die stukken informatie samenbrengt in tentoonstelingen, presentaties en naslagwerken.",
+        "required": [
+          "rol"
+        ],
+        "properties": {
+          "rol": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "rol"
+          },
+          "steltSamen": {
+            "type": "array",
+            "title": "steltSamen",
+            "items": {
+              "type": "object",
+              "$ref": "tentoonstelling",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "tentoonstelling"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false,
+        "allOf": [
+          {
+            "$ref": "medewerker",
+            "objectConfiguration": {
+              "register": "ggm-kern",
+              "schema": "medewerker"
+            }
+          }
+        ]
+      },
+      "standplaats": {
+        "slug": "standplaats",
+        "title": "Standplaats",
+        "version": "2.5.0",
+        "description": "vanaf een vaste locatie te koop aanbieden, verkopen of afleveren van goederen of aanbieden van diensten, gebruikmakend van fysieke middelen zoals een kraam, een wagen of een tafel",
+        "required": [
+          "beschrijving",
+          "adres",
+          "naamInstelling"
+        ],
+        "properties": {
+          "beschrijving": {
+            "type": "string",
+            "maxLength": 300,
+            "title": "beschrijving"
+          },
+          "adres": {
+            "type": "string",
+            "title": "adres"
+          },
+          "naamInstelling": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "naamInstelling"
+          },
+          "locatie": {
+            "type": "array",
+            "title": "locatie",
+            "items": {
+              "type": "object",
+              "$ref": "museumobject",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "museumobject"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "tentoonstelling": {
+        "slug": "tentoonstelling",
+        "title": "Tentoonstelling",
+        "version": "2.5.0",
+        "description": "Een uitstalling van voorwerpen om door het grote publiek bekeken te worden.",
+        "required": [
+          "titel",
+          "omschrijving",
+          "datumStart",
+          "datumEinde",
+          "subtitel"
+        ],
+        "properties": {
+          "titel": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "titel"
+          },
+          "omschrijving": {
+            "type": "string",
+            "title": "omschrijving"
+          },
+          "datumStart": {
+            "type": "string",
+            "format": "date",
+            "title": "datumStart"
+          },
+          "datumEinde": {
+            "type": "string",
+            "format": "date",
+            "title": "datumEinde"
+          },
+          "subtitel": {
+            "type": "string",
+            "maxLength": 200,
+            "title": "subtitel"
+          },
+          "zaal": {
+            "type": "array",
+            "title": "zaal",
+            "items": {
+              "type": "object",
+              "$ref": "zaal",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "zaal"
+              }
+            }
+          },
+          "steltSamen": {
+            "type": "array",
+            "title": "steltSamen",
+            "items": {
+              "type": "object",
+              "$ref": "samensteller",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "samensteller"
+              }
+            }
+          },
+          "voor": {
+            "type": "array",
+            "title": "voor",
+            "items": {
+              "type": "object",
+              "$ref": "rondleiding",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "rondleiding"
+              }
+            }
+          },
+          "onderdeel": {
+            "type": "array",
+            "title": "onderdeel",
+            "items": {
+              "type": "object",
+              "$ref": "museumobject",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "museumobject"
+              }
+            }
+          },
+          "isBedoeldVoor": {
+            "type": "array",
+            "title": "isBedoeldVoor",
+            "items": {
+              "type": "object",
+              "$ref": "bruikleen",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "bruikleen"
+              }
+            }
+          },
+          "isGewijdAan": {
+            "type": "array",
+            "title": "isGewijdAan",
+            "items": {
+              "type": "object",
+              "$ref": "historisch-persoon",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "historisch-persoon"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "voorziening": {
+        "slug": "voorziening",
+        "title": "Voorziening",
+        "version": "2.5.0",
+        "description": "Middel om services/maatregelen in te vullen.",
+        "required": [
+          "naam",
+          "omschrijving",
+          "aantalBeschikbaar"
+        ],
+        "properties": {
+          "naam": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "naam"
+          },
+          "omschrijving": {
+            "type": "string",
+            "title": "omschrijving"
+          },
+          "aantalBeschikbaar": {
+            "type": "integer",
+            "title": "aantalBeschikbaar"
+          },
+          "betreft": {
+            "type": "array",
+            "title": "betreft",
+            "items": {
+              "type": "object",
+              "$ref": "reservering",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "reservering"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "winkelverkoopgroep": {
+        "slug": "winkelverkoopgroep",
+        "title": "Winkelverkoopgroep",
+        "version": "2.5.0",
+        "description": "Groepering van winkelverkopen",
+        "required": [],
+        "properties": {},
+        "searchable": true,
+        "hardValidation": false
+      },
+      "winkelvoorraaditem": {
+        "slug": "winkelvoorraaditem",
+        "title": "Winkelvoorraaditem",
+        "version": "2.5.0",
+        "description": "Onderdeel in de winkelvoorraad",
+        "required": [
+          "aantal",
+          "locatie",
+          "aantalInBestelling",
+          "datumLeveringBestelling"
+        ],
+        "properties": {
+          "aantal": {
+            "type": "integer",
+            "title": "aantal"
+          },
+          "locatie": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "locatie"
+          },
+          "aantalInBestelling": {
+            "type": "integer",
+            "title": "aantalInBestelling"
+          },
+          "datumLeveringBestelling": {
+            "type": "string",
+            "format": "date",
+            "title": "datumLeveringBestelling"
+          },
+          "betreft": {
+            "type": "object",
+            "title": "betreft",
+            "$ref": "product",
+            "objectConfiguration": {
+              "register": "ggm-sport-cultuur-recreatie",
+              "schema": "product"
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "zaal": {
+        "slug": "zaal",
+        "title": "Zaal",
+        "version": "2.5.0",
+        "description": "Grote ruimte in een gebouw",
+        "required": [
+          "naam",
+          "omschrijving",
+          "capaciteit",
+          "nummer"
+        ],
+        "properties": {
+          "naam": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "naam"
+          },
+          "omschrijving": {
+            "type": "string",
+            "title": "omschrijving"
+          },
+          "capaciteit": {
+            "type": "integer",
+            "title": "capaciteit"
+          },
+          "nummer": {
+            "type": "integer",
+            "title": "nummer"
+          },
+          "tentoonstelling": {
+            "type": "array",
+            "title": "tentoonstelling",
+            "items": {
+              "type": "object",
+              "$ref": "tentoonstelling",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "tentoonstelling"
+              }
+            }
+          },
+          "betreft": {
+            "type": "array",
+            "title": "betreft",
+            "items": {
+              "type": "object",
+              "$ref": "reservering",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "reservering"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "belijning": {
+        "slug": "belijning",
+        "title": "Belijning",
+        "version": "2.5.0",
+        "description": "Op of in het oppervlak van de verharding aangebrachte tekens ter geleiding, waarschuwing, regeling of informatie van het verkeer",
+        "required": [
+          "naam"
+        ],
+        "properties": {
+          "naam": {
+            "type": "string",
+            "maxLength": 200,
+            "title": "naam"
+          },
+          "heeft": {
+            "type": "array",
+            "title": "heeft",
+            "items": {
+              "type": "object",
+              "$ref": "veld",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "veld"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "bezetting": {
+        "slug": "bezetting",
+        "title": "Bezetting",
+        "version": "2.5.0",
+        "description": "Aantal deelnemers aan een activiteit",
+        "required": [],
+        "properties": {},
+        "searchable": true,
+        "hardValidation": false
+      },
+      "binnenlocatie": {
+        "slug": "binnenlocatie",
+        "title": "Binnenlocatie",
+        "version": "2.5.0",
+        "description": "Locatie binnen een gebouw",
+        "required": [
+          "bouwjaar",
+          "vloeroppervlakte",
+          "klokurenOnderwijs",
+          "klokurenVerenigingen",
+          "onderhoudsstatus",
+          "onderhoudsniveau",
+          "geschatteKostenPerJaar",
+          "locatie",
+          "adres",
+          "sporthal",
+          "gymzaal",
+          "gemeentelijk"
+        ],
+        "properties": {
+          "bouwjaar": {
+            "type": "integer",
+            "title": "bouwjaar"
+          },
+          "vloeroppervlakte": {
+            "type": "integer",
+            "title": "vloeroppervlakte"
+          },
+          "klokurenOnderwijs": {
+            "type": "number",
+            "title": "klokurenOnderwijs",
+            "description": "Aantal klokuren per week"
+          },
+          "klokurenVerenigingen": {
+            "type": "number",
+            "title": "klokurenVerenigingen",
+            "description": "aantal klokuren per week"
+          },
+          "onderhoudsstatus": {
+            "type": "integer",
+            "title": "onderhoudsstatus"
+          },
+          "onderhoudsniveau": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "onderhoudsniveau"
+          },
+          "geschatteKostenPerJaar": {
+            "type": "number",
+            "title": "geschatteKostenPerJaar"
+          },
+          "locatie": {
+            "type": "string",
+            "format": "geo",
+            "title": "locatie"
+          },
+          "adres": {
+            "type": "string",
+            "title": "adres"
+          },
+          "sporthal": {
+            "type": "boolean",
+            "title": "sporthal"
+          },
+          "gymzaal": {
+            "type": "boolean",
+            "title": "gymzaal"
+          },
+          "gemeentelijk": {
+            "type": "boolean",
+            "title": "gemeentelijk"
+          },
+          "bedient": {
+            "type": "object",
+            "title": "bedient",
+            "$ref": "wijk",
+            "objectConfiguration": {
+              "register": "ggm-kern",
+              "schema": "wijk"
+            }
+          },
+          "isGevestigdIn": {
+            "type": "object",
+            "title": "isGevestigdIn",
+            "$ref": "verblijfsobject",
+            "objectConfiguration": {
+              "register": "ggm-kern",
+              "schema": "verblijfsobject"
+            }
+          },
+          "heeft": {
+            "type": "array",
+            "title": "heeft",
+            "items": {
+              "type": "object",
+              "$ref": "sportmateriaal",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "sportmateriaal"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false,
+        "allOf": [
+          {
+            "$ref": "sportlocatie",
+            "objectConfiguration": {
+              "register": "ggm-sport-cultuur-recreatie",
+              "schema": "sportlocatie"
+            }
+          }
+        ]
+      },
+      "onderhoudskosten": {
+        "slug": "onderhoudskosten",
+        "title": "Onderhoudskosten",
+        "version": "2.5.0",
+        "description": "Kosten voor het onderhoud van iemand of iets, hetzij om te voorzien in de levensbehoeften van personen, hetzij voor de instandhouding en verzorging van zaken.",
+        "required": [],
+        "properties": {},
+        "searchable": true,
+        "hardValidation": false
+      },
+      "sport": {
+        "slug": "sport",
+        "title": "Sport",
+        "version": "2.5.0",
+        "description": "Een fysieke bezigheid met vaste regels en waarbij vaak sprake is van competitieverband. Sporten kunnen ook recreatief beoefend worden.",
+        "required": [
+          "naam"
+        ],
+        "properties": {
+          "naam": {
+            "type": "string",
+            "maxLength": 200,
+            "title": "naam"
+          },
+          "oefentUit": {
+            "type": "array",
+            "title": "oefentUit",
+            "items": {
+              "type": "object",
+              "$ref": "sportvereniging",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "sportvereniging"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "sportlocatie": {
+        "slug": "sportlocatie",
+        "title": "Sportlocatie",
+        "version": "2.5.0",
+        "description": "Locatie waar de betreffende sport plaatsvindt",
+        "required": [
+          "naam"
+        ],
+        "properties": {
+          "naam": {
+            "type": "string",
+            "maxLength": 200,
+            "title": "naam"
+          },
+          "gebruikt": {
+            "type": "array",
+            "title": "gebruikt",
+            "items": {
+              "type": "object",
+              "$ref": "sportvereniging",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "sportvereniging"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "sportmateriaal": {
+        "slug": "sportmateriaal",
+        "title": "Sportmateriaal",
+        "version": "2.5.0",
+        "description": "Materieel om sport mee te beoefenen of ter odnersteuning van de sportuitvoering.",
+        "required": [
+          "naam"
+        ],
+        "properties": {
+          "naam": {
+            "type": "string",
+            "maxLength": 200,
+            "title": "naam"
+          },
+          "heeft": {
+            "type": "array",
+            "title": "heeft",
+            "items": {
+              "type": "object",
+              "$ref": "binnenlocatie",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "binnenlocatie"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "sportpark": {
+        "slug": "sportpark",
+        "title": "Sportpark",
+        "version": "2.5.0",
+        "description": "Geheel van terreinen, gebouwen en voorzieningen voor verschillende takken van sport.",
+        "required": [],
+        "properties": {
+          "ligtOp": {
+            "type": "object",
+            "title": "ligtOp",
+            "$ref": "overigbenoemdterrein",
+            "objectConfiguration": {
+              "register": "ggm-kern",
+              "schema": "overigbenoemdterrein"
+            }
+          },
+          "heeft": {
+            "type": "array",
+            "title": "heeft",
+            "items": {
+              "type": "object",
+              "$ref": "veld",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "veld"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false,
+        "allOf": [
+          {
+            "$ref": "sportlocatie",
+            "objectConfiguration": {
+              "register": "ggm-sport-cultuur-recreatie",
+              "schema": "sportlocatie"
+            }
+          }
+        ]
+      },
+      "sportvereniging": {
+        "slug": "sportvereniging",
+        "title": "Sportvereniging",
+        "version": "2.5.0",
+        "description": "Organisatievorm waarin sport bedreven kan worden",
+        "required": [
+          "naam",
+          "typeSport",
+          "binnensport",
+          "buitensport",
+          "email",
+          "adres",
+          "ledenaantal",
+          "aantalNormTeams"
+        ],
+        "properties": {
+          "naam": {
+            "type": "string",
+            "maxLength": 200,
+            "title": "naam"
+          },
+          "typeSport": {
+            "type": "string",
+            "title": "typeSport"
+          },
+          "binnensport": {
+            "type": "boolean",
+            "title": "binnensport"
+          },
+          "buitensport": {
+            "type": "boolean",
+            "title": "buitensport"
+          },
+          "email": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "email"
+          },
+          "adres": {
+            "type": "string",
+            "title": "adres"
+          },
+          "ledenaantal": {
+            "type": "integer",
+            "title": "ledenaantal"
+          },
+          "aantalNormTeams": {
+            "type": "number",
+            "title": "aantalNormTeams"
+          },
+          "gebruikt": {
+            "type": "array",
+            "title": "gebruikt",
+            "items": {
+              "type": "object",
+              "$ref": "sportlocatie",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "sportlocatie"
+              }
+            }
+          },
+          "oefentUit": {
+            "type": "array",
+            "title": "oefentUit",
+            "items": {
+              "type": "object",
+              "$ref": "sport",
+              "objectConfiguration": {
+                "register": "ggm-sport-cultuur-recreatie",
+                "schema": "sport"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false,
+        "allOf": [
+          {
+            "$ref": "nietnatuurlijkpersoon",
+            "objectConfiguration": {
+              "register": "ggm-kern",
+              "schema": "nietnatuurlijkpersoon"
+            }
+          }
+        ]
+      },
+      "veld": {
+        "slug": "veld",
+        "title": "Veld",
+        "version": "2.5.0",
+        "description": "Een stuk land dat speciaal voor het bedrijven van een veldsport gereedgemaakt is",
+        "required": [],
+        "properties": {
+          "ligtOp": {
+            "type": "object",
+            "title": "ligtOp",
+            "$ref": "overigbenoemdterrein",
+            "objectConfiguration": {
+              "register": "ggm-kern",
+              "schema": "overigbenoemdterrein"
+            }
+          },
+          "heeft": {
+            "type": "object",
+            "title": "heeft",
+            "$ref": "sportpark",
+            "objectConfiguration": {
+              "register": "ggm-sport-cultuur-recreatie",
+              "schema": "sportpark"
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      }
+    },
+    "registers": {
+      "ggm-sport-cultuur-recreatie": {
+        "slug": "ggm-sport-cultuur-recreatie",
+        "title": "GGM - 5 Sport, Cultuur en Recreatie",
+        "version": "2.5.0",
+        "description": "Gemeentelijk Gegevensmodel domain: 5 Sport, Cultuur en Recreatie",
+        "schemas": [
+          "archeologiebesluit",
+          "artefact",
+          "artefactsoort",
+          "boring",
+          "doos",
+          "kaart",
+          "locatie",
+          "magazijnlocatie",
+          "magazijnplaatsing",
+          "project",
+          "put",
+          "spoor",
+          "stelling",
+          "vindplaats",
+          "vlak",
+          "vondst",
+          "vulling",
+          "aanvraag",
+          "archief",
+          "archiefcategorie",
+          "archiefstuk",
+          "auteur",
+          "bezoeker",
+          "depot",
+          "digitaalbestand",
+          "indeling",
+          "index",
+          "kast",
+          "nadere-toegang",
+          "ordeningsschema",
+          "plank",
+          "rechthebbende",
+          "stelling-2",
+          "uitgever",
+          "vindplaats-2",
+          "erfgoed-object",
+          "historisch-persoon",
+          "objectclassificatie",
+          "ambacht",
+          "beschermde-status",
+          "bouwactiviteit",
+          "bouwstijl",
+          "bouwtype",
+          "oorspronkelijkefunctie",
+          "activiteit",
+          "activiteitsoort",
+          "balieverkoop",
+          "balieverkoop-entreekaart",
+          "belanghebbende",
+          "bruikleen",
+          "collectie",
+          "doelgroep",
+          "entreekaart",
+          "incident",
+          "lener",
+          "mailing",
+          "museumobject",
+          "museumrelatie",
+          "omzetgroep",
+          "prijs",
+          "product",
+          "productgroep",
+          "productie-eenheid",
+          "programma",
+          "programmasoort",
+          "reservering",
+          "rondleiding",
+          "samensteller",
+          "standplaats",
+          "tentoonstelling",
+          "voorziening",
+          "winkelverkoopgroep",
+          "winkelvoorraaditem",
+          "zaal",
+          "belijning",
+          "bezetting",
+          "binnenlocatie",
+          "onderhoudskosten",
+          "sport",
+          "sportlocatie",
+          "sportmateriaal",
+          "sportpark",
+          "sportvereniging",
+          "veld"
+        ],
+        "source": "internal"
+      }
+    }
+  }
+}

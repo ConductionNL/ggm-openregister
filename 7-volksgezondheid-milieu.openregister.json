@@ -1,0 +1,980 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "GGM - 7 Volksgezondheid en Milieu",
+    "description": "OpenRegister configuration for the Gemeentelijk Gegevensmodel (GGM) domain: 7 Volksgezondheid en Milieu. Auto-generated from GGM v2.5.0.",
+    "version": "2.5.0"
+  },
+  "x-openregister": {
+    "type": "application",
+    "sourceType": "github",
+    "sourceUrl": "https://github.com/ConductionNL/ggm-openregister",
+    "openregister": "^v0.2.10",
+    "github": {
+      "repo": "ConductionNL/ggm-openregister",
+      "branch": "main",
+      "path": "7-volksgezondheid-milieu.openregister.json"
+    },
+    "description": "Gemeentelijk Gegevensmodel - 7 Volksgezondheid en Milieu"
+  },
+  "components": {
+    "schemas": {
+      "categorie": {
+        "slug": "categorie",
+        "title": "Categorie",
+        "version": "2.5.0",
+        "description": "Categorie waarop leveranciers zich voor de levering van personeel voor kunnen kwalificeren",
+        "required": [
+          "code",
+          "naam",
+          "omschrijving"
+        ],
+        "properties": {
+          "code": {
+            "type": "integer",
+            "title": "code"
+          },
+          "naam": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "naam"
+          },
+          "omschrijving": {
+            "type": "string",
+            "title": "omschrijving"
+          },
+          "subcategorie": {
+            "type": "array",
+            "title": "subcategorie",
+            "items": {
+              "type": "object",
+              "$ref": "melding",
+              "objectConfiguration": {
+                "register": "ggm-volksgezondheid-milieu",
+                "schema": "melding"
+              }
+            }
+          },
+          "hoofdcategorie": {
+            "type": "array",
+            "title": "hoofdcategorie",
+            "items": {
+              "type": "object",
+              "$ref": "melding",
+              "objectConfiguration": {
+                "register": "ggm-volksgezondheid-milieu",
+                "schema": "melding"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "container": {
+        "slug": "container",
+        "title": "Container",
+        "version": "2.5.0",
+        "description": "Container voor het gescheiden inzamelen van huishoudelijke afvalstoffen dwz afvalstoffen afkomstig uit particuliere huishoudens behoudens voor zover het ingezamelde bestanddelen van die afvalstoffen betreft die zijn aangewezen als gevaarlijke afvalstoffen",
+        "required": [
+          "sensorID",
+          "containercode"
+        ],
+        "properties": {
+          "sensorID": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "sensorID"
+          },
+          "containercode": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "containercode"
+          },
+          "gelost": {
+            "type": "array",
+            "title": "gelost",
+            "items": {
+              "type": "object",
+              "$ref": "ophaalmoment",
+              "objectConfiguration": {
+                "register": "ggm-volksgezondheid-milieu",
+                "schema": "ophaalmoment"
+              }
+            }
+          },
+          "heeft": {
+            "type": "array",
+            "title": "heeft",
+            "items": {
+              "type": "object",
+              "$ref": "vulgraadmeting",
+              "objectConfiguration": {
+                "register": "ggm-volksgezondheid-milieu",
+                "schema": "vulgraadmeting"
+              }
+            }
+          },
+          "soort": {
+            "type": "object",
+            "title": "soort",
+            "$ref": "containertype",
+            "objectConfiguration": {
+              "register": "ggm-volksgezondheid-milieu",
+              "schema": "containertype"
+            }
+          },
+          "geschiktVoor": {
+            "type": "object",
+            "title": "geschiktVoor",
+            "$ref": "fractie",
+            "objectConfiguration": {
+              "register": "ggm-volksgezondheid-milieu",
+              "schema": "fractie"
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "containertype": {
+        "slug": "containertype",
+        "title": "Containertype",
+        "version": "2.5.0",
+        "description": "Typologie van container",
+        "required": [
+          "naam",
+          "omschrijving"
+        ],
+        "properties": {
+          "naam": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "naam"
+          },
+          "omschrijving": {
+            "type": "string",
+            "title": "omschrijving"
+          },
+          "betreft": {
+            "type": "array",
+            "title": "betreft",
+            "items": {
+              "type": "object",
+              "$ref": "melding",
+              "objectConfiguration": {
+                "register": "ggm-volksgezondheid-milieu",
+                "schema": "melding"
+              }
+            }
+          },
+          "geschiktVoor": {
+            "type": "array",
+            "title": "geschiktVoor",
+            "items": {
+              "type": "object",
+              "$ref": "vuilniswagen",
+              "objectConfiguration": {
+                "register": "ggm-volksgezondheid-milieu",
+                "schema": "vuilniswagen"
+              }
+            }
+          },
+          "soort": {
+            "type": "array",
+            "title": "soort",
+            "items": {
+              "type": "object",
+              "$ref": "container",
+              "objectConfiguration": {
+                "register": "ggm-volksgezondheid-milieu",
+                "schema": "container"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "fractie": {
+        "slug": "fractie",
+        "title": "Fractie",
+        "version": "2.5.0",
+        "description": "Onderdeel, deeltje",
+        "required": [
+          "naam",
+          "omschrijving"
+        ],
+        "properties": {
+          "naam": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "naam"
+          },
+          "omschrijving": {
+            "type": "string",
+            "title": "omschrijving"
+          },
+          "ophalen": {
+            "type": "array",
+            "title": "ophalen",
+            "items": {
+              "type": "object",
+              "$ref": "route",
+              "objectConfiguration": {
+                "register": "ggm-volksgezondheid-milieu",
+                "schema": "route"
+              }
+            }
+          },
+          "fractie": {
+            "type": "array",
+            "title": "fractie",
+            "items": {
+              "type": "object",
+              "$ref": "storting",
+              "objectConfiguration": {
+                "register": "ggm-volksgezondheid-milieu",
+                "schema": "storting"
+              }
+            }
+          },
+          "inzamelpuntVan": {
+            "type": "array",
+            "title": "inzamelpuntVan",
+            "items": {
+              "type": "object",
+              "$ref": "milieustraat",
+              "objectConfiguration": {
+                "register": "ggm-volksgezondheid-milieu",
+                "schema": "milieustraat"
+              }
+            }
+          },
+          "betreft": {
+            "type": "array",
+            "title": "betreft",
+            "items": {
+              "type": "object",
+              "$ref": "prijsregel",
+              "objectConfiguration": {
+                "register": "ggm-volksgezondheid-milieu",
+                "schema": "prijsregel"
+              }
+            }
+          },
+          "geschiktVoor": {
+            "type": "array",
+            "title": "geschiktVoor",
+            "items": {
+              "type": "object",
+              "$ref": "container",
+              "objectConfiguration": {
+                "register": "ggm-volksgezondheid-milieu",
+                "schema": "container"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "locatie": {
+        "slug": "locatie",
+        "title": "Locatie",
+        "version": "2.5.0",
+        "description": "Locaties die worden aangedaan tijdens het rijden van een route. Dit kunnen adressen zijn en/of GML-punten met een x- en y-coordinaat. Avalex hanteert op het moment van schrijven alleen adressen, ook voor de containers.",
+        "required": [
+          "locatiePunt",
+          "locatiecode",
+          "adresaanduiding"
+        ],
+        "properties": {
+          "locatiePunt": {
+            "type": "string",
+            "format": "geo",
+            "title": "locatiePunt"
+          },
+          "locatiecode": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "locatiecode"
+          },
+          "adresaanduiding": {
+            "type": "string",
+            "title": "adresaanduiding"
+          },
+          "gestoptOp": {
+            "type": "array",
+            "title": "gestoptOp",
+            "items": {
+              "type": "object",
+              "$ref": "ophaalmoment",
+              "objectConfiguration": {
+                "register": "ggm-volksgezondheid-milieu",
+                "schema": "ophaalmoment"
+              }
+            }
+          },
+          "betreft": {
+            "type": "array",
+            "title": "betreft",
+            "items": {
+              "type": "object",
+              "$ref": "melding",
+              "objectConfiguration": {
+                "register": "ggm-volksgezondheid-milieu",
+                "schema": "melding"
+              }
+            }
+          },
+          "gaatLangs": {
+            "type": "object",
+            "title": "gaatLangs",
+            "$ref": "route",
+            "objectConfiguration": {
+              "register": "ggm-volksgezondheid-milieu",
+              "schema": "route"
+            }
+          },
+          "heeft": {
+            "type": "array",
+            "title": "heeft",
+            "items": {
+              "type": "object",
+              "$ref": "container",
+              "objectConfiguration": {
+                "register": "ggm-volksgezondheid-milieu",
+                "schema": "container"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "melding": {
+        "slug": "melding",
+        "title": "Melding",
+        "version": "2.5.0",
+        "description": "De betekenisvolle formulering van een waargenomen feit, waaraan een waarde kan worden toegekend",
+        "required": [
+          "illegaal",
+          "24uurs",
+          "datumtijd",
+          "omschrijving",
+          "meldingnummer"
+        ],
+        "properties": {
+          "illegaal": {
+            "type": "boolean",
+            "title": "illegaal"
+          },
+          "24uurs": {
+            "type": "boolean",
+            "title": "24uurs"
+          },
+          "datumtijd": {
+            "type": "string",
+            "format": "date-time",
+            "title": "datumtijd"
+          },
+          "omschrijving": {
+            "type": "string",
+            "title": "omschrijving"
+          },
+          "meldingnummer": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "meldingnummer"
+          },
+          "betreft": {
+            "type": "object",
+            "title": "betreft",
+            "$ref": "locatie",
+            "objectConfiguration": {
+              "register": "ggm-volksgezondheid-milieu",
+              "schema": "locatie"
+            }
+          },
+          "subcategorie": {
+            "type": "object",
+            "title": "subcategorie",
+            "$ref": "categorie",
+            "objectConfiguration": {
+              "register": "ggm-volksgezondheid-milieu",
+              "schema": "categorie"
+            }
+          },
+          "hoofdcategorie": {
+            "type": "object",
+            "title": "hoofdcategorie",
+            "$ref": "categorie",
+            "objectConfiguration": {
+              "register": "ggm-volksgezondheid-milieu",
+              "schema": "categorie"
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false,
+        "allOf": [
+          {
+            "$ref": "aanvraagofmelding",
+            "objectConfiguration": {
+              "register": "ggm-dienstverlening",
+              "schema": "aanvraagofmelding"
+            }
+          }
+        ]
+      },
+      "milieustraat": {
+        "slug": "milieustraat",
+        "title": "Milieustraat",
+        "version": "2.5.0",
+        "description": "Een locatie die specifiek bestemd is voor het brengen van gescheiden huishoudelijk afval en grofvuil.",
+        "required": [
+          "naam",
+          "omschrijving",
+          "adresaanduiding"
+        ],
+        "properties": {
+          "naam": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "naam"
+          },
+          "omschrijving": {
+            "type": "string",
+            "title": "omschrijving"
+          },
+          "adresaanduiding": {
+            "type": "string",
+            "title": "adresaanduiding"
+          },
+          "geldigVoor": {
+            "type": "array",
+            "title": "geldigVoor",
+            "items": {
+              "type": "object",
+              "$ref": "pas",
+              "objectConfiguration": {
+                "register": "ggm-volksgezondheid-milieu",
+                "schema": "pas"
+              }
+            }
+          },
+          "bij": {
+            "type": "array",
+            "title": "bij",
+            "items": {
+              "type": "object",
+              "$ref": "storting",
+              "objectConfiguration": {
+                "register": "ggm-volksgezondheid-milieu",
+                "schema": "storting"
+              }
+            }
+          },
+          "inzamelpuntVan": {
+            "type": "array",
+            "title": "inzamelpuntVan",
+            "items": {
+              "type": "object",
+              "$ref": "fractie",
+              "objectConfiguration": {
+                "register": "ggm-volksgezondheid-milieu",
+                "schema": "fractie"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "ophaalmoment": {
+        "slug": "ophaalmoment",
+        "title": "Ophaalmoment",
+        "version": "2.5.0",
+        "description": "Een stop die een vuilniswagen maakt tijdens het doen van een rit. Bijgehouden wordt de gewichtstoename van de lading",
+        "required": [
+          "gewichtstoename",
+          "tijdstip"
+        ],
+        "properties": {
+          "gewichtstoename": {
+            "type": "integer",
+            "title": "gewichtstoename"
+          },
+          "tijdstip": {
+            "type": "string",
+            "format": "date-time",
+            "title": "tijdstip"
+          },
+          "heeft": {
+            "type": "object",
+            "title": "heeft",
+            "$ref": "rit",
+            "objectConfiguration": {
+              "register": "ggm-volksgezondheid-milieu",
+              "schema": "rit"
+            }
+          },
+          "gestoptOp": {
+            "type": "object",
+            "title": "gestoptOp",
+            "$ref": "locatie",
+            "objectConfiguration": {
+              "register": "ggm-volksgezondheid-milieu",
+              "schema": "locatie"
+            }
+          },
+          "gelost": {
+            "type": "object",
+            "title": "gelost",
+            "$ref": "container",
+            "objectConfiguration": {
+              "register": "ggm-volksgezondheid-milieu",
+              "schema": "container"
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "pas": {
+        "slug": "pas",
+        "title": "Pas",
+        "version": "2.5.0",
+        "description": "klein kaartje met je naam en soms je foto erop, dat je toegang geeft tot bepaalde diensten",
+        "required": [
+          "pasnummer",
+          "adresaanduiding"
+        ],
+        "properties": {
+          "pasnummer": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "pasnummer"
+          },
+          "adresaanduiding": {
+            "type": "string",
+            "title": "adresaanduiding"
+          },
+          "uitgevoerdeStorting": {
+            "type": "array",
+            "title": "uitgevoerdeStorting",
+            "items": {
+              "type": "object",
+              "$ref": "storting",
+              "objectConfiguration": {
+                "register": "ggm-volksgezondheid-milieu",
+                "schema": "storting"
+              }
+            }
+          },
+          "geldigVoor": {
+            "type": "array",
+            "title": "geldigVoor",
+            "items": {
+              "type": "object",
+              "$ref": "milieustraat",
+              "objectConfiguration": {
+                "register": "ggm-volksgezondheid-milieu",
+                "schema": "milieustraat"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "prijsafspraak": {
+        "slug": "prijsafspraak",
+        "title": "Prijsafspraak",
+        "version": "2.5.0",
+        "description": "Overeenkomst tussen concurrenten met betrekking tot de prijs van goederen of diensten.",
+        "required": [
+          "datumStart",
+          "datumEinde",
+          "titel"
+        ],
+        "properties": {
+          "datumStart": {
+            "type": "string",
+            "format": "date",
+            "title": "datumStart"
+          },
+          "datumEinde": {
+            "type": "string",
+            "format": "date",
+            "title": "datumEinde"
+          },
+          "titel": {
+            "type": "string",
+            "maxLength": 200,
+            "title": "titel"
+          },
+          "heeft": {
+            "type": "array",
+            "title": "heeft",
+            "items": {
+              "type": "object",
+              "$ref": "prijsregel",
+              "objectConfiguration": {
+                "register": "ggm-volksgezondheid-milieu",
+                "schema": "prijsregel"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "prijsregel": {
+        "slug": "prijsregel",
+        "title": "Prijsregel",
+        "version": "2.5.0",
+        "description": "Een *prijsregel* is een **regel die aangeeft hoe de prijs van een product, dienst of prestatie wordt vastgesteld of toegepast**, bijvoorbeeld binnen een declaratie- of tariefstructuur.",
+        "required": [
+          "bedrag",
+          "credit"
+        ],
+        "properties": {
+          "bedrag": {
+            "type": "number",
+            "title": "bedrag"
+          },
+          "credit": {
+            "type": "boolean",
+            "title": "credit"
+          },
+          "heeft": {
+            "type": "object",
+            "title": "heeft",
+            "$ref": "prijsafspraak",
+            "objectConfiguration": {
+              "register": "ggm-volksgezondheid-milieu",
+              "schema": "prijsafspraak"
+            }
+          },
+          "betreft": {
+            "type": "object",
+            "title": "betreft",
+            "$ref": "fractie",
+            "objectConfiguration": {
+              "register": "ggm-volksgezondheid-milieu",
+              "schema": "fractie"
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "rit": {
+        "slug": "rit",
+        "title": "Rit",
+        "version": "2.5.0",
+        "description": "Verplaatsing van een wegvoertuig over een wegpad",
+        "required": [
+          "starttijd",
+          "eindtijd",
+          "ritcode"
+        ],
+        "properties": {
+          "starttijd": {
+            "type": "string",
+            "format": "date-time",
+            "title": "starttijd"
+          },
+          "eindtijd": {
+            "type": "string",
+            "format": "date-time",
+            "title": "eindtijd"
+          },
+          "ritcode": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "ritcode"
+          },
+          "uitgevoerdMet": {
+            "type": "object",
+            "title": "uitgevoerdMet",
+            "$ref": "vuilniswagen",
+            "objectConfiguration": {
+              "register": "ggm-volksgezondheid-milieu",
+              "schema": "vuilniswagen"
+            }
+          },
+          "volgens": {
+            "type": "object",
+            "title": "volgens",
+            "$ref": "route",
+            "objectConfiguration": {
+              "register": "ggm-volksgezondheid-milieu",
+              "schema": "route"
+            }
+          },
+          "heeft": {
+            "type": "array",
+            "title": "heeft",
+            "items": {
+              "type": "object",
+              "$ref": "ophaalmoment",
+              "objectConfiguration": {
+                "register": "ggm-volksgezondheid-milieu",
+                "schema": "ophaalmoment"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "route": {
+        "slug": "route",
+        "title": "Route",
+        "version": "2.5.0",
+        "description": "Routes die gereden worden om bepaalde fracties vuilnis op te halen. Routes gaan langs locaties, waar afhankelijk van de routesoort een containers, bepaalde plekken of adressen worden aangedaan.\n\n huis-aan-huis: er worden locaties met adressen aangedaan\n illegale dumping, grofvuil: er worden locaties aangedaan (evt met adres)\n containters: er worden locaties met containers aangedaan",
+        "required": [
+          "routecode",
+          "routesoort",
+          "geometrie"
+        ],
+        "properties": {
+          "routecode": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "routecode"
+          },
+          "routesoort": {
+            "type": "string",
+            "title": "routesoort",
+            "enum": [
+              "huis-aan-huis",
+              "illegale dumping",
+              "hot-spot-locaties",
+              "vangnetregeling",
+              "grofvuil"
+            ]
+          },
+          "geometrie": {
+            "type": "string",
+            "format": "geo",
+            "title": "geometrie",
+            "description": "Geometrie: lijnen die gezamenlijk de route bepalen. Nog onvoldoende ondersteund met GML. Ij dat geval leeglaten."
+          },
+          "volgens": {
+            "type": "array",
+            "title": "volgens",
+            "items": {
+              "type": "object",
+              "$ref": "rit",
+              "objectConfiguration": {
+                "register": "ggm-volksgezondheid-milieu",
+                "schema": "rit"
+              }
+            }
+          },
+          "gaatLangs": {
+            "type": "array",
+            "title": "gaatLangs",
+            "items": {
+              "type": "object",
+              "$ref": "locatie",
+              "objectConfiguration": {
+                "register": "ggm-volksgezondheid-milieu",
+                "schema": "locatie"
+              }
+            }
+          },
+          "ophalen": {
+            "type": "object",
+            "title": "ophalen",
+            "$ref": "fractie",
+            "objectConfiguration": {
+              "register": "ggm-volksgezondheid-milieu",
+              "schema": "fractie"
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "storting": {
+        "slug": "storting",
+        "title": "Storting",
+        "version": "2.5.0",
+        "description": "Activiteit, inhoudende a. het zich ontdoen van stoffen",
+        "required": [
+          "datumtijd",
+          "gewicht"
+        ],
+        "properties": {
+          "datumtijd": {
+            "type": "string",
+            "format": "date-time",
+            "title": "datumtijd"
+          },
+          "gewicht": {
+            "type": "integer",
+            "title": "gewicht",
+            "description": "Gewicht in kilo's"
+          },
+          "uitgevoerdeStorting": {
+            "type": "object",
+            "title": "uitgevoerdeStorting",
+            "$ref": "pas",
+            "objectConfiguration": {
+              "register": "ggm-volksgezondheid-milieu",
+              "schema": "pas"
+            }
+          },
+          "bij": {
+            "type": "object",
+            "title": "bij",
+            "$ref": "milieustraat",
+            "objectConfiguration": {
+              "register": "ggm-volksgezondheid-milieu",
+              "schema": "milieustraat"
+            }
+          },
+          "fractie": {
+            "type": "array",
+            "title": "fractie",
+            "items": {
+              "type": "object",
+              "$ref": "fractie",
+              "objectConfiguration": {
+                "register": "ggm-volksgezondheid-milieu",
+                "schema": "fractie"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "vuilniswagen": {
+        "slug": "vuilniswagen",
+        "title": "Vuilniswagen",
+        "version": "2.5.0",
+        "description": "Een vrachtwagen die gebruikt wordt om afval in te zamelen bij bedrijven en huishoudens (huisvuil)",
+        "required": [
+          "code",
+          "type",
+          "kenteken"
+        ],
+        "properties": {
+          "code": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "code"
+          },
+          "type": {
+            "type": "string",
+            "maxLength": 200,
+            "title": "type"
+          },
+          "kenteken": {
+            "type": "string",
+            "maxLength": 8,
+            "title": "kenteken"
+          },
+          "uitgevoerdMet": {
+            "type": "array",
+            "title": "uitgevoerdMet",
+            "items": {
+              "type": "object",
+              "$ref": "rit",
+              "objectConfiguration": {
+                "register": "ggm-volksgezondheid-milieu",
+                "schema": "rit"
+              }
+            }
+          },
+          "geschiktVoor": {
+            "type": "array",
+            "title": "geschiktVoor",
+            "items": {
+              "type": "object",
+              "$ref": "containertype",
+              "objectConfiguration": {
+                "register": "ggm-volksgezondheid-milieu",
+                "schema": "containertype"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "vulgraadmeting": {
+        "slug": "vulgraadmeting",
+        "title": "Vulgraadmeting",
+        "version": "2.5.0",
+        "description": "Mate waarin een (afval)container gevuld is",
+        "required": [
+          "tijdstip",
+          "vulgraad",
+          "vullingGewicht"
+        ],
+        "properties": {
+          "tijdstip": {
+            "type": "string",
+            "format": "date-time",
+            "title": "tijdstip"
+          },
+          "vulgraad": {
+            "type": "integer",
+            "title": "vulgraad",
+            "description": "Vulgraadpercentage"
+          },
+          "vullingGewicht": {
+            "type": "integer",
+            "title": "vullingGewicht",
+            "description": "Gewicht vulling in kilo's"
+          },
+          "heeft": {
+            "type": "object",
+            "title": "heeft",
+            "$ref": "container",
+            "objectConfiguration": {
+              "register": "ggm-volksgezondheid-milieu",
+              "schema": "container"
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      }
+    },
+    "registers": {
+      "ggm-volksgezondheid-milieu": {
+        "slug": "ggm-volksgezondheid-milieu",
+        "title": "GGM - 7 Volksgezondheid en Milieu",
+        "version": "2.5.0",
+        "description": "Gemeentelijk Gegevensmodel domain: 7 Volksgezondheid en Milieu",
+        "schemas": [
+          "categorie",
+          "container",
+          "containertype",
+          "fractie",
+          "locatie",
+          "melding",
+          "milieustraat",
+          "ophaalmoment",
+          "pas",
+          "prijsafspraak",
+          "prijsregel",
+          "rit",
+          "route",
+          "storting",
+          "vuilniswagen",
+          "vulgraadmeting"
+        ],
+        "source": "internal"
+      }
+    }
+  }
+}

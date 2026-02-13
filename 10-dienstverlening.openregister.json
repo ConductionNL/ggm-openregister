@@ -1,0 +1,1038 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "GGM - 10 Dienstverlening",
+    "description": "OpenRegister configuration for the Gemeentelijk Gegevensmodel (GGM) domain: 10 Dienstverlening. Auto-generated from GGM v2.5.0.",
+    "version": "2.5.0"
+  },
+  "x-openregister": {
+    "type": "application",
+    "sourceType": "github",
+    "sourceUrl": "https://github.com/ConductionNL/ggm-openregister",
+    "openregister": "^v0.2.10",
+    "github": {
+      "repo": "ConductionNL/ggm-openregister",
+      "branch": "main",
+      "path": "10-dienstverlening.openregister.json"
+    },
+    "description": "Gemeentelijk Gegevensmodel - 10 Dienstverlening"
+  },
+  "components": {
+    "schemas": {
+      "aanvraagdata": {
+        "slug": "aanvraagdata",
+        "title": "Aanvraagdata",
+        "version": "2.5.0",
+        "description": "Bron: GEN_REQ_DATA\nID: REQ_DATA icm VELD_NAAM",
+        "required": [
+          "veld",
+          "data"
+        ],
+        "properties": {
+          "veld": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "veld"
+          },
+          "data": {
+            "type": "string",
+            "title": "data"
+          },
+          "heeftData": {
+            "type": "object",
+            "title": "heeftData",
+            "$ref": "aanvraagofmelding",
+            "objectConfiguration": {
+              "register": "ggm-dienstverlening",
+              "schema": "aanvraagofmelding"
+            }
+          },
+          "isConform": {
+            "type": "object",
+            "title": "isConform",
+            "$ref": "formuliersoortveld",
+            "objectConfiguration": {
+              "register": "ggm-dienstverlening",
+              "schema": "formuliersoortveld"
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "aanvraagofmelding": {
+        "slug": "aanvraagofmelding",
+        "title": "AanvraagOfMelding",
+        "version": "2.5.0",
+        "description": "Komt overeen met een VJV\n\nBron: GEM_VJV (Distinct op REQ_ID)\nID: REQ_ID",
+        "required": [
+          "afgehandeld",
+          "kanaal",
+          "soort",
+          "datumAfhandeling",
+          "categorie",
+          "identificatie",
+          "onderwerp",
+          "status",
+          "subcategorie",
+          "datumAanmaak",
+          "categoriecode",
+          "datumBeginStatus",
+          "datumEindeStatus",
+          "hoofdcategorie",
+          "hoofdcategoriecode",
+          "onderwerpcode",
+          "statuscode",
+          "statusVolgorde",
+          "subcategoriecode"
+        ],
+        "properties": {
+          "afgehandeld": {
+            "type": "string",
+            "title": "afgehandeld",
+            "enum": [
+              "Ja",
+              "Nee",
+              "Onbekend",
+              "Leeg"
+            ]
+          },
+          "kanaal": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "kanaal"
+          },
+          "soort": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "soort",
+            "description": "Sluit aan op soorten uit Suite4Omgevingsdiensten: aanvraag, melding...."
+          },
+          "datumAfhandeling": {
+            "type": "string",
+            "format": "date",
+            "title": "datumAfhandeling"
+          },
+          "categorie": {
+            "type": "string",
+            "maxLength": 200,
+            "title": "categorie"
+          },
+          "identificatie": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "identificatie"
+          },
+          "onderwerp": {
+            "type": "string",
+            "maxLength": 200,
+            "title": "onderwerp"
+          },
+          "status": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "status"
+          },
+          "subcategorie": {
+            "type": "string",
+            "maxLength": 200,
+            "title": "subcategorie"
+          },
+          "datumAanmaak": {
+            "type": "string",
+            "format": "date",
+            "title": "datumAanmaak"
+          },
+          "categoriecode": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "categoriecode"
+          },
+          "datumBeginStatus": {
+            "type": "string",
+            "format": "date",
+            "title": "datumBeginStatus"
+          },
+          "datumEindeStatus": {
+            "type": "string",
+            "format": "date",
+            "title": "datumEindeStatus"
+          },
+          "hoofdcategorie": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "hoofdcategorie"
+          },
+          "hoofdcategoriecode": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "hoofdcategoriecode"
+          },
+          "onderwerpcode": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "onderwerpcode"
+          },
+          "statuscode": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "statuscode"
+          },
+          "statusVolgorde": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "statusVolgorde"
+          },
+          "subcategoriecode": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "subcategoriecode"
+          },
+          "melder": {
+            "type": "object",
+            "title": "melder",
+            "$ref": "rechtspersoon",
+            "objectConfiguration": {
+              "register": "ggm-kern",
+              "schema": "rechtspersoon"
+            }
+          },
+          "heeftDocumenten": {
+            "type": "array",
+            "title": "heeftDocumenten",
+            "items": {
+              "type": "object",
+              "$ref": "document",
+              "objectConfiguration": {
+                "register": "ggm-kern",
+                "schema": "document"
+              }
+            }
+          },
+          "aanvraagMet": {
+            "type": "object",
+            "title": "aanvraagMet",
+            "$ref": "formuliersoort",
+            "objectConfiguration": {
+              "register": "ggm-dienstverlening",
+              "schema": "formuliersoort"
+            }
+          },
+          "kanLeidenTot": {
+            "type": "array",
+            "title": "kanLeidenTot",
+            "items": {
+              "type": "object",
+              "$ref": "zaak",
+              "objectConfiguration": {
+                "register": "ggm-kern",
+                "schema": "zaak"
+              }
+            }
+          },
+          "betreft": {
+            "type": "array",
+            "title": "betreft",
+            "items": {
+              "type": "object",
+              "$ref": "onderwerp",
+              "objectConfiguration": {
+                "register": "ggm-dienstverlening",
+                "schema": "onderwerp"
+              }
+            }
+          },
+          "heeftData": {
+            "type": "array",
+            "title": "heeftData",
+            "items": {
+              "type": "object",
+              "$ref": "aanvraagdata",
+              "objectConfiguration": {
+                "register": "ggm-dienstverlening",
+                "schema": "aanvraagdata"
+              }
+            }
+          },
+          "ingediendDoor": {
+            "type": "object",
+            "title": "ingediendDoor",
+            "$ref": "indiener",
+            "objectConfiguration": {
+              "register": "ggm-veiligheid-vergunningen",
+              "schema": "indiener"
+            }
+          },
+          "heeft": {
+            "type": "array",
+            "title": "heeft",
+            "items": {
+              "type": "object",
+              "$ref": "aomstatus",
+              "objectConfiguration": {
+                "register": "ggm-veiligheid-vergunningen",
+                "schema": "aomstatus"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "afspraakstatus": {
+        "slug": "afspraakstatus",
+        "title": "Afspraakstatus",
+        "version": "2.5.0",
+        "description": "de toestand van de afspraak",
+        "required": [
+          "status"
+        ],
+        "properties": {
+          "status": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "status"
+          },
+          "heeft": {
+            "type": "array",
+            "title": "heeft",
+            "items": {
+              "type": "object",
+              "$ref": "balieafspraak",
+              "objectConfiguration": {
+                "register": "ggm-dienstverlening",
+                "schema": "balieafspraak"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "artikel": {
+        "slug": "artikel",
+        "title": "Artikel",
+        "version": "2.5.0",
+        "description": "Tekst die is gemaakt om gepubliceerd te worden als een onafhankelijk deel van een tijdschrift, krant, encyclopedie of ander werk",
+        "required": [],
+        "properties": {},
+        "searchable": true,
+        "hardValidation": false
+      },
+      "balieafspraak": {
+        "slug": "balieafspraak",
+        "title": "Balieafspraak",
+        "version": "2.5.0",
+        "description": "Balieafspraken zijn afspraken voor een klantcontact. Dit ongeacht of deze werkelijk heeft plaatsgevonden of gaat plaatsvinden, soms liggen deze in de toekomst of is iemand niet op komen dagen, of iets anders waardoor het klantcontact nog niet heeft plaatsgevonden.",
+        "required": [
+          "starttijdGepland",
+          "tijdAangemaakt",
+          "toelichting",
+          "tijdsduurGepland",
+          "wachttijdTotaal",
+          "eindtijdGepland",
+          "wachttijdVoorStartAfspraak",
+          "wachttijdNaStartAfspraak",
+          "werkelijkeTijdsduur",
+          "notitie"
+        ],
+        "properties": {
+          "starttijdGepland": {
+            "type": "string",
+            "format": "date-time",
+            "title": "starttijdGepland"
+          },
+          "tijdAangemaakt": {
+            "type": "string",
+            "format": "date-time",
+            "title": "tijdAangemaakt"
+          },
+          "toelichting": {
+            "type": "string",
+            "title": "toelichting"
+          },
+          "tijdsduurGepland": {
+            "type": "integer",
+            "title": "tijdsduurGepland",
+            "description": "Werkelijke tijdsduur in minuten"
+          },
+          "wachttijdTotaal": {
+            "type": "integer",
+            "title": "wachttijdTotaal",
+            "description": "Wachttijd inclusief de tijd dat iemand te vroeg voor de afspraak verschijnt en de tijd dat iemand moet wachten na de geplande starttijd van de afspraak"
+          },
+          "eindtijdGepland": {
+            "type": "string",
+            "format": "date-time",
+            "title": "eindtijdGepland"
+          },
+          "wachttijdVoorStartAfspraak": {
+            "type": "integer",
+            "title": "wachttijdVoorStartAfspraak",
+            "description": "Tijdsduur dat iemand te vroeg is voor de afspraak"
+          },
+          "wachttijdNaStartAfspraak": {
+            "type": "integer",
+            "title": "wachttijdNaStartAfspraak",
+            "description": "Tijdsduur die iemand moet wachten na de starttijd van de afspraak"
+          },
+          "werkelijkeTijdsduur": {
+            "type": "integer",
+            "title": "werkelijkeTijdsduur"
+          },
+          "notitie": {
+            "type": "string",
+            "title": "notitie"
+          },
+          "locatie": {
+            "type": "object",
+            "title": "locatie",
+            "$ref": "vestigingvanzaakbehandelendeorganisatie",
+            "objectConfiguration": {
+              "register": "ggm-kern",
+              "schema": "vestigingvanzaakbehandelendeorganisatie"
+            }
+          },
+          "betreft": {
+            "type": "array",
+            "title": "betreft",
+            "items": {
+              "type": "object",
+              "$ref": "productofdienst",
+              "objectConfiguration": {
+                "register": "ggm-dienstverlening",
+                "schema": "productofdienst"
+              }
+            }
+          },
+          "heeftBetrekkingOp": {
+            "type": "object",
+            "title": "heeftBetrekkingOp",
+            "$ref": "zaak",
+            "objectConfiguration": {
+              "register": "ggm-kern",
+              "schema": "zaak"
+            }
+          },
+          "met": {
+            "type": "object",
+            "title": "met",
+            "$ref": "medewerker",
+            "objectConfiguration": {
+              "register": "ggm-kern",
+              "schema": "medewerker"
+            }
+          },
+          "mondtUitIn": {
+            "type": "object",
+            "title": "mondtUitIn",
+            "$ref": "klantcontact",
+            "objectConfiguration": {
+              "register": "ggm-kern",
+              "schema": "klantcontact"
+            }
+          },
+          "heeft": {
+            "type": "object",
+            "title": "heeft",
+            "$ref": "afspraakstatus",
+            "objectConfiguration": {
+              "register": "ggm-dienstverlening",
+              "schema": "afspraakstatus"
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "externebron": {
+        "slug": "externebron",
+        "title": "ExterneBron",
+        "version": "2.5.0",
+        "description": "Bron buiten de eigen organisatie",
+        "required": [],
+        "properties": {
+          "heeftHerkomst": {
+            "type": "array",
+            "title": "heeftHerkomst",
+            "items": {
+              "type": "object",
+              "$ref": "batch",
+              "objectConfiguration": {
+                "register": "ggm-interne-organisatie",
+                "schema": "batch"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "formuliersoort": {
+        "slug": "formuliersoort",
+        "title": "Formuliersoort",
+        "version": "2.5.0",
+        "description": "Bron: GEM_FORM\nID: FORM_ID",
+        "required": [
+          "naam",
+          "onderwerp",
+          "ingebruik"
+        ],
+        "properties": {
+          "naam": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "naam"
+          },
+          "onderwerp": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "onderwerp"
+          },
+          "ingebruik": {
+            "type": "boolean",
+            "title": "ingebruik"
+          },
+          "heeftVelden": {
+            "type": "array",
+            "title": "heeftVelden",
+            "items": {
+              "type": "object",
+              "$ref": "formuliersoortveld",
+              "objectConfiguration": {
+                "register": "ggm-dienstverlening",
+                "schema": "formuliersoortveld"
+              }
+            }
+          },
+          "isAanleidingVoor": {
+            "type": "array",
+            "title": "isAanleidingVoor",
+            "items": {
+              "type": "object",
+              "$ref": "zaaktype",
+              "objectConfiguration": {
+                "register": "ggm-kern",
+                "schema": "zaaktype"
+              }
+            }
+          },
+          "aanvraagMet": {
+            "type": "array",
+            "title": "aanvraagMet",
+            "items": {
+              "type": "object",
+              "$ref": "aanvraagofmelding",
+              "objectConfiguration": {
+                "register": "ggm-dienstverlening",
+                "schema": "aanvraagofmelding"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "formuliersoortveld": {
+        "slug": "formuliersoortveld",
+        "title": "Formuliersoortveld",
+        "version": "2.5.0",
+        "description": "Bron: GEM_VELD\nID: FORM_ID en VELD_NAAM",
+        "required": [
+          "veldnaam",
+          "veldtype",
+          "helptekst",
+          "maxLengte",
+          "isVerplicht",
+          "label"
+        ],
+        "properties": {
+          "veldnaam": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "veldnaam"
+          },
+          "veldtype": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "veldtype"
+          },
+          "helptekst": {
+            "type": "string",
+            "title": "helptekst"
+          },
+          "maxLengte": {
+            "type": "integer",
+            "title": "maxLengte"
+          },
+          "isVerplicht": {
+            "type": "boolean",
+            "title": "isVerplicht"
+          },
+          "label": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "label"
+          },
+          "heeftVelden": {
+            "type": "object",
+            "title": "heeftVelden",
+            "$ref": "formuliersoort",
+            "objectConfiguration": {
+              "register": "ggm-dienstverlening",
+              "schema": "formuliersoort"
+            }
+          },
+          "isConform": {
+            "type": "array",
+            "title": "isConform",
+            "items": {
+              "type": "object",
+              "$ref": "aanvraagdata",
+              "objectConfiguration": {
+                "register": "ggm-dienstverlening",
+                "schema": "aanvraagdata"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "klantbeoordeling": {
+        "slug": "klantbeoordeling",
+        "title": "Klantbeoordeling",
+        "version": "2.5.0",
+        "description": "goed- of afkeurende uitspraak; = mening, opvatting",
+        "required": [
+          "ddBeoordeling",
+          "beoordeling",
+          "contactOpnemen",
+          "categorie",
+          "subCategorie",
+          "onderwerp",
+          "kanaal"
+        ],
+        "properties": {
+          "ddBeoordeling": {
+            "type": "string",
+            "format": "date",
+            "title": "ddBeoordeling",
+            "description": "datum en tijdstip van de klantbeoordeling"
+          },
+          "beoordeling": {
+            "type": "string",
+            "maxLength": 10,
+            "title": "beoordeling",
+            "description": "cijfer voor de beoordeling (getal tussen 0 en 10)"
+          },
+          "contactOpnemen": {
+            "type": "boolean",
+            "title": "contactOpnemen",
+            "description": "of de klant het al dan niet goed vind dat naar aanleiding van zijn/haar beoordeling contact wordt opgenomen"
+          },
+          "categorie": {
+            "type": "string",
+            "maxLength": 50,
+            "title": "categorie"
+          },
+          "subCategorie": {
+            "type": "string",
+            "maxLength": 50,
+            "title": "subCategorie"
+          },
+          "onderwerp": {
+            "type": "string",
+            "maxLength": 50,
+            "title": "onderwerp"
+          },
+          "kanaal": {
+            "type": "string",
+            "maxLength": 100,
+            "title": "kanaal",
+            "description": "waar de beoordeling is uitgevoerd, te weten op de website, naar aanleiding van een webformulier of na schriftelijke uitvraag vanuit onze organisatie"
+          },
+          "heeft": {
+            "type": "array",
+            "title": "heeft",
+            "items": {
+              "type": "object",
+              "$ref": "productofdienst",
+              "objectConfiguration": {
+                "register": "ggm-dienstverlening",
+                "schema": "productofdienst"
+              }
+            }
+          },
+          "doet": {
+            "type": "object",
+            "title": "doet",
+            "$ref": "betrokkene",
+            "objectConfiguration": {
+              "register": "ggm-kern",
+              "schema": "betrokkene"
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "klantbeoordelingreden": {
+        "slug": "klantbeoordelingreden",
+        "title": "Klantbeoordelingreden",
+        "version": "2.5.0",
+        "description": "Reden voor de beoordeling",
+        "required": [
+          "reden"
+        ],
+        "properties": {
+          "reden": {
+            "type": "string",
+            "maxLength": 100,
+            "title": "reden"
+          },
+          "heeft": {
+            "type": "object",
+            "title": "heeft",
+            "$ref": "klantbeoordeling",
+            "objectConfiguration": {
+              "register": "ggm-dienstverlening",
+              "schema": "klantbeoordeling"
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "mor-aanvraagofmelding": {
+        "slug": "mor-aanvraagofmelding",
+        "title": "MOR-AanvraagOfMelding",
+        "version": "2.5.0",
+        "description": "Bericht van een inwoner over een gebrek of opvallendheid in de openbare ruimte",
+        "required": [
+          "locatie",
+          "locatieOmschrijving",
+          "meldingOmschrijving",
+          "meldingTekst"
+        ],
+        "properties": {
+          "locatie": {
+            "type": "string",
+            "format": "geo",
+            "title": "locatie"
+          },
+          "locatieOmschrijving": {
+            "type": "string",
+            "maxLength": 300,
+            "title": "locatieOmschrijving"
+          },
+          "meldingOmschrijving": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "meldingOmschrijving"
+          },
+          "meldingTekst": {
+            "type": "string",
+            "maxLength": 4000,
+            "title": "meldingTekst"
+          }
+        },
+        "searchable": true,
+        "hardValidation": false,
+        "allOf": [
+          {
+            "$ref": "aanvraagofmelding",
+            "objectConfiguration": {
+              "register": "ggm-dienstverlening",
+              "schema": "aanvraagofmelding"
+            }
+          }
+        ]
+      },
+      "onderwerp": {
+        "slug": "onderwerp",
+        "title": "Onderwerp",
+        "version": "2.5.0",
+        "description": "Bron: GEM_VJV_ONDERWERP\nID: ONDERWERP_ID",
+        "required": [
+          "naam",
+          "toelichting",
+          "isActief"
+        ],
+        "properties": {
+          "naam": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "naam"
+          },
+          "toelichting": {
+            "type": "string",
+            "title": "toelichting"
+          },
+          "isActief": {
+            "type": "boolean",
+            "title": "isActief"
+          },
+          "hoofdonderwerp": {
+            "type": "object",
+            "title": "hoofdonderwerp",
+            "$ref": "onderwerp",
+            "objectConfiguration": {
+              "register": "ggm-dienstverlening",
+              "schema": "onderwerp"
+            }
+          },
+          "betreft": {
+            "type": "array",
+            "title": "betreft",
+            "items": {
+              "type": "object",
+              "$ref": "aanvraagofmelding",
+              "objectConfiguration": {
+                "register": "ggm-dienstverlening",
+                "schema": "aanvraagofmelding"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "productofdienst": {
+        "slug": "productofdienst",
+        "title": "ProductOfDienst",
+        "version": "2.5.0",
+        "description": "Bron: QP_CALENDAR.CFM_SERVICES",
+        "required": [
+          "naam",
+          "afhandeltijd",
+          "ingebruik"
+        ],
+        "properties": {
+          "naam": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "naam"
+          },
+          "afhandeltijd": {
+            "type": "integer",
+            "title": "afhandeltijd",
+            "description": "Standaard afhandeltijd in minuten"
+          },
+          "ingebruik": {
+            "type": "boolean",
+            "title": "ingebruik"
+          },
+          "heeft": {
+            "type": "array",
+            "title": "heeft",
+            "items": {
+              "type": "object",
+              "$ref": "klantbeoordeling",
+              "objectConfiguration": {
+                "register": "ggm-dienstverlening",
+                "schema": "klantbeoordeling"
+              }
+            }
+          },
+          "betreft": {
+            "type": "array",
+            "title": "betreft",
+            "items": {
+              "type": "object",
+              "$ref": "balieafspraak",
+              "objectConfiguration": {
+                "register": "ggm-dienstverlening",
+                "schema": "balieafspraak"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "telefoononderwerp": {
+        "slug": "telefoononderwerp",
+        "title": "Telefoononderwerp",
+        "version": "2.5.0",
+        "description": "Onderwerp waarover het telefooncontact gaat",
+        "required": [
+          "onderwerp"
+        ],
+        "properties": {
+          "onderwerp": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "onderwerp"
+          },
+          "heeft": {
+            "type": "array",
+            "title": "heeft",
+            "items": {
+              "type": "object",
+              "$ref": "telefoontje",
+              "objectConfiguration": {
+                "register": "ggm-dienstverlening",
+                "schema": "telefoontje"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "telefoonstatus": {
+        "slug": "telefoonstatus",
+        "title": "Telefoonstatus",
+        "version": "2.5.0",
+        "description": "ABANDONEDALERTING: “Opgehangen tijdens overgaan telefoon”\n DROPPEDCANCELED: “Opgehangen door systeem”\n ABANDONEDQUEUED: “Opgehangen tijdens wachten, zonder boodschap. ”\n CONNECTEDDIRECT: “Direct verbonden”\n CONNECTEDQUEUEDANNOUNCE: “Verbonden na wachtrij met boodschap”\n AbandonedQUEUEDANNOUNCE: “Opgehangen in wachtrij met boodschap”\n DroppedBusy: “Opgehangen door systeem, te druk”\n REJECTED: “Geweigerd door systeem”\n Droppedoverload: “Opgehangen door systeem vanwege overbelasting”",
+        "required": [
+          "contactConnectionState",
+          "status"
+        ],
+        "properties": {
+          "contactConnectionState": {
+            "type": "string",
+            "maxLength": 20,
+            "title": "contactConnectionState"
+          },
+          "status": {
+            "type": "string",
+            "maxLength": 20,
+            "title": "status"
+          },
+          "heeft": {
+            "type": "array",
+            "title": "heeft",
+            "items": {
+              "type": "object",
+              "$ref": "telefoontje",
+              "objectConfiguration": {
+                "register": "ggm-dienstverlening",
+                "schema": "telefoontje"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "telefoontje": {
+        "slug": "telefoontje",
+        "title": "Telefoontje",
+        "version": "2.5.0",
+        "description": "De telefoontgesprekken zijn alle keren dat iemand naar de gemeente belt en het telefoonsysteem neemt deze telefoongesprekken aan. Ongeacht of iemand daarna ophangt, door het systeem uit de wachtrij wordt gezet, doorverbonden wordt met een derde partij of er werkelijk wordt opgenomen.",
+        "required": [
+          "starttijd",
+          "eindtijd",
+          "totaleTijdsduur",
+          "trackID",
+          "totaleWachttijd",
+          "totaleSpreektijd",
+          "totaleOnHoldTijd",
+          "afhandeltijdNaGesprek",
+          "deltaISDNConnectie"
+        ],
+        "properties": {
+          "starttijd": {
+            "type": "string",
+            "format": "date-time",
+            "title": "starttijd",
+            "description": "Het moment dat de telefooncentrale een telefoontje in behandeling neemt. Dit ligt voor de starttijd van het klantcontact"
+          },
+          "eindtijd": {
+            "type": "string",
+            "format": "date-time",
+            "title": "eindtijd",
+            "description": "Het moment dat de telefooncentrale het telefoontjes beeindigd"
+          },
+          "totaleTijdsduur": {
+            "type": "integer",
+            "title": "totaleTijdsduur",
+            "description": "Tijd tussen start- en eindtijd van telefoontje"
+          },
+          "trackID": {
+            "type": "string",
+            "maxLength": 20,
+            "title": "trackID"
+          },
+          "totaleWachttijd": {
+            "type": "integer",
+            "title": "totaleWachttijd",
+            "description": "De tijd tussen de starttijd van het telefoontje en het moment dat het telefoontje voor het eerst wordt opgenomen, of het telefoontje wordt afgesloten"
+          },
+          "totaleSpreektijd": {
+            "type": "integer",
+            "title": "totaleSpreektijd",
+            "description": "De totale tijd dat met een (of meer) medewerkers van de gemeente wordt gebeld."
+          },
+          "totaleOnHoldTijd": {
+            "type": "integer",
+            "title": "totaleOnHoldTijd",
+            "description": "De totale tijd dat een beller tussen klantcontacten \"on hold\" wordt gezet."
+          },
+          "afhandeltijdNaGesprek": {
+            "type": "integer",
+            "title": "afhandeltijdNaGesprek",
+            "description": "De tijd die de medewerker nodig heeft om het telefoontje af te handelen totdat hij/zij klaar is voor een volgend telefoontje"
+          },
+          "deltaISDNConnectie": {
+            "type": "integer",
+            "title": "deltaISDNConnectie",
+            "description": "De totale tijd dat er een teelfoonverbinding was minus totale wachttijd, spreektijd en on hold-tijd."
+          },
+          "mondtUitIn": {
+            "type": "array",
+            "title": "mondtUitIn",
+            "items": {
+              "type": "object",
+              "$ref": "klantcontact",
+              "objectConfiguration": {
+                "register": "ggm-kern",
+                "schema": "klantcontact"
+              }
+            }
+          },
+          "heeft": {
+            "type": "object",
+            "title": "heeft",
+            "$ref": "telefoonstatus",
+            "objectConfiguration": {
+              "register": "ggm-dienstverlening",
+              "schema": "telefoonstatus"
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      }
+    },
+    "registers": {
+      "ggm-dienstverlening": {
+        "slug": "ggm-dienstverlening",
+        "title": "GGM - 10 Dienstverlening",
+        "version": "2.5.0",
+        "description": "Gemeentelijk Gegevensmodel domain: 10 Dienstverlening",
+        "schemas": [
+          "aanvraagdata",
+          "aanvraagofmelding",
+          "afspraakstatus",
+          "artikel",
+          "balieafspraak",
+          "externebron",
+          "formuliersoort",
+          "formuliersoortveld",
+          "klantbeoordeling",
+          "klantbeoordelingreden",
+          "mor-aanvraagofmelding",
+          "onderwerp",
+          "productofdienst",
+          "telefoononderwerp",
+          "telefoonstatus",
+          "telefoontje"
+        ],
+        "source": "internal"
+      }
+    }
+  }
+}

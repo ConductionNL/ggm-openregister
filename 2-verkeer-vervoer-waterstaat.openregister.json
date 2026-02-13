@@ -1,0 +1,1517 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "GGM - 2 Verkeer, Vervoer en Waterstaat",
+    "description": "OpenRegister configuration for the Gemeentelijk Gegevensmodel (GGM) domain: 2 Verkeer, Vervoer en Waterstaat. Auto-generated from GGM v2.5.0.",
+    "version": "2.5.0"
+  },
+  "x-openregister": {
+    "type": "application",
+    "sourceType": "github",
+    "sourceUrl": "https://github.com/ConductionNL/ggm-openregister",
+    "openregister": "^v0.2.10",
+    "github": {
+      "repo": "ConductionNL/ggm-openregister",
+      "branch": "main",
+      "path": "2-verkeer-vervoer-waterstaat.openregister.json"
+    },
+    "description": "Gemeentelijk Gegevensmodel - 2 Verkeer, Vervoer en Waterstaat"
+  },
+  "components": {
+    "schemas": {
+      "belprovider": {
+        "slug": "belprovider",
+        "title": "Belprovider",
+        "version": "2.5.0",
+        "description": "Leverancier of dienstverlener van modiele beldiensten",
+        "required": [
+          "code"
+        ],
+        "properties": {
+          "code": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "code"
+          },
+          "leverancier": {
+            "type": "array",
+            "title": "leverancier",
+            "items": {
+              "type": "object",
+              "$ref": "parkeerrecht",
+              "objectConfiguration": {
+                "register": "ggm-verkeer-vervoer-waterstaat",
+                "schema": "parkeerrecht"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false,
+        "allOf": [
+          {
+            "$ref": "leverancier",
+            "objectConfiguration": {
+              "register": "ggm-interne-organisatie",
+              "schema": "leverancier"
+            }
+          }
+        ]
+      },
+      "mulderfeit": {
+        "slug": "mulderfeit",
+        "title": "MulderFeit",
+        "version": "2.5.0",
+        "description": "Een administratieve overtreding met betrekking tot parkeren, zoals bepaald onder de Wet administratiefrechtelijke handhaving verkeersvoorschriften (WAHV), ook wel bekend als de Mulderwet.",
+        "required": [
+          "bonnummer",
+          "overtreding",
+          "vorderingnummer",
+          "dienstCD",
+          "bedrag",
+          "parkeertarief",
+          "datumBezwaar",
+          "bezwaarToegewezen",
+          "bezwaarIngetrokken",
+          "bezwaarAfgehandeld",
+          "datumGeseponeerd",
+          "datumBetaling",
+          "datumIndiening",
+          "redenSeponeren",
+          "organisatie"
+        ],
+        "properties": {
+          "bonnummer": {
+            "type": "integer",
+            "title": "bonnummer"
+          },
+          "overtreding": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "overtreding"
+          },
+          "vorderingnummer": {
+            "type": "integer",
+            "title": "vorderingnummer"
+          },
+          "dienstCD": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "dienstCD"
+          },
+          "bedrag": {
+            "type": "number",
+            "title": "bedrag"
+          },
+          "parkeertarief": {
+            "type": "number",
+            "title": "parkeertarief"
+          },
+          "datumBezwaar": {
+            "type": "string",
+            "format": "date",
+            "title": "datumBezwaar"
+          },
+          "bezwaarToegewezen": {
+            "type": "string",
+            "format": "date",
+            "title": "bezwaarToegewezen"
+          },
+          "bezwaarIngetrokken": {
+            "type": "string",
+            "format": "date",
+            "title": "bezwaarIngetrokken"
+          },
+          "bezwaarAfgehandeld": {
+            "type": "string",
+            "format": "date",
+            "title": "bezwaarAfgehandeld"
+          },
+          "datumGeseponeerd": {
+            "type": "string",
+            "format": "date",
+            "title": "datumGeseponeerd"
+          },
+          "datumBetaling": {
+            "type": "string",
+            "format": "date",
+            "title": "datumBetaling"
+          },
+          "datumIndiening": {
+            "type": "string",
+            "format": "date",
+            "title": "datumIndiening"
+          },
+          "redenSeponeren": {
+            "type": "string",
+            "maxLength": 300,
+            "title": "redenSeponeren"
+          },
+          "organisatie": {
+            "type": "string",
+            "maxLength": 200,
+            "title": "organisatie"
+          },
+          "betreftVoertuig": {
+            "type": "object",
+            "title": "betreftVoertuig",
+            "$ref": "voertuig",
+            "objectConfiguration": {
+              "register": "ggm-verkeer-vervoer-waterstaat",
+              "schema": "voertuig"
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "naheffing": {
+        "slug": "naheffing",
+        "title": "Naheffing",
+        "version": "2.5.0",
+        "description": "Het achteraf vorderen van te weinig betaalde belasting",
+        "required": [
+          "bonnummer",
+          "overtreding",
+          "vorderingnummer",
+          "dienstCD",
+          "fiscaal",
+          "bedrag",
+          "parkeertarief",
+          "datumBezwaar",
+          "bezwaarToegewezen",
+          "bezwaarIngetrokken",
+          "bezwaarAfgehandeld",
+          "datumGeseponeerd",
+          "datumBetaling",
+          "datumIndiening",
+          "redenSeponeren",
+          "organisatie"
+        ],
+        "properties": {
+          "bonnummer": {
+            "type": "integer",
+            "title": "bonnummer"
+          },
+          "overtreding": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "overtreding"
+          },
+          "vorderingnummer": {
+            "type": "integer",
+            "title": "vorderingnummer"
+          },
+          "dienstCD": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "dienstCD"
+          },
+          "fiscaal": {
+            "type": "boolean",
+            "title": "fiscaal"
+          },
+          "bedrag": {
+            "type": "number",
+            "title": "bedrag"
+          },
+          "parkeertarief": {
+            "type": "number",
+            "title": "parkeertarief"
+          },
+          "datumBezwaar": {
+            "type": "string",
+            "format": "date",
+            "title": "datumBezwaar"
+          },
+          "bezwaarToegewezen": {
+            "type": "string",
+            "format": "date",
+            "title": "bezwaarToegewezen"
+          },
+          "bezwaarIngetrokken": {
+            "type": "string",
+            "format": "date",
+            "title": "bezwaarIngetrokken"
+          },
+          "bezwaarAfgehandeld": {
+            "type": "string",
+            "format": "date",
+            "title": "bezwaarAfgehandeld"
+          },
+          "datumGeseponeerd": {
+            "type": "string",
+            "format": "date",
+            "title": "datumGeseponeerd"
+          },
+          "datumBetaling": {
+            "type": "string",
+            "format": "date",
+            "title": "datumBetaling"
+          },
+          "datumIndiening": {
+            "type": "string",
+            "format": "date",
+            "title": "datumIndiening"
+          },
+          "redenSeponeren": {
+            "type": "string",
+            "maxLength": 300,
+            "title": "redenSeponeren"
+          },
+          "organisatie": {
+            "type": "string",
+            "maxLength": 200,
+            "title": "organisatie"
+          },
+          "komtVoortUit": {
+            "type": "object",
+            "title": "komtVoortUit",
+            "$ref": "parkeerscan",
+            "objectConfiguration": {
+              "register": "ggm-verkeer-vervoer-waterstaat",
+              "schema": "parkeerscan"
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "parkeergarage": {
+        "slug": "parkeergarage",
+        "title": "Parkeergarage",
+        "version": "2.5.0",
+        "description": "Open constructie die geheel of gedeeltelijk in gebruik is als voorziening voor het parkeren van voertuigen",
+        "required": [],
+        "properties": {},
+        "searchable": true,
+        "hardValidation": false,
+        "allOf": [
+          {
+            "$ref": "parkeerzone",
+            "objectConfiguration": {
+              "register": "ggm-verkeer-vervoer-waterstaat",
+              "schema": "parkeerzone"
+            }
+          }
+        ]
+      },
+      "parkeerrecht": {
+        "slug": "parkeerrecht",
+        "title": "Parkeerrecht",
+        "version": "2.5.0",
+        "description": "Het onder bepaalde voorwaarden (zoals betaling parkeerbelasting of parkeergeld) ontstane recht om een voertuig gedurende een bepaalde of onbepaalde periode op een daartoe benoemde parkeerplaats of in/op een daartoe benoemde parkeervoorziening te parkeren.",
+        "required": [
+          "datumtijdStart",
+          "datumtijdEinde",
+          "aanmaaktijd",
+          "productnaam",
+          "productomschrijving",
+          "bedragAankoop",
+          "bedragBTW"
+        ],
+        "properties": {
+          "datumtijdStart": {
+            "type": "string",
+            "format": "date-time",
+            "title": "datumtijdStart"
+          },
+          "datumtijdEinde": {
+            "type": "string",
+            "format": "date-time",
+            "title": "datumtijdEinde"
+          },
+          "aanmaaktijd": {
+            "type": "string",
+            "format": "date-time",
+            "title": "aanmaaktijd"
+          },
+          "productnaam": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "productnaam"
+          },
+          "productomschrijving": {
+            "type": "string",
+            "title": "productomschrijving"
+          },
+          "bedragAankoop": {
+            "type": "number",
+            "title": "bedragAankoop",
+            "description": "Bedrag incl. BTW"
+          },
+          "bedragBTW": {
+            "type": "number",
+            "title": "bedragBTW"
+          },
+          "verificatie": {
+            "type": "object",
+            "title": "verificatie",
+            "$ref": "parkeerscan",
+            "objectConfiguration": {
+              "register": "ggm-verkeer-vervoer-waterstaat",
+              "schema": "parkeerscan"
+            }
+          },
+          "resulteert": {
+            "type": "object",
+            "title": "resulteert",
+            "$ref": "parkeervergunning",
+            "objectConfiguration": {
+              "register": "ggm-verkeer-vervoer-waterstaat",
+              "schema": "parkeervergunning"
+            }
+          },
+          "betreft": {
+            "type": "array",
+            "title": "betreft",
+            "items": {
+              "type": "object",
+              "$ref": "parkeerzone",
+              "objectConfiguration": {
+                "register": "ggm-verkeer-vervoer-waterstaat",
+                "schema": "parkeerzone"
+              }
+            }
+          },
+          "leverancier": {
+            "type": "object",
+            "title": "leverancier",
+            "$ref": "belprovider",
+            "objectConfiguration": {
+              "register": "ggm-verkeer-vervoer-waterstaat",
+              "schema": "belprovider"
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "parkeerscan": {
+        "slug": "parkeerscan",
+        "title": "Parkeerscan",
+        "version": "2.5.0",
+        "description": "Waarneming van een parkeeractie door een scanauto",
+        "required": [
+          "transactieID",
+          "codeScanvoertuig",
+          "codeGebruiker",
+          "kenteken",
+          "coordinaten",
+          "parkeerrecht",
+          "tijdstip",
+          "foto"
+        ],
+        "properties": {
+          "transactieID": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "transactieID"
+          },
+          "codeScanvoertuig": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "codeScanvoertuig"
+          },
+          "codeGebruiker": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "codeGebruiker"
+          },
+          "kenteken": {
+            "type": "string",
+            "maxLength": 12,
+            "title": "kenteken"
+          },
+          "coordinaten": {
+            "type": "string",
+            "format": "geo",
+            "title": "coordinaten"
+          },
+          "parkeerrecht": {
+            "type": "boolean",
+            "title": "parkeerrecht"
+          },
+          "tijdstip": {
+            "type": "string",
+            "format": "date-time",
+            "title": "tijdstip"
+          },
+          "foto": {
+            "type": "string",
+            "format": "binary",
+            "title": "foto"
+          },
+          "betreft": {
+            "type": "object",
+            "title": "betreft",
+            "$ref": "parkeervlak",
+            "objectConfiguration": {
+              "register": "ggm-verkeer-vervoer-waterstaat",
+              "schema": "parkeervlak"
+            }
+          },
+          "uitgevoerdDoor": {
+            "type": "object",
+            "title": "uitgevoerdDoor",
+            "$ref": "medewerker",
+            "objectConfiguration": {
+              "register": "ggm-kern",
+              "schema": "medewerker"
+            }
+          },
+          "verificatie": {
+            "type": "object",
+            "title": "verificatie",
+            "$ref": "parkeerrecht",
+            "objectConfiguration": {
+              "register": "ggm-verkeer-vervoer-waterstaat",
+              "schema": "parkeerrecht"
+            }
+          },
+          "komtVoortUit": {
+            "type": "object",
+            "title": "komtVoortUit",
+            "$ref": "naheffing",
+            "objectConfiguration": {
+              "register": "ggm-verkeer-vervoer-waterstaat",
+              "schema": "naheffing"
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "parkeervergunning": {
+        "slug": "parkeervergunning",
+        "title": "Parkeervergunning",
+        "version": "2.5.0",
+        "description": "Officiele toestemming dat je op een bepaalde plek mag parkeren",
+        "required": [
+          "nummer",
+          "type",
+          "datumStart",
+          "datumEindeGeldigheid",
+          "datumReservering",
+          "minutenAfgeschreven",
+          "minutenGeldig",
+          "minutenResterend",
+          "kenteken"
+        ],
+        "properties": {
+          "nummer": {
+            "type": "integer",
+            "title": "nummer"
+          },
+          "type": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "type"
+          },
+          "datumStart": {
+            "type": "string",
+            "format": "date-time",
+            "title": "datumStart"
+          },
+          "datumEindeGeldigheid": {
+            "type": "string",
+            "format": "date-time",
+            "title": "datumEindeGeldigheid"
+          },
+          "datumReservering": {
+            "type": "string",
+            "format": "date",
+            "title": "datumReservering"
+          },
+          "minutenAfgeschreven": {
+            "type": "integer",
+            "title": "minutenAfgeschreven"
+          },
+          "minutenGeldig": {
+            "type": "integer",
+            "title": "minutenGeldig"
+          },
+          "minutenResterend": {
+            "type": "integer",
+            "title": "minutenResterend"
+          },
+          "kenteken": {
+            "type": "string",
+            "maxLength": 12,
+            "title": "kenteken"
+          },
+          "soort": {
+            "type": "object",
+            "title": "soort",
+            "$ref": "productsoort",
+            "objectConfiguration": {
+              "register": "ggm-verkeer-vervoer-waterstaat",
+              "schema": "productsoort"
+            }
+          },
+          "houder": {
+            "type": "object",
+            "title": "houder",
+            "$ref": "rechtspersoon",
+            "objectConfiguration": {
+              "register": "ggm-kern",
+              "schema": "rechtspersoon"
+            }
+          },
+          "geldigVoor": {
+            "type": "array",
+            "title": "geldigVoor",
+            "items": {
+              "type": "object",
+              "$ref": "parkeerzone",
+              "objectConfiguration": {
+                "register": "ggm-verkeer-vervoer-waterstaat",
+                "schema": "parkeerzone"
+              }
+            }
+          },
+          "ingezetene": {
+            "type": "object",
+            "title": "ingezetene",
+            "$ref": "ingezetene",
+            "objectConfiguration": {
+              "register": "ggm-kern",
+              "schema": "ingezetene"
+            }
+          },
+          "resulteert": {
+            "type": "object",
+            "title": "resulteert",
+            "$ref": "parkeerrecht",
+            "objectConfiguration": {
+              "register": "ggm-verkeer-vervoer-waterstaat",
+              "schema": "parkeerrecht"
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "parkeervlak": {
+        "slug": "parkeervlak",
+        "title": "Parkeervlak",
+        "version": "2.5.0",
+        "description": "Parkeergelegenheid bestemd voor het parkeren van een of meerdere voertuigen direct langs de doorgaande weg gelegen.",
+        "required": [
+          "vlakID",
+          "doelgroep",
+          "plaats",
+          "coordinaten",
+          "fiscaal",
+          "aantal"
+        ],
+        "properties": {
+          "vlakID": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "vlakID"
+          },
+          "doelgroep": {
+            "type": "string",
+            "title": "doelgroep",
+            "enum": [
+              "DP01",
+              "DP02",
+              "DP03",
+              "DP04",
+              "DP05",
+              "Leeg"
+            ]
+          },
+          "plaats": {
+            "type": "string",
+            "maxLength": 200,
+            "title": "plaats"
+          },
+          "coordinaten": {
+            "type": "string",
+            "format": "geo",
+            "title": "coordinaten"
+          },
+          "fiscaal": {
+            "type": "boolean",
+            "title": "fiscaal"
+          },
+          "aantal": {
+            "type": "integer",
+            "title": "aantal"
+          },
+          "bevat": {
+            "type": "object",
+            "title": "bevat",
+            "$ref": "straatsectie",
+            "objectConfiguration": {
+              "register": "ggm-verkeer-vervoer-waterstaat",
+              "schema": "straatsectie"
+            }
+          },
+          "betreft": {
+            "type": "array",
+            "title": "betreft",
+            "items": {
+              "type": "object",
+              "$ref": "parkeerscan",
+              "objectConfiguration": {
+                "register": "ggm-verkeer-vervoer-waterstaat",
+                "schema": "parkeerscan"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "parkeerzone": {
+        "slug": "parkeerzone",
+        "title": "Parkeerzone",
+        "version": "2.5.0",
+        "description": "Een afgebakend gebied binnen een gemeente  waar specifieke parkeerregels en -voorwaarden van toepassing zijn.",
+        "required": [
+          "geometrie",
+          "naam",
+          "sectorcode",
+          "typeCode",
+          "typeNaam",
+          "soortCode",
+          "iPMCode",
+          "iPMNaam",
+          "gebruik",
+          "aantalParkeervlakken",
+          "alleenDagtarief",
+          "uurtarief",
+          "dagtarief",
+          "starttarief",
+          "startdag",
+          "eindedag",
+          "starttijd",
+          "eindtijd",
+          "isParkeergarage"
+        ],
+        "properties": {
+          "geometrie": {
+            "type": "string",
+            "format": "geo",
+            "title": "geometrie"
+          },
+          "naam": {
+            "type": "string",
+            "maxLength": 250,
+            "title": "naam"
+          },
+          "sectorcode": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "sectorcode"
+          },
+          "typeCode": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "typeCode"
+          },
+          "typeNaam": {
+            "type": "string",
+            "maxLength": 250,
+            "title": "typeNaam"
+          },
+          "soortCode": {
+            "type": "string",
+            "title": "soortCode"
+          },
+          "iPMCode": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "IPMCode"
+          },
+          "iPMNaam": {
+            "type": "string",
+            "maxLength": 250,
+            "title": "IPMNaam"
+          },
+          "gebruik": {
+            "type": "string",
+            "maxLength": 250,
+            "title": "gebruik"
+          },
+          "aantalParkeervlakken": {
+            "type": "integer",
+            "title": "aantalParkeervlakken"
+          },
+          "alleenDagtarief": {
+            "type": "boolean",
+            "title": "alleenDagtarief"
+          },
+          "uurtarief": {
+            "type": "number",
+            "title": "uurtarief"
+          },
+          "dagtarief": {
+            "type": "number",
+            "title": "dagtarief"
+          },
+          "starttarief": {
+            "type": "number",
+            "title": "starttarief"
+          },
+          "startdag": {
+            "type": "string",
+            "maxLength": 20,
+            "title": "startdag"
+          },
+          "eindedag": {
+            "type": "string",
+            "maxLength": 20,
+            "title": "eindedag"
+          },
+          "starttijd": {
+            "type": "integer",
+            "title": "starttijd"
+          },
+          "eindtijd": {
+            "type": "integer",
+            "title": "eindtijd"
+          },
+          "isParkeergarage": {
+            "type": "string",
+            "title": "isParkeergarage",
+            "enum": [
+              "Ja",
+              "Nee",
+              "Onbekend",
+              "Leeg"
+            ]
+          },
+          "bevat": {
+            "type": "array",
+            "title": "bevat",
+            "items": {
+              "type": "object",
+              "$ref": "straatsectie",
+              "objectConfiguration": {
+                "register": "ggm-verkeer-vervoer-waterstaat",
+                "schema": "straatsectie"
+              }
+            }
+          },
+          "geldigVoor": {
+            "type": "array",
+            "title": "geldigVoor",
+            "items": {
+              "type": "object",
+              "$ref": "parkeervergunning",
+              "objectConfiguration": {
+                "register": "ggm-verkeer-vervoer-waterstaat",
+                "schema": "parkeervergunning"
+              }
+            }
+          },
+          "betreft": {
+            "type": "array",
+            "title": "betreft",
+            "items": {
+              "type": "object",
+              "$ref": "parkeerrecht",
+              "objectConfiguration": {
+                "register": "ggm-verkeer-vervoer-waterstaat",
+                "schema": "parkeerrecht"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "productgroep": {
+        "slug": "productgroep",
+        "title": "Productgroep",
+        "version": "2.5.0",
+        "description": "Groepering van producten",
+        "required": [
+          "code",
+          "omschrijving",
+          "beslisboom"
+        ],
+        "properties": {
+          "code": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "code"
+          },
+          "omschrijving": {
+            "type": "string",
+            "maxLength": 250,
+            "title": "omschrijving"
+          },
+          "beslisboom": {
+            "type": "string",
+            "maxLength": 250,
+            "title": "beslisboom"
+          },
+          "valtBinnen": {
+            "type": "array",
+            "title": "valtBinnen",
+            "items": {
+              "type": "object",
+              "$ref": "productsoort",
+              "objectConfiguration": {
+                "register": "ggm-verkeer-vervoer-waterstaat",
+                "schema": "productsoort"
+              }
+            }
+          },
+          "soort": {
+            "type": "array",
+            "title": "soort",
+            "items": {
+              "type": "object",
+              "$ref": "parkeervergunning",
+              "objectConfiguration": {
+                "register": "ggm-verkeer-vervoer-waterstaat",
+                "schema": "parkeervergunning"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "productsoort": {
+        "slug": "productsoort",
+        "title": "Productsoort",
+        "version": "2.5.0",
+        "description": "Typologie van een product",
+        "required": [
+          "code",
+          "omschrijving",
+          "tarief",
+          "tariefperiode"
+        ],
+        "properties": {
+          "code": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "code"
+          },
+          "omschrijving": {
+            "type": "string",
+            "maxLength": 250,
+            "title": "omschrijving"
+          },
+          "tarief": {
+            "type": "number",
+            "title": "tarief"
+          },
+          "tariefperiode": {
+            "type": "string",
+            "maxLength": 20,
+            "title": "tariefperiode"
+          },
+          "valtBinnen": {
+            "type": "object",
+            "title": "valtBinnen",
+            "$ref": "productgroep",
+            "objectConfiguration": {
+              "register": "ggm-verkeer-vervoer-waterstaat",
+              "schema": "productgroep"
+            }
+          },
+          "soort": {
+            "type": "array",
+            "title": "soort",
+            "items": {
+              "type": "object",
+              "$ref": "parkeervergunning",
+              "objectConfiguration": {
+                "register": "ggm-verkeer-vervoer-waterstaat",
+                "schema": "parkeervergunning"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "straatsectie": {
+        "slug": "straatsectie",
+        "title": "Straatsectie",
+        "version": "2.5.0",
+        "description": "Gedeelte van een straat",
+        "required": [
+          "code",
+          "omschrijving",
+          "zoneCode"
+        ],
+        "properties": {
+          "code": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "code"
+          },
+          "omschrijving": {
+            "type": "string",
+            "maxLength": 500,
+            "title": "omschrijving"
+          },
+          "zoneCode": {
+            "type": "string",
+            "title": "zoneCode",
+            "enum": [
+              "GSM-Zone",
+              "Vergunninghouderzone"
+            ]
+          },
+          "bevat": {
+            "type": "object",
+            "title": "bevat",
+            "$ref": "parkeerzone",
+            "objectConfiguration": {
+              "register": "ggm-verkeer-vervoer-waterstaat",
+              "schema": "parkeerzone"
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "voertuig": {
+        "slug": "voertuig",
+        "title": "Voertuig",
+        "version": "2.5.0",
+        "description": "Vervoermiddel bestemd voor het verkeer over wegen",
+        "required": [
+          "kenteken",
+          "merk",
+          "kleur",
+          "type",
+          "land"
+        ],
+        "properties": {
+          "kenteken": {
+            "type": "string",
+            "maxLength": 12,
+            "title": "kenteken"
+          },
+          "merk": {
+            "type": "string",
+            "maxLength": 200,
+            "title": "merk"
+          },
+          "kleur": {
+            "type": "string",
+            "maxLength": 200,
+            "title": "kleur"
+          },
+          "type": {
+            "type": "string",
+            "maxLength": 200,
+            "title": "type"
+          },
+          "land": {
+            "type": "string",
+            "maxLength": 200,
+            "title": "land"
+          },
+          "betreft": {
+            "type": "array",
+            "title": "betreft",
+            "items": {
+              "type": "object",
+              "$ref": "parkeerscan",
+              "objectConfiguration": {
+                "register": "ggm-verkeer-vervoer-waterstaat",
+                "schema": "parkeerscan"
+              }
+            }
+          },
+          "betreftVoertuig": {
+            "type": "array",
+            "title": "betreftVoertuig",
+            "items": {
+              "type": "object",
+              "$ref": "mulderfeit",
+              "objectConfiguration": {
+                "register": "ggm-verkeer-vervoer-waterstaat",
+                "schema": "mulderfeit"
+              }
+            }
+          },
+          "is": {
+            "type": "object",
+            "title": "is",
+            "$ref": "object",
+            "objectConfiguration": {
+              "register": "ggm-kern",
+              "schema": "object"
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "stremming": {
+        "slug": "stremming",
+        "title": "Stremming",
+        "version": "2.5.0",
+        "description": "Situatie waarbij de doorstroming van het (vaar)wegverkeer plaatselijk is geblokkeerd als gevolg van een incident",
+        "required": [
+          "naam",
+          "datumStart",
+          "datumEinde",
+          "datumAanmelding",
+          "status",
+          "datumWijziging",
+          "geschiktVoorPublicatie",
+          "delenToegestaan",
+          "locatie",
+          "hinderklasse",
+          "aantalGehinderden"
+        ],
+        "properties": {
+          "naam": {
+            "type": "string",
+            "maxLength": 250,
+            "title": "naam"
+          },
+          "datumStart": {
+            "type": "string",
+            "format": "date-time",
+            "title": "datumStart"
+          },
+          "datumEinde": {
+            "type": "string",
+            "format": "date-time",
+            "title": "datumEinde"
+          },
+          "datumAanmelding": {
+            "type": "string",
+            "format": "date-time",
+            "title": "datumAanmelding"
+          },
+          "status": {
+            "type": "string",
+            "title": "status",
+            "enum": [
+              "Afgerond",
+              "In Uitvoering",
+              "Gepulbliceerd",
+              "Aangemeld",
+              "Plan Afhandelen"
+            ]
+          },
+          "datumWijziging": {
+            "type": "string",
+            "format": "date-time",
+            "title": "datumWijziging"
+          },
+          "geschiktVoorPublicatie": {
+            "type": "boolean",
+            "title": "geschiktVoorPublicatie"
+          },
+          "delenToegestaan": {
+            "type": "boolean",
+            "title": "delenToegestaan"
+          },
+          "locatie": {
+            "type": "string",
+            "format": "geo",
+            "title": "locatie"
+          },
+          "hinderklasse": {
+            "type": "string",
+            "title": "hinderklasse",
+            "enum": [
+              "Klasse 0: Geen hinder",
+              "Klasse 1: Kleine hinder",
+              "Klasse 2: Matige hinder",
+              "Klasse 3: Grote hinder",
+              "Klasse 4: Zeer grote hinder"
+            ]
+          },
+          "aantalGehinderden": {
+            "type": "string",
+            "title": "aantalGehinderden",
+            "enum": [
+              "minder dan 1000",
+              "1.000 tot 10.000",
+              "10.000 tot 100.000",
+              "100.000 tot 1.000.000",
+              "meer dan 1.000.000"
+            ]
+          },
+          "betreft": {
+            "type": "array",
+            "title": "betreft",
+            "items": {
+              "type": "object",
+              "$ref": "wegdeel",
+              "objectConfiguration": {
+                "register": "ggm-kern",
+                "schema": "wegdeel"
+              }
+            }
+          },
+          "gewijzigdDoor": {
+            "type": "object",
+            "title": "gewijzigdDoor",
+            "$ref": "medewerker",
+            "objectConfiguration": {
+              "register": "ggm-kern",
+              "schema": "medewerker"
+            }
+          },
+          "ingevoerdDoor": {
+            "type": "object",
+            "title": "ingevoerdDoor",
+            "$ref": "medewerker",
+            "objectConfiguration": {
+              "register": "ggm-kern",
+              "schema": "medewerker"
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "strooidag": {
+        "slug": "strooidag",
+        "title": "Strooidag",
+        "version": "2.5.0",
+        "description": "Dag waarop op wegen gestrooid wordt ter voorkoming van gladheid",
+        "required": [
+          "datum",
+          "minimumtemperatuur",
+          "tijdMinimumtemperatuur",
+          "maximumtemperatuur",
+          "tijdMaximumtemperatuur"
+        ],
+        "properties": {
+          "datum": {
+            "type": "string",
+            "format": "date",
+            "title": "datum"
+          },
+          "minimumtemperatuur": {
+            "type": "number",
+            "title": "minimumtemperatuur"
+          },
+          "tijdMinimumtemperatuur": {
+            "type": "string",
+            "format": "time",
+            "title": "tijdMinimumtemperatuur"
+          },
+          "maximumtemperatuur": {
+            "type": "number",
+            "title": "maximumtemperatuur"
+          },
+          "tijdMaximumtemperatuur": {
+            "type": "string",
+            "format": "time",
+            "title": "tijdMaximumtemperatuur"
+          },
+          "uitvoeringOp": {
+            "type": "array",
+            "title": "uitvoeringOp",
+            "items": {
+              "type": "object",
+              "$ref": "strooirouteuitvoering",
+              "objectConfiguration": {
+                "register": "ggm-verkeer-vervoer-waterstaat",
+                "schema": "strooirouteuitvoering"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "strooiroute": {
+        "slug": "strooiroute",
+        "title": "Strooiroute",
+        "version": "2.5.0",
+        "description": "Traject waarop het strooien plaatsvindt",
+        "required": [
+          "route"
+        ],
+        "properties": {
+          "route": {
+            "type": "string",
+            "format": "geo",
+            "title": "route"
+          },
+          "volgens": {
+            "type": "array",
+            "title": "volgens",
+            "items": {
+              "type": "object",
+              "$ref": "strooirouteuitvoering",
+              "objectConfiguration": {
+                "register": "ggm-verkeer-vervoer-waterstaat",
+                "schema": "strooirouteuitvoering"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "strooirouteuitvoering": {
+        "slug": "strooirouteuitvoering",
+        "title": "StrooirouteUitvoering",
+        "version": "2.5.0",
+        "description": "De route die uiteindelijk is gevolgd voor het strooien",
+        "required": [
+          "route",
+          "geplandStart",
+          "geplandEinde",
+          "werkelijkeStart",
+          "werkelijkEinde"
+        ],
+        "properties": {
+          "route": {
+            "type": "string",
+            "format": "geo",
+            "title": "route"
+          },
+          "geplandStart": {
+            "type": "string",
+            "format": "date-time",
+            "title": "geplandStart"
+          },
+          "geplandEinde": {
+            "type": "string",
+            "format": "date-time",
+            "title": "geplandEinde"
+          },
+          "werkelijkeStart": {
+            "type": "string",
+            "format": "date-time",
+            "title": "werkelijkeStart"
+          },
+          "werkelijkEinde": {
+            "type": "string",
+            "format": "date-time",
+            "title": "werkelijkEinde"
+          },
+          "volgens": {
+            "type": "object",
+            "title": "volgens",
+            "$ref": "strooiroute",
+            "objectConfiguration": {
+              "register": "ggm-verkeer-vervoer-waterstaat",
+              "schema": "strooiroute"
+            }
+          },
+          "uitvoeringOp": {
+            "type": "object",
+            "title": "uitvoeringOp",
+            "$ref": "strooidag",
+            "objectConfiguration": {
+              "register": "ggm-verkeer-vervoer-waterstaat",
+              "schema": "strooidag"
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "verkeersbesluit": {
+        "slug": "verkeersbesluit",
+        "title": "Verkeersbesluit",
+        "version": "2.5.0",
+        "description": "Een besluit van een wegbeheerder om een bepaald verkeersteken te plaatsen, te wijzigen of in te trekken of een bepaalde fysieke maatregel te treffen.",
+        "required": [
+          "referentienummer",
+          "datumBesluit",
+          "datumStart",
+          "titel",
+          "straat",
+          "postcode",
+          "huisnummer",
+          "datumEinde"
+        ],
+        "properties": {
+          "referentienummer": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "referentienummer"
+          },
+          "datumBesluit": {
+            "type": "string",
+            "format": "date",
+            "title": "datumBesluit"
+          },
+          "datumStart": {
+            "type": "string",
+            "format": "date-time",
+            "title": "datumStart"
+          },
+          "titel": {
+            "type": "string",
+            "maxLength": 250,
+            "title": "titel"
+          },
+          "straat": {
+            "type": "string",
+            "title": "straat"
+          },
+          "postcode": {
+            "type": "string",
+            "maxLength": 6,
+            "title": "postcode"
+          },
+          "huisnummer": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "huisnummer"
+          },
+          "datumEinde": {
+            "type": "string",
+            "format": "date-time",
+            "title": "datumEinde"
+          },
+          "isVastgelegdIn": {
+            "type": "object",
+            "title": "isVastgelegdIn",
+            "$ref": "document",
+            "objectConfiguration": {
+              "register": "ggm-kern",
+              "schema": "document"
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "verkeerstelling": {
+        "slug": "verkeerstelling",
+        "title": "Verkeerstelling",
+        "version": "2.5.0",
+        "description": "Een onderzoek om inzicht te krijgen in het verkeer, in de hoeveelheid verkeer, de verdeling en de gereden snelheid.",
+        "required": [
+          "tijdVanaf",
+          "tijdTot",
+          "aantal"
+        ],
+        "properties": {
+          "tijdVanaf": {
+            "type": "string",
+            "format": "date-time",
+            "title": "tijdVanaf"
+          },
+          "tijdTot": {
+            "type": "string",
+            "format": "date-time",
+            "title": "tijdTot"
+          },
+          "aantal": {
+            "type": "integer",
+            "title": "aantal"
+          },
+          "gegenereerdDoor": {
+            "type": "object",
+            "title": "gegenereerdDoor",
+            "$ref": "sensor",
+            "objectConfiguration": {
+              "register": "ggm-volkshuisvesting-leefomgeving",
+              "schema": "sensor"
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "vloginfo": {
+        "slug": "vloginfo",
+        "title": "VLogInfo",
+        "version": "2.5.0",
+        "description": "V-log is een open standaard voor datalogging van een verkeersregelinstallatie.",
+        "required": [
+          "tijdstip",
+          "snelheid",
+          "startgroen",
+          "eindegroen",
+          "verkeerWilGroen",
+          "wachttijd",
+          "detectieVerkeer"
+        ],
+        "properties": {
+          "tijdstip": {
+            "type": "string",
+            "format": "date-time",
+            "title": "tijdstip"
+          },
+          "snelheid": {
+            "type": "integer",
+            "title": "snelheid"
+          },
+          "startgroen": {
+            "type": "boolean",
+            "title": "startgroen"
+          },
+          "eindegroen": {
+            "type": "boolean",
+            "title": "eindegroen"
+          },
+          "verkeerWilGroen": {
+            "type": "boolean",
+            "title": "verkeerWilGroen"
+          },
+          "wachttijd": {
+            "type": "integer",
+            "title": "wachttijd"
+          },
+          "detectieVerkeer": {
+            "type": "integer",
+            "title": "detectieVerkeer"
+          },
+          "gegenereerdDoor": {
+            "type": "object",
+            "title": "gegenereerdDoor",
+            "$ref": "kast",
+            "objectConfiguration": {
+              "register": "ggm-volkshuisvesting-leefomgeving",
+              "schema": "kast"
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      }
+    },
+    "registers": {
+      "ggm-verkeer-vervoer-waterstaat": {
+        "slug": "ggm-verkeer-vervoer-waterstaat",
+        "title": "GGM - 2 Verkeer, Vervoer en Waterstaat",
+        "version": "2.5.0",
+        "description": "Gemeentelijk Gegevensmodel domain: 2 Verkeer, Vervoer en Waterstaat",
+        "schemas": [
+          "belprovider",
+          "mulderfeit",
+          "naheffing",
+          "parkeergarage",
+          "parkeerrecht",
+          "parkeerscan",
+          "parkeervergunning",
+          "parkeervlak",
+          "parkeerzone",
+          "productgroep",
+          "productsoort",
+          "straatsectie",
+          "voertuig",
+          "stremming",
+          "strooidag",
+          "strooiroute",
+          "strooirouteuitvoering",
+          "verkeersbesluit",
+          "verkeerstelling",
+          "vloginfo"
+        ],
+        "source": "internal"
+      }
+    }
+  }
+}

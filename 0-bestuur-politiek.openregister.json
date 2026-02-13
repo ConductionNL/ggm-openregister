@@ -1,0 +1,786 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "GGM - 0 Bestuur, Politiek en Ondersteuning",
+    "description": "OpenRegister configuration for the Gemeentelijk Gegevensmodel (GGM) domain: 0 Bestuur, Politiek en Ondersteuning. Auto-generated from GGM v2.5.0.",
+    "version": "2.5.0"
+  },
+  "x-openregister": {
+    "type": "application",
+    "sourceType": "github",
+    "sourceUrl": "https://github.com/ConductionNL/ggm-openregister",
+    "openregister": "^v0.2.10",
+    "github": {
+      "repo": "ConductionNL/ggm-openregister",
+      "branch": "main",
+      "path": "0-bestuur-politiek.openregister.json"
+    },
+    "description": "Gemeentelijk Gegevensmodel - 0 Bestuur, Politiek en Ondersteuning"
+  },
+  "components": {
+    "schemas": {
+      "aanwezige-deelnemer": {
+        "slug": "aanwezige-deelnemer",
+        "title": "Aanwezige Deelnemer",
+        "version": "2.5.0",
+        "description": "iemand die meedoet aan eencollege- of raadsvergadering",
+        "required": [
+          "aanvangAanwezigheid",
+          "eindeAanwezigheid",
+          "rol",
+          "vertegenwoordigtOrganisatie",
+          "naam"
+        ],
+        "properties": {
+          "aanvangAanwezigheid": {
+            "type": "string",
+            "format": "date-time",
+            "title": "aanvangAanwezigheid"
+          },
+          "eindeAanwezigheid": {
+            "type": "string",
+            "format": "date-time",
+            "title": "eindeAanwezigheid"
+          },
+          "rol": {
+            "type": "string",
+            "title": "rol",
+            "enum": [
+              "Voorzitter",
+              "Vice-voorzitter",
+              "Raadslid",
+              "Inspreker",
+              "Overig",
+              "Portefeuillehouder",
+              "Statenlid"
+            ]
+          },
+          "vertegenwoordigtOrganisatie": {
+            "type": "string",
+            "maxLength": 250,
+            "title": "vertegenwoordigtOrganisatie"
+          },
+          "naam": {
+            "type": "string",
+            "maxLength": 250,
+            "title": "naam"
+          },
+          "is": {
+            "type": "object",
+            "title": "is",
+            "$ref": "raadslid",
+            "objectConfiguration": {
+              "register": "ggm-bestuur-politiek",
+              "schema": "raadslid"
+            }
+          },
+          "vergadering": {
+            "type": "object",
+            "title": "vergadering",
+            "$ref": "vergadering",
+            "objectConfiguration": {
+              "register": "ggm-bestuur-politiek",
+              "schema": "vergadering"
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "agendapunt": {
+        "slug": "agendapunt",
+        "title": "Agendapunt",
+        "version": "2.5.0",
+        "description": "Een onderwerp dat in de vergadering wordt behandeld.",
+        "required": [
+          "nummer",
+          "titel",
+          "omschrijving"
+        ],
+        "properties": {
+          "nummer": {
+            "type": "integer",
+            "title": "nummer"
+          },
+          "titel": {
+            "type": "string",
+            "maxLength": 250,
+            "title": "titel"
+          },
+          "omschrijving": {
+            "type": "string",
+            "title": "omschrijving"
+          },
+          "behandelt": {
+            "type": "array",
+            "title": "behandelt",
+            "items": {
+              "type": "object",
+              "$ref": "raadsstuk",
+              "objectConfiguration": {
+                "register": "ggm-bestuur-politiek",
+                "schema": "raadsstuk"
+              }
+            }
+          },
+          "heeft": {
+            "type": "object",
+            "title": "heeft",
+            "$ref": "vergadering",
+            "objectConfiguration": {
+              "register": "ggm-bestuur-politiek",
+              "schema": "vergadering"
+            }
+          },
+          "hoortBij": {
+            "type": "array",
+            "title": "hoortBij",
+            "items": {
+              "type": "object",
+              "$ref": "stemming",
+              "objectConfiguration": {
+                "register": "ggm-bestuur-politiek",
+                "schema": "stemming"
+              }
+            }
+          },
+          "betreft": {
+            "type": "object",
+            "title": "betreft",
+            "$ref": "video-opname",
+            "objectConfiguration": {
+              "register": "ggm-kern",
+              "schema": "video-opname"
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "categorie": {
+        "slug": "categorie",
+        "title": "Categorie",
+        "version": "2.5.0",
+        "description": "Categorie waarop leveranciers zich voor de levering van personeel voor kunnen kwalificeren",
+        "required": [
+          "naam"
+        ],
+        "properties": {
+          "naam": {
+            "type": "string",
+            "maxLength": 250,
+            "title": "naam"
+          },
+          "heeft": {
+            "type": "array",
+            "title": "heeft",
+            "items": {
+              "type": "object",
+              "$ref": "raadsstuk",
+              "objectConfiguration": {
+                "register": "ggm-bestuur-politiek",
+                "schema": "raadsstuk"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "collegelid": {
+        "slug": "collegelid",
+        "title": "Collegelid",
+        "version": "2.5.0",
+        "description": "Iemand die behoort het college van burgemeester en wethouders",
+        "required": [
+          "voornaam",
+          "achternaam",
+          "titel",
+          "fractie",
+          "portefeuille",
+          "datumAanstelling",
+          "datumUittreding"
+        ],
+        "properties": {
+          "voornaam": {
+            "type": "string",
+            "maxLength": 250,
+            "title": "voornaam"
+          },
+          "achternaam": {
+            "type": "string",
+            "maxLength": 250,
+            "title": "achternaam"
+          },
+          "titel": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "titel"
+          },
+          "fractie": {
+            "type": "string",
+            "maxLength": 250,
+            "title": "fractie"
+          },
+          "portefeuille": {
+            "type": "string",
+            "maxLength": 200,
+            "title": "portefeuille"
+          },
+          "datumAanstelling": {
+            "type": "string",
+            "format": "date",
+            "title": "datumAanstelling"
+          },
+          "datumUittreding": {
+            "type": "string",
+            "format": "date",
+            "title": "datumUittreding"
+          },
+          "is": {
+            "type": "object",
+            "title": "is",
+            "$ref": "indiener",
+            "objectConfiguration": {
+              "register": "ggm-bestuur-politiek",
+              "schema": "indiener"
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false,
+        "allOf": [
+          {
+            "$ref": "ingezetene",
+            "objectConfiguration": {
+              "register": "ggm-kern",
+              "schema": "ingezetene"
+            }
+          }
+        ]
+      },
+      "dossier": {
+        "slug": "dossier",
+        "title": "Dossier",
+        "version": "2.5.0",
+        "description": "Samenhangende set gegevens en informatie voor een specifiek doel",
+        "required": [
+          "naam"
+        ],
+        "properties": {
+          "naam": {
+            "type": "string",
+            "maxLength": 250,
+            "title": "naam"
+          },
+          "hoortBij": {
+            "type": "array",
+            "title": "hoortBij",
+            "items": {
+              "type": "object",
+              "$ref": "raadsstuk",
+              "objectConfiguration": {
+                "register": "ggm-bestuur-politiek",
+                "schema": "raadsstuk"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "indiener": {
+        "slug": "indiener",
+        "title": "Indiener",
+        "version": "2.5.0",
+        "description": "Persoon die meldiing of aanvraag doet",
+        "required": [
+          "naam",
+          "omschrijving"
+        ],
+        "properties": {
+          "naam": {
+            "type": "string",
+            "maxLength": 250,
+            "title": "naam"
+          },
+          "omschrijving": {
+            "type": "string",
+            "title": "omschrijving"
+          },
+          "is": {
+            "type": "object",
+            "title": "is",
+            "$ref": "rechtspersoon",
+            "objectConfiguration": {
+              "register": "ggm-kern",
+              "schema": "rechtspersoon"
+            }
+          },
+          "heeft": {
+            "type": "array",
+            "title": "heeft",
+            "items": {
+              "type": "object",
+              "$ref": "raadsstuk",
+              "objectConfiguration": {
+                "register": "ggm-bestuur-politiek",
+                "schema": "raadsstuk"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "programma": {
+        "slug": "programma",
+        "title": "Programma",
+        "version": "2.5.0",
+        "description": "Een tijdelijke, flexibele organisatiestructuur, die is opgezet om de implementatie van een verzameling met elkaar samenhangende projecten en activiteiten te co&#246;rdineren, te sturen en te controleren teneinde te zorgen voor de realisatie van de eindresultaten en benefits die zijn gerelateerd aan de strategische doelstellingen van de organisatie.",
+        "required": [
+          "naam"
+        ],
+        "properties": {
+          "naam": {
+            "type": "string",
+            "maxLength": 250,
+            "title": "naam"
+          },
+          "hoortBij": {
+            "type": "array",
+            "title": "hoortBij",
+            "items": {
+              "type": "object",
+              "$ref": "raadsstuk",
+              "objectConfiguration": {
+                "register": "ggm-bestuur-politiek",
+                "schema": "raadsstuk"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "raadscommissie": {
+        "slug": "raadscommissie",
+        "title": "Raadscommissie",
+        "version": "2.5.0",
+        "description": "Een raadscommissie binnen de Nederlandse gemeenteraad is een groep raadsleden die zich buigt over specifieke thema's of beleidsonderwerpen om de besluitvorming in de volledige raad voor te bereiden en te ondersteunen.",
+        "required": [
+          "naam"
+        ],
+        "properties": {
+          "naam": {
+            "type": "string",
+            "maxLength": 250,
+            "title": "naam"
+          },
+          "isLidVan": {
+            "type": "array",
+            "title": "isLidVan",
+            "items": {
+              "type": "object",
+              "$ref": "raadslid",
+              "objectConfiguration": {
+                "register": "ggm-bestuur-politiek",
+                "schema": "raadslid"
+              }
+            }
+          },
+          "heeft": {
+            "type": "array",
+            "title": "heeft",
+            "items": {
+              "type": "object",
+              "$ref": "vergadering",
+              "objectConfiguration": {
+                "register": "ggm-bestuur-politiek",
+                "schema": "vergadering"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "raadslid": {
+        "slug": "raadslid",
+        "title": "Raadslid",
+        "version": "2.5.0",
+        "description": "Iemand die behoort de gemeenteraad",
+        "required": [
+          "voornaam",
+          "achternaam",
+          "titel",
+          "fractie",
+          "datumAanstelling",
+          "datumUittreding"
+        ],
+        "properties": {
+          "voornaam": {
+            "type": "string",
+            "maxLength": 250,
+            "title": "voornaam"
+          },
+          "achternaam": {
+            "type": "string",
+            "maxLength": 250,
+            "title": "achternaam"
+          },
+          "titel": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "titel"
+          },
+          "fractie": {
+            "type": "string",
+            "maxLength": 250,
+            "title": "fractie"
+          },
+          "datumAanstelling": {
+            "type": "string",
+            "format": "date",
+            "title": "datumAanstelling"
+          },
+          "datumUittreding": {
+            "type": "string",
+            "format": "date",
+            "title": "datumUittreding"
+          },
+          "isLidVan": {
+            "type": "array",
+            "title": "isLidVan",
+            "items": {
+              "type": "object",
+              "$ref": "raadscommissie",
+              "objectConfiguration": {
+                "register": "ggm-bestuur-politiek",
+                "schema": "raadscommissie"
+              }
+            }
+          },
+          "is": {
+            "type": "object",
+            "title": "is",
+            "$ref": "indiener",
+            "objectConfiguration": {
+              "register": "ggm-bestuur-politiek",
+              "schema": "indiener"
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false,
+        "allOf": [
+          {
+            "$ref": "ingezetene",
+            "objectConfiguration": {
+              "register": "ggm-kern",
+              "schema": "ingezetene"
+            }
+          }
+        ]
+      },
+      "raadsstuk": {
+        "slug": "raadsstuk",
+        "title": "Raadsstuk",
+        "version": "2.5.0",
+        "description": "Stuk dat door de gemeenteraad wordt behandeld",
+        "required": [
+          "datumRegistratie",
+          "datumPublicatie",
+          "datumExpiratie",
+          "besloten",
+          "typeRaadsstuk"
+        ],
+        "properties": {
+          "datumRegistratie": {
+            "type": "string",
+            "format": "date-time",
+            "title": "datumRegistratie"
+          },
+          "datumPublicatie": {
+            "type": "string",
+            "format": "date-time",
+            "title": "datumPublicatie"
+          },
+          "datumExpiratie": {
+            "type": "string",
+            "format": "date-time",
+            "title": "datumExpiratie"
+          },
+          "besloten": {
+            "type": "boolean",
+            "title": "besloten"
+          },
+          "typeRaadsstuk": {
+            "type": "string",
+            "maxLength": 80,
+            "title": "typeRaadsstuk"
+          },
+          "betreft": {
+            "type": "object",
+            "title": "betreft",
+            "$ref": "stemming",
+            "objectConfiguration": {
+              "register": "ggm-bestuur-politiek",
+              "schema": "stemming"
+            }
+          },
+          "heeftVerslag": {
+            "type": "object",
+            "title": "heeftVerslag",
+            "$ref": "vergadering",
+            "objectConfiguration": {
+              "register": "ggm-bestuur-politiek",
+              "schema": "vergadering"
+            }
+          },
+          "heeft": {
+            "type": "object",
+            "title": "heeft",
+            "$ref": "taakveld",
+            "objectConfiguration": {
+              "register": "ggm-bestuur-politiek",
+              "schema": "taakveld"
+            }
+          },
+          "wordtBehandeldIn": {
+            "type": "array",
+            "title": "wordtBehandeldIn",
+            "items": {
+              "type": "object",
+              "$ref": "vergadering",
+              "objectConfiguration": {
+                "register": "ggm-bestuur-politiek",
+                "schema": "vergadering"
+              }
+            }
+          },
+          "hoortBij": {
+            "type": "array",
+            "title": "hoortBij",
+            "items": {
+              "type": "object",
+              "$ref": "programma",
+              "objectConfiguration": {
+                "register": "ggm-bestuur-politiek",
+                "schema": "programma"
+              }
+            }
+          },
+          "behandelt": {
+            "type": "array",
+            "title": "behandelt",
+            "items": {
+              "type": "object",
+              "$ref": "agendapunt",
+              "objectConfiguration": {
+                "register": "ggm-bestuur-politiek",
+                "schema": "agendapunt"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "stemming": {
+        "slug": "stemming",
+        "title": "Stemming",
+        "version": "2.5.0",
+        "description": "Stem (openbaring van iemands mening (voor of tegen)),  uitbrengen bij verkiezingen of bij een vergadering",
+        "required": [
+          "resultaat",
+          "stemmingstype"
+        ],
+        "properties": {
+          "resultaat": {
+            "type": "string",
+            "title": "resultaat",
+            "enum": [
+              "Voor",
+              "Tegen",
+              "Gelijk"
+            ]
+          },
+          "stemmingstype": {
+            "type": "string",
+            "title": "stemmingstype",
+            "enum": [
+              "Hoofdelijk",
+              "Regulier",
+              "Schriftelijk"
+            ]
+          },
+          "betreft": {
+            "type": "object",
+            "title": "betreft",
+            "$ref": "raadsstuk",
+            "objectConfiguration": {
+              "register": "ggm-bestuur-politiek",
+              "schema": "raadsstuk"
+            }
+          },
+          "hoortBij": {
+            "type": "object",
+            "title": "hoortBij",
+            "$ref": "agendapunt",
+            "objectConfiguration": {
+              "register": "ggm-bestuur-politiek",
+              "schema": "agendapunt"
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "taakveld": {
+        "slug": "taakveld",
+        "title": "Taakveld",
+        "version": "2.5.0",
+        "description": "Een samenhangend geheel van activiteiten en taken en hangt onder een programma.",
+        "required": [
+          "naam"
+        ],
+        "properties": {
+          "naam": {
+            "type": "string",
+            "maxLength": 250,
+            "title": "naam"
+          },
+          "heeft": {
+            "type": "array",
+            "title": "heeft",
+            "items": {
+              "type": "object",
+              "$ref": "raadsstuk",
+              "objectConfiguration": {
+                "register": "ggm-bestuur-politiek",
+                "schema": "raadsstuk"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      },
+      "vergadering": {
+        "slug": "vergadering",
+        "title": "Vergadering",
+        "version": "2.5.0",
+        "description": "Een bijeenkomst van meerdere mensen (meestal van eenzelfde organisatie) die met elkaar spreken en/of afspraken maken over de gemeenschappelijke toekomst.",
+        "required": [
+          "eindtijd",
+          "starttijd",
+          "titel",
+          "locatie"
+        ],
+        "properties": {
+          "eindtijd": {
+            "type": "string",
+            "format": "date-time",
+            "title": "eindtijd"
+          },
+          "starttijd": {
+            "type": "string",
+            "format": "date-time",
+            "title": "starttijd"
+          },
+          "titel": {
+            "type": "string",
+            "maxLength": 250,
+            "title": "titel"
+          },
+          "locatie": {
+            "type": "string",
+            "maxLength": 250,
+            "title": "locatie"
+          },
+          "betreft": {
+            "type": "array",
+            "title": "betreft",
+            "items": {
+              "type": "object",
+              "$ref": "video-opname",
+              "objectConfiguration": {
+                "register": "ggm-kern",
+                "schema": "video-opname"
+              }
+            }
+          },
+          "heeftVerslag": {
+            "type": "object",
+            "title": "heeftVerslag",
+            "$ref": "raadsstuk",
+            "objectConfiguration": {
+              "register": "ggm-bestuur-politiek",
+              "schema": "raadsstuk"
+            }
+          },
+          "wordtBehandeldIn": {
+            "type": "array",
+            "title": "wordtBehandeldIn",
+            "items": {
+              "type": "object",
+              "$ref": "raadsstuk",
+              "objectConfiguration": {
+                "register": "ggm-bestuur-politiek",
+                "schema": "raadsstuk"
+              }
+            }
+          },
+          "heeft": {
+            "type": "object",
+            "title": "heeft",
+            "$ref": "raadscommissie",
+            "objectConfiguration": {
+              "register": "ggm-bestuur-politiek",
+              "schema": "raadscommissie"
+            }
+          },
+          "aanwezigedeelnemer": {
+            "type": "array",
+            "title": "aanwezigedeelnemer",
+            "items": {
+              "type": "object",
+              "$ref": "aanwezige-deelnemer",
+              "objectConfiguration": {
+                "register": "ggm-bestuur-politiek",
+                "schema": "aanwezige-deelnemer"
+              }
+            }
+          }
+        },
+        "searchable": true,
+        "hardValidation": false
+      }
+    },
+    "registers": {
+      "ggm-bestuur-politiek": {
+        "slug": "ggm-bestuur-politiek",
+        "title": "GGM - 0 Bestuur, Politiek en Ondersteuning",
+        "version": "2.5.0",
+        "description": "Gemeentelijk Gegevensmodel domain: 0 Bestuur, Politiek en Ondersteuning",
+        "schemas": [
+          "aanwezige-deelnemer",
+          "agendapunt",
+          "categorie",
+          "collegelid",
+          "dossier",
+          "indiener",
+          "programma",
+          "raadscommissie",
+          "raadslid",
+          "raadsstuk",
+          "stemming",
+          "taakveld",
+          "vergadering"
+        ],
+        "source": "internal"
+      }
+    }
+  }
+}
