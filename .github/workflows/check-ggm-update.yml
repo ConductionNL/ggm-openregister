@@ -1,0 +1,128 @@
+name: Check for GGM updates
+
+on:
+  schedule:
+    # Run every night at 02:00 UTC
+    - cron: '0 2 * * *'
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  check-and-regenerate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout this repository
+        uses: actions/checkout@v4
+
+      - name: Get current GGM version from our configs
+        id: current
+        run: |
+          CURRENT_VERSION=$(python3 -c "
+          import json, glob
+          files = glob.glob('*.openregister.json')
+          if files:
+              with open(files[0]) as f:
+                  data = json.load(f)
+              print(data['info']['version'])
+          else:
+              print('0.0.0')
+          ")
+          echo "version=$CURRENT_VERSION" >> $GITHUB_OUTPUT
+          echo "Current version: $CURRENT_VERSION"
+
+      - name: Get latest GGM release version
+        id: latest
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Get the latest release tag from GGM repo
+          LATEST=$(gh api repos/Gemeente-Delft/Gemeentelijk-Gegevensmodel/releases/latest --jq '.tag_name' 2>/dev/null || echo "")
+
+          # If no releases, check for version directories
+          if [ -z "$LATEST" ]; then
+            LATEST=$(gh api repos/Gemeente-Delft/Gemeentelijk-Gegevensmodel/contents --jq '[.[] | select(.name | test("^v[0-9]")) | .name] | sort | last' 2>/dev/null || echo "")
+          fi
+
+          # Strip 'v' prefix if present
+          LATEST_VERSION="${LATEST#v}"
+          echo "version=$LATEST_VERSION" >> $GITHUB_OUTPUT
+          echo "Latest GGM version: $LATEST_VERSION"
+
+      - name: Compare versions
+        id: compare
+        run: |
+          CURRENT="${{ steps.current.outputs.version }}"
+          LATEST="${{ steps.latest.outputs.version }}"
+
+          if [ -z "$LATEST" ]; then
+            echo "Could not determine latest GGM version"
+            echo "needs_update=false" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+
+          python3 -c "
+          from packaging.version import Version
+          current = '$CURRENT'
+          latest = '$LATEST'
+          try:
+              needs = Version(latest) > Version(current)
+          except:
+              needs = latest != current
+          print(f'Current: {current}, Latest: {latest}, Needs update: {needs}')
+          import sys
+          sys.exit(0 if needs else 1)
+          " && echo "needs_update=true" >> $GITHUB_OUTPUT || echo "needs_update=false" >> $GITHUB_OUTPUT
+
+      - name: Clone GGM repository
+        if: steps.compare.outputs.needs_update == 'true'
+        run: |
+          LATEST="${{ steps.latest.outputs.version }}"
+          git clone --depth 1 https://github.com/Gemeente-Delft/Gemeentelijk-Gegevensmodel.git /tmp/ggm-source
+          echo "Cloned GGM repository"
+
+          # Find the QEA file in the latest version directory
+          QEA_FILE=$(find /tmp/ggm-source -name "*.qea" -path "*v${LATEST}*" ! -name "*MIM*" | head -1)
+          if [ -z "$QEA_FILE" ]; then
+            # Try without v prefix
+            QEA_FILE=$(find /tmp/ggm-source -name "*.qea" -path "*${LATEST}*" ! -name "*MIM*" | head -1)
+          fi
+
+          if [ -z "$QEA_FILE" ]; then
+            echo "Error: Could not find QEA file for version $LATEST"
+            exit 1
+          fi
+
+          echo "Found QEA file: $QEA_FILE"
+          echo "QEA_FILE=$QEA_FILE" >> $GITHUB_ENV
+
+      - name: Update version in generate.py
+        if: steps.compare.outputs.needs_update == 'true'
+        run: |
+          LATEST="${{ steps.latest.outputs.version }}"
+          sed -i "s/GGM_VERSION = \".*\"/GGM_VERSION = \"$LATEST\"/" generate.py
+
+      - name: Regenerate configuration files
+        if: steps.compare.outputs.needs_update == 'true'
+        run: |
+          # Remove old generated files
+          rm -f *.openregister.json
+
+          # Run generator
+          python3 generate.py "$QEA_FILE"
+
+      - name: Commit and push changes
+        if: steps.compare.outputs.needs_update == 'true'
+        run: |
+          LATEST="${{ steps.latest.outputs.version }}"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet && echo "No changes to commit" && exit 0
+          git commit -m "Update to GGM v${LATEST}
+
+          Auto-generated from Gemeentelijk Gegevensmodel v${LATEST}.
+
+          Source: https://github.com/Gemeente-Delft/Gemeentelijk-Gegevensmodel"
+          git push
